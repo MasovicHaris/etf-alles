@@ -1,0 +1,63 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1344": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj elemenata: \nZ1 = fi1 = \nZ2 = fi2 = \nParalelna veza ovih elemenata ima Z = 2.57147 i fi = -33.7613.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1345": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj elemenata: \nZ1 = fi1 = \nParalelna veza ovih elemenata ima Z = 0 i fi = 0.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1346": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj elemenata: \nZ1 = fi1 = \nZ2 = fi2 = \nZ3 = fi3 = \nZ4 = fi4 = \nParalelna veza ovih elemenata ima Z = 0.353553 i fi = 45.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1489652249
+}

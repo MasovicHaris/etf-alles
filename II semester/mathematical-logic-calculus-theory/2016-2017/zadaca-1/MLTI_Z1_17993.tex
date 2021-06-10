@@ -1,0 +1,347 @@
+%MIT License
+%
+%Copyright (c) 2017 dinkoosmankovic
+%
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+%
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+
+
+    \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage{amsmath} 
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    \usepackage{mathtools}
+    \usepackage{gensymb}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    
+    
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{1}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Matematička logika i teorija izračunljivosti}
+
+      \vspace*{2cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.75cm}
+      {\Large Br. indexa: \brIndexa}
+
+      \vspace*{3cm}
+      \renewcommand{\arraystretch}{1.75}
+      \begin{tabular}{|c|c|}
+    	\hline Zadatak & Bodovi \\
+    	\hline 1 &  \\
+    	\hline 2 &  \\
+    	\hline 3 &  \\
+    	\hline 4 &  \\
+    	\hline 5 &  \\
+    	\hline 6 &  \\
+    	\hline
+     \end{tabular}
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka
+	
+		{(a) Ako je 2 faktor broja n i ako je 3 faktor broja, tada je 6 faktor broja n. \\
+		
+	    Ukoliko uvedemo oznake: \\
+		A - 2 faktor broja n; \\
+		B - 3 faktor broja n; \\
+		C - 6 faktor broja n; \\
+		Forma iskazne algebre glasi: AB {$\Rightarrow$} C \\
+		
+		(b) Ako je n prost broj, tada je n neparan ili jednak 2. \\
+		
+		Ukoliko uvedemo oznake: \\
+		A - n prost broj; \\
+		B - n neparan; \\
+		C - jednak je 2; \\
+		Forma iskazne algebre glasi: A {$\Rightarrow$} B {$\vee$} C \\
+		
+		(c) Ova petlja će se izvršiti tačno {\textit N} puta ako ne sadrži {\bf return ili break. } \\
+		
+		Ukoliko uvedemo oznake: \\
+		A - petlja će se izvršiti tačno {\textit N} puta; \\
+		B - sadrži {\bf return}; \\
+		C - sadrži {\bf break}; \\		
+		Forma iskazne algebre glasi: {$\neg$}(B {$\vee$} C) {$\Rightarrow$} A} 
+		
+		\item Rješenje zadatka
+		
+		{(a) Ako je decimalni zapis broja r konačan, tada je broj r racionalan. \\
+		
+		Ukoliko uvedemo oznake: \\
+		A - decimalni zapis broja r je konačan \\
+		B - broj r je racionalan. \\
+		Forma iskazne algebre glasi: A {$\Rightarrow$} B \\
+		
+		Ukoliko izraz negiramo imamo: 		
+		\begin{equation*}
+		    \overline{A \Rightarrow B}=\overline{\overline{A} \vee B}= A\overline{B} 
+		\end{equation*}
+		
+		Što u prevodu znači: \\
+		Decimalni zapis broja r je konačan, ali broj r nije racionalan.
+        \newpage
+		
+		(b) Postojanje dva ugla od 45$^{\circ}$ u trouglu je dovoljan uvjet da bi taj trougao bio pravougli. \\
+		
+		Ukoliko uvedemo oznake: \\
+		A - Postoje dva ugla od 45$^{\circ}$ u trouglu \\
+		B - Trougao je pravougli \\
+		Forma iskazne algebre glasi: A {$\Rightarrow$} B \\
+		
+		Ukoliko izraz negiramo imamo: 		
+		\begin{equation*}
+		    \overline{A \Rightarrow B}=\overline{\overline{A} \vee B}= A\overline{B} 
+		\end{equation*}
+		
+		Što u prevodu znači: \\
+		Postoje dva ugla od 45$^{\circ}$, ali trougao nije pravougli. \\
+		
+		(c) Cijeli broj je paran ako i samo ako je jednak nekom proizvodu nekog drugog cijelog broja i broja 2. \\
+		
+		Ukoliko uvedemo oznake: \\
+		A - Cijeli broj Z je paran \\
+		B - Z je jednak proizvodu nekog drugog cijelog broja i broja 2 \\
+		Forma iskazne algebre glasi: A {$\Leftrightarrow$} B \\
+		
+		Ukoliko izraz negiramo imamo: 		
+		\begin{equation*}
+		    Z = \overline{A \Leftrightarrow B}=\overline{\overline{A}B \vee A\overline{B}}= \overline{\overline{A}B} 
+		    \wedge \overline{A\overline{B}} = (A \vee \overline{B})(\overline{A} \vee {B})=
+		    A\overline{B} \vee \overline{A}B = A \veebar{} B
+		\end{equation*}
+		
+		Što u prevodu znači: \\
+		Ili je cijeli broj Z paran ili je Z jednak proizvodu nekog drugog cijelog broja i broja 2.  } 
+		
+		\newpage
+		
+		\item Rješenje zadatka
+		\\ 
+		
+		Iskaz:  (p {$\vee$} ({$\neg$}q {$\Rightarrow$} r)) {$\wedge$} s {$\vee$} (s {$\Leftrightarrow$} r) {$\wedge$} q 
+		
+		Ukoliko označimo izraze (radi lakšeg snalaženja): \\ 
+		1 - {$\top$} (tačno); 0 - {$\bot$} (netačno); \\
+		A - p {$\vee$} ({$\neg$}q {$\Rightarrow$} r) \\
+		B - A {$\wedge$} s \\
+		C - s {$\Leftrightarrow$} r \\
+		D - C {$\wedge$} q \\
+		Čitav iskaz - B {$\vee$} D
+		
+		Imamo sljedeću tabelu: \\
+		\\
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+    	\hline q & p & r & s & {$\neg$}q & {$\neg$}q {$\Rightarrow$} r & A & B & C & D & B {$\vee$} D \\
+    	\hline 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0\\
+    	\hline 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+    	\hline 0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+    	\hline 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1\\
+    	\hline 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0\\
+    	\hline 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 1\\
+    	\hline 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+    	\hline 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1\\
+    	\hline 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 1\\
+    	\hline 1 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1\\
+    	\hline 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+    	\hline 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+    	\hline 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 1\\
+    	\hline 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 1\\
+    	\hline 1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+    	\hline 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+    	\hline
+     \end{tabular}
+		
+	\newpage
+	
+		\item Rješenje zadatka
+		
+		Primjenom aksioma iskazne algebre minimizirajte izraze: \\
+		
+	(a) \begin{align*}
+		
+		    [(A {\Rightarrow} B) {\Rightarrow} (C {\Rightarrow} D)]
+		{\Leftrightarrow} [(A {\Rightarrow} C) {\Rightarrow} (B {\Rightarrow} D)] =
+		[(\overline{A {\Rightarrow} B}) \vee (C {\Rightarrow} D)]
+		{\Leftrightarrow} [(\overline{A {\Rightarrow} C}) \vee (B {\Rightarrow} D)] = \\
+		
+		= [A\overline{B} \vee \overline{C} \vee D] \Leftrightarrow [A\overline{C} \vee \overline{B} \vee D] = 
+		[A\overline{B} \vee \overline{C} \vee D][A\overline{C} \vee \overline{B} \vee D] \vee
+		[\overline{A\overline{B} \vee \overline{C} \vee D}][\overline{A\overline{C} \vee \overline{B} \vee D}]
+		\\
+		
+		* Ukoliko posmatramo lijevu stranu disjunkcije imamo: \\
+		
+		[A\overline{B} \vee \overline{C} \vee D][A\overline{C} \vee \overline{B} \vee D] =
+		A\overline{B}~\overline{C} \vee A\overline{B} \vee A\overline{B}D \vee A\overline{C}
+		\vee \overline{B}~\overline{C} \vee D\overline{C} \vee A\overline{C}D \vee
+		\overline{B}D \vee D = \\
+		
+		= A\overline{B} \vee A\overline{C} \vee \overline{B}~\overline{C} \vee D \\
+		
+	    * Ukoliko posmatramo desnu stranu disjunkcije imamo: \\
+	    
+		[\overline{A\overline{B} \vee \overline{C} \vee D}][\overline{A\overline{C} \vee \overline{B} \vee D}] = (\overline{A} \vee B)C\overline{D}[(\overline{A} \vee C)B\overline{D}] = [\overline{A}C\overline{D} \vee BC\overline{D}][(\overline{A} \vee C)B\overline{D}] = \\
+		
+		= [\overline{A}C\overline{D} \vee BC\overline{D}][\overline{A}B\overline{D} \vee
+		CB\overline{D}] = AC\overline{D}B \vee \overline{A}BC\overline{D} \vee BC\overline{D} =
+		BC\overline{D}(A \vee \overline{A}) \vee BC\overline{D} = BC\overline{D} \\
+		
+		* Ukoliko disjunkciju napišemo na sljedeći način imamo: \\
+		
+		\overline{\overline{A\overline{B} \vee A\overline{C} \vee \overline{B}~\overline{C} \vee D  \vee BC\overline{D}}} = \overline{(\overline{A} \vee B)(\overline{A} \vee C)(B \vee C)~\overline{D}(\overline{B} \vee \overline{C} \vee D)} = \\
+		
+		\overline{(\overline{A} \vee B)(\overline{A} \vee C)(B \vee C)(\overline{B}~\overline{D} \vee \overline{D}~\overline{C})} = \overline{(\overline{A} \vee BC)(B~\overline{C}~\overline{D} \vee C~\overline{B}~\overline{D})} =
+		\overline{\overline{A}~B~\overline{C}~\overline{D} \vee \overline{A}~C~\overline{B}~\overline{D}} = \\
+		
+		\overline{\overline{A}~\overline{D}(B~\overline{C} \vee \overline{B}~C)} =
+		A \vee D \vee \overline{B \veebar{} C} = A \vee D \vee (B \Leftrightarrow C)		
+		\end{align*}
+		\newpage
+	(b) \begin{align*}
+	
+		    \overline{\overline{B(A\veebar{}B)} \vee \overline{A} (\overline{B \veebar{} C})}
+		    = B(A \veebar{} B) \wedge \overline{\overline{A} (\overline{B \veebar{} C})}
+		    = B(A \veebar{} B) [A \vee(B \veebar{} C)] =  \\
+		    
+		    = B(A\overline{C} \vee \overline{A}C)[ A \vee (B\overline{C} \vee \overline{B}C)] 
+		    = (A\overline{C} \vee \overline{A}C)(AB \vee B\overline{C}) = AB\overline{C} \vee AB\overline{C} = AB\overline{C}
+		\end{align*} 
+		
+		
+	(c) \begin{align*}
+	
+		    A\overline{B} \vee B\overline{C} \vee AC = A\overline{B} \vee B\overline{C} \vee AC
+		    (B \vee \overline{B}) = A\overline{B} \vee B\overline{C} \vee ABC \vee A\overline{B}C = \\
+
+		    = A\overline{B} \vee B\overline{C}A \vee \overline{C}B\overline{A} \vee ABC = 
+		    A\overline{B} \vee AB \vee \overline{A}B\overline{C} = A \vee \overline{A}B\overline{C}
+		    = (A \vee \overline{A})(A \vee B)(A \vee \overline{C}) =
+		    \\
+		    
+		    = (A \vee B)(A \vee \overline{C}) = A \vee B\overline{C}
+		\end{align*}
+		
+		(d) \begin{align*}
+		    
+		    A \vee (B \veebar C) \vee (C \Rightarrow B) = A \vee (B\overline{C} \vee \overline{B}C)
+		    \vee (\overline{C} \vee B) =  A \vee B\overline{C} \vee \overline{B}C
+		    \vee \overline{C} \vee B = \\
+		    
+		    = A \vee  \overline{B}C \vee \overline{C} \vee B =
+		    A \vee  \overline{B}C \vee \overline{C} \vee BC \vee B\overline{C} =
+		    A \vee C \vee \overline{C} = A \vee \top = \top    
+		\end{align*}
+		\item Rješenje zadatka
+		\\
+		
+		* Ukoliko označimo sljedeće rečenice iskazima: \\
+		
+		A - Automobil je ispravan \\
+		S - Urađen je servis \\
+		V - Autombil je spreman za vožnju \\
+		L - Svijetli lampica upozorenje na kvar \\
+		
+		* Možemo formulisati (na osnovu teksta) sljedeći iskaz: 
+		
+		\begin{equation*}
+		    (A \Leftrightarrow S)(S \Rightarrow V)(\overline{V} \vee L)(\overline{A} \Rightarrow L)\overline{L} = (AS \vee \overline{A}~\overline{S})(\overline{S} \vee V)(\overline{V} \vee L)(A \vee L)\overline{L} = \\
+		    
+		    (AS \vee \overline{A}~\overline{S})(\overline{S} \vee V)(\overline{V} \vee L)(A\overline{L}) = (AS \vee \overline{A}~\overline{S})(\overline{S} \vee V)(\overline{V}A\overline{L}) = (AS \vee \overline{A}~\overline{S})(\overline{S}~\overline{V}A\overline{L}) = \bot
+		\end{equation*} \\
+		
+		** Možemo zaključiti da ovaj skup rečenica nije konzistentan. \\
+		
+		
+		\newpage
+		
+		\item Rješenje zadatka
+		
+		* Ukoliko svaku izjavu označimo sa slovima: \\
+		A - Johnny: Bobby je ubio Maxa. \\
+		B - Lenny: Vinnie nije ubio maxa. \\
+        C - Bobby: Vinnie je sa Johnnyem pucao u boce na zidu kada je Max pao. \\
+        D - Vinnie: Bobby nije ubio Maxa. \\
+        
+        * Intuitivno možemo zaključiti sljedeće: \\
+        Očigledno je bio ili Bobby ili Vinnie, što se vidi iz izjava, pa možemo napraviti 
+        2 slučaja: \\
+        
+        1) Ako je Bobby ubio Maxa, važi A,B,C ali ne i D što se protivrječi postavci zadatka koja \\
+        kaže da 3 izjave su lažne. Samim tim Bobby nije ubio Maxa. \\
+        2) Ako je Vinnie ubio Maxa, A,B,C ne važe i važi samo D, što se poklapa sa postavkom zadatka zadatka koja 
+        kaže da 3 izjave su lažne. Samim tim Vinnie je ubio Maxa. \\
+        
+        * Dalje možemo zaključiti da je A = {$\overline{D}$} \\
+        * Formalnim putem možemo napisati iskaz: \\
+        \begin{equation*}
+            (A~\overline{B}~\overline{C}~\overline{D})
+            \vee (\overline{A}~B~\overline{C}~\overline{D}) \vee
+            (\overline{A}~\overline{B}~C~\overline{D}) \vee
+            (\overline{A}~\overline{B}~\overline{C}~D) = 
+            (\overline{D}~\overline{B}~\overline{C}) \vee
+            (D~\overline{B}~\overline{C}) = \overline{B}~\overline{C} \\
+        \end{equation*}       
+        
+        ** Odavde možemo zaključiti da je Vinnie ubio Maxa i da Vinnie nije sa Johnnyem pucao u boce na zidu kada je Max pao (što je logično).\\
+        
+        
+        
+	\end{enumerate}
+	
+	
+	
+    \end{document}
+    

@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-431.29.2.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1753": {
+            "status": 1,
+            "run_result": {
+                "output": "Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \n1. Meho Mehic, Tel: 123456\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1758": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite ime: Unesite prezime: Unesite broj telefona: \nPero Peric 434343",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1759": {
+            "status": 1,
+            "run_result": {
+                "output": "Mato Matic, Tel: 14\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1760": {
+            "status": 1,
+            "run_result": {
+                "output": "Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \n1. Meho Mehic, Tel: 123456\n\n2. Pero Peric, Tel: 434343\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \n1. Meho Mehic, Tel: 123456\n\n2. Pero Peric, Tel: 434343\n\n3. Mato Matic, Tel: 14\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1483124297
+}

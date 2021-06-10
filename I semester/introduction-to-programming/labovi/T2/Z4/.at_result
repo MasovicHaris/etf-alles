@@ -1,0 +1,179 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-431.29.2.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c:39:9: warning: C++ style comments are not allowed in ISO C90\nmain.c:39:9: warning: (this will be reported only once per input file)",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "39",
+                "col": "9",
+                "message": "C++ style comments are not allowed in ISO C90",
+                "output": "/tmp/buildservice/bs_4278/main.c:39:9: warning: C++ style comments are not allowed in ISO C90"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "39",
+                "col": "9",
+                "message": "(this will be reported only once per input file)",
+                "output": "/tmp/buildservice/bs_4278/main.c:39:9: warning: (this will be reported only once per input file)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "4030": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Svi brojevi nisu iz intervala 50 do 200",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4031": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Svi brojevi nisu iz intervala 50 do 200",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4032": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Svi brojevi nisu iz intervala 50 do 200",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4033": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 100,150,150\nUnesena su 2 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4034": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 123,123,123\nUnesen je 1 razlicit broj",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4035": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 188,189,190\nUnesena su 3 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4036": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 110,120,130\nUnesena su 3 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4037": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 122,123,124\nUnesena su 3 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4038": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 55,65,75\nUnesena su 3 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4039": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Brojevi poredani po velicini glase: 59,60,70\nUnesena su 3 razlicita broja",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1477034772
+}

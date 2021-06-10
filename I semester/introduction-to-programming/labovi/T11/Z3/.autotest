@@ -1,0 +1,69 @@
+{
+    "id": 7158,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 11, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1756,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "struct Pravougaonik p;\np.dole_lijevo.x=1;\np.dole_lijevo.y=1;\np.gore_desno.x=2;\np.gore_desno.y=2;\nprintf(\"%.2f %.2f\", obim_pravougaonika(p), povrsina_pravougaonika(p));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4.00 1.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1757,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "struct Pravougaonik p;\np.dole_lijevo.x=1;\np.dole_lijevo.y=1;\np.gore_desno.x=2;\np.gore_desno.y=2;\n\nstruct Tacka t;\nt.x=1.5; t.y=1.5;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=1; t.y=1;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=2; t.y=2;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=0; t.y=1.5;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=1.5; t.y=0;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=3; t.y=1.5;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\nt.x=1.5; t.y=3;\nprintf(\"%d \", tacka_u_pravougaoniku(t,p));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 0 0 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

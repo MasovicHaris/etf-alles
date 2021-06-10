@@ -1,0 +1,290 @@
+{
+    "id": 5607,
+    "name": "Tehnike programiranja (2018\/2019), Zada\u0107a 1, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"Pop je podigao kapak na peci\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pop,kapak,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nstd::string recenica(\"  vesla    kajak Aziza  \");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "kajak,Aziza,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"    \");\nstd::vector<std::string> rez(NadjiSimetricneRijeci(recenica));\nif (rez.size() != 0)\n    std::cout << \"NIJE \";\nstd::cout << \"PRAZAN\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "PRAZAN"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"\");\nstd::vector<std::string> rez(NadjiSimetricneRijeci(recenica));\nif (rez.size() != 0)\n    std::cout << \"NIJE \";\nstd::cout << \"PRAZAN\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "PRAZAN"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"To je neka recenica bez simetricnih rijeci\");\nstd::vector<std::string> rez(NadjiSimetricneRijeci(recenica));\nif (rez.size() != 0)\n    std::cout << \"NIJE \";\nstd::cout << \"PRAZAN\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "PRAZAN"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"ABA aBa abA AbA abaB Baba\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "ABA,aBa,abA,AbA,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"potop\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "potop,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"IduLjudi EvoLove   ali    EvoSadaSove     URimuUmiru     \");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "EvoLove,EvoSadaSove,URimuUmiru,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nstd::string recenica(\"Anna\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Anna,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nstd::string recenica(\"Najduzi poznati palindromski leksem je finska rijec saippuakuppinippukauppias koja oznacava trgovca sapunom\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "saippuakuppinippukauppias,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string recenica(\"a Aa ab\");\nfor (std::string s : NadjiSimetricneRijeci(recenica))\n    std::cout << s << \",\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Aa,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": " Aziza vesla kajak "
+            },
+            "expected": [
+                "Unesite recenicu:\\nSimetricne rijeci unutar recenice su:\\nAziza\\nkajak"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": " Katodna i kanalizaciona, dvije bratske cijevi..."
+            },
+            "expected": [
+                "Unesite recenicu:\\nRecenica ne sadrzi simetricne rijeci!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

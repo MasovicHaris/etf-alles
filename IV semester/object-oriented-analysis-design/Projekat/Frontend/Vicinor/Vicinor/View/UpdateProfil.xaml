@@ -1,0 +1,161 @@
+﻿<Page
+    x:Class="Vicinor.Forme.UpdateProfil"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.Forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid x:Name="grid" Background="White">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="UpdateProfilTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="firstName.(Control.FontSize)" Value="12"/>
+                        <Setter Target="firstNameTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="lastName.(Control.FontSize)" Value="12"/>
+                        <Setter Target="lastNameTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="Username.(Control.FontSize)" Value="12"/>
+                        <Setter Target="usernameTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="Password.(Control.FontSize)" Value="12"/>
+                        <Setter Target="passwordTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="NewPassword.(Control.FontSize)" Value="12"/>
+                        <Setter Target="newPasswordTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="Email.(Control.FontSize)" Value="12"/>
+                        <Setter Target="emailTextBlock.(TextBlock.FontSize)" Value="12"/>
+                        <Setter Target="AddImage.(Control.FontSize)" Value="12"/>
+
+                        <Setter Target="showPasswordButton.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="changePasswordButton.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="pictureTextBlock.(TextBlock.FontSize)" Value="12"/>
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger/>
+                    </VisualState.StateTriggers>
+
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="UpdateProfilTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="firstName.(Control.FontSize)" Value="18"/>
+                        <Setter Target="firstNameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="lastName.(Control.FontSize)" Value="18"/>
+                        <Setter Target="lastNameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="Username.(Control.FontSize)" Value="18"/>
+                        <Setter Target="usernameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="Password.(Control.FontSize)" Value="18"/>
+                        <Setter Target="passwordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="NewPassword.(Control.FontSize)" Value="18"/>
+                        <Setter Target="newPasswordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="Email.(Control.FontSize)" Value="18"/>
+                        <Setter Target="emailTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="AddImage.(Control.FontSize)" Value="18"/>
+                        <Setter Target="pictureTextBlock.(TextBlock.FontSize)" Value="18"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="UpdateProfilTextBlock" Text="-Update Profile-"  Grid.Row="0"  Grid.ColumnSpan="3"  TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" ></TextBlock>
+        <TextBox Name="firstName" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" ></TextBox>
+        <TextBlock x:Name="firstNameTextBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0" Text="First Name: " Grid.Row="1" Grid.Column="0" TextAlignment="Center"></TextBlock>
+        <TextBox Name="lastName" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" ></TextBox>
+        <TextBlock x:Name="lastNameTextBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0" Text="Last Name: " Grid.Row="2" Grid.Column="0" TextAlignment="Center"></TextBlock>
+
+        <TextBox Name="Username" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"  ></TextBox>
+        <TextBlock x:Name="usernameTextBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0"  Text="Username: " Grid.Row="3" Grid.Column="0" TextAlignment="Center"></TextBlock>
+
+        <TextBox Name="Password" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center"  ></TextBox>
+        <PasswordBox x:Name="pTextBox"  Grid.Column="1" Grid.Row="4" PasswordChar ="*"  VerticalAlignment="Center" />
+
+        <TextBlock x:Name="passwordTextBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0" Text="Password: " Grid.Row="4" Grid.Column="0" TextAlignment="Center"></TextBlock>
+
+        <TextBox Name="NewPassword" Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" ></TextBox>
+        <TextBlock x:Name="newPasswordTextBlock" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0" Text="New pass: " Grid.Row="7" Grid.Column="0" TextAlignment="Center"></TextBlock>
+        <TextBlock x:Name="dateOfBirthTextBlock"  Text="Date of Birth: " VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20,0,20,0" Grid.Row="8" Grid.Column="0" TextAlignment="Center" FontSize="15"></TextBlock>
+
+        <TextBlock x:Name="emailTextBlock" HorizontalAlignment="Right" Margin="20,0,20,0" Text="Email: " Grid.Row="10" Grid.Column="0" TextAlignment="Center" FontSize="15" VerticalAlignment="Center"></TextBlock>
+        <TextBox Name="Email" Grid.Column="1" Grid.Row="10" VerticalAlignment="Center" ></TextBox>
+
+        <Image Name="Picture" Grid.Column="1"  Grid.Row="9" Stretch="Fill" HorizontalAlignment="Center" Height="150" Width="150"></Image>
+
+        <TextBlock x:Name="pictureTextBlock"  Text="Picture: " HorizontalAlignment="Right" Margin="20,0,20,0" Grid.Row="9" Grid.Column="0" TextAlignment="Center"></TextBlock>
+
+        <Button Name="AddImage" Grid.Column="1" Grid.Row="11" VerticalAlignment="Center"  HorizontalAlignment="Stretch" Click="AddImage_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3D8EBB"/>
+                    <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                </LinearGradientBrush>
+            </Button.Background> Add Image
+        </Button>
+        <Button Name="Update" Grid.Column="1" Grid.Row="12" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="Update_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3D8EBB"/>
+                    <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                </LinearGradientBrush>
+            </Button.Background> Update
+        </Button>
+        <Button Name="Cancel" Grid.Column="1" Grid.Row="13" VerticalAlignment="Center" HorizontalAlignment="Stretch" Click="Cancel_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3D8EBB"/>
+                    <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                </LinearGradientBrush>
+            </Button.Background> Cancel
+        </Button>
+        <Button x:Name="showPasswordButton" Content="Show/Hide Password" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="5" VerticalAlignment="Center" Click="showPasswordButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3D8EBB"/>
+                    <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="changePasswordButton" Content="Change Password" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="6" VerticalAlignment="Center" Click="changePasswordButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3D8EBB"/>
+                    <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="DateTextBox" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" IsReadOnly="True" />
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+Testiramo Dvostruka:
+
+Broj elemenata: 5
+Novi broj elemenata nakon dodavanja 1 elementa: 6
+--------------------------------------
+Citava lista: 
+2 3 4 5 1 3 
+Trenutni: 1
+Novi trenutni: 3
+Stari trenutni: 1
+--------------------------------------
+2 3 4 5 1 3 
+Trenutni: 1
+Novi trenutni: 5
+Stari trenutni: 1
+--------------------------------------
+2 3 4 5 1 3 
+Trenutni: 1
+Novi trenutni: 3
+Stari trenutni: 1
+--------------------------------------
+2 3 4 5 1 3 
+Trenutni: 1
+Pocetak nakon dodavanja na pocetak: 
+1337 2 3 4 5 1 3 
+--------------------------------------
+1337 2 3 4 5 1 3 
+Trenutni: 2
+Kraj nakon dodavanja na kraj: 
+1337 2 3 4 5 1 3 1337 
+--------------------------------------
+Broj elemenata prije brisanja: 8
+Broj elemenata nakon brisanja trenutnog elementa: 7
+--------------------------------------
+Prije dodavanja: 1337 2 3 4 5 1 1337 
+Poslije dodavanja: 1 1 1 1337 2 3 4 5 1 1337 
+--------------------------------------
+Prije dodavanja: 1 1 1 1337 2 3 4 5 1 1337 
+Poslije dodavanja: 1 2 2 2 1 1 1337 2 3 4 5 1 1337 

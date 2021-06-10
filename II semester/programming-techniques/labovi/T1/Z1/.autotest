@@ -1,0 +1,144 @@
+{
+    "id": 8511,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 1, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3120,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 15 3\n10"
+            },
+            "expected": [
+                "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \\nZa poplocavanje bazena dimenzija 5x15x3m sa plocicama dimenzija 10x10cm\\npotrebno je 19500 plocica."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3121,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: iz postavke (nemoguce poplociti cijelim plocicama)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 15 3\n13\n"
+            },
+            "expected": [
+                "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \\nPoplocavanje bazena dimenzija 5x15x3m sa plocicama dimenzija 13x13cm\\nnije izvodljivo bez lomljenja plocica!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3122,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: svaka strana po 1m, svaka ploca po 1m\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 1 1\n100\n"
+            },
+            "expected": [
+                "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \\nZa poplocavanje bazena dimenzija 1x1x1m sa plocicama dimenzija 100x100cm\\npotrebno je 5 plocica."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3123,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: 7x1x14m, 4x4cm\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 1 14\n4\n"
+            },
+            "expected": [
+                "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \\nZa poplocavanje bazena dimenzija 7x1x14m sa plocicama dimenzija 4x4cm\\npotrebno je 144375 plocica."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3124,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: ne moze se poplociti cijelim plocicama\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 2 6\n3\n"
+            },
+            "expected": [
+                "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \\nPoplocavanje bazena dimenzija 3x2x6m sa plocicama dimenzija 3x3cm\\nnije izvodljivo bez lomljenja plocica!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,836 @@
+{
+    "id": 352601,
+    "name": "Tehnike programiranja (2018\/2019), Zada\u0107a 5, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3803,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT1 (javni): konstruktor s inicijalizacionom listom + funkcija Velicina\n        Tok<char> tok = Tok<char>{'T', 'P'};\n        std::cout << tok.Velicina() << std::endl; \/\/2\n        std::cout << Tok<int>{1, 2, 3, 4}.Velicina() << std::endl; \/\/4\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2\\n4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3804,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT2 (javni): konstruktor s kontejnerom + za svaki\n    int niz[]{5, 4, 3, 2, 1, 0};\n    Tok<int> tok = Tok<int>(niz); \/\/po defaultu je vektor kao tip kontejnera\n    tok.ZaSvaki([](const int &i) { std::cout << i; });\n} \/\/543210",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "543210"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3805,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT3 (javni): konstruktor s 2 parametra, funkcija Velicina + funkcija Prazan\n    int niz[]{5, 4, 3, 2, 1, 0};\n    Tok<int> tok = Tok<int>(niz + 1, niz + 3);\n    std::cout << tok.Velicina() << \" \" << tok.Prazan(); \/\/2 0\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3806,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT4 (javni): for_each\n        Tok<double>{1.1, 2.2, 3.3, 4.4}.ZaSvaki([](const double &d) { std::cout << d << \" \"; }); \/\/1.1 2.2 3.3 4.4\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.1 2.2 3.3 4.4 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3807,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT5 (javni): Obrnut\n    auto IspisiChar = [](const char &d) { std::cout << d; };\n    Tok<char>{'a', 'j', 'n', 'a', 'r', 'i', 'm', 'a', 'r', 'g', 'o', 'r', 'p', ' ', 'e', 'k', 'i', 'n', 'h', 'e', 'T'}\n            .Obrnut()\n            .ZaSvaki(IspisiChar); \/\/Tehnike programiranja\n    std::cout << std::endl;\n    Tok<int>({1, 2, 3, 4}).Obrnut().ZaSvaki([](int i) { std::cout << i; }); \/\/4321\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tehnike programiranja\\n4321"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3808,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT6 (javni): Akumuliraj\n    auto list = {1.1f, 2.2f, 3.3f, 4.4f, 5.5f};\n    std::cout << \"Suma \" << Tok<float>(list).Akumuliraj([](float a, float b) { return a + b; }) << std::endl;\n    std::cout << \"Produkt \" << std::fixed << Tok<float>(list).Akumuliraj([](float a, float b) { return a * b; });\n}\/\/Suma 16.5\\nProdukt 193.261200",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Suma 16.5\\nProdukt 193.261200"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3809,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT7 (javni): limitiraj\n    Tok<int>{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}\n            .Limitiraj(5)\n            .ZaSvaki([](int i) { std::cout << i << \" \"; }); \/\/9 8 7 6 5\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9 8 7 6 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3810,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT8 (javni): preskoci\n    Tok<int>{9, 8, 7, 6, 5, 4, 3, 2, 1, 0}\n            .Preskoci(6)\n            .ZaSvaki([](int i) { std::cout << i << \" \"; }); \/\/3 2 1 0\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 2 1 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3811,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT9 (javni): proviri i obrni\n    \/\/proviri radi isto sto i 'ZaSvaki' ali ona nastavlja tok (nije terminalni dogadjaj)\n    Tok<int> tok = Tok<int>({5, 3, 18, 9, 11});\n    tok\n            .Proviri([](int i) { std::cout << i << \", \"; }) \/\/ispisuje 5, 3, 18, 9, 11,\n            .Obrnut()\n            .Proviri([](int i) { std::cout << \"(\" << i << \") \"; }) \/\/ispisuje (11) (9) (18) (3) (5)\n            .Obrnut() \/\/ponovo obrnimo\n            .ZaSvaki([](int i) { std::cout << \"[\" << i << \"]\"; }); \/\/ispisuje [5][3][18][9][11]\n} \/\/5, 3, 18, 9, 11, (11) (9) (18) (3) (5) [5][3][18][9][11]",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5, 3, 18, 9, 11, (11) (9) (18) (3) (5) [5][3][18][9][11]"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3812,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT10 (javni): proviri, limitiraj i preskoci\n\n\n    void (*proviri)(int) = [](int i) { std::cout << i << \" \"; };\n    Tok<int>{1, 2, 3, 4, 5, 6, 7}\n            .Akcija([]() { std::cout << std::endl << \"Prije Preskoci(2): \"; }) \/\/proviri se inace koristi za \"debugiranje\", kao npr. ovdje, da vidimo sta se desava\n            .Proviri(proviri)\n            .Preskoci(2)\n            .Akcija([]() { std::cout << std::endl << \"Nakon Preskoci(2) a prije Limitiraj(3): \"; })\n            .Proviri(proviri)\n            .Limitiraj(3)\n            .Akcija([]() { std::cout << std::endl << \"Nakon Limitiraj(3) a prije Preskoci(1): \"; })\n            .Proviri(proviri)\n            .Preskoci(1)\n            .Akcija([]() { std::cout << std::endl << \"Poslije Preskoci(1): \"; }) \/\/ovdje se mogla koristiti ZaSvaki, jer je kraj toka\n            .Proviri(proviri);\n\n\n    \/*\n        Prije Preskoci(2): 1 2 3 4 5 6 7\n        Nakon Preskoci(2) a prije Limitiraj(3): 3 4 5 6 7\n        Nakon Limitiraj(3) a prije Preskoci(1): 3 4 5\n        Poslije Preskoci(1): 4 5*\/\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prije Preskoci(2): 1 2 3 4 5 6 7 \\nNakon Preskoci(2) a prije Limitiraj(3): 3 4 5 6 7 \\nNakon Limitiraj(3) a prije Preskoci(1): 3 4 5 \\nPoslije Preskoci(1): 4 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3813,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT11 (javni): mapiraj (1)\n    Tok<int>{1, 2, 3}\n            .Mapiraj<int>([](int i) { return i * 10; }) \/\/svaki elemenat pomnozi s 10\n            .ZaSvaki([](int i) { std::cout << i << \" \"; }); \/\/10 20 30\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 20 30"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3814,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT12 (javni): mapiraj (2), akcija i proviri\n\n    auto ispisi = [](int i) { std::cout << i << \" \"; };\n    Tok<int>{1, 2, 3}\n            .Akcija([]() { std::cout << \"Tok: \"; })\n            .Proviri(ispisi)\n            .Mapiraj<int>([](int i) { return i * -1; })\n            .Akcija([]() { std::cout << std::endl << \"Nakon mapiranja\/negiranja: \"; })\n            .ZaSvaki(ispisi);\n\/\/        Tok: 1 2 3\n\/\/        Nakon mapiranja\/negiranja: -1 -2 -3\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tok: 1 2 3 \\nNakon mapiranja\/negiranja: -1 -2 -3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3815,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT13 (javni): mapiraj (3) (mapiranje u novi tip), akcija i proviri\n    auto ispisi = [](int i) { std::cout << i << \" \"; };\n    std::cout << std::fixed;\n    \/\/ako ovo koristimo u Mapiraj, onda ne treba navoditi tip (npr. Mapiraj<double>)\n    \/\/a inace ga moramo navesti jer [](double d) nije std::function nego obicna funkcija (pokazivac na nju)\n    std::function<double(double)> podijeli_s_100 = [](double d) { return d \/ 100.0; };\n\n    Tok<int>{1, 2, 3}\n            .Akcija([]() { std::cout << \"Tok: \"; })\n            .Proviri(ispisi)\n            .Mapiraj(std::function<int(int)>([](int i) { return i * -1; })) \/\/ne treba Mapiraj<int> jer prosljedjujemo std::function\n            .Akcija([]() { std::cout << std::endl << \"Nakon mapiranja\/negiranja: \"; })\n            .Proviri(ispisi)\n            .Mapiraj<double>([](int i) { return 1.0 \/ i; }) \/\/ovdje treba Mapiraj<double>, lambdu prosljedjujemo\n            .Akcija([]() { std::cout << std::endl << \"Nakon invertovanja: \"; })\n            .Proviri([](double d) { std::cout << d << \" \"; }) \/\/sad lambda prima 'double, tip toka se promijenio\n            .Mapiraj(podijeli_s_100) \/\/ako kao mapper proslijedimo direktno std::function, tada ne pisemo Mapiraj<double>!\n            .Akcija([]() { std::cout << std::endl << \"Nakon dijeljenja s 100: \"; })\n            .ZaSvaki([](double d) { std::cout << d << \" \"; });\n\/\/        Tok: 1 2 3\n\/\/        Nakon mapiranja\/negiranja: -1 -2 -3\n\/\/        Nakon invertovanja: -1.000000 -0.500000 -0.333333\n\/\/        Nakon dijeljenja s 100: -0.010000 -0.005000 -0.003333\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tok: 1 2 3 \\nNakon mapiranja\/negiranja: -1 -2 -3 \\nNakon invertovanja: -1.000000 -0.500000 -0.333333 \\nNakon dijeljenja s 100: -0.010000 -0.005000 -0.003333 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3816,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT14 (javni): filtriraj\n    Tok<double>{1, 2, 3.1, -2, 1.1, -4}\n            .Filtriraj([](double d) { return d < 0; }) \/\/samo negativni brojevi idu dalje u tok\n            .ZaSvaki([](double d) { std::cout << d << \" \"; }); \/\/-2 -4\n\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-2 -4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3817,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT15 (javni): Unikatno\n    Tok<int>{1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 5, 5, 6}\n            .Unikatno()\n            .ZaSvaki([](int i) { std::cout << i << \" \"; }); \/\/1 2 3 4 5 6\n\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 4 5 6 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3818,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT16 (javni): ZadovoljavaBaremJedan, ZadovoljavaSve, ZadovoljavaNijedan\n    int niz[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 101, 102, -1};\n    Tok<int> tok(niz);\n    std::cout << std::boolalpha;\n    std::cout << \"Barem jedan trocifren porzivan: \" << tok.ZadovoljavaBaremJedan([](int i) { return i >= 100 && i <= 999; }) << std::endl;\n    std::cout << \"Barem jedan negativan: \" << tok.ZadovoljavaBaremJedan([](int i) { return i < 0; }) << std::endl;\n    std::cout << \"Svi veci od -5: \" << tok.ZadovoljavajuSvi([](int i) { return i > -5; }) << std::endl;\n    std::cout << \"Svi pozitivni: \" << tok.ZadovoljavajuSvi([](int i) { return i >= 0; }) << std::endl;\n    std::cout << \"Nijedan pozitivan: \" << tok.ZadovoljavaNijedan([](int i) { return i >= 0; }) << std::endl;\n    std::cout << \"Nijedan negativan: \" << tok.ZadovoljavaNijedan([](int i) { return i < 0; }) << std::endl;\n    std::cout << \"Nijedan veci od 1000: \" << tok.ZadovoljavaNijedan([](int i) { return i > 1000; }) << std::endl;\n\/\/        Barem jedan trocifren porzivan: true\n\/\/        Barem jedan negativan: true\n\/\/        Svi veci od -5: true\n\/\/        Svi pozitivni: false\n\/\/        Nijedan pozitivan: false\n\/\/        Nijedan negativan: false\n\/\/        Nijedan veci od 1000: true\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Barem jedan trocifren porzivan: true\\nBarem jedan negativan: true\\nSvi veci od -5: true\\nSvi pozitivni: false\\nNijedan pozitivan: false\\nNijedan negativan: false\\nNijedan veci od 1000: true\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3819,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT17 (javni): Opseg metoda sa filtriraj metodom (capturing lambda!)\n    Tok<char> tok = Tok<char>::Opseg('A', 'Z');\n    \/\/ispisi svako drugo slovo engl. alfabeta\n    int i = 0;\n    tok\n            .Filtriraj([&i](const char &) { return i++ % 2 == 0; })\n            .ZaSvaki([](const char &c) { std::cout << c; });\n    std::cout << std::endl;\n    \/\/drugi nacin za istu stvar, zadavanjem treceg parametra u ::Opseg\n    Tok<char>::Opseg('A', 'Z', 2).ZaSvaki([](const char &c) { std::cout << c; });\n}\/\/ACEGIKMOQSUWY\n \/\/ACEGIKMOQSUWY",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "ACEGIKMOQSUWY\\nACEGIKMOQSUWY"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3820,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT18 (javni): MapirajPoravnato (1)\n    \/\/flatMap ili map flatten, da \"poravnamo\" npr. 2D vektor u 1D\n    Tok<std::vector<int>> tok{\n            {1, 2, 3},\n            {4, 5},\n            {6, 7, 8, 9}\n    };\n    tok.MapirajPoravnato<int>([](const std::vector<int> &v) { return Tok<int>(v); })\n            .ZaSvaki([](int i) { std::cout << i << \" \"; });\n}\/\/1 2 3 4 5 6 7 8 9 ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 4 5 6 7 8 9 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3821,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT19 (javni): MapirajPoravnato (2)\n    \/\/poravnajmo 3D vektor u 1d\n    std::vector<std::vector<std::vector<int>>> mat3d{\n            {\n                    {1,  2,  3},\n                    {4,  5},\n                    {6,  7,  8,  9}\n            },\n            {\n                    {0}\n            },\n            {\n                    {-1, -2, -3},\n                    {-4, -5},\n                    {-6, -7, -8, -9}\n            }\n    };\n    Tok<std::vector<std::vector<int>>>(mat3d)\n            .MapirajPoravnato<std::vector<int>>([](const std::vector<std::vector<int>> &mat) { return Tok<std::vector<int>>(mat); })\n            .MapirajPoravnato<int>([](const std::vector<int> &v) { return Tok<int>(v); })\n            .ZaSvaki([](int i) { std::cout << i << \" \"; });\n}\/\/1 2 3 4 5 6 7 8 9 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 4 5 6 7 8 9 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3822,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT20 (javni): Pronadji prvi (1)\n    std::cout << Tok<float>{1, 2, 3, 4.5, 5}.PronadjiPrvi() << \" \";\n    \/\/pronadji prvi paran\n    std::cout << Tok<unsigned int>{7, 7, 1, 3, 5, 9, 12, 2, 5, 6}\n            .Filtriraj([](unsigned u) { return !(u % 2); })\n            .PronadjiPrvi() << \" \";\n}\/\/1 12",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 12"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3823,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT21 (skriveni): Pronadji prvi (2)\n    std::cout << Tok<float>{0}.PronadjiPrvi() << \" \";\n    \/\/nema prvog\n    try {\n        Tok<int>{}.PronadjiPrvi();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n\n    \/\/nema prvog nakon preskakanja\n    try {\n        Tok<int>{1, 2, 3}.Preskoci(3).PronadjiPrvi();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n\n    \/\/nema prvog nakon filtriranja\n    try {\n        Tok<int>{1, 2, 3}.Filtriraj([](int i) { return i < 1; }).PronadjiPrvi();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n}\/\/0 Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3824,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT22 (javni): Pronadji posljednji (1)\n    std::cout << Tok<float>{1, 2, 3, 4.5, 5}.PronadjiPosljednji() << \" \";\n    \/\/pronadji prvi paran\n    std::cout << Tok<unsigned int>{7, 7, 1, 3, 5, 9, 12, 2, 5, 9}\n            .Filtriraj([](unsigned u) { return !(u % 2); })\n            .PronadjiPosljednji() << \" \";\n}\/\/5 2",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3825,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT23 (skriveni): Pronadji posljednji (2)\n    std::cout << Tok<float>{0}.PronadjiPosljednji() << \" \";\n    \/\/nema posljednjeg\n    try {\n        Tok<int>{}.PronadjiPosljednji();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n\n    \/\/nema posljednjeg nakon preskakanja\n    try {\n        Tok<int>{1, 2, 3}.Preskoci(3).PronadjiPosljednji();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n\n    \/\/nema posljednjeg nakon filtriranja\n    try {\n        Tok<int>{1, 2, 3}.Filtriraj([](int i) { return i < 1; }).PronadjiPosljednji();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n}\/\/0 Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3826,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT24 (javni): Proviri\n    Tok<int>{1, 2, 3}\n            .Proviri([](int i) { std::cout << \"provirio (1): \" << i << std::endl; })\n            .Mapiraj<int>([](int i) { return i * 100; })\n            .Proviri([](int i) { std::cout << \"provirio (2): \" << i << std::endl; });\n\n}\n\/\/    provirio (1): 1\n\/\/    provirio (1): 2\n\/\/    provirio (1): 3\n\/\/    provirio (2): 100\n\/\/    provirio (2): 200\n\/\/    provirio (2): 300",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "provirio (1): 1\\nprovirio (1): 2\\nprovirio (1): 3\\nprovirio (2): 100\\nprovirio (2): 200\\nprovirio (2): 300"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3827,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT25 (javni): Minimalan (1)\n    std::cout << Tok<int>{1, 2, 0, 3}.Minimalan() << \" \";\n    std::cout << Tok<int>{13}.Minimalan() << \" \";\n    std::cout << Tok<int>{5, 5, 5, 5}.Minimalan() << \" \";\n    std::cout << Tok<short>{(short) 2, (short) 3, (short) 1}.Minimalan() << \" \";\n    std::cout << Tok<int>{3, -250000, +250000, 0, 17}.Minimalan() << \" \";\n    try {\n        Tok<int>{}.Minimalan();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n}\/\/0 13 5 1 -250000 Err: 'Tok je prazan'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 13 5 1 -250000 Err: 'Tok je prazan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3828,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT26 (javni): Maksimalan (1)\n    std::cout << Tok<int>{1, 2, 0, 3}.Maksimalan() << \" \";\n    std::cout << Tok<int>{13}.Maksimalan() << \" \";\n    std::cout << Tok<int>{5, 5, 5, 5}.Maksimalan() << \" \";\n    std::cout << Tok<short>{(short) 2, (short) 3, (short) 1}.Maksimalan() << \" \";\n    std::cout << Tok<int>{3, -250000, +250000, 0, 17}.Maksimalan() << \" \";\n    try {\n        Tok<int>{}.Maksimalan();\n        std::cout << \"Ne smije se ispisati!\";\n    }\n    catch (const std::logic_error &e) { std::cout << \"Err: '\" << e.what() << \"'\\n\"; }\n    catch (...) { std::cout << \"Ni ovo se ne smije ispisati!\"; }\n}\/\/3 13 5 3 250000 Err: 'Tok je prazan'",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 13 5 3 250000 Err: 'Tok je prazan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3829,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT29 (skriveni): obrnut ali sa custom kolekcijom, ako ovaj AT padne, onda\n    \/\/ce ih vjerovatno dosta drugih pasti jer imate pretpostavku koja nije dozvoljena postavkom\n    Tok<int, MojNizKontejner>{7, 1, 3, 3, 9}.Obrnut().ZaSvaki([](int i) { std::cout << i; }); \/\/93317\n}",
+            "global_above_main": "",
+            "global_top": "template <typename T>\nclass MojNizKontejner {\n    static constexpr const unsigned int MAX_EL = 100;\n    T arr[MAX_EL]{};\n    unsigned int len = 0;\npublic:\n    const T *begin() const { return &arr[0]; }\n\n    const T *end() const { return arr + len; }\n\n    T *insert(const T *position, T el) {\n        if (position < begin() || position > end()) throw \"Pozicija ne valja!\";\n        if (len++ >= MAX_EL) throw \"Maksimalan kapacitet dostignut, nije potrebno autotestom!\";\n        T *i;\n        for (i = arr + len; i > position; --i)\n            *i = *(i - 1);\n        *i = el;\n        return i;\n    }\n\n};",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "93317"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3830,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT30 (skriveni): Preskoci sa n >= Velicina\n    std::cout << Tok<int>{1, 2, 3}.Preskoci(3).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Preskoci(4).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Preskoci(5).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Preskoci(50000000).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Preskoci(2).Velicina() << \" \";\n} \/\/0 0 0 0 1",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 0 0 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3831,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT31 (skriveni): Limitiraj sa n >= velicina\n    std::cout << Tok<int>{1, 2, 3}.Limitiraj(3).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Limitiraj(4).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Limitiraj(5).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Limitiraj(50000000).Velicina() << \" \";\n    std::cout << Tok<int>{1, 2, 3}.Limitiraj(2).Velicina() << \" \";\n} \/\/3 3 3 3 2",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 3 3 3 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3832,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT33 (skriveni): Akumuliraj a tok prazan\n    #define Izuzetak(x) try {x std::cout << \"Ne smije se ispisati!\";} \\\r\n        catch (const std::logic_error &err) {std::cout << \"Err: '\" << err.what() << \"'\\n\";} \\\r\n        catch (...) {std::cout << \"Ni ovo se ne smije ispisati!\";}\n\n    Izuzetak({ Tok<int>{}.Akumuliraj([](int a, int b) { return a + b; }); })\n    Izuzetak({ Tok<int>{}.Akumuliraj([](int a, int b) { return a + b; }); })\n    Izuzetak({ Tok<int>{}.Akumuliraj([](int a, int b) { return a * b; }); })\n    Izuzetak({ Tok<int>{}.Akumuliraj([](int a, int b) { return a + b + 1; }); })\n    std::cout << Tok<int>{4, 5}.Akumuliraj([](int a, int b) { return a + b; });\n} \/\/Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'\\n9",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Err: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'\\nErr: 'Tok je prazan'\\n9"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3833,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT35 (skriveni): MapirajPoravnato (3)\n    \/\/#include <string>\n    \/\/napravimo kombinacije karata u 1-D toku\n    Tok<std::string>({\"Tref\", \"Pik\", \"Srce\", \"Karo\"})\n            .MapirajPoravnato<std::string>([](std::string boja) {\n                return Tok<int>::Opseg(1, 14) \/\/ovo su int-ovi od 1-14\n                        .Mapiraj<std::string>([](int i) { return std::to_string(i); }) \/\/pretvorimo 1..14 u stringove \"1\"...\"14\"\n                        .Mapiraj<std::string>([&boja](const std::string &rbr) { return boja + rbr; });\n            })\n            .ZaSvaki([](std::string i) { std::cout << i << \" \"; });\n\n}\/\/Tref1 Tref2 Tref3 Tref4 Tref5 Tref6 Tref7 Tref8 Tref9 Tref10 Tref11 Tref12 Tref13 Tref14 Pik1 Pik2 Pik3 Pik4 Pik5 Pik6 Pik7 Pik8 Pik9 Pik10 Pik11 Pik12 Pik13 Pik14 Srce1 Srce2 Srce3 Srce4 Srce5 Srce6 Srce7 Srce8 Srce9 Srce10 Srce11 Srce12 Srce13 Srce14 Karo1 Karo2 Karo3 Karo4 Karo5 Karo6 Karo7 Karo8 Karo9 Karo10 Karo11 Karo12 Karo13 Karo14",
+            "global_above_main": "",
+            "global_top": "#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tref1 Tref2 Tref3 Tref4 Tref5 Tref6 Tref7 Tref8 Tref9 Tref10 Tref11 Tref12 Tref13 Tref14 Pik1 Pik2 Pik3 Pik4 Pik5 Pik6 Pik7 Pik8 Pik9 Pik10 Pik11 Pik12 Pik13 Pik14 Srce1 Srce2 Srce3 Srce4 Srce5 Srce6 Srce7 Srce8 Srce9 Srce10 Srce11 Srce12 Srce13 Srce14 Karo1 Karo2 Karo3 Karo4 Karo5 Karo6 Karo7 Karo8 Karo9 Karo10 Karo11 Karo12 Karo13 Karo14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3834,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT36 (skriveni): MapirajPoravnato (4) + sakupi\n    \/\/#include <string>\n    \/\/#include <utility>\n    \/\/#include <list>\n    \/\/napravimo kombinacije karata kao vektor parova (vector<pair<string, vector<int>>)\n    std::list<std::pair<std::string, std::vector<int>>> lista_parova = Tok<std::string>{\"Tref\", \"Pik\", \"Srce\", \"Karo\"}\n            .Mapiraj<std::pair<std::string, std::vector<int>>>([](std::string boja) {\n                return std::make_pair(boja, std::vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14});\n            })\n            .Sakupi<std::list<std::pair<std::string, std::vector<int>>>>(\n                    [](std::list<std::pair<std::string, std::vector<int>>> &lista, std::pair<std::string, std::vector<int>> el) {\n                        lista.emplace_back(el);\n                    });\n\n    \/\/sada ovau listu mozemo ispisati klasicno, preko for-each (for (auto i : lista_parova)\n    \/\/ali koristicemo tokove i za ovu akciju\n    Tok<std::pair<std::string, std::vector<int>>>(lista_parova)\n            .ZaSvaki([](const std::pair<std::string, std::vector<int>> &par) {\n                std::cout << par.first << \": {\";\n                std::vector<int> vector = par.second;\n                for (std::size_t i = 0; i < vector.size(); ++i)\n                    if (i + 1 == vector.size())\n                        std::cout << vector.at(i);\n                    else std::cout << vector.at(i) << \", \";\n                std::cout << \"}\" << std::endl;\n            });\n}\n\/\/Tref: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\n\/\/Pik: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\n\/\/Srce: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\n\/\/Karo: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <utility>\n#include <list>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tref: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\\nPik: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\\nSrce: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\\nKaro: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3835,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT37 (skriveni): MapirajPoravnato (5) + sakupi BEZ petlji\n    \/\/#include <string>\n    \/\/#include <utility>\n    \/\/#include <list>\n    \/\/napravimo kombinacije karata kao vektor parova (vector<pair<string, vector<int>>)\n    std::list<std::pair<std::string, std::vector<int>>> lista_parova = Tok<std::string>{\"Tref\", \"Pik\", \"Srce\", \"Karo\"}\n            .Mapiraj<std::pair<std::string, std::vector<int>>>([](std::string boja) {\n                return std::make_pair(boja, std::vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14});\n            })\n            .Sakupi<std::list<std::pair<std::string, std::vector<int>>>>(\n                    [](std::list<std::pair<std::string, std::vector<int>>> &lista, std::pair<std::string, std::vector<int>> el) {\n                        lista.emplace_back(el);\n                    });\n\n\n    \/\/ovaj autotest napravi listu parova (string, vector) pomocu tokova, ispise je, sve to bez koristenja ijedne petlje!\n    Tok<std::pair<std::string, std::vector<int>>>(lista_parova)\n            .ZaSvaki([](const std::pair<std::string, std::vector<int>> &par) {\n                std::cout << par.first << \": \";\n                Tok<int>(par.second).ZaSvaki([](int i) { std::cout << i << \", \"; });\n                std::cout << std::endl;\n            });\n}\n\/\/Tref: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,\n\/\/Pik: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,\n\/\/Srce: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,\n\/\/Karo: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <utility>\n#include <list>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tref: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \\nPik: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \\nSrce: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \\nKaro: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3836,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT39 (skriveni): .Sakupi u set + par klasicnih metoda\n    std::set<int> s = Tok<double>({1, 2, 8, 3, 2, 7, 4})\n            .Mapiraj<int>([](double i) -> int { return (int) i * 10; })\n            .Filtriraj([](int i) { return i < 80; }) \/\/izosstavljamo 8 tj. 80 nakon mapiranja\n            .Unikatno()\n            .Sortirano([](int a, int b) { return a > b; })\n            .Sakupi<std::set<int>>([](std::set<int> &s, int i) { s.emplace(i); });\n    std::cout << \"set: \";\n    for (const int &i : s) std::cout << i << \" \";\n}\/\/set: 10 20 30 40 70",
+            "global_above_main": "",
+            "global_top": "#include <set>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "set: 10 20 30 40 70"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3837,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT40 (skriveni): Mapiraj sa vlastitim kontejnerima\n    Tok<char, MojNizKontejner>{'A', 'B', 'C'}\n            .Mapiraj<char>([](char c) { return c + 32; })\n            .Obrnut()\n            .ZaSvaki([](char x) { std::cout << x; });\n}\/\/cba",
+            "global_above_main": "",
+            "global_top": "template <typename T>\nclass MojNizKontejner {\n    static constexpr const unsigned int MAX_EL = 100;\n    T arr[MAX_EL]{};\n    unsigned int len = 0;\npublic:\n    const T *begin() const { return &arr[0]; }\n\n    const T *end() const { return arr + len; }\n\n    T *insert(const T *position, T el) {\n        if (position < begin() || position > end()) throw \"Pozicija ne valja!\";\n        if (len++ >= MAX_EL) throw \"Maksimalan kapacitet dostignut, nije potrebno autotestom!\";\n        T *i;\n        for (i = arr + len; i > position; --i)\n            *i = *(i - 1);\n        *i = el;\n        return i;\n    }\n\n};",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "cba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3838,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT41 (skriveni): Mapiraj sa vlastitim kontejnerima\n    Tok<char, MojVektorKontejner>{'A', 'B', 'C'}\n            .Mapiraj<char>([](char c) { return c + 32; })\n            .Obrnut()\n            .Filtriraj([](char x) { return x > 'a'; })\n            .Mapiraj<int>([](char c) { return (int) c; }) \/\/c = 99, b = 98, a = 97\n            .ZaSvaki([](int x) { std::cout << x; });\n}\/\/9998",
+            "global_above_main": "",
+            "global_top": "#include <vector>\ntemplate <typename T>\nclass MojVektorKontejner {\n    std::vector<T> elems;\npublic:\n    using const_iterator = typename std::vector<T>::const_iterator;\n\n    const_iterator begin() const { return elems.begin(); }\n\n    const_iterator end() const { return elems.end(); }\n\n    typename std::vector<T>::iterator insert(const_iterator position, T el) { return elems.insert(position, el); }\n\n};",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9998"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3839,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT42 (skriveni): Zadatak s takmicenja za osnovne\/srednje skole + intervjui za praksu\/posao\n    \/\/napisati funkciju koja primi niz rezultata za N takmicara, te broj K\n    \/\/ispise sumu rezultata prvih K takmicara\n    \/\/obavezno koristiti tokove, sve mora biti napisano u jednoj liniji (dozvoljeno je prelazenje u novi red na .)\n\n    \/\/primjer parametara za funkciju\n    int rezultati[]{5, 17, 3, 13, 10, 7, 9, 4};\n    int K = 3; \/\/suma prva 3 (17, 13, 10) = 40\n    \/\/jedna jedina linija... umjesto .Sortirano().Obrnut() moglo se koristiti .Sortirano(lambda a > b)\n    std::cout << Tok<int>(rezultati).Sortirano().Obrnut().Limitiraj(K).Akumuliraj([](int a, int b) { return a + b; });\n}\/\/40",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "40"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3840,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT43 (skriveni): .Sakupi ali u mapu (kljuc je elemenat toka, vrijednost je 1\/el)\n    \/\/#include <map>\n    int x = 0;\n    std::map<int, double> mapa = Tok<int>({1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12})\n            .Sakupi<std::map<int, double>>([&x](std::map<int, double> &m, int el) { m[x++] = 1. \/ el; });\n\n    for (std::pair<int, double> p : mapa)\n        std::cout << \"{\" << p.first << \": \" << p.second << \"}, \";\n}\/\/{0: 1.000000}, {1: 0.500000}, {2: 0.333333}, {3: 0.250000}, {4: 0.200000}, {5: 0.166667}, {6: 0.142857}, {7: 0.125000}, {8: 0.111111}, {9: 0.100000}, {10: 0.090909}, {11: 0.083333},\n",
+            "global_above_main": "",
+            "global_top": "#include <map>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{0: 1}, {1: 0.5}, {2: 0.333333}, {3: 0.25}, {4: 0.2}, {5: 0.166667}, {6: 0.142857}, {7: 0.125}, {8: 0.111111}, {9: 0.1}, {10: 0.0909091}, {11: 0.0833333},"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3841,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT44 (javni): filtriraj, ali vrati sve elemente + vlastiti kontejner\n    Tok<int, MojNizKontejner>{1, -1, 2, 5, 7, -3, 0}\n            .Filtriraj([](int i) { return i > -10; })\n            .ZaSvaki([](int i) { std::cout << i << \" \"; });\n}\/\/1 -1 2 5 7 -3 0",
+            "global_above_main": "",
+            "global_top": "template <typename T>\nclass MojNizKontejner {\n    static constexpr const unsigned int MAX_EL = 100;\n    T arr[MAX_EL]{};\n    unsigned int len = 0;\npublic:\n    const T *begin() const { return &arr[0]; }\n\n    const T *end() const { return arr + len; }\n\n    T *insert(const T *position, T el) {\n        if (position < begin() || position > end()) throw \"Pozicija ne valja!\";\n        if (len++ >= MAX_EL) throw \"Maksimalan kapacitet dostignut, nije potrebno autotestom!\";\n        T *i;\n        for (i = arr + len; i > position; --i)\n            *i = *(i - 1);\n        *i = el;\n        return i;\n    }\n\n};",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 -1 2 5 7 -3 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/custom-process-vm/SVEU16emulator/cmake-build-debug/CMakeFiles/SVEU16emulator.dir
+C:/Users/User/Desktop/custom-process-vm/SVEU16emulator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/custom-process-vm/SVEU16emulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

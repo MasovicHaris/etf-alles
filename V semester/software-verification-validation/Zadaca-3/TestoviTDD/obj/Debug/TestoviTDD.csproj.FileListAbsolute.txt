@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\TestoviTDD.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\TestoviTDD.pdb
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\iTunes.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\iTunes.pdb
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\obj\Debug\TestoviTDD.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\obj\Debug\TestoviTDD.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\obj\Debug\TestoviTDD.csproj.CopyComplete
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\obj\Debug\TestoviTDD.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviTDD\obj\Debug\TestoviTDD.pdb

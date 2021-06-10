@@ -1,0 +1,147 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3408": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite redova: Izuzetak: Broj redova mora biti pozitivan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3409": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite redova: Izuzetak: Broj redova mora biti pozitivan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3410": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite redova: 1 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3411": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite redova: 1 \n2 1 2 \n3 2 1 2 3 \n4 3 2 1 2 3 4 \n5 4 3 2 1 2 3 4 5 \n6 5 4 3 2 1 2 3 4 5 6 \n7 6 5 4 3 2 1 2 3 4 5 6 7 \n8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 \n9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 \n10 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3412": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite redova: Izuzetak: Nedovoljno memorije!\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3413": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Broj redova mora biti pozitivan",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3414": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 1 2 3 2 1 2 3 4 3 2 1 2 3 4 5 4 3 2 1 2 3 4 5 6 5 4 3 2 1 2 3 4 5 6 7 6 5 4 3 2 1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10 9 8 7 6 5 4 3 2 1 2 3 4 5 6 7 8 9 10 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3443": {
+            "status": 1,
+            "run_result": {
+                "output": "1 \n2 1 2 \n3 2 1 2 3 \n4 3 2 1 2 3 4 \n5 4 3 2 1 2 3 4 5 \nNew pozvan 2 puta,  delete [] pozvan 2 puta, a alocirano ukupno 140 bajta i to redom: 40 100 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3444": {
+            "status": 1,
+            "run_result": {
+                "output": "New pozvan 1 puta,  delete [] pozvan 1 puta, a alocirano ukupno 40 bajta i to redom: 40 Izuzetak: Nedovoljno memorije!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1492067576
+}

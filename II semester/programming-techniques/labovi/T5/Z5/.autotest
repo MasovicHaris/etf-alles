@@ -1,0 +1,172 @@
+{
+    "id": 8555,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3352,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira primjer iz postavke \n\n_main(); ",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "70\n"
+            },
+            "expected": [
+                "Unesite broj podintervala: Za taj broj podintervala priblizne vrijednosti integrala iznose:\\n- Za funkciju sin x na intervalu (0,pi): 1.99966\\n- Za funkciju x^3 na intervalu (0,10): 2500.51\\n- Za funkciju 1\/x na intervalu (1,2): 0.69316"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3353,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testiramo funkciju TrapeznoPravilo\n\/\/slucaj male razlike izmedju granica intervala (a i b)\n\nconst double PI(4 * std::atan(1));\ndouble vrijednost1(TrapeznoPravilo(std::sin, 0, PI\/50, 100));\ndouble vrijednost2(TrapeznoPravilo([](double x) { return x * x * x; }, 0, 0.5, 100));\ndouble vrijednost3(TrapeznoPravilo([](double x) { return 1 \/ x; }, 1, 1.1, 100));\ndouble vrijednost4(TrapeznoPravilo(std::cos, 0, PI\/50, 100));\ndouble vrijednost5(TrapeznoPravilo([](double x) { return exp(x); }, 1, 1.1, 100));\ndouble vrijednost6(TrapeznoPravilo ([](double x) {return std::sin (x)*std::cos (x*x) * std::sin (x*x*x);},0,PI\/50,100));\nstd::cout<<\"- Za funkciju sin x na intervalu (0,pi\/50): \"<<std::fixed<<std::setprecision(5)<<vrijednost1<<std::endl;\nstd::cout<<\"- Za funkciju x^3 na intervalu (0,0.5): \"<<std::fixed<<std::setprecision(2)<<vrijednost2<<std::endl;\nstd::cout<<\"- Za funkciju 1\/x na intervalu (1,1.1): \"<<std::fixed<<std::setprecision(5)<<vrijednost3<<std::endl;\nstd::cout<<\"- Za funkciju cos x na intervalu (0,pi\/50): \"<<std::fixed<<std::setprecision(5)<<vrijednost4<<std::endl;\nstd::cout<<\"- Za funkciju exp(x) na intervalu (1,1.1): \"<<std::fixed<<std::setprecision(5)<<vrijednost5<<std::endl;\nstd::cout<<\"- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (0,pi\/50): \"<<std::fixed<<std::setprecision(5)<<vrijednost6<<std::endl;",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "- Za funkciju sin x na intervalu (0,pi\/50): 0.00197\\n- Za funkciju x^3 na intervalu (0,0.5): 0.02\\n- Za funkciju 1\/x na intervalu (1,1.1): 0.09531\\n- Za funkciju cos x na intervalu (0,pi\/50): 0.06279\\n- Za funkciju exp(x) na intervalu (1,1.1): 0.28588\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (0,pi\/50): 0.00000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3354,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testiramo slucaj jednog podintervala\n\n_main();\n",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1"
+            },
+            "expected": [
+                "Unesite broj podintervala: Za taj broj podintervala priblizne vrijednosti integrala iznose:\\n- Za funkciju sin x na intervalu (0,pi): 0.00000\\n- Za funkciju x^3 na intervalu (0,10): 5000.00\\n- Za funkciju 1\/x na intervalu (1,2): 0.75000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3355,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testiramo slucaj dva podintervala\n\n_main();",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2"
+            },
+            "expected": [
+                "Unesite broj podintervala: Za taj broj podintervala priblizne vrijednosti integrala iznose:\\n- Za funkciju sin x na intervalu (0,pi): 1.57080\\n- Za funkciju x^3 na intervalu (0,10): 3125.00\\n- Za funkciju 1\/x na intervalu (1,2): 0.70833"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3356,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testiramo funkciju TrapeznoPravilo\n\/\/slucaj velike razlike izmedju granica intervala (a i b)\n\nconst double PI(4 * std::atan(1));\ndouble vrijednost1(TrapeznoPravilo(std::sin, -PI, PI, 100));\ndouble vrijednost2(TrapeznoPravilo([](double x) { return x * x * x; }, 0, 100, 100));\ndouble vrijednost3(TrapeznoPravilo([](double x) { return 1 \/ x; }, 1, 100, 100));\ndouble vrijednost4(TrapeznoPravilo(std::cos, -PI, PI, 100));\ndouble vrijednost5(TrapeznoPravilo([](double x) { return exp(x); }, 1, 10, 100));\ndouble vrijednost6(TrapeznoPravilo ([](double x) {return std::sin (x)*std::cos (x*x) * std::sin (x*x*x);},-PI,PI,100));\nstd::cout<<\"- Za funkciju sin x na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost1<<std::endl;\nstd::cout<<\"- Za funkciju x^3 na intervalu (0,100): \"<<std::fixed<<std::setprecision(2)<<vrijednost2<<std::endl;\nstd::cout<<\"- Za funkciju 1\/x na intervalu (1,100): \"<<std::fixed<<std::setprecision(5)<<vrijednost3<<std::endl;\nstd::cout<<\"- Za funkciju cos x na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost4<<std::endl;\nstd::cout<<\"- Za funkciju exp(x) na intervalu (1,10): \"<<std::fixed<<std::setprecision(5)<<vrijednost5<<std::endl;\nstd::cout<<\"- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost6<<std::endl;",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "- Za funkciju sin x na intervalu (-pi,pi): -0.00000\\n- Za funkciju x^3 na intervalu (0,100): 25002500.00\\n- Za funkciju 1\/x na intervalu (1,100): 4.68093\\n- Za funkciju cos x na intervalu (-pi,pi): 0.00000\\n- Za funkciju exp(x) na intervalu (1,10): 22038.61154\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): 0.55896",
+                "- Za funkciju sin x na intervalu (-pi,pi): 0.00000\\n- Za funkciju x^3 na intervalu (0,100): 25002500.00\\n- Za funkciju 1\/x na intervalu (1,100): 4.68093\\n- Za funkciju cos x na intervalu (-pi,pi): -0.00000\\n- Za funkciju exp(x) na intervalu (1,10): 22038.61154\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): 0.55896",
+                "- Za funkciju sin x na intervalu (-pi,pi): 0.00000\\n- Za funkciju x^3 na intervalu (0,100): 25002500.00\\n- Za funkciju 1\/x na intervalu (1,100): 4.68093\\n- Za funkciju cos x na intervalu (-pi,pi): 0.00000\\n- Za funkciju exp(x) na intervalu (1,10): 22038.61154\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): 0.55896",
+                "- Za funkciju sin x na intervalu (-pi,pi): -0.00000\\n- Za funkciju x^3 na intervalu (0,100): 25002500.00\\n- Za funkciju 1\/x na intervalu (1,100): 4.68093\\n- Za funkciju cos x na intervalu (-pi,pi): -0.00000\\n- Za funkciju exp(x) na intervalu (1,10): 22038.61154\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): 0.55896"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3357,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testiramo funkciju TrapeznoPravilo\n\/\/mali broj podintervala, a sirok interval\n\nconst double PI(4 * std::atan(1));\ndouble vrijednost1(TrapeznoPravilo(std::sin, -PI, PI, 2));\ndouble vrijednost2(TrapeznoPravilo([](double x) { return x * x * x; }, 0, 100, 2));\ndouble vrijednost3(TrapeznoPravilo([](double x) { return 1 \/ x; }, 1, 100, 2));\ndouble vrijednost4(TrapeznoPravilo(std::cos, -PI, PI, 2));\ndouble vrijednost5(TrapeznoPravilo([](double x) { return exp(x); }, 1, 10, 2));\ndouble vrijednost6(TrapeznoPravilo ([](double x) {return std::sin (x)*std::cos (x*x) * std::sin (x*x*x);},-PI,PI,2));\nstd::cout<<\"- Za funkciju sin x na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost1<<std::endl;\nstd::cout<<\"- Za funkciju x^3 na intervalu (0,100): \"<<std::fixed<<std::setprecision(2)<<vrijednost2<<std::endl;\nstd::cout<<\"- Za funkciju 1\/x na intervalu (1,100): \"<<std::fixed<<std::setprecision(5)<<vrijednost3<<std::endl;\nstd::cout<<\"- Za funkciju cos x na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost4<<std::endl;\nstd::cout<<\"- Za funkciju exp(x) na intervalu (1,10): \"<<std::fixed<<std::setprecision(5)<<vrijednost5<<std::endl;\nstd::cout<<\"- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): \"<<std::fixed<<std::setprecision(5)<<vrijednost6<<std::endl;",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "- Za funkciju sin x na intervalu (-pi,pi): 0.00000\\n- Za funkciju x^3 na intervalu (0,100): 31250000.00\\n- Za funkciju 1\/x na intervalu (1,100): 25.97770\\n- Za funkciju cos x na intervalu (-pi,pi): 0.00000\\n- Za funkciju exp(x) na intervalu (1,10): 50666.77787\\n- Za funkciju sin(x)*cos(x*x)*sin(x*x*x) na intervalu (-pi,pi): 0.00000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

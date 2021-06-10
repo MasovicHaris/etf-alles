@@ -1,0 +1,94 @@
+{
+    "id": 890,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 5, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 891,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3 4 5 6 7 8 9 10"
+            },
+            "expected": [
+                "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 5.50.\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 892,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 1 1 1 1 1 1 1 1 1"
+            },
+            "expected": [
+                "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 1.00.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 893,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10 -9 -8 -7 -6 -5 -4 -3 -2 -1"
+            },
+            "expected": [
+                "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je -5.50."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

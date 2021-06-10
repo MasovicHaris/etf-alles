@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "uticov",
+        "os": "Linux 4.8.0-34-generic x86_64\nUbuntu 16.10\n",
+        "compiler_version": "g++ (Ubuntu 6.2.0-5ubuntu12) 6.2.0 20161005",
+        "debugger_version": "GNU gdb (Ubuntu 7.11.90.20161005-0ubuntu1) 7.11.90.20161005-git",
+        "profiler_version": "valgrind-3.12.0.SVN"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3203": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj redova: \n  1\n  1  1\n  1  2  1\n  1  3  3  1\n  1  4  6  4  1\n  1  5 10 10  5  1\n  1  6 15 20 15  6  1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3204": {
+            "status": 1,
+            "run_result": {
+                "output": "0\nBroj redova ne smije biti negativan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3205": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj redova: \n   1\n   1   1\n   1   2   1\n   1   3   3   1\n   1   4   6   4   1\n   1   5  10  10   5   1\n   1   6  15  20  15   6   1\n   1   7  21  35  35  21   7   1\n   1   8  28  56  70  56  28   8   1\n   1   9  36  84 126 126  84  36   9   1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3206": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj redova: \n 1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1490257161
+}

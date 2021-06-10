@@ -1,0 +1,684 @@
+
+    \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    \usepackage{mathtools}
+    \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{2}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Diskretna Matematika}
+
+      \vspace*{2cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.75cm}
+      {\Large Br. indexa: \brIndexa} \\
+      \vspace*{0.75cm}
+      {\Large Demonstrator: Rijad Muminović} \\
+      \vspace*{0.75cm}
+      {\Large Grupa: RI - 4} \\
+
+%%      \vspace*{3cm}
+%      \renewcommand{\arraystretch}{1.75}
+ %     \begin{tabular}{|c|c|}
+  %  	\hline Zadatak & Bodovi \\
+   % 	\hline 1 &  \\
+%    	\hline 2 &  \\
+ %   	\hline 3 &  \\
+  %  	\hline 4 &  \\
+  %  	\hline 5 &  \\
+   % 	\hline 6 &  \\
+    %	\hline
+%     \end{tabular} 
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo, Novembar 2017g.}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 1 [0.25 poena] \\
+		
+Odredite na koliko je različitih načina moguće razmjestiti 9 studenata i 4
+profesora oko okruglog stola ako je poznato da se profesori međusobno ne
+podnose i ne mogu sjediti jedan do drugog. \\
+
+* S obzirom da studente redamo oko okruglog stola, radi se o kružnim
+permutacijama, a svaka permutacija daje drugi raspored. Kao što znamo,
+broj kružnih permutacija za n elemenata je (n-1)! . Dakle studente možemo
+rasporediti na $P_{9}$ = (9 - 1)! = 8! = 40320 načina. Preostalo nam je
+još da razmjestimo 4 profesora, što je druga etapa ovog problema. Kako svi
+sjede za okruglim stolom, a nikoja dva profesora ne mogu sjediti jedan do
+drugog, njih ćemo razmjestiti tako da sjede između studenata. Prvog od
+četiri profesora možemo staviti na jedno od 9 mogućih mjesta (između dva
+studenta), drugog profesora možemo staviti na jedno od 8 preostalih mjesta
+(jedno smo već zauzeli), trećeg na jedno od 7 preostalih mjesta (dva su već
+zauzeta), četvrtog na jedno od 6 preostalih mjesta (tri su već zauzeta).
+Dakle profesore možemo razmjestiti na 9 ${\cdot}$ 8 ${\cdot}$ 7 ${\cdot}$ 6 = 3024 načina. 
+Konačno na osnovu multiplikativnog
+principa, ukupan broj načina na koji možemo izvršiti razmještanje je
+\begin{equation*}
+    P_{9} \cdot 3024 = 40320 \cdot 3024 = 121927680.
+\end{equation*}
+        
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 2 [0.25 poena] \\
+		
+Potrebno je formirati osmočlanu ekipu za međunarodno softverskohardversko
+takmičenje. Uvjeti su da ekipa mora imati barem četiri studenta sa
+smjera RI, dok su studenti drugih smjerova poželjni (zbog većeg hardverskog
+znanja) ali ne i obavezni. Za takmičenje se prijavilo 9 studenata smjera RI i 6
+studenata smjera AiE (dok studenti drugih smjerova nisu bili zainteresirani).
+Odredite na koliko načina je moguće odabrati traženu ekipu. Koliko će iznositi
+broj mogućih ekipa ukoliko se postavi dodatno ograničenje da ekipa mora
+imati i barem jednog studenta smjera AiE? \\
+		
+* Da bi formirali ekipu, potrebno je izabrati k studenata sa smjera RI i
+8 - k studenata sa smjera AiE, pri čemu je k ${\geq}$ 4 po uvjetu zadatka. Kako
+mora vrijediti k ${\geq}$ 0 i 8 - k ${\geq}$ 0, dobijamo da je k ${\in}$ $\{$ 4, 5, 6, 7, 8$\}$. 
+Pošto se svi studenti razlikuju, za neko k studente sa smjera RI možemo izabrati na C(9, k) načina, 
+dok 8 - k studenata smjera AiE možemo izabrati na C(6, 8 - k) načina. 
+Kako su oba izbora neovisna jedan od drugog, za broj načina za izbor ekipe koristiti 
+ćemo multiplikativni princip za neko k i on iznosi		
+\begin{equation*}
+    C(9, k) \cdot C(6, 8 - k)
+\end{equation*}
+Na kraju korištenjem aditivnog principa rješenje problema dobijamo sumi-
+ranjem za sve vrijednosti k iz skupa, pa je konačna formula		
+\begin{equation*}
+   \sum_{k=4}^8 ~ C(9, k) \cdot C(6, 8 - k)
+\end{equation*}		
+
+\newpage
+odnosno
+\begin{equation*}
+   C(9, 4) \cdot C(6, 4) + C(9, 5) \cdot C(6, 3) + C(9, 6) \cdot C(6, 2) + C(9, 7) \cdot C(6, 1)
+   + C(9, 8) \cdot C(6, 0) =
+\end{equation*}	
+\begin{equation*}
+   126 \cdot 15 + 126 \cdot 20 + 84 \cdot 15 + 36 \cdot 6 + C(9, 8) \cdot C(6, 0) = 5886 + C(9, 8) \cdot C(6, 0)
+\end{equation*}	
+\begin{equation*}
+   5886 + 9 = 5895
+\end{equation*}
+Vidimo da traženu ekipu možemo odabrati na 5895 načina. Dalje se postavlja uslov koliko će iznositi broj mogućih ekipa ukoliko se postavi dodatno ograničenje da ekipa mora imati i barem jednog studenta smjera AiE.
+U već izračunatoj vrijednosti sume k = 8 se ne smije pojavljivati, samim tim ukupan broj mogućih kombinacija da se izabere ekipa sa barem jednim studentom AiE je 5886.
+
+		\item Rješenje zadatka \\
+		\\ 
+		Zadatak 3 [0.25 poena] \\ 
+		
+Odredite na koliko načina možemo raspodijeliti 6 jabuka, 12 smokava i 8
+naranči među osmero djece, pri čemu se pretpostavlja se da se primjerci iste
+voćke ne mogu međusobno razlikovati (npr. sve jabuke su iste). \\
+		
+* Ovu raspodjelu možemo izvršiti tako da prvo raspodijelimo jabuke, pa
+smokve pa onda naranče, a konačan broj načina raspodjele dobijamo multiplikativnim 
+principom jer su sve ove raspodjele neovisne jedna od druge. S
+obzirom da se voćke međusobno ne razlikuju, a problem raspodjele svake od
+njih je raspodjeljivanje n jednakih elemenata među k ljudi možemo zaključiti
+da se radi o kombinacijama sa ponavljanjem
+\begin{equation*}
+   \overline{C}(k, n) = C(k, n+k-1) =  {{n+k-1}\choose{k}}
+\end{equation*}
+Izračunajmo sada:
+\begin{equation*}
+   \overline{C}_{~8}^{~6} \cdot \overline{C}_{~8}^{~12} \cdot \overline{C}_{~8}^{~8} = 
+\end{equation*}
+\begin{equation*}
+   = C_{~13}^{~6} \cdot C_{~19}^{~12} \cdot C_{~15}^{~8} =
+\end{equation*}
+\begin{equation*}
+   = {{13}\choose{6}} \cdot {{19}\choose{12}} \cdot {{15}\choose{8}} = 1716 \cdot 50388 \cdot 6435 = 556407474480
+\end{equation*}
+
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 4 [0.25 poena] \\
+		
+Na stolu se nalazi određena količina papirića, pri čemu se na svakom od
+papirića nalazi po jedno slovo. Na 2 papirića se nalazi slovo A, na 2 papirića se
+nalazi slovo M, na 3 papirića slovo Y i na 2 papirića slovo V. Odredite koliko se
+različitih troslovnih riječi može napisati slažući uzete papiriće jedan do drugog
+(nebitno je imaju li te riječi smisla ili ne).
+
+        \newpage
+* Imamo 2 slova A, 2 slova M, 3 slova Y i 2 slova V. Pošto pravimo troslovne
+riječi, tražimo koeficjent uz $t^3$, od tih slova znači da nam je poredak odnosno redoslijed uzimanja tih
+slova bitan, što nas dovodi do zaključka da se radi o permutacijama sa ponavljanjem 
+klase 3. Za rješavanje ovog zadatka koristiti ćemo funkcije izvodnice.
+\begin{equation*}
+   \Psi_{n;m_1,m_2,...,m_n} = \prod_{i=1}^{n} ~ \sum_{j=0}^{m_i} \frac{t^j}{j!}
+\end{equation*}
+Razvijajući ovaj polinom za n = 4, $m_1$ = 2, $m_2$ = 2, $m_3$ = 3, $m_4$ = 2
+tražimo član uz $t^3$. Ako ovaj koefcijent označimo sa ${\lambda_3}$ konačno rješenje ovog
+zadatka će biti 3! ${\cdot}$ ${\lambda_3}$ 
+\begin{equation*}
+   \Psi_{4;2,2,4,2} = (1+t+\frac{t^2}{2})^{3} \cdot (1+t+ \frac{t^2}{2}+ \frac{t^3}{6})
+\end{equation*}
+odnosno član uz $t^3$:
+
+\begin{equation*}
+   \Psi_{4;2,2,4,2} = 1 + 4 \cdot t + 8 \cdot t^2 + 61 \cdot \frac{t^3}{6} + ...
+\end{equation*}
+Vidimo da je ${\lambda_3}$ = {$\frac{61}{6}$}. Pomnožimo taj broj sa 3! , i imamo naš broj varijacija sa ponavljanjem koji je 61.
+        
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 5 [0.25 poena] \\
+		
+Odredite koliko se različitih paketa koji sadrže 6 voćki može napraviti ukoliko
+nam je raspolaganju 6 breskvi, 3 jabuke, 2 naranče, 3 kruške i 1 smokva (pri
+čemu se pretpostavlja da ne pravimo razliku između primjeraka iste voćke). \\
+
+* Ovaj problem je veoma sličan prethodno riješenom problemu u zadatku
+4, ali ovdje nije bitan redoslijed kojim stavljamo pojedine voćke u pakete,
+tako da ovdje tražimo kombinacije sa ponavljanjem klase 6. Ponovo ćemo
+koristiti funkcije izvodnice za računanje.
+\begin{equation*}
+   \varphi_{n;m_1,m_2,...,m_n} = \prod_{i=1}^{n} ~ \sum_{j=0}^{m_i} t^j
+\end{equation*}	
+Kada razvijemo ovaj polinom, konačno rješenje će biti koefijent uz član
+$t^6$.
+\begin{equation*}
+   \varphi_{5;6,3,2,3,1} = (1+t+t^2+t^3+t^4+t^5+t^6) \cdot (1+t+t^2+t^3)^2 \cdot (1+t+t^2) \cdot (1+t) =
+\end{equation*}	
+\begin{equation*}
+    = ... + 82 \cdot t^6 + 67 \cdot t^5 + 48 \cdot t^4 + 29 \cdot t^3 + 14 \cdot t^2 + 5 \cdot t + 1
+\end{equation*}	
+Koefcijent uz $t^6$ je 82, pa je konačno rješenje ovog zadatka 82.
+		\newpage
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 6 [0.25 poena] \\
+		
+Odredite na koliko načina se može rasporediti 33 identičnih kuglica u 6
+različitih kutija, ali tako da u svakoj kutiji bude najviše 7 kuglica. \\
+
+* 33 puta biramo jednu od 6 različitih kutija, pri čemu istu kutiju možemo
+izabrati maksimalno 7 puta. Dakle računamo kombinacije sa ponavljanjem
+klase 33 skupa od 6 elemenata, u ovom slučaju kutija. Za računanje ćemo
+koristiti funkcije izvodnice.
+\begin{equation*}
+   \varphi_{n;m_1,m_2,...,m_n} = \prod_{i=1}^{6} ~ \sum_{j=0}^{7} t^j
+\end{equation*}	
+Kada razvijemo ovaj polinom, konačno rješenje će biti koefcijent uz član
+$t^{33}$. 
+\begin{equation*}
+   \varphi_{6;n_1,n_2,n_3,n_4,n_5,n_6} = (1+t+t^2+t^3+t^4+t^5+t^6+t^7)^6 =
+\end{equation*}	
+\begin{equation*}
+    = ... + 1966 \cdot t^{33} + 2877 \cdot t^{32} + 4032 \cdot t^{31} + ... + 56 \cdot t^3 + 21 \cdot t^2 + 6 \cdot t + 1
+\end{equation*}	
+Rješenje ovog zadatka je koefcijent uz $t^{33}$, a to je 1966. \\
+
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 7 [0.25 poena] \\
+		
+Odredite na koliko načina se 14 različitih predmeta upakovati u 6 identičnih
+vreća (koje nemaju nikakav identitet po kojem bi se mogle razlikovati), pri
+čemu se dopušta i da neke od vreća ostanu prazne. \\
+
+* Rješenje ovog zadatka je suma Stirlingovih brojeva druge vrste $S^k_{14}$, pri
+čemu k može uzimati vrijednosti od 0 do 6. Stirlingovi brojevi 2 vrste se računaju formulom
+\begin{equation*}
+S^k_n = S^{k-1}_{n-1} + k \cdot S^k_{n-1}
+\end{equation*}
+pri početnim vrijednostima
+\begin{equation*}
+S^k_n = 0 \quad \forall ~ n < k
+\end{equation*}
+\begin{equation*}
+S^0_n = 0 \quad \forall n > 0 
+\end{equation*}
+\begin{equation*}
+S^0_0 = 1 
+\end{equation*}
+Stirlingove brojeve 2 vrste najlakše možemo izračunati pomoću tabele, što ćemo i uraditi. \\
+\newpage
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline n k &  0&  1&  2&  3&  4& 5 & 6\\ 
+\hline 0 &  1&  0&  0&  0&  0& 0&0\\
+\hline 1 &  0&  1&  0&  0&  0& 0&0\\
+\hline 2 &  0&  1& 1&  0&  0& 0&0\\ 
+\hline 3 &  0&  1&  3&  1& 0 & 0&0\\
+\hline 4 &  0&  1&  7&  6&  1& 0&0\\
+\hline 5 &  0&  1&  15&  25&  10& 1&0\\
+\hline 6 &  0&  1&  31&  90&  65& 15&1\\
+\hline 7 &  0&  1&  63&  301&  350& 140&21\\
+\hline 8 &  0&  1&  127&  966&  1701& 1050&266\\
+\hline 9 &  0&  1&  255&  3025&  7770& 6951&2646\\
+\hline 10&  0&  1&  511&  9330&  34105& 42525&22827\\
+\hline 11&  0&  1&  1023&  28501&  145750& 246730&179487\\
+\hline 12&  0&  1&  2047&  86526&  611501& 1379400&1323652\\
+\hline 13&  0&  1&  4095&  261625&  2532530& 7508501&9321312\\
+\hline 14&  0&  1&  8191&  788970&  10391745& 40075035&63436373\\
+\hline
+\end{tabular} \\
+\\
+Kao što smo rekli, rješenje će biti suma svih $S^k_{14}$, tj. u ovom slučaju suma
+svih brojeva iz zadnjeg reda ove tabele, pa imamo
+\begin{equation*}
+   \sum_{k=0}^6 S^k_{14} = 0 + 1 + 8191 + 788970 +10391745 + 40075035 + 63436373 = 114700315
+\end{equation*}	
+
+		\item Rješenje zadatka \\
+		Zadatak 8 [0.25 poena] \\
+		
+Odredite na koliko se načina može 14 kamenčića razvrstati u 3 gomilica. Pri
+tome se i kamenčići i gomilice smatraju identičnim (odnosno ni kamenčići ni
+gomilice nemaju nikakav identitet po kojem bi se mogli razlikovati). \\
+
+* Pošto poredak kod kamenčića i kod gomilica nije bitan, a pri tome gomilice su skupovi
+koji ne smiju biti prazni, rješenje ovog zadatka se svodi na računanje broja particija broja 14
+sa tačno 3 sabirka odnosno $p^{3}_{14}$. Možemo primjetiti da je naš broj sabiraka mali, tačnije 3, 
+pa možemo iskoristiti formulu Honsbergera i Schwennicke-a (Predavanje 5, strana 5), odnosno:
+\begin{equation*}
+p^3_{14} = \floor[\Bigg]{\frac{14^2}{12} + \frac{1}{2}} = 16.
+\end{equation*}
+što ujedno predstavlja i rješenje našeg zadatka.
+		
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 9 [0.25 poena] \\
+		
+Odredite na koliko načina se broj 13 može rastaviti na sabirke koji su prirodni
+brojevi, pri čemu njihov poredak nije bitan, ali pod dodatnim uvjetom da se
+sabirak 3 smije pojaviti najviše 3 puta, dok se sabirak 1 smije pojaviti samo
+neparan broj puta. \\ 
+
+		\newpage
+
+* Moramo odrediti broj particija broja 13, ali pošto imamo dodatne uvjete
+za odeđene sabirke, najpogodnije je koristiti funkcije izvodnice.
+\begin{equation*}
+   \varphi_{n;m_1,m_2,...,m_n} = \prod_{i=1}^{k} ~ \sum_{j=0}^{\infty} t^{i \cdot j}
+\end{equation*}
+Razvijmo ovaj polinom po postavci zadatka:
+\begin{equation*}
+   \varphi = (t+t^3+t^5+t^7+t^9+t^{11}+t^{13}) \cdot (1+t^2+t^4+t^6+t^8+t^{10}+t^{12}) \cdot (1+t^3+t^6+t^9) \cdot (1+t^4+t^8+t^{12}) \cdot (1+t^5+t^{10})
+\end{equation*}
+\begin{equation*}
+   \cdot (1+t^6+t^{12}) \cdot (1+t^7) \cdot (1+t^8) \cdot (1+t^9) \cdot (1+t^{10}) \cdot (1+t^{11}) \cdot (1+t^{12}) \cdot (1+t^{13})
+\end{equation*}
+Kad izmnožimo sve imamo:
+\begin{equation*}
+   \varphi = ... + 25 \cdot t^{14} + 47 \cdot t^{13} + 29 \cdot t^{12} + ... + t^4 + 2 \cdot t^3 + t
+\end{equation*}
+Kad smo razvili polinom, ostaje nam samo da očitamo koefcijent uz $t^{13}$,
+a to je ovdje 47 , što znači da broj 13 možemo rastaviti na prirodne sabirke
+na 47 načina ako se sabirak 3 smije pojaviti najviše 3 puta, dok se sabirak 1 smije pojaviti samo
+neparan broj puta. \\
+
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 10 [0.25 poena] \\
+		
+U nekoj kutiji nalazi se 85 kompakt diskova (CD-ova), od kojih je 18 diskova
+nečitljivo. Ukoliko nasumice izaberemo 7 diskova iz kutije, nađite
+vjerovatnoću da će \\
+a. svi izabrani diskovi biti čitljivi; \\
+b. tačno jedan izabrani disk biti nečitljiv; \\
+c. barem jedan izabrani disk biti nečitljiv; \\
+d. tačno dva izabrana diska biti nečitljiva; \\
+e. barem dva izabrana diska biti nečitljiva; \\
+f. najviše dva izabrana diska biti nečitljiva; \\
+g. najviše dva izabrana diska biti čitljiva; \\
+h. svi izabrani diskovi biti nečitljivi. \\
+
+        * \\
+        a)
+        \begin{equation*}
+        \frac{C^7_{67}}{C^7_{85}} = \frac{869648208}{4935847320} = 0.176 = 17.6\%
+        \end{equation*}
+        b)
+        \begin{equation*}
+        \frac{C^1_{18} \cdot C^6_{67}}{C^7_{85}} = \frac{18 \cdot 99795696}{4935847320} = 0.363 = 36.3\%
+        \end{equation*}
+		\newpage
+		c)
+        \begin{equation*}
+        1 - \frac{C^7_{67}}{C^7_{85}} = 1 - \frac{869648208}{4935847320} = 1 -  0.176 = 0.824 = 82.4\%
+        \end{equation*}
+		d)
+        \begin{equation*}
+        \frac{C^2_{18} \cdot C^5_{67}}{C^7_{85}} = \frac{153 \cdot 9657648}{4935847320} = 0.299 = 29.9\%
+        \end{equation*}
+		e)
+        \begin{equation*}
+        1 - \frac{C^7_{67}+ C^1_{18} \cdot C^6_{67}}{C^7_{85}} = 1 - \frac{869648208 + 18 \cdot 99795696}{4935847320} = 0.459 = 45.9\%
+        \end{equation*}
+        f)
+        \begin{equation*}
+        \frac{C^7_{67}+ C^1_{18} \cdot C^6_{67} + C^2_{18} \cdot C^5_{67}}{C^7_{85}} = \frac{869648208 + 18 \cdot 99795696 + 153 \cdot 9657648}{4935847320} = 0.839 = 83.9\%
+        \end{equation*}
+        g)
+        \begin{equation*}
+        \frac{C^7_{18} + C^6_{18} \cdot C^1_{67} + C^5_{18} \cdot C^2_{67} }{C^7_{85}} = \frac{31824 + 18564 \cdot 67 + 8568 \cdot 2211}{4935847320} = 0.0040 = 0.4\%
+        \end{equation*}
+        h)
+        \begin{equation*}
+        \frac{C^7_{18}}{C^7_{85}} = \frac{31824}{4935847320} = 6.447 \cdot 10^{-6} = 6.447 \cdot 10^{-4}~\%
+        \end{equation*}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 11 [0.25 poena] \\
+		\\
+Neka je dat pravičan novčić, tj. novčić kod kojeg je jednaka vjerovatnoća
+pojave glave ili pisma prilikom bacanja. Ako bacimo takav novčić 60 puta,
+očekujemo da će otprilike 30 puta pasti glava i isto toliko puta pismo.
+Međutim, to naravno ne znači da će sigurno biti tačno 30 pojava glave ili pisma
+(štaviše, vjerovatnoća da se tačno to desi je prilično mala). Odredite: \\
+a. Vjerovatnoću da će se zaista pojaviti 30 puta glava i 30 puta pismo; \\
+b. Vjerovatnoću da će se glava pojaviti više od 26 a manje od 34 puta; \\
+c. Vjerovatnoću da će se glava pojaviti više od 23 a manje od 37 puta. \\
+\\
+* \\
+\\
+a) Sa P(A) ćemo označiti vjerovatnoću da je pismo, pošto je novčić
+potpuno pravičan, 1 - P(A) je vjerovatnoća da je glava. Vjerovatnoća
+za a) se računa kao:
+\begin{equation*}
+        C^{30}_{60} \cdot (\frac{1}{2})^{30} \cdot (\frac{1}{2})^{30} = 118264581564861424 \cdot (\frac{1}{2})^{60}
+        =0.1026 = 10.26~\%
+\end{equation*}	
+\newpage
+b) Ova vjerovatnoća je jednaka sumi vjerovatnoća da će se glava pojaviti
+27,28,29,30,31,32,33 puta. Pa imamo:
+\begin{equation*}
+        C^{27}_{60} \cdot (\frac{1}{2})^{27} \cdot (\frac{1}{2})^{33} +
+        C^{28}_{60} \cdot (\frac{1}{2})^{28} \cdot (\frac{1}{2})^{32} +
+        C^{29}_{60} \cdot (\frac{1}{2})^{29} \cdot (\frac{1}{2})^{31} +
+\end{equation*}	
+\begin{equation*}
+        C^{30}_{60} \cdot (\frac{1}{2})^{30} \cdot (\frac{1}{2})^{30} +
+        C^{31}_{60} \cdot (\frac{1}{2})^{31} \cdot (\frac{1}{2})^{29} +
+        C^{32}_{60} \cdot (\frac{1}{2})^{32} \cdot (\frac{1}{2})^{28} +
+        C^{33}_{60} \cdot (\frac{1}{2})^{33} \cdot (\frac{1}{2})^{27} 
+\end{equation*}	
+odnosno:
+\begin{equation*}
+        2 \cdot C^{27}_{60} \cdot (\frac{1}{2})^{27} \cdot (\frac{1}{2})^{33} +
+        2 \cdot C^{28}_{60} \cdot (\frac{1}{2})^{28} \cdot (\frac{1}{2})^{32} +
+        2 \cdot C^{29}_{60} \cdot (\frac{1}{2})^{29} \cdot (\frac{1}{2})^{31} +
+        C^{30}_{60} \cdot (\frac{1}{2})^{30} \cdot (\frac{1}{2})^{30}
+\end{equation*}	
+odnosno:
+\begin{equation*}
+        0.1526 + 0.1799 + 0.1985 + 0.1026 = 0.6336 = 63.36~\%
+\end{equation*}	
+c) Ova vjerovatnoća je jednaka sumi vjerovatnoća da će se glava pojaviti 24,25,26,34,35,36 puta, odnoso ove vrijednosti ćemo dodati na već sračunate pod b. Pa imamo:
+\begin{equation*}
+        2 \cdot C^{24}_{60} \cdot (\frac{1}{2})^{24} \cdot (\frac{1}{2})^{36} +
+        2 \cdot C^{25}_{60} \cdot (\frac{1}{2})^{25} \cdot (\frac{1}{2})^{35} +
+        2 \cdot C^{26}_{60} \cdot (\frac{1}{2})^{26} \cdot (\frac{1}{2})^{34} + b)
+\end{equation*}	
+odnosno:
+\begin{equation*}
+         0.0625 + 0.0905 + 0.1212 + 0.6336 = 0.9078 = 90.78~\%
+\end{equation*}	
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 12 [0.25 poena] \\
+		\\
+Odredite vjerovatnoću da će u skupini od 6 nasumično izvučenih karata iz
+dobro izmješanog špila od 52 karte dvije karte biti sa slikom i tri karte crvene
+boje (herc ili karo). \\
+ \\
+ * Tražene mogućnosti nisu disjunktne. Napravimo klase koje su disjunktne. \\
+ Ukupan broj karata, n = 52 \\
+$A_1$ - karte sa slikom crvene boje, $n_1$ = 6 \\
+$A_2$ - karte sa slikom koje nisu crvene, $n_2$ = 6 \\
+$A_3$ - karte crvene boje koje nisu sa slikom, $n_3$ = 20 \\
+$A_4$ - ostale karte, $n_4$ = 20 \\
+\\
+Iz $A_1$ uzmemo $m_1$, iz $A_2$ $m_2$, iz $A_3$ $m_3$, iz $A_4$ $m_4$.
+Sada imamo 6 izvlačenja koje moraju zadovoljiti sljedeći sistem:
+\begin{equation*}
+    m_1 + m_2 + m_3 + m_4 = 6 \quad
+    m_1 + m_2 = 2 \quad 
+    m_1 + m_3 = 3
+\end{equation*}
+\begin{equation*}
+    m_1 = 0 \quad m_2 = 2 \quad m_3 = 3 \quad m_4 = 1
+\end{equation*}
+\begin{equation*}
+    m_1 = 1 \quad m_2 = 1 \quad m_3 = 2 \quad m_4 = 2
+\end{equation*}
+\begin{equation*}
+    m_1 = 2 \quad m_2 = 0 \quad m_3 = 1 \quad m_4 = 3
+\end{equation*}
+
+Ove mogućnosti se međusobno isključuju, tako da ukupnu vjerovatnoću dobijamo sabiranjem
+vjerovatnoća za svaku od ove mogućnosti odnosno:
+\newpage
+\begin{equation*}
+    \frac{C^0_{6} \cdot C^2_{6} \cdot C^3_{20} \cdot C^1_{20} +
+          C^1_{6} \cdot C^1_{6} \cdot C^2_{20} \cdot C^2_{20} +
+          C^2_{6} \cdot C^0_{6} \cdot C^1_{20} \cdot C^3_{20} 
+    }{C^6_{52}} = 
+\end{equation*}
+
+\begin{equation*}
+    = \frac{1 \cdot 15 \cdot 1140 \cdot 20 + 6 \cdot 6 \cdot 190 \cdot 190 + 15 \cdot 1 \cdot 20 \cdot 1140}{20358520} = \frac{1983600}{20358520} = 0.09743 = 9.743 \%
+\end{equation*}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 13 [0.25 poena] \\
+		\\
+Podmornica gađa neprijateljski brod sa četiri torpeda, čije su vjerovatnoće
+pogađanja 50 \%, 75 \%, 25 \% i 30 \% respektivno. Ako brod pogodi jedan
+torpedo, on će biti potopljen sa vjerovatnoćom 35 \%, u slučaju pogotka sa dva
+torpeda on će biti potopljen sa vjerovatnoćom 65 \%, dok u slučaju da ga
+pogode tri ili četiri torpeda, on se potapa sigurno. Nađite vjerovatnoću da će
+brod biti potopljen.
+\\
+\\
+* Vjerovatnoća da će brod biti potopljen jednaka je zbiru vjerovatnoća: \\
+\\
+1. da ga je pogodio jedan od torpeda $t_i$ pomnožena sa vjerovatnoćom
+potapanja ukoliko je pogođen jednim torpedom, \\
+2. da su ga pogodila dva od torpeda $t_i$ pomnožena sa vjerovatnoćom potapanja ukoliko je pogođen sa dva torpeda,\\
+3. da su ga pogodila tri od torpeda $t_i$ pomnožena sa vjerovatnoćom potapanja ukoliko je pogođen sa tri torpeda,\\
+4. da su ga pogodila sva četiri torpeda $t_i$ pomnožena sa vjerovatnoćom potapanja ukoliko je pogođen sa četiri torpeda, odnosno: \\
+\begin{equation*}
+    P = (0.5 \cdot 0.25 \cdot 0.75 \cdot 0.7 +
+         0.5 \cdot 0.75 \cdot 0.75 \cdot 0.7 +
+         0.5 \cdot 0.25 \cdot 0.25 \cdot 0.7 +
+         0.5 \cdot 0.25 \cdot 0.75 \cdot 0.3) \cdot 0.35
+\end{equation*}
+\begin{equation*}
+     + ~(0.5 \cdot 0.25 \cdot 0.25 \cdot 0.3 +
+         0.5 \cdot 0.75 \cdot 0.75 \cdot 0.3 +
+         0.5 \cdot 0.75 \cdot 0.25 \cdot 0.7 +~
+\end{equation*}
+\begin{equation*}
+         0.5 \cdot 0.25 \cdot 0.75 \cdot 0.3 +
+         0.5 \cdot 0.25 \cdot 0.25 \cdot 0.7 +
+         0.5 \cdot 0.75 \cdot 0.75 \cdot 0.7) \cdot 0.65
+\end{equation*}
+\begin{equation*}
+     + ~(0.5 \cdot 0.25 \cdot 0.75 \cdot 0.3 +
+         0.5 \cdot 0.25 \cdot 0.25 \cdot 0.7 +
+         0.5 \cdot 0.75 \cdot 0.75 \cdot 0.7 +
+         0.5 \cdot 0.25 \cdot 0.75 \cdot 0.7) \cdot 1
+\end{equation*}
+\begin{equation*}
+     + ~(0.5 \cdot 0.75 \cdot 0.25 \cdot 0.3) \cdot 1 =
+\end{equation*}
+\begin{equation*}
+     = 0.109375 + 0.2640625 + 0.3125 + 0.028125 = 0.7140625 = 71.40 ~\%
+\end{equation*}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 14 [0.25 poena] \\
+		
+Za četiri trkača vjerovatnoće da će uspjeti da istrče maraton do kraja
+procijenjene su na 55 \%, 75 \%, 50 \% i 40 \% respektivno. Nakon što je maraton
+zaista održan, pokazalo se da je samo jedan od njih uspio istrčati maraton do
+kraja. Nađite vjerovatnoću da je to bio drugi trkač.
+		\newpage
+		* Imamo redom vjerovatnoće: \\
+		P($T_1$) = 0.55 \\
+		P($T_2$) = 0.75 \\
+		P($T_3$) = 0.50 \\
+		P($T_4$) = 0.40 \\
+		Vjerovatnoća da je jedan trkač istrčao je: \\
+		\begin{equation*}
+		    P(T) = 0.55 \cdot 0.25 \cdot 0.50 \cdot 0.6 + 0.45 \cdot 0.75 \cdot 0.50 \cdot 0.6 
+		          + 0.45 \cdot 0.25 \cdot 0.50 \cdot 0.6 + 0.45 \cdot 0.25 \cdot 0.50 \cdot 0.4 =
+		\end{equation*}
+		\begin{equation*}
+		        = 0.19875
+		\end{equation*}
+		Traži se uslovna vjerovatnoća P($T_2$/T):
+		\begin{equation*}
+		    P(T_2/T) = \frac{P(T_2) \cdot P(T/T_2)}{P(T)} = \frac{P(T_2) \cdot P(\overline{T_1}) 
+		    \cdot  P(\overline{T_3})  \cdot P(\overline{T_4})}{P(T)} = 
+		\end{equation*}
+		\begin{equation*}
+		        = \frac{0.75 \cdot 0.45 \cdot 0.5 \cdot 0.6}{0.19875} = 0.5094 = 50.94 ~\%
+		\end{equation*}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 15 [0.25 poena] \\
+		\\
+Igrač igra nagradnu igru u kojoj se iz kutije nasumično izvlače kuglice, koje
+mogu biti zlatne, srebrene i brončane. Ukupno ima 6 zlatnih, 15 srebrenih i 84
+brončanih kuglica. Za osvajanje nagrade potrebno je izvući ili jednu zlatnu
+kuglicu (neovisno od toga kakve su ostale), ili dvije srebrene kuglice, ili tri
+brončane kuglice. Odredite vjerovatnoću osvajanja nagrade ako igrač ima
+pravo izvući \\
+a. jednu kuglicu; \\
+b. dvije kuglice; \\
+c. tri kuglice. \\
+\\
+		* \\
+		a) Ako izvlači jednu kuglicu, jedino može dobiti ako izvuče zlatnu kuglicu,
+        znači vjerovatnoću dobijamo kao količnik povoljnih i mogućih slučajeva.
+		\begin{equation*}
+		    P = \frac{6}{6+15+84} = \frac{6}{105} = 0.0571 = 5.71 ~\%
+		\end{equation*}
+		b) Ako izvlačimo dvije kuglice, može biti dobitak i sa zlatnim i sa srebrenim kuglicama, pa se vjerovatnoća najlakše računa korištenjem suprotne vjerovatnoće. Slučaji u kojima izvlačimo dvije kuglice, a ne dobijamo su kad izvućemo jednu srebrenu i jednu brozanu ili dvije bronzane, pa se vjerovatnoća računa kao:
+		\begin{equation*}
+		    P = 1 - \frac{C^2_{84} + C^1_{15} \cdot C^1_{84}}{C^2_{105}}= 1 - \frac{3486 + 1260}{5460} = 0.13 = 13\%
+		\end{equation*}
+		\newpage
+		c)  Ako izvlačimo tri kuglice, ponovo je najlakše vjerovatnoću izračunati
+            pomožu suprotne vjerovatnoće, jer je u ovom slučaju jedini scenarij u
+            kome igrač ne dobija slučaj kada izvuće dvije bronzane i jednu srebrenu
+            kuglicu, pa vjerovatnoću računamo kao:
+		\begin{equation*}
+		    P = 1 - \frac{C^2_{84} \cdot C^1_{15}}{C^3_{105}}= 1 - \frac{3486 \cdot 15}{187460} = 0.721 = 72.1\%
+		\end{equation*}
+		\item Rješenje zadatka \\ 
+		\\
+		Zadatak 16 [0.25 poena] \\
+		\\
+Računar A je generirao neki binarni podatak (odnosno podatak koji može biti
+samo 0 ili 1. Taj podatak je proslijeđen putem lokalne mreže računaru B, koja
+je zatim proslijeđena računaru C, i najzad računaru D (sve putem lokalne
+mreže). Međutim, uslijed smetnji u prenosu, vjerovatnoća da podatak poslan
+sa jednog računara na drugi putem mreže stigne neizmijenjen iznosi svega
+49 \%. Greška može uzrokovati da se 0 pretvori u 1 ili 1 pretvori u 0. Ukoliko je
+poznato da je na krajnje odredište (računar D) stigao ispravan podatak, kolika
+je vjerovatnoća da je na računar B stigao ispravan podatak? \\
+\\
+* \\
+\\
+Ako je $A_i$, i ${\in}$ $\{1, 2, 3, 4\}$, označimo kao događaj da neizmijenjen podatak stigne sa prethodnog na sljedeći računar, ta vjerovatnoća može se izraziti kao:
+\begin{equation*}
+    p(A_1) = p(A_2) = p(A_3) = p(A_4) = 0.49
+\end{equation*}
+S druge strane, događaj $B_i$, i ${\in}$ $\{1, 2, 3, 4\}$, je događaj da je računar prenio tačnu informaciju. 
+Događaji $A_i$ ${\cdot}$ $B_i$ su zavisni te je njihova zavisnost data relacijama:
+\begin{equation*}
+    B_1 = A_1
+\end{equation*}
+\begin{equation*}
+    B_2 = A_2 \cdot B_1 + \overline{A_2} \cdot \overline{B_1}
+\end{equation*}
+\begin{equation*}
+    B_3 = A_3 \cdot B_2 + \overline{A_3} \cdot \overline{B_2}
+\end{equation*}
+\begin{equation*}
+    B_4 = A_4 \cdot B_3 + \overline{A_4} \cdot \overline{B_3}
+\end{equation*}
+Pošto ponašanja računara nisu međusobno ovisna, te korištenjem poznate relacije za računanje
+suprotne vjerovatnoće dobijamo:
+\begin{equation*}
+    P(B_1) = P(A_1) = 0.49
+\end{equation*}
+\begin{equation*}
+    P(B_2) = P(A_2) \cdot p(B_1) + P(\overline{A_2}) \cdot P(\overline{B_1}) = 0.49 \cdot 0.49 + 0.51 \cdot 0.51 = 0.5002 
+\end{equation*}
+\begin{equation*}
+    P(B_3) = P(A_3) \cdot P(B_2) + P(\overline{A_3}) \cdot P(\overline{B_2}) = 0.49 \cdot 0.5002 + 0.51 \cdot 0.4998 = 0.499996
+\end{equation*}
+\begin{equation*}
+    P(B_4) = P(A_4) \cdot P(B_3) + P(\overline{A_4}) \cdot P(\overline{B_3}) = 0.49 \cdot 0.499996 + 0.51 \cdot 0.500004 = 0.50000008
+\end{equation*}
+\newpage
+Tražena vjerovatnoća je zapravo $p(B_1/B_4)$ se može izračunati koristeći Bayesovu teoremu, što
+daje:
+\begin{equation*}
+    P(B_1/B_4) = \frac{P(B_1) \cdot P(B_4/B_1)}{P(B_4)}
+\end{equation*}
+U setu podataka nedostaje još vjerovatnoća $P(B_4/B_1)$ koju su dostupni svi potrebni podaci:
+\begin{equation*}
+    P(B_2/B_1) = P(A_2) = 0.49
+\end{equation*}
+\begin{equation*}
+    P(B_3/B_1) = P(A_3) \cdot P(B_2/B_1) + P(\overline{A_3}) \cdot P(\overline{B_2}/B_1) = 0.49 \cdot 0.49 + 0.51 \cdot 0.51 = 0.5002 
+\end{equation*}
+\begin{equation*}
+    P(B_4/B_1) = P(A_4) \cdot P(B_3/B_1) + P(\overline{A_4}) \cdot P(\overline{B_3}/B_1) = 0.49 \cdot 0.5002 +
+    0.51 \cdot 0.4998 = 0.499996
+\end{equation*}
+Samim tim tražena vjerovatnoća je:
+\begin{equation*}
+    P(B_1/B_4) = \frac{P(B_1) \cdot P(B_4/B_1)}{P(B_4)} = \frac{0.49 \cdot 0.499996}{0.50000008} \approx
+     49 ~\%
+\end{equation*}
+	\end{enumerate}
+	
+	
+	
+    \end{document}

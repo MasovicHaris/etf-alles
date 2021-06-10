@@ -1,0 +1,151 @@
+﻿<Page
+    x:Class="Vicinor.Forme.AdminUpdate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.Forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" MinHeight="700" MinWidth="650">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <Grid Background="White" Margin="10, 0, 0, 10">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="usernameTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="usernameTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="newUsernameTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="newUsernameTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="passwordTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="passwordTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="confirmButton.(Control.FontSize)" Value="16"/>
+                        <Setter Target="confirmPasswordTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="confirmPasswordTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="cancelButton.(Control.FontSize)" Value="16"/>
+                        <Setter Target="newPasswordTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="newPasswordTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="changePasswordHyperlinkButton.(Control.FontSize)" Value="16"/>
+                        <Setter Target="changeUsernameHyperlinkButton.(Control.FontSize)" Value="16"/>
+
+                        <Setter Target="usernameTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="newUsernameTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="passwordTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="confirmPasswordTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="newPasswordTextBox.(FrameworkElement.Width)" Value="100"/>
+
+
+
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+                        <Setter Target="usernameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="usernameTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="newUsernameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="newUsernameTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="passwordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="passwordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="confirmButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="confirmPasswordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="confirmPasswordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="cancelButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="newPasswordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="newPasswordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="changePasswordHyperlinkButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="changeUsernameHyperlinkButton.(Control.FontSize)" Value="18"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="usernameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="usernameTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="newUsernameTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="newUsernameTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="passwordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="passwordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="confirmButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="confirmPasswordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="confirmPasswordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="cancelButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="newPasswordTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="newPasswordTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="changePasswordHyperlinkButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="changeUsernameHyperlinkButton.(Control.FontSize)" Value="18"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="usernameTextBlock" HorizontalAlignment="Right"  Text="Username:" VerticalAlignment="Center"/>
+                <TextBox x:Name="usernameTextBox"  Background="White"  Margin ="20,20,20,20" Text="" Grid.Column="1" IsReadOnly="True"/>
+
+                <HyperlinkButton Name="changeUsernameHyperlinkButton" Content="Change Username"  Margin ="20,20,20,20"  Grid.Column="1" Grid.Row="1" Click="changeUsernameHyperlinkButton_Click" Height="36" Width="146" />
+
+                <TextBlock x:Name="newUsernameTextBlock"  Text="New Username:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
+                <TextBox x:Name="newUsernameTextBox"  Background="White" Text=""  Grid.Row="2" Grid.Column="1"  Margin ="20,20,20,20" />
+
+                <TextBox x:Name="passwordTextBox"  Background="White" Grid.Column="1" Grid.Row="3" IsReadOnly="True"  Margin ="20,20,20,20" />
+                <TextBlock x:Name="passwordTextBlock"  HorizontalAlignment="Right" VerticalAlignment="Center" Text="Password:"  Grid.Row="3"/>
+
+                <HyperlinkButton x:Name="changePasswordHyperlinkButton"  Margin ="20,20,20,20" Content="Change Password" Grid.Column="1"  Grid.Row="4" Click="changePasswordHyperlinkButton_Click" Height="36" Width="140"/>
+
+                <TextBlock x:Name="newPasswordTextBlock" Text="New Password:"  HorizontalAlignment="Right" VerticalAlignment="Center"  Grid.Row="5" />
+                <TextBox x:Name="newPasswordTextBox"  Background="White" Text="" Grid.Column="1"  Grid.Row="5"  Margin ="20,20,20,20" />
+
+                <TextBlock x:Name="confirmPasswordTextBlock" Text="Confirm Password:" HorizontalAlignment="Right"  VerticalAlignment="Center" Grid.Row="6" />
+                <TextBox x:Name="confirmPasswordTextBox" Background="White"   Text="" Grid.Column="1" Grid.Row="6"  Margin ="20,20,20,20" />
+
+            <Button x:Name="confirmButton" Content="Confirm Changes"   Margin ="20,20,20,20"  Grid.Column="1" Grid.Row="8" Click="confirmButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3D8EBB"/>
+                        <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="cancelButton" Content="Cancel"  Grid.Row="8"  Margin ="20,20,20,20"  Grid.Column="1"  VerticalAlignment="Top" HorizontalAlignment="Right" Click="cancelButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF3D8EBB"/>
+                        <GradientStop Color="#FF67D6F7" Offset="0.867"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+                <TextBox x:Name="errorTextBox" Grid.Column="1"   Margin ="20,20,20,20"  TextWrapping="Wrap"  Background="Gray" Grid.Row="7" Text="" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Visible"   />
+            </Grid>
+        </ScrollViewer>
+
+</Page>

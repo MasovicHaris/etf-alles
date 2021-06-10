@@ -1,0 +1,44 @@
+{
+    "id": 8593,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 9, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3569,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje nove metode DajBrojIspisa.\n\nVektor3d v1, v2;\nv1.Postavi(3, 4, 2); v2.Postavi(2, 0, 5);\nv1.Ispisi();\nv1.Ispisi();\nv1.Ispisi();\nstd::cout << std::endl;\nv2.Ispisi();\nv2.Ispisi();\nstd::cout << std::endl;\nstd::cout << \"Objekat v1 je ispisan \" << v1.DajBrojIspisa()\n << \"puta, a objekat v2 \" << v2.DajBrojIspisa() << \" puta\" << std::endl;\n\n\n\/\/Da li su metode Ispisi i DajBrojIspisa const.\nconst Vektor3d v3(v1);\nv3.Ispisi(); \nv3.DajBrojIspisa();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{3,4,2}{3,4,2}{3,4,2}\\n{2,0,5}{2,0,5}\\nObjekat v1 je ispisan 3puta, a objekat v2 2 puta\\n{3,4,2}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

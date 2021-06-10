@@ -1,0 +1,270 @@
+{
+    "id": 8512,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 1, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3125,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: iz postavke zadatka\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 5 8\n"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 7, 5 i 8 iznosi 20.\\nNjegova povrsina iznosi 17.3205.\\nNjegov najmanji ugao ima 38 stepeni, 12 minuta i 47 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3126,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: double ulaz\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7.7 8.4 5.1\n"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 7.7, 8.4 i 5.1 iznosi 21.2.\\nNjegova povrsina iznosi 19.2861.\\nNjegov najmanji ugao ima 36 stepeni, 36 minuta i 33 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3127,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: iz postavke - nije trougao\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 15 7\n"
+            },
+            "expected": [
+                "Unesite tri broja: Ne postoji trougao cije su duzine stranica 5, 15 i 7!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3128,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: nije trougao, dva puta se unosi!\n_main(); \/\/7 5 -8\n_main(); \/\/7 8 0",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 5 -8\n7 8 0\n\n"
+            },
+            "expected": [
+                "Unesite tri broja: Ne postoji trougao cije su duzine stranica 7, 5 i -8!Unesite tri broja: Ne postoji trougao cije su duzine stranica 7, 8 i 0!\\n",
+                "Unesite tri broja: Ne postoji trougao cije su duzine stranica 7, 5 i -8!\\nUnesite tri broja: Ne postoji trougao cije su duzine stranica 7, 8 i 0!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3129,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: test preciznosti\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0.5 0.7 0.3"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 0.5, 0.7 i 0.3 iznosi 1.5.\\nNjegova povrsina iznosi 0.0649519.\\nNjegov najmanji ugao ima 21 stepeni, 47 minuta i 12 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3130,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: jednakostranicni trougao\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 7 7\n"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 7, 7 i 7 iznosi 21.\\nNjegova povrsina iznosi 21.2176.\\nNjegov najmanji ugao ima 60 stepeni, 0 minuta i 0 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3131,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: pravougli\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 4 5"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 3, 4 i 5 iznosi 12.\\nNjegova povrsina iznosi 6.\\nNjegov najmanji ugao ima 36 stepeni, 52 minuta i 11 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3132,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: pravougli, ostale stranice jednake duzine (90 + 45 + 45 stepeni)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 7 9.89949493661"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 7, 7 i 9.89949 iznosi 23.8995.\\nNjegova povrsina iznosi 24.5.\\nNjegov najmanji ugao ima 45 stepeni, 0 minuta i 0 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3138,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: da li je ispravno provjereno da li tri broja\n\/\/     mogu biti stranice trougla?\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3"
+            },
+            "expected": [
+                "Unesite tri broja: Ne postoji trougao cije su duzine stranica 1, 2 i 3!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3139,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: malo ve\u0107i projevi, ugao oko 15 stepeni\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "123 321 222\n"
+            },
+            "expected": [
+                "Unesite tri broja: Obim trougla sa duzinama stranica 123, 321 i 222 iznosi 666.\\nNjegova povrsina iznosi 9651.26.\\nNjegov najmanji ugao ima 15 stepeni, 42 minuta i 57 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,369 @@
+{
+    "id": 8561,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 6, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3380,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1: Slanje negativnog n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10"
+            },
+            "expected": [
+                "Koliko zelite elemenata: Izuzetak: Broj elemenata mora biti pozitivan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3383,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT2 : testiranje slanja nule\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Koliko zelite elemenata: Izuzetak: Broj elemenata mora biti pozitivan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3384,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 : testiranje prekoracenja opsega\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "100000000"
+            },
+            "expected": [
+                "Koliko zelite elemenata: Izuzetak: Prekoracen dozvoljeni opseg"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3385,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT4 : primjer koji testira funkciju GenerirajStepeneDvojke na integer\n\n    int *p(GenerirajStepeneDvojke<int>(10));\n    for(int i = 0; i < 10; i++) std::cout << p[i] << \" \";\n    delete [] p;\n   ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 4 8 16 32 64 128 256 512"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3386,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ testiranje funkcije na double tip podataka\n double *p(GenerirajStepeneDvojke<double>(12));\n for(int i = 0; i < 12; i++) std::cout << p[i] << \" \";\n delete [] p;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 4 8 16 32 64 128 256 512 1024 2048"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3387,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/testiranje funkcije na tip unsigned int\nunsigned int *p(GenerirajStepeneDvojke<unsigned int>(8));\n    for(int i = 0; i < 8; i++) std::cout << p[i] << \" \";\n    delete [] p;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 4 8 16 32 64 128"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3388,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT7 testiranje grani\u010dne vrijednost long double koja izaziva overflow\ntry {\n    long double *p(GenerirajStepeneDvojke<long double>(16385));\n    for(int i = 0; i < 11; i++) std::cout << p[i] << \" \";\n    delete [] p;\n}\n  catch(std::overflow_error e) {\n    std::cout << \"Izuzetak: \" << e.what();\n  }\n  catch(...) {\n    std::cout << \"Pogre\u0161an izuzetak!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "100000000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Prekoracen dozvoljeni opseg"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3389,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT8 testiranje granicne vrijednosti long double koja ne izaziva overflow\n\n    long double *p(GenerirajStepeneDvojke<long double>(16384));\n    for(int i = 0; i < 20; i++) std::cout << p[i] << \" \";\n    delete [] p;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3390,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT9 testiranje rubnog slu\u010daja integera koji izaziva overflow\ntry {\n int  *p(GenerirajStepeneDvojke<int>(32));\n for(int i = 0; i < 32; i++) std::cout << p[i] << \" \";\n delete [] p;\n}\n  catch(std::overflow_error e) {\n    std::cout << \"Izuzetak: \" << e.what();\n  }\n  catch(...) {\n    std::cout << \"Pogre\u0161an izuzetak!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Prekoracen dozvoljeni opseg"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3391,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 10 testiranje grani\u010dne vrijednosti floata koja ne izaziva overflow\n float  *p(GenerirajStepeneDvojke<float>(128));\n for(int i = 0; i < 20; i++) std::cout << p[i] << \" \";\n delete [] p;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3392,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT11 testiranje da li se stepeni ispisuju egzaktno, a ne aproksimativno\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "30"
+            },
+            "expected": [
+                "Koliko zelite elemenata: 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288 1048576 2097152 4194304 8388608 16777216 33554432 67108864 134217728 268435456 536870912"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3393,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT12 testiranje grani\u010dne vrijednosti double koja izaziva overflow \ntry {\n double  *p(GenerirajStepeneDvojke<double>(1025));\n for(int i = 0; i < 25; i++) std::cout << p[i] << \" \";\n delete [] p;\n }\n  catch(std::overflow_error e) {\n    std::cout << \"Izuzetak: \" << e.what();\n  }\n  catch(...) {\n   std::cout << \"Pogre\u0161an izuzetak!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Prekoracen dozvoljeni opseg"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3415,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT13 direktno testiranje funkcije na poslano n jednako nuli\n  try {\n  int  *p(GenerirajStepeneDvojke<int>(0));\n  }\n  catch(std::domain_error e) {\n    std::cout << \"Izuzetak: \" << e.what();\n  }\n  catch(...) {\n    std::cout << \"Pogre\u0161an izuzetak!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Broj elemenata mora biti pozitivan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3416,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT13 direktno testiranje funkcije na poslan negativan n\n  try {\n  int  *p(GenerirajStepeneDvojke<int>(-5));\n  }\n  catch(std::domain_error e) {\n    std::cout << \"Izuzetak: \" << e.what();\n  }\n  catch(...) {\n    std::cout << \"Pogre\u0161an izuzetak!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Broj elemenata mora biti pozitivan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

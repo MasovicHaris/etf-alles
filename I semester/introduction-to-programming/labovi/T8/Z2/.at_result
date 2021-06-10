@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:27: warning: ISO C90 forbids mixed declarations and code\nmain.c:30: warning: format ‘%f’ expects type ‘float *’, but argument 2 has type ‘int *’\nmain.c:32: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nmain.c:2: note: expected ‘float *’ but argument is of type ‘int *’\nmain.c:32: warning: ISO C90 forbids mixed declarations and code\nmain.c:34: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nmain.c:13: note: expected ‘float *’ but argument is of type ‘int *’\nmain.c:34: warning: ISO C90 forbids mixed declarations and code\nAt top level:\ncc1: warning: unrecognized command line option \"-Wno-unused-result\""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "746": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite temperature: Maksimalna temperatura: 20.0\nProsjecna temperatura: 14.0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_746.c: In function ‘_main’:\nbs_test_746.c:34: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nbs_test_746.c:4: note: expected ‘float *’ but argument is of type ‘int *’\nbs_test_746.c:36: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nbs_test_746.c:15: note: expected ‘float *’ but argument is of type ‘int *’"
+            }
+        },
+        "747": {
+            "status": 1,
+            "run_result": {
+                "output": "10.70",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_747.c: In function ‘_main’:\nbs_test_747.c:34: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nbs_test_747.c:4: note: expected ‘float *’ but argument is of type ‘int *’\nbs_test_747.c:36: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nbs_test_747.c:15: note: expected ‘float *’ but argument is of type ‘int *’"
+            }
+        },
+        "748": {
+            "status": 1,
+            "run_result": {
+                "output": "4.46",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_748.c: In function ‘_main’:\nbs_test_748.c:34: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nbs_test_748.c:4: note: expected ‘float *’ but argument is of type ‘int *’\nbs_test_748.c:36: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nbs_test_748.c:15: note: expected ‘float *’ but argument is of type ‘int *’"
+            }
+        },
+        "749": {
+            "status": 1,
+            "run_result": {
+                "output": "0.00",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_749.c: In function ‘_main’:\nbs_test_749.c:34: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nbs_test_749.c:4: note: expected ‘float *’ but argument is of type ‘int *’\nbs_test_749.c:36: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nbs_test_749.c:15: note: expected ‘float *’ but argument is of type ‘int *’"
+            }
+        },
+        "1584": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite temperature: Maksimalna temperatura: 11.1\nProsjecna temperatura: 10.0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1584.c: In function ‘_main’:\nbs_test_1584.c:34: warning: passing argument 1 of ‘maxtemp’ from incompatible pointer type\nbs_test_1584.c:4: note: expected ‘float *’ but argument is of type ‘int *’\nbs_test_1584.c:36: warning: passing argument 1 of ‘prtemp’ from incompatible pointer type\nbs_test_1584.c:15: note: expected ‘float *’ but argument is of type ‘int *’"
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1481270921
+}

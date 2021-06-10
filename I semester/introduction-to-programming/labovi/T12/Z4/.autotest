@@ -1,0 +1,194 @@
+{
+    "id": 7202,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 12, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1030,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Inzinjerska matematika I\n"
+            },
+            "expected": [
+                "Unesite predmet: Prosjecna ocjena: 6.50\\nProlaznost: 50%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1031,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Inzinjerska fizika I\n"
+            },
+            "expected": [
+                "Unesite predmet: Prosjecna ocjena: 6.25\\nProlaznost: 75%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1032,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Linearna algebra i geometrija\n"
+            },
+            "expected": [
+                "Unesite predmet: Prosjecna ocjena: 8.33\\nProlaznost: 100%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1033,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Osnove racunarstva\n"
+            },
+            "expected": [
+                "Unesite predmet: Prosjecna ocjena: 8.67\\nProlaznost: 100%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1034,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Osnove elektrotehnike\n"
+            },
+            "expected": [
+                "Unesite predmet: Prosjecna ocjena: 9.50\\nProlaznost: 100%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1035,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Osnove matematike\nOsnove racunarstva\n"
+            },
+            "expected": [
+                "Unesite predmet: Nepostojeci predmet!\\nUnesite predmet: Prosjecna ocjena: 8.67\\nProlaznost: 100%\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1036,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    int indexi[] = {12345, 12345, 12233, 13579, 13579, 13337, 13337, 13337, 13337, 13337, 12345, 13579, 17773, 17773};\n    int predmeti[] = {3, 4, 4, 2, 3, 1, 2, 3, 4, 5, 5, 2, 1, 2};\n    int ocjene[] = {10, 9, 10, 8, 8, 5, 6, 7, 7, 9, 10, 6, 8, 5};\n    int n = sizeof(indexi) \/ sizeof(int), i;\n\n    izlaz = fopen(\"ispiti.txt\", \"w\");\n\n    for (i = 0; i < n; i++)\n    {\n        fprintf(izlaz, \"%d %d %d\\n\", indexi[i], predmeti[i], ocjene[i]);\n    }\n\n    fclose(izlaz);\n\n    izlaz = fopen(\"predmeti.txt\", \"w\");\n\n    fprintf(izlaz, \"1 Inzinjerska matematika I\\n\");\n    fprintf(izlaz, \"2 Inzinjerska fizika I\\n\");\n    fprintf(izlaz, \"3 Linearna algebra i geometrija\\n\");\n    fprintf(izlaz, \"4 Osnove racunarstva\\n\");\n    fprintf(izlaz, \"5 Osnove elektrotehnike\\n\");\n    fprintf(izlaz, \"6 Tehnike programiranja\\n\");\n\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Tehnike programiranja\n"
+            },
+            "expected": [
+                "Unesite predmet: Zalimo, ali ne postoje podaci o predmetu Tehnike programiranja!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

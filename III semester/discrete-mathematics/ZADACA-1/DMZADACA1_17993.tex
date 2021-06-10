@@ -1,0 +1,1054 @@
+
+
+    \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    
+    
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{1}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Diskretna Matematika }
+
+      \vspace*{2cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.75cm}
+      {\Large Br. indexa: \brIndexa} \\
+      \vspace*{0.75cm}
+      {\Large Grupa: RI-4} \\
+      \vspace*{0.75cm}
+      {\Large Demonstrator: Rijad Muminović} \\
+      \vspace*{2cm}
+      
+      \renewcommand{\arraystretch}{1.75}
+      \begin{tabular}{|c|c|}
+    	\hline Zadatak & Bodovi \\
+    	\hline 1 &  \\
+    	\hline 2 &  \\
+    	\hline 3 &  \\
+    	\hline 4 &  \\
+    	\hline 5 &  \\
+    	\hline 6 &  \\
+    	\hline 7 &  \\
+    	\hline 8 &  \\
+    	\hline
+     \end{tabular}
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo - Oktobar 2017g.}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka
+		\\
+		
+		Zadatak 1 [0.25 poena] \\
+		
+Za potrebe neke vitaminske terapije koriste se tri vrste tableta T1, T2 i T3 koje respektivno
+sadrže 30, 33, odnosno 21 jedinica nekog vitamina. Terapijom je potrebno unijeti 210 jedinica
+tog vitamina. Odredite sve moguće načine kako se može realizirati ta terapija pomoću
+raspoloživih tableta ukoliko se tablete ne smiju lomiti, tj. može se uzeti samo cijela tableta.
+\\
+\\
+* Ukoliko broj traženih tableta T1, T2 i T3 označimo respektivno sa x, y i
+z, problem se može formulisati u obliku diofantove jednačine i to na sljedeći način: \\
+\begin{equation*}
+30x + 33y + 21z = 210
+\end{equation*} uz dodatne uslove x,y,z ${\in}$  Z , x ${\geq}$ 0; y ${\geq}$ 0 i z ${\geq}$ 0. \\
+
+Kako je NZD(30, 33, 21) = 3 i 3 ${\mid}$ 210, jednačina je rješiva. Sada jednačinu
+možemo podijeliti sa 3 i dobiti njoj ekvivaletnu jednačinu \\
+\begin{equation*}
+10x + 11y + 7z = 70
+\end{equation*}
+Napišimo ovu jednačinu u obliku ${10x + 11y = 70 - 7z}$. Kako je NZD(10, 11) =
+1 rješenja će postojati ako i samo ako 1 ${\mid}$ 70 - 7z, odnosno ako postoji k ${\in}$ Z
+takav da je 70 - 7z = k, što daje novu diofantovu jednačinu
+\begin{equation*}
+k + 7z = 70
+\end{equation*}
+Ovo je diofantova jednačina sa dvije nepoznate u kojoj je NZD(1, 7) = 1
+i pri tome je ispunjen uvjet 1 ${\mid}$ 70, pa možemo pristupiti rješavanju diofantove
+jednačine. Koristeći Euklidov algoritam odmah možemo izraziti 1 preko 1 i
+7, tj.
+\begin{equation*}
+7 = 1 \cdot 7 + 1 \cdot 0
+\end{equation*}
+Opće rješenje za ovu jednačinu glasi z = 70 + t; t ${\in}$ Z. Vratimo se sada u
+početnu jednačinu 10x + 11y = 70 - 7z i uvrštavanjem z dobijamo:
+\begin{equation*}
+10x + 11y = -420 - 7t
+\end{equation*}
+Sada moramo izraziti NZD(10, 11) = 1 kao linearnu kombinaciju 10 i 11.
+Primjenimo prošireni Euklidov algoritam:
+\begin{equation*}
+1 = -1 \cdot 10 + 1 \cdot 11
+\end{equation*}
+Odavde slijede opća rješenja početne jednačine data sa:
+\begin{equation*}
+x = 420 + 7t + 11s;  \quad
+y = -420 - 7t - 10s; \quad 
+z = 70 + t; \quad (RJ)
+\end{equation*}
+Prema postavci zadatka imamo x ${\geq}$ 0 , y ${\geq}$ 0 i z ${\geq}$ 0, što nam daje
+ograničenja pomoću kojih ćemo dobiti konkretne vrijednosti t i s. Iz uslova
+z ${\geq}$ 0 imamo 70 + t ${\geq}$ 0  tj. t ${\geq}$ -70. 
+Iskoristimo sada uslove x ${\geq}$0 i y ${\geq}$ 0. Iz uslova x ${\geq}$ 0 i y ${\geq}$ 0 dobijamo
+\begin{equation*}
+420 + 7t + 11s \geq 0 \quad  i  \quad
+-420 - 7t - 10s \geq 0  
+\end{equation*}
+i dobijamo rješenja:
+\begin{equation*}
+s \geq \frac{-(420 + 7t)}{11} \quad (1) \quad i \quad s \leq \frac{-(420 + 7t)}{10} \quad (2)
+\end{equation*}
+
+\newpage
+
+Spajanjem uslova (1) i (2) dobijamo slijedeću nejednakost, iz koje možemo
+izraziti još jedan uslov za parametar t i to na sljedeći način: 
+\begin{equation*}
+\frac{-(420 + 7t)}{11} \leq s \leq \frac{-(420 + 7t)}{10} \quad  (0)
+\end{equation*}
+Očigledno vrijedi da je:
+\begin{equation*}
+\frac{-(420 + 7t)}{11} \leq \frac{-(420 + 7t)}{10} \quad 
+\end{equation*} 
+i na osnovu toga imamo rješenje: t ${\leq}$ -60 što ako presječemo sa t ${\geq}$ -70 imamo
+10 cijelobrojnih rješenja i to takvih da t ${\in}$ [-70,-60].
+
+Sada za svako t iz skupa pobrojanih vrijednosti moramo odrediti moguće
+vrijednosti parametra s uvrštavajući vrijednost t u jednačinu (0). \\
+Pa imamo 5 rješenja naše početne diofantove jednačine i to: 
+
+1. Uvrštavanjem t = -70 u (0) dobijamo naše s = 7, i uvršatavanjem toga u (RJ) imamo:
+\begin{equation*}
+x = 7 \quad  y = 0 \quad  z = 0 
+\end{equation*}
+2. Uvrštavanjem t = -69 u (0) dobijamo naše s = 6, i uvršatavanjem toga u (RJ) imamo:
+\begin{equation*}
+x = 3 \quad  y = 3 \quad  z = 1 
+\end{equation*}
+3. Uvrštavanjem t = -66 u (0) dobijamo naše s = 4, i uvršatavanjem toga u (RJ) imamo:
+\begin{equation*}
+x = 2 \quad  y = 2 \quad  z = 4 
+\end{equation*}
+4. Uvrštavanjem t = -63 u (0) dobijamo naše s = 2, i uvršatavanjem toga u (RJ) imamo:
+\begin{equation*}
+x = 1 \quad  y = 1 \quad  z = 7 
+\end{equation*}
+5. Uvrštavanjem t = -62 u (0) dobijamo naše s = 1, i uvršatavanjem toga u (RJ) imamo:
+\begin{equation*}
+x = 0 \quad  y = 0 \quad  z = 10 
+\end{equation*}
+
+		\item Rješenje zadatka
+		\\
+		
+		Zadatak 2 [0.25 poena] \\
+		
+Čopor majmuna je skupljao banane. Kada su skupljene banane pokušali razmjestiti u 15
+jednakih gomila, ispostavilo se da preostaje 9 banana koje je nemoguće rasporedititi tako da
+gomile budu jednake. Slično, kada su probali rasporediti banane u 19 jednakih gomila,
+preostale su 2 banane. Međutim, uspjeli su skupljene banane razmjestiti u 28 jednakih gomila.
+Odredite koliki je najmanji mogući broj banana za koji je ovakav scenario moguć (uz
+pretpostavku da su majmuni u stanju uraditi ovo što je opisano, što je prilično diskutabilno).
+\\
+\\ 
+* Ovaj problem se može predstaviti kao sistem linearnih kongruencija i to na sljedeći način: 
+\begin{equation*}
+x \equiv 9 ~(mod~15) \quad 
+x \equiv 2 ~(mod~19) \quad 
+x \equiv 0 ~(mod~28)
+\end{equation*}
+Kako je NZD(15, 19, 28) = 1 možemo koristiti Kinesku teoremu o ostacima pri
+rješavanju ovog sistema.
+
+\newpage
+
+Izračunajmo ${\lambda_{1}}$ = (15 ${\cdot}$ 19 ${\cdot}$ 28)/15 = 532 ,~~ $\lambda_{2}$ =
+(15 ${\cdot}$ 19 ${\cdot}$ 28)/19 = 420 ~~ i \\
+~~ ${\lambda_{3}}$ = (15 ${\cdot}$ 19 ${\cdot}$ 28)/28 = 285. \\
+\\ 
+Opće rješenje se može predstaviti u obliku \\
+x ${\equiv}$~$\lambda_{1}$~${\cdot}$~$x_{1}$  + $\lambda_{2}$~${\cdot}$~$x_{2}$  + $\lambda_{3}$~${\cdot}$~$x_{3}$~(mod 15 ${\cdot}$ 19 ${\cdot}$ 28) ~ (RJ) \\
+gdje su x-vi rješenja posebnih jednačina, odnosno: \\
+\begin{equation*}
+7 \cdot x_1 \equiv 9 ~(mod~15) ~ (1) \quad 
+2 \cdot x_2 \equiv 2 ~(mod~19) ~ (2) \quad 
+5 \cdot x_3  \equiv 0 ~(mod~28) ~ (3)
+\end{equation*}
+Rješenja respektivno kongruencija su: 
+\begin{equation*}
+x_1 = 12 ~ (1) \quad 
+x_2 = 1 ~ (2) \quad 
+x_3 = 0 ~ (3)  
+\end{equation*}
+Pošto smo našli $x_1$ $x_2$ i $x_3$ uvrstimo to u (RJ) i imamo naše rješenje datog problema: 
+\begin{equation*}
+x \equiv (532 \cdot 12 + 420 \cdot 1 + 285 \cdot 0 = 6804)~(mod~7980)~ tj. \quad x \equiv 6804~(mod~ 7980) 
+\end{equation*}
+Najmanji mogući broj banana je 6804.
+
+		\item Rješenje zadatka \\
+		
+		Zadatak 3 [0.25 poena] \\
+		
+Tajna špijunska organizacija HABER SPY, zadužena za prisluškivanje razgovora na ETF
+Haber kutiji u cilju sprečavanja dogovaranja jezivih terorističkih aktivnosti koje se sastoje u
+podvaljivanju pokvarene (ukisle) kafe neposlušnim djelatnicima ETF-a, jednog dana uhvatila
+je tajanstvenu poruku koja je glasila
+OECGJMZMXGHERZEXUOVZEHERVSDYEOEHNEXEHERJSXUOYZMDRMCEDMC
+EDUYM
+Ova poruka smjesta je analizirana uz pomoć HEPEK superkvantnog kompjutera, koji nije
+uspio dešifrirati poruku, ali je došao do sljedećih spoznaja: \\
+
+1. Izvorna poruka je u cijelosti pisana bosanskim jezikom, isključivo velikim slovima
+unutar engleskog alfabeta (ASCII kodovi u opsegu od 65 do 91); \\
+
+2. Za šifriranje je korišten algoritam prema kojem se svaki znak izvorne poruke čiji je
+ASCII kod x mijenja znakom sa ASCII kodom y prema formuli y = mod(a x + b, 26) +
+65, gdje su a i b neke cjelobrojne konstante u opsegu od 0 do 25.
+Međutim, HEPEK nije uspio do kraja probiti algoritam šifriranja i dešifrirati poruku. Stoga je
+vaš zadatak sljedeći: \\ 
+
+a. Odredite konstante a i b ukoliko je poznata činjenica da se u bosanskom jeziku
+ubjedljivo najviše puta pojavljuje slovo A, a odmah zatim po učestanosti pojavljivanja
+slijedi slovo E; \\
+
+b. Odredite funkciju dešifriranja, tj. funkciju kojom se vrši rekonstrukcija x iz
+poznatog y; \\ 
+
+c. Na osnovu rezultata pod b), dešifrirajte uhvaćenu poruku (za tu svrhu, napišite kratku
+funkciju od dva reda u C-u, C++-u ili nekom drugom sličnom programskom jeziku, jer
+bi Vam ručno računanje oduzelo cijeli dan; uz zadaću, priložite listing te funkcije). \\
+
+\newpage
+
+a) \\
+\\
+* Prebrojavanjem možemo zaključiti da se najviše ponavlja slovo E, a zatim
+slovo M, pa možemo pretpostaviti da se prilikom šifriranja slovo A zamijenilo sa slovom E,
+a slovo E sa slovom M. Kako slova A, E, M imaju
+redom ASCII šifre 65, 69, 77 to znači da uz navedenu pretpostavku
+a i b moraju zadovoljavati slijedeći sistem jednačina:
+\begin{equation*}
+mod(65a + b, 26) + 65 = 69 \quad i \quad mod(69a + b, 26) + 65 = 77
+\end{equation*}
+odnosno: 
+\begin{equation*}
+mod(65a + b, 26) = 4 \quad i \quad mod(69a + b, 26) = 12
+\end{equation*}
+što dalje se može zapisati kao:
+\begin{equation*}
+65a + b \equiv 4~(mod~26) \quad i \quad 69a + b \equiv 12~(mod~26) 
+\end{equation*}
+Riješimo ovaj sistem, tako što ćemo pomnožiti prvu jednačinu sa (-1) i dodati na drugu, pri čemu imamo:
+\begin{equation*}
+4a \equiv 8~(mod~26)
+\end{equation*}
+Naša dobivena jednačina predstavlja običnu diofantovu jednačinu:
+\begin{equation*}
+4a + 26k = 8 ~~ -> ~~ 2a + 13k = 4
+\end{equation*}
+NZD(2, 13) = 1 pa primjenom proširenog Euklidovog algoritma odmah
+u prvom koraku dobijamo da možemo 1 izraziti kao:
+\begin{equation*}
+1 = -6 \cdot 2 + 1 \cdot 13
+\end{equation*}
+Imamo opće rješenje a = -24 + 13t; t ${\in}$ Z. Iz uslova 0 ${\leq}$ a ${\leq}$ 25
+dobijamo vrijednosti t na sljedeći način: 0 ${\leq}$ -24 + 13t ${\leq}$ 25 dobijamo skup vrijednosti da t ${\in}$ \{2,3\}.
+Uvrstimo li t = 2 i t = 3 u a = -24 + 13t dobijamo a = 2 i a = 15
+respektivno. Sada kada smo našli moguće vrijednosti a, vrijednosti b
+ćemo dobiti uvrštavanjem u jednu od kongruencija početnog sistema.
+\\
+Uvrštavanjem u 65a~+~b ${\equiv}$ 4~(mod~26) dobijamo dvije kongruencije po
+b:
+\begin{equation*}
+130 + b \equiv 4~(mod~26)~ za~a = 2 \quad i \quad 975 + b \equiv 4~(mod~26)~za~a = 15
+\end{equation*}
+odnosno: 
+\begin{equation*}
+b \equiv -126~(mod~26)~ za~a = 2~(1) \quad i \quad  b \equiv -971~(mod~26)~za~a = 15~(2)
+\end{equation*}
+Rješavanje (1) i (2) daje redom b = -126 + 26t; t ${\in}$ Z i b = -971 + 26s; s ${\in}$ Z
+što uz uslov 0 ${\leq}$ b ${\leq}$ 25 daje t = 5 i s = 38 respektivno, što
+daje b = 4 za a = 2 i b = 17 za a = 15. Dakle imamo dvije mogućnosti,
+a = 2 i b = 4 i a = 15 i b = 17.
+Međutim, pošto za slučaj a = 2 i b = 4 (prema postupku kodiranja/šifriranja) dobijamo uvijek neparne vrijednosti tj.
+y = mod(2a + 4, 26) + 65, pošto mod(2a + 4, 26) je uvijek paran broj i pošto se dodaje 65 imamo uvijek neparan broj.
+S tim naš šifrirani kod ima J karakter čija je ASCII vrijednost 74, a to je paran broj. Samim tim prvi slučaj moramo
+odbaciti. Samim tim slijedi da su rješenja pod a) a = 15 i b = 17.
+\newpage
+
+b) 
+Sada znamo da funkcija šifriranja tačno glasi y = mod(15x + 17, 26) + 65. Međutim, za dobijanje funkcije dešifriranja treba ovaj izraz riješiti po x, uz
+dodatni uvjet 65 ${\leq}$ x < 91. Uvedimo smjenu x = 65 + z, tako da
+dodatni uvjet postaje 0 ${\leq}$ z < 26. Pokažimo to na sljedeći način: 
+\begin{equation*}
+y - 65 = mod(15x+17,26) -> 15x \equiv y - 82~(mod~ 26)
+\end{equation*}
+Uvedimo gore spomenutu smjenu: x = 65 + z, i dobit ćemo sljedeće:
+\begin{equation*}
+15 \cdot z \equiv y - 17 ~(mod~26)
+\end{equation*}
+NZD(15,26) = 1, samim tim možemo riješiti ovu diofantovu jednačinu, a ostatak možemo napisati kao:
+\begin{equation*}
+1 = 7 \cdot 15 - 4 \cdot 26
+\end{equation*}
+Na osnovu toga možemo formirati naše rješenje z kao:
+\begin{equation*}
+z = 7 \cdot (y - 17) + 26t,~gdje~t~\in Z 
+\end{equation*}
+Odnosno naše rješenje možemo napisati i na sljedeći način:
+\begin{equation*}
+z \equiv 7y - 119~(mod~26)~->~z \equiv 7y + 11~(mod~26) 
+\end{equation*}
+Uvrštavanjem smjene za z imamo:
+\begin{equation*}
+x = mod(7y + 11, 26) + 65
+\end{equation*}
+što ujedno predstavlja naš glavni dio dekodiranja zadane šifrirane poruke.
+\\
+\\
+c)
+\\
+
+Predstavimo ćemo našu formulu u c++ programu (tj. samo main je dovoljan):
+
+int main() \{ \\
+
+    std::string a\{"OECGJMZMXGHERZEXUOVZEHERVSDYEOEHNEXEH" \\
+    "ERJSXUOYZMDRMCEDMCEDUYM"\};       ~~ // a je naša poruka \\ 
+    for (int i=0; i < a.length(); i++) a[i] = char(((7*a[i]+11) \% 26) + 65);  
+    \\
+    std::cout << a;  \\
+    
+\}
+\\
+\\
+** Kao rezultat dobijamo poruku: \\
+SAMOJEREDOVANRADISPRAVANPUTKASAVLADAVANJUDISKRETNEMATEMATIKE \\
+odnosno da odvojimo: \\
+SAMO JE REDOVAN RAD ISPRAVAN PUT KA SAVLADAVANJU DISKRETNE \\ 
+MATEMATIKE
+
+\newpage
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 4 [0.6 poena] \\
+		
+		a) \\
+\begin{equation*}
+18x + 14y + 11z \equiv 62~(mod~87)~(1)
+\end{equation*}
+\begin{equation*}
+2x + 18y + 15z \equiv 13~(mod~87)~(2)
+\end{equation*}
+\begin{equation*}
+10x + 12y + 12z \equiv 59~(mod~87)~(3)
+\end{equation*}
+Ukoliko (2) jednačinu pomnožimo sa (-9) i dodamo na (1), i ukoliko (2) jednačinu pomnožimo sa (-5) i dodamo na (3) imamo sljedeće:
+\begin{equation*}
+158y + 124z \equiv 55~(mod~87)
+\end{equation*}
+\begin{equation*}
+78y + 63z \equiv 6~(mod~87)
+\end{equation*}
+Pomnožimo našu drugu jednačinu sa (-2) i saberimo sa prvom, pa na osnovu toga imamo:
+\begin{equation*}
+158y + 124z \equiv 55~(mod~87)
+\end{equation*}
+\begin{equation*}
+2y - 2z \equiv 43~(mod~87)
+\end{equation*}
+Ukoliko sad pomnožimo našu drugu jednačinu sa 62 imamo (to smijemo uraditi jer je NZD(62,87 = 1):
+\begin{equation*}
+158y + 124z \equiv 55~(mod~87)
+\end{equation*}
+\begin{equation*}
+124y - 124z \equiv 2666~(mod~87)~ -> ~ 124y - 124z \equiv 56~(mod~87)
+\end{equation*}
+Saberimo sad ove 2 jednačine i izvršimo skraćenje po modulu: 
+\begin{equation*}
+21y \equiv 24~(mod~87)
+\end{equation*}
+Ovo predstavlja običnu diofantovu jednačinu koju možemo zapisati kao:
+\begin{equation*}
+21y + 87k = 24,~k \in Z
+\end{equation*}
+Pošto je NZD(21,87) = 3, podijelimo jednačin sa 3 i samim tim je ona rješiva:
+\begin{equation*}
+7y + 29k = 8
+\end{equation*}
+Pošto je NZD(7,29) = 1, to možemo zapisati u obliku:
+\begin{equation*}
+1 = -4 \cdot 7 + 1 \cdot 29
+\end{equation*}
+Na kraju imamo da je rješenje po y:
+\begin{equation*}
+y = -32 + 29t,~t \in Z
+\end{equation*}
+odnosno da bi dobili tipična rješenja uvrstimo t=2, t=3, t=4 respektivno:
+\begin{equation*}
+y = 26 \quad y = 55 \quad y = 84
+\end{equation*}		
+Pošto smo našli par kombinacija y, uvrstimo npr. prvo rješenje nazad u jednačinu 2y - 2z ${\equiv}$ 43~(mod~87) pri čemu ćemo kao finalni izraz dobiti:
+\begin{equation*}
+2z + 87k = 9,~k \in Z
+\end{equation*}
+\newpage
+
+Ukoliko ponovimo postupak za rješavanje diofantove jednačine (uradili smo ga n-puta dosad) imamo da je rješenje:
+\begin{equation*}
+z = -387 + 87t,~t \in Z
+\end{equation*}
+odnosno da naša tipična rješenje za z su (ukoliko ponovimo uvrštavanje za svaki y) respektivno: 
+\begin{equation*}
+z = 48 \quad z = 77 \quad z = 19
+\end{equation*}		
+Ukoliko sada uvrstimo bilo koju varijantu y i z u početnu (2) jednačinu, konkretno ovdje za prvo y i z, dobijamo novu diofantovu jednačinu:
+\begin{equation*}
+2x + 87t = 43,~t \in Z
+\end{equation*}
+Rješenje ove diofantove jednačine je:
+\begin{equation*}
+x = -1849 + 87t
+\end{equation*}
+odnosno naše tipično rješenje:
+\begin{equation*}
+x = 65
+\end{equation*}
+Pri čemu se može pokazati da i za ostale kombinacije y i z, dobije se x = 65.
+Možemo zaključiti da su rješenja našeg sistema linearnih kongruencija tj. tipična rješenja:
+\begin{equation*}
+x = 65 \quad y = 26 \quad z = 48 
+\end{equation*} 
+\begin{equation*}
+x = 65 \quad y = 55 \quad z = 77 
+\end{equation*} 
+\begin{equation*}
+x = 65 \quad y = 84  \quad z = 19 
+\end{equation*} 
+\\
+b) \\
+\\
+\begin{equation*}
+15x + 3y \equiv 15~(mod~102) 
+\end{equation*} 
+\begin{equation*}
+2x + 16y \equiv 6~(mod~102) 
+\end{equation*} 
+Ukoliko našu 2 jednačinu pomnožimo sa (-7) i dodamo na prvu imamo:
+\begin{equation*}
+x - 109y \equiv -27~(mod~102) 
+\end{equation*} 
+\begin{equation*}
+2x + 16y \equiv 6~(mod~102) 
+\end{equation*} 
+Sada ako pomnožimo prvu sa (-2) i dodamo na drugu imamo sistem:
+\begin{equation*}
+x - 109y \equiv -27~(mod~102)~(1)
+\end{equation*} 
+\begin{equation*}
+30y \equiv 60~(mod~102)~(2)
+\end{equation*} 		
+Riješimo zasebno drugu jednačinu što predstavlja običnu diofantovu jednačinu. Pošto je NZD(30,102) = 6, ukoliko
+jednačinu podijelimo sa 6 imamo:
+\begin{equation*}
+5y + 17k = 10,~k \in Z
+\end{equation*}
+NZD(5, 17) = 1, preko proširenog Euklidovog algoritma imamo:
+\begin{equation*}
+1 = 7 \cdot 5 - 2 \cdot 17
+\end{equation*}
+odnosno naše rješenje za y:
+\begin{equation*}
+y = 70 + 17t,~t \in Z
+\end{equation*}
+
+\newpage
+
+Da bismo dobili tipična rješenja za y, moramo ograničiti y i to tako da važi:
+\begin{equation*}
+0  \leq 70 + 17t < 102
+\end{equation*}
+odnosno dobijamo skup t takav da t ${\in}$ \{-4,-3,-2,-1,0,1\}.
+Samim tim naša rješenja su respektivno za y:
+\begin{equation*}
+y \in \{2,19,36,53,70,87\}
+\end{equation*}
+Uvrštavanjem svakih od y-ona u (1) i rješavanjem zasebno diofantovih jednačina imamo da su rješenja respektivno (što smo već radili više puta do sad):
+\begin{equation*}
+x \in \{89,4,21,38,55,72\}
+\end{equation*}
+odnosno naš sistem ima 6 rješenja i to:
+\begin{equation*}
+x = 89 \quad y = 2 ~(1)
+\end{equation*}
+\begin{equation*}
+x = 4 \quad y = 19 ~(2)
+\end{equation*}
+\begin{equation*}
+x = 21 \quad y = 36 ~(3)
+\end{equation*}
+\begin{equation*}
+x = 38 \quad y = 53 ~(4)
+\end{equation*}
+\begin{equation*}
+x = 55 \quad y = 70 ~(5)
+\end{equation*}
+\begin{equation*} 
+x = 72 \quad y = 87 ~(6)
+\end{equation*}
+
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 5 [0.8 poena] \\
+		\\
+		Ispitajte rješivost i odredite broj rješenja sljedećih kvadratnih kongruencija (u slučaju da su
+        rješive): \\
+        \\
+		a)\\
+		\begin{equation*}
+	       x^2 \equiv 141~(mod~1045)
+		\end{equation*}
+		Očigledno 1045 je složen broj, i može se raspisati kao 1045 = $2^0$ ${\cdot}$ 5 ${\cdot}$ 11 ${\cdot}$ 19.
+		Dalje pošto je NZD(141, 1045) = 1, mora važiti uslov da je  da je kvadratni 
+		ostatak 141 po svakom modulu 5, 11, 19. \\
+		Odnosno mora važiti p(141 $\mid$ 5) i p(141 $\mid$ 11) i p(141 $\mid$ 19). \\
+		Prvi uslov važi pošto je mod(141,5) = 1, pa imamo p(1 $\mid$ 5) = 1. \\
+		Iz drugog uslova važi mod(141,11) = 9, pa imamo p($3^2$ $\mid$ 11) = 1. \\
+		Iz trećeg uslova važi mod(141,19) = 8, pa imamo p($2^3$ $\mid$ 19) = 
+		p($2^2$ $\mid$ 19)~p($2$ $\mid$ 19) = \\ 
+		=  p($2$ $\mid$ 19) = $(-1)^{(19^2 -1)/ 8}$ =  -1 \\
+		\\
+		Naša kvadratna kongruencija očigledno nije rješiva. \\
+		\\
+		b)
+		\begin{equation*}
+	       x^2 \equiv 7801~(mod~31096)
+		\end{equation*}
+		Očigledno 31096 je složen broj, i može se raspisati kao 31096 = $2^3$ ${\cdot}$ $13^2$ ${\cdot}$ 23.
+		Dalje pošto je NZD(7801, 31096) = 1, mora važiti uslov da je  da je kvadratni 
+		ostatak 7801 po svakom od modula 13, 23.
+		\newpage
+		Odnosno mora važiti p(7801 $\mid$ 13) i p(7801 $\mid$ 23) i nameće se dodatni uslov da je  \\
+		7801 ${\equiv}$ 1~(mod~8) koji je bezuvjetno tačan. \\
+		Prvi uslov važi pošto je mod(7801,13) = 1, pa imamo p(1 $\mid$ 13) = 1. \\
+		Iz drugog uslova važi mod(7801, 23) = 4, pa imamo p($2^2$ $\mid$ 23) = 1. \\
+		Odnosno pošto je kvadratna kongruencija rješiva, broj tipičnih rješenja kongruencije je $2^{k+2}$, odnosno 16.
+		\\
+		\\
+		c)
+		\begin{equation*}
+	       x^2 \equiv 20003~(mod~4784)
+		\end{equation*}
+		Očigledno 4784 je složen broj, i može se raspisati kao 31096 = $2^4$ ${\cdot}$ 13 ${\cdot}$ 23.
+		Dalje pošto je NZD(20003, 4784) = 1, mora važiti uslov da je  da je kvadratni 
+		ostatak 20003 po svakom od modula 13, 23.
+		Odnosno mora važiti p(20003 $\mid$ 13) i p(20003 $\mid$ 23) i nameće se dodatni uslov da je  
+		20003 ${\equiv}$ 1~(mod~8) koji nije tačan, jer je ostatak 3, samim tim naša kvadratna kongruencija nije rješiva. \\
+		\\
+		\\
+		d)
+		\begin{equation*}
+	       x^2 \equiv 126~(mod~38115)
+		\end{equation*}
+		Očigledno je NZD(126, 38115) = 63, samim tim mora se transformisati početni izraz tako da bude ovaj potreban uslov 
+		zadovoljen. Broj 63 možemo izraziti kao:
+		\begin{equation*}
+	       63 = 7 \cdot 3^2
+		\end{equation*}
+		gdje p=7 a q=$3^2$, što povlači narednu diofantovu jednačinu:
+		\begin{equation*}
+	      7z \equiv 2~(mod~605)
+		\end{equation*}
+		NZD(2,605) = 1, i može se izaziti kao:
+		\begin{equation*}
+	      1 = 173 \cdot 7 - 2 \cdot 605
+		\end{equation*}
+		i naše tipično rješenje je $z_{0}$ = 346. \\
+		Na osnovu toga dobivamo novu oformljenu kvadratnu kongruenciju:
+		\begin{equation*}
+	      y^2 \equiv 346~(mod~605)
+		\end{equation*}
+		Očigledno 605 je složen broj, i može se raspisati kao 605 = $2^0$ ${\cdot}$ 5 ${\cdot}$ $11^2$.
+		Dalje pošto je NZD(346, 605) = 1, mora važiti uslov da je  da je kvadratni 
+		ostatak 346 po svakom modulu 5, 11. \\
+		Odnosno mora važiti p(346 $\mid$ 5) i p(346 $\mid$ 11). \\
+		Prvi uslov važi pošto je mod(346,5) = 1, pa imamo p(1 $\mid$ 5) = 1. \\
+		Drugi uslov važi pošto je mod(346,11) = 5, pa imamo p(5 $\mid$ 11) = p(1 $\mid$ 11) = 1. \\
+		Očigledno je nova kvadratna kongruencija rješiva, i broj tipičnih rješenja kvadratne kongruencije je $2^k$, odnosno $2^2$ = 4.
+		Da bismo dobili ukupan broj tipičnih rješenja početne kvadratne kongruencije, moramo ovaj broj pomnožiti sa q, odnosno naš finalni broj tipičnih kongruentnih rješenja je 4 ${\cdot}$ 3 = 12.
+		\newpage
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 6 [1.2 poena] \\
+		\\
+		Nađite sve diskretne kvadratne korijene sljedećih klasa ostataka, formiranjem odgovarajućih
+        kvadratnih kongruencija i njihovim rješavanjem (rješavanje "grubom silom" neće biti
+        prihvaćeno): \\
+        a.~~$[9]_{137}$ \\
+        b.~~$[121]_{169}$ \\
+        c.~~$[124]_{253}$ \\
+        d.~~$[7506]_{9207}$ \\
+		\\
+		\\
+		a) ~~$[9]_{137}$ \\ 
+		Ovo možemo napisati u obliku kvadratne kongruencije: 
+		\begin{equation*}
+		x^2 \equiv 9~(mod~137)
+		\end{equation*}
+		Pošto je NZD(9, 137) = 1 i (9 ${\mid}$ 137) = 1 kongruencija je rješiva i ona
+ima dva tipična rješenja. Ukoliko je $x_1$ jedno tipično rješenje ove kongruencije, 
+onda je p - $x_1$ drugo tipično rješenje. Pošto mod(137, 4) = 1
+i mod(137, 8) = 1 rješenje tražimo pomoću Tonellijevog algoritma.
+Da bi koristili Tonellijev algoritam moramo naći broj g takav da je
+(g ${\mid}$ 137) = -1. Pokušajmo sa g=3: (3 ${\mid}$ 137) = (137 ${\mid}$ 3) ${\cdot}$ $(-1)^{(136 \cdot 2) / 4}$
+= (2 ${\mid}$ 3) = -1 \\
+\\
+Sada su početni parametri za Tonellijev algoritam t = 68 , v = 1, w = 9,
+h = ($[3]_{137})^{-1}$. \\
+Parametar h možemo izračunati kao rješenje kongruencije:
+\begin{equation*}
+3x \equiv 1~(mod~137)
+\end{equation*}
+odnosno naš h = 46 kad se riješi ova diofantova jednačina. \\ 
+Predstaviti ćemo naš Tonellijev algoritam pomoću c++ kod-a koji će kao rezultat dati x i p - x: \\
+\\
+    int p = 137, g=3; \\
+    int t= 68, v = 1, w = 9, h = 46; \\
+    int x; \\
+    while(t \% 2 == 0)\{ \\
+        t = t/2; h = ((h*h) \% p); \\
+        if((int(std::pow(w,t)) \% p) != 1)\{ \\
+            v = (v * g) \% p; \\
+            w = (w * h) \% p; \\
+        \} \\
+        g = int(std::pow(w,2)) \% p; \\
+    \} \\
+     x = (v * int(std::pow(w, (t+1)/2))) \% p; \\
+    \\
+    std::cout << x << " " << p - x; \\ 
+Kao rezultat dobijamo $x_1$ = 3 i $x_2 $ = 134. Ovo su ujedno i svi diskretni kvadratni korijeni zadane početne kvadratne kongruencije. 
+\newpage
+
+b) ~~$[121]_{169}$ \\ \\ 
+		Ovo možemo napisati u obliku kvadratne kongruencije: 
+		\begin{equation*}
+		x^2 \equiv 121~(mod~169)
+		\end{equation*}
+		Ispitajmo uslove rješivosti. 169 se može napisat kao $13^2$ samim tim je složen broj, a
+		NZD(121,169) = 1, samim tim slijedi da (121 ${\mid}$ 169) = 1.
+		Očigledno su svi uslovi zadovoljeni i naša kvadratna kongruencija je rješiva.
+		Broj naših tipičnih rješenja je $2^1$ = 2.
+		\\
+		Pređimo na rješavanje: \\
+		Naša rješenja zadane kvadratne kongruencije se svedu na rješavanje kongruencije:
+		\begin{equation*}
+		x^2 \equiv 121~(mod~13)
+		\end{equation*}
+		Pošto je 13 prost broj i NZD(121, 13) = 1 i (121 ${\mid}$ 13) = 1 naša kvadratna kongruencija
+		je rješiva. Pošto je 13 prost broj, vidimo da važi Legendrov uslov mod(13,8) = 5.
+		Prema Legendrovoj formuli imamo da je x = mod($121^{(13+3)/8}$, 13) = 3.
+		Ispitajmo mod($x^2$, 13) = 121, očigledno je različito, i x ne zadovoljava kongruenciju.
+		Ukoliko primjenimo drugu Legendrovu formulu imamo rješenje $x_1$ = 11 odnosno $x_2$ = 2. \\ 
+		\\
+		Odnosno nazovimo $x_1$ = 2 sad. \\
+		Izračunajmo $[h]_p$ = $([2x_1]_p)^{-1}$. Ovo se svodi na rješavanje kongruencije 4x ${\equiv}$ 1 (mod 13)
+        čije je tipično rješenje x = 10, pa je h = 10. \\ 
+        Sada $x_2$ računamo kao $x_2$ = mod($x_1$ - h ${\cdot}$($(x_1)^2$ - a), $13^2$) = 158. \\ 
+		Odnosno naša dva finalna rješenja su: $x_1$ = 11 (169 - 158) i $x_2$ = 158. \\
+		
+c) ~~$[124]_{253}$ \\ \\ \\ 
+		Ovo možemo napisati u obliku kvadratne kongruencije: 
+		\begin{equation*}
+		x^2 \equiv 124~(mod~253)
+		\end{equation*}
+		NZD(124, 253) = 1, ali 253 se može napisati kao 253 = $2^0$ ${\cdot}$ 11 ${\cdot}$ 23.
+		(124 ${\mid}$ 253) = 1, samim tim broj rješenja zadane kvadratne kogruencije je $2^2$ = 4.
+ 		Moramo ispitati riješivost i rješiti naredne dvije kongruencije:
+        \begin{equation*}
+		x^2 \equiv 124~(mod~11)~~->~~ x^2 \equiv 3~(mod~11)
+		\end{equation*}
+		\begin{equation*}
+		x^2 \equiv 124~(mod~23)~~->~~ x^2 \equiv 9~(mod~23)
+		\end{equation*}
+		Prva kongruencija je rješiva jer je (3 ${\mid}$ 11) = 1, samim tim i druga jer je ($3^2$ ${\mid}$ 23) = 1.
+		Nije teško vidjeti na prvu da su rješenja prve kongruencije $x_1$ = 5 i $x_2$ = 6 (mada možemo primjeniti i neki metod na osnovu prethodnih zadataka) i rješenja druge kongruencije $x_3$ = 3 i $x_4$ = 20.  
+		Formirajmo kombinacije tipičnih rješenja kao: (5,3),(5,20),(6,3),(6,20).
+		Odnosno naravno sada rješavamo preko kineske teoreme o ostacima (primjer: zadatak~2) ili 
+		običnim putem uvrštavanja i pri čemu dobijamo
+		respektivno 4 sistema linearnih kongruencija iz kojih slijedi 4 rješenja početne kvadratne kongruencije: \\
+		\newpage 
+		1. za (5,20)~-->~$x_1$ = 181, \\
+		2. za (5,3)~-->~$x_2$ = 49, \\
+		3. za (6,3)~-->~$x_3$ = 72, \\
+		4. za (6,20)~-->~$x_4$ = 204. \\
+		\\
+d) ~~$[7506]_{9207}$ \\ \\ \\ 
+		Ovo možemo napisati u obliku kvadratne kongruencije: 
+		\begin{equation*}
+		x^2 \equiv 7506~(mod~9207)
+		\end{equation*}
+		NZD(7506, 9207) = 27, pa moramo transformisati našu kvadratnu kongruenciju. Odnosno 
+		naš 27 = $3^3$ = $3{\cdot}3^2$. Formiramo linearnu kongruenciju:
+		\begin{equation*}
+		3z \equiv 278~(mod~341)
+		\end{equation*}
+		Pri čemu rješenje ove linearne kongruencije je $z_0$ = 320.
+		Sad moramo ispitati rješivost kvadratne kongruencije:
+		\begin{equation*}
+		x^2 \equiv 320~(mod~341)
+		\end{equation*}
+		NZD(320,341) =  1, a modul 341 = 11 ${\cdot}$ 31. Također važi (320 ${\mid}$ 11) = 1 i 
+		(320 ${\mid}$ 31) = 1. Samim ti je naša kvadratna kongruencija rješiva i ima $2^2$ = 4 rješenja.
+		Odnosno naša početna kvadratna kongruencija je rješiva i ima 4 ${\cdot}$ 3 = 12 rješenja.
+		Riješimo sada našu novu kvadratnu kongruenciju: 
+		\begin{equation*}
+		x^2 \equiv 320~(mod~341)
+		\end{equation*}
+		odnosno moraju biti rješive naredne kongruencije:
+		\begin{equation*}
+		x^2 \equiv 320~(mod~11)~~->~~x^2 \equiv 1~(mod~11)
+		\end{equation*}
+		\begin{equation*}
+		x^2 \equiv 320~(mod~31)~~->~~x^2 \equiv 10~(mod~31)
+		\end{equation*}
+		Rješenja ovih kvadratnih kongruencija (moduli su prosti pa se računanje ove dvije
+		kvaratne kongruencije svede na računanje sistema preko
+		kineske teoreme tj. računanje 4 sistema specifična za 4 tipična rješenja ovih kvadratnih
+		kongruencija):
+		\begin{equation*}
+		x_1 = 45 \quad x_2 = 76 \quad x_3 = 265 \quad x_4 = 296
+		\end{equation*}
+		Odnosno da bismo dobili naših 12 rješenja, svakom ovom tipičnom rješenju odgovaraju još 3 tipična
+		rješenja za prvu kvadratnu kongruenciju prema formuli
+		\begin{equation*}
+		9 \cdot x + 3096 \cdot i,~gdje~i~=~ 0,1,2
+		\end{equation*}
+		odnosno
+		\begin{equation*}
+		x_1 = 405 \quad x_2 = 3474 \quad x_3 = 6543 ~~ za~x=45
+		\end{equation*}
+		\begin{equation*}
+		x_4 = 684 \quad x_5 = 3753 \quad x_6 = 6822 ~~ za~x=76
+		\end{equation*}
+		\begin{equation*}
+		x_7 = 2385 \quad x_8 = 5454 \quad x_9 = 8523 ~~ za~x=265
+		\end{equation*}
+		\begin{equation*}
+		x_{10} = 2664 \quad x_{11} = 5733 \quad x_{12} = 8802 ~~ za~x=296
+		\end{equation*}
+	
+		\newpage
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 7 [0.25 poena] \\
+		\\
+Almira i Božidar žele da razmjenjuju poruke šifrirane nekim algoritmom koji zahtijeva tajni
+ključ, ali nemaju sigurnog kurira preko kojeg bi mogli prenijeti ključ. Zbog toga su odlučili da
+razmijene ključ putem Diffie-Hellmanovog protokola. Za tu svrhu, oni su se preko ETF Haber
+kutije dogovorili da će koristiti prost broj p = 1013 i generator g = 5. Nakon toga, Almira je u
+tajnosti slučajno izabrala broj a = 329, dok se Božidar u tajnosti odlučio za broj b = 135.
+Odredite koje još informacije Almira i Božidar moraju razmijeniti preko ETF Haber kutije da
+bi se dogovorili o vrijednosti ključa, te kako glasi ključ koji su oni dogovorili. \\
+
+
+* Almira i Božidar su se dogovorili da koriste prost broj p = 1013 i generator
+g = 5. Pošto je Almira izabrala u tajnosti broj a = 329 ona računa ${\alpha}$ = mod($g^a$, p) = mod($5^{329}$, 1013) = \\
+= $[5]_{1013}^{329}$. Božidar je izabrao broj b = 135 pa računa ${\beta}$ = mod($g^{b}$, p) = mod($5^{135}$, 1013) = \\
+= $[5]_{1013}^{135}$. Za izračunavanje
+potrebnih modula, koristiti ćemo metodu kvadriraj-i-množi. Raspišimo prvo
+eksponente koji su nam potrebni pomoću stepena dvojke: \\
+329 = 256 + 64 + 8 + 1, \\
+135 = 128 + 4 + 2 + 1. \\
+\\
+Sada računamo sve stepene: \\ 
+\begin{equation*}
+    [5]_{1013}^{2}~=~[25]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{4}~=~[625]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{8}~=~[620]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{16}~=~[473]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{32}~=~[869]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{64}~=~[476]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{128}~=~[677]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{256}~=~[453]_{1013}
+\end{equation*}
+Sada imamo da je:
+\begin{equation*}
+    [5]_{1013}^{329} = [453]_{1013} \cdot [476]_{1013} \cdot [620]_{1013} \cdot [5]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{329} = [516]_{1013}
+\end{equation*}
+odnosno: 
+\begin{equation*}
+    [5]_{1013}^{135} = [677]_{1013} \cdot [625]_{1013} \cdot [25]_{1013} \cdot [5]_{1013}
+\end{equation*}
+\begin{equation*}
+    [5]_{1013}^{135} = [882]_{1013}
+\end{equation*}
+
+Dakle, Almira je izračunala ${\alpha}$ = 516 i šalje to Božidaru, a Božidar je izračunao
+${\beta}$ = 882 i šalje to Almiri. Sada i Almira i Božidar u tajnosti računaju vrijednost
+ključa. Almira računa po formuli k = mod(${\beta}^a$, p) dok Božidar ključ računa po
+formuli k = mod(${\alpha}^b$, p).
+\newpage
+Almira računa:
+\begin{equation*}
+    k = mod({\beta}^a, p) = mod(882^{329}, 1013) = [882]_{1013}^{329}
+\end{equation*}
+
+\begin{equation*}
+    [882]_{1013}^{2}~=~[953]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{4}~=~[561]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{8}~=~[691]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{16}~=~[358]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{32}~=~[526]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{64}~=~[127]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{128}~=~[934]_{1013}
+\end{equation*}
+\begin{equation*}
+    [882]_{1013}^{256}~=~[163]_{1013}
+\end{equation*}
+odnosno:
+\begin{equation*}
+    k = [882]_{1013}^{329} = [163]_{1013} \cdot [127]_{1013} \cdot [691]_{1013} \cdot [882]_{1013} = 543
+\end{equation*}
+Božidar računa:
+\begin{equation*}
+    k = mod({\alpha}^b, p) = mod(516^{135}, 1013) = [516]_{1013}^{135}
+\end{equation*}
+
+\begin{equation*}
+    [516]_{1013}^{2}~=~[850]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{4}~=~[231]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{8}~=~[685]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{16}~=~[206]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{32}~=~[903]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{64}~=~[957]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{128}~=~[97]_{1013}
+\end{equation*}
+\begin{equation*}
+    [516]_{1013}^{256}~=~[292]_{1013}
+\end{equation*}
+odnosno:
+\begin{equation*}
+    k = [516]_{1013}^{135} = [97]_{1013} \cdot [231]_{1013} \cdot [850]_{1013} \cdot [516]_{1013} = 543
+\end{equation*}
+
+Vidimo da su i Almira i Božidar došli do istog ključa, što znači da su razmijenili sve potrebne (i korektne) informacije.
+		\newpage
+		\item Rješenje zadatka \\ 
+		\\
+		Zadatak 8 [0.4 poena] \\
+		\\
+Anita i Berin međusobno razmjenjuju poruke preko Facebook-a. Kako je poznato da takva
+komunikacija nije pouzdana, oni su odlučili da će primati samo šifrirane poruke. Anita je na
+svoj profil postavila informaciju da prima samo poruke šifrirane pomoću RSA kriptosistema s
+javnim ključem (599, 893), dok je Berin postavio informaciju da prima samo poruke šifrirane
+RSA kriptosistemom s javnim ključem (451, 1763). \\
+
+a. Odredite kako glase tajni ključevi koje koriste Anita i Berin za dešifriranje šifriranih
+poruka koje im pristižu. \\
+\\
+b. Odredite kako glase funkcije šifriranja i dešifriranja koje koriste Anita i Berin za
+šifriranje poruka koje šalju jedno drugom, odnosno za dešifriranje šifriranih poruka
+koje im pristižu. \\
+\\
+c. Odredite kako glasi šifrirana poruka y koju Anita šalje Berinu ako izvorna poruka
+glasi x = 6991. Kako glasi digitalni potpis z u slučaju da Anita želi Berinu dokazati da
+poruka potiče baš od nje? \\
+\\
+d. Pokažite kako će Berin dešifrirati šifriranu poruku y koju mu je Anita poslala (tj.
+primijenite odgovarajuću funkciju za dešifriranje na šifriranu poruku) i na osnovu
+primljenog digitalnog potpisa z utvrditi da je poruka zaista stigla od Anite. \\
+\\
+** Napomena: Svo kvadriranje modula je već urađeno u primjerima iznad, tako da
+sam skratio ovdje da ne bi ispalo glomazno. Temelji se na istom načinu kao u prethodnom 
+zadatku.. ** \\ 
+a) i b) \\
+
+* Kako je Anita odredila da može primati šifrirane poruke ključem (599, 893), to znači
+da će prema RSA protokolu, Berin moći koristiti encoding funkciju koja glasi:
+\begin{equation*}
+    E_B(x) = mod(x^{599}, 893).
+\end{equation*}
+Analogno, kako Berin prima poruke šifrirane ključem (451, 1763) to znači da će Anita
+moći koristiti encoding funkciju koja glasi:
+\begin{equation*}
+    E_A(x) = mod(x^{451}, 1763).
+\end{equation*}
+Da bi se desila intercepcija, to zahtjeva proračunavanje ključeva tj. provaljivanje
+RSA protokola. Računamo sad tajne ključeve zasebno:
+\begin{equation*}
+    451 \cdot b_B \equiv 1~(mod~\varphi(1763)) ~->~ 1763 = 43 \cdot 41
+\end{equation*}
+\begin{equation*}
+    451 \cdot b_B \equiv 1~(mod~ 1680)
+\end{equation*}
+\begin{equation*}
+    b_B = 1531
+\end{equation*}
+\newpage
+Odnosno tajni ključ za Anitu:
+\begin{equation*}
+    599 \cdot b_A \equiv 1~(mod~\varphi(893)) ~->~ 893 = 19 \cdot 47
+\end{equation*}
+\begin{equation*}
+    599 \cdot b_A \equiv 1~(mod~ 828)
+\end{equation*}
+\begin{equation*}
+    b_A = 47
+\end{equation*}
+Odnosno imamo respektivno decoding formule:
+\begin{equation*}
+    D_B(y) = mod(y^{1531}, 1763)
+\end{equation*}
+\begin{equation*}
+    D_A(y) = mod(y^{47}, 893)
+\end{equation*}
+\\
+c)\\
+\\
+Neka je sada poruka koju Anita želi poslati Berinu x = 6991. Pošto je ova poruka
+veća no enkripcijski modul, mora se "razbiti" na dijelove. Odnosno: \\
+\begin{equation*}
+    6991_{10} = ({3 \cdot 1702})_{1763}
+\end{equation*}
+Odnosno Anita šalje sljedeće enkripcije:
+\begin{equation*}
+    y_1 = mod(3^{451}, 1763) = 1667
+\end{equation*}
+\begin{equation*}
+    y_0 = mod(1702^{451}, 1763) = 963
+\end{equation*}
+Koeficijente $y_0$ i $y_1$ Anita će poslati Berinu zajedno sa potpisom z. Taj potpis će Anita
+izračunati kao Berinovu enkripciju svoje dekripcije poruke koju mu želi poslati. Dakle,
+\begin{equation*}
+    z = E_B(D_A(6991))
+\end{equation*}
+Međutim, kako je 6991 veće od Anitinog dekripcionog modula, moramo "razbiti" i to na dijelove, odnosno:
+\begin{equation*}
+   6991_{10} = (7 \cdot 740)_{893}
+\end{equation*}
+odnosno:
+\begin{equation*}
+   D_A(6991) = D_A(7) \cdot {893} + D_A(740) ~ -> ~ D_A(7) = 524 \quad D_A(740) = 740
+\end{equation*}
+Odnosno z će se poslati u porukama i to:
+\begin{equation*}
+    z_1 = mod(524^{599}, 893) = 7
+\end{equation*}
+\begin{equation*}
+    z_0 = mod(740^{599}, 893) = 740
+\end{equation*}
+\\
+\newpage
+d) \\
+\\
+Sad Berin primjenjuje svoju dekripciju na $y_1$ i $y_0$:
+\begin{equation*}
+   D_B(1677) = mod(1677^{1531}, 1763) = 3
+\end{equation*}
+\begin{equation*}
+   D_B(963) = mod(963^{1531}, 1763) = 1702
+\end{equation*}
+I računa poruku:
+\begin{equation*}
+   x = 3 \cdot 1763 + 1702 = 6991
+\end{equation*}
+Također ukoliko apsolutno želi biti siguran da je poruka od Anite, primjeniti
+će Anitinu enkripciju na svoju dekripciju pojedinačnih $z_1$ i $z_0$ odnosno:
+\begin{equation*}
+    D_B(z_1) = D_B(7) = 1221 -> E_A(1221) = 7 \quad (1)
+\end{equation*}
+\begin{equation*}
+    D_B(z_2) = D_B(740) = 490 -> E_A(490) = 740 \quad (2)
+\end{equation*}
+odnosno kad sklopimo sve zajedno imamo:
+\begin{equation*}
+    x = (1) \cdot 893 + (2) = 6991
+\end{equation*}
+čime je upravo dokazana valjanost digitalnog potpisa, odnosno Anita je zaista poslala
+	poruku Berinu.
+	\end{enumerate}
+	
+	
+	
+	
+    \end{document}
+    

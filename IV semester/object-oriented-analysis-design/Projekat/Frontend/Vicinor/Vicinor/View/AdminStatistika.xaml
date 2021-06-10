@@ -1,0 +1,118 @@
+﻿<Page
+    x:Class="Vicinor.Forme.AdminStatistika"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.Forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" MinHeight="300" MinWidth="200">
+
+    <Grid Background="White" Margin="10, 0, 0, 10" MinHeight="500" >
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                       
+                        <Setter Target="regProcenatTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="regNeregTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="neregProcenatTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="statistikaTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="brojBanovanihTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="brojRegistrovanihTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="procenatNeregTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="procenatRegTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="brRegistrovanihTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="brBanovanihTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="neregProcenatTextBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="brRegistrovanihTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="brBanovanihTextBox.(FrameworkElement.Width)" Value="100"/>
+                       
+                        <Setter Target="procenatNeregTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="procenatRegTextBox.(FrameworkElement.Width)" Value="100"/>
+                        <Setter Target="brojRegistrovanihTextBlock.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                        <Setter Target="brojBanovanihTextBlock.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                        <Setter Target="regProcenatTextBlock.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                        <Setter Target="neregProcenatTextBlock.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="300" MinWindowWidth="200"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+                        
+                        <Setter Target="regProcenatTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="regNeregTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="neregProcenatTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="statistikaTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="brojBanovanihTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="brojRegistrovanihTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="procenatNeregTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="procenatRegTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="brRegistrovanihTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="brBanovanihTextBox.(Control.FontSize)" Value="18"/>
+                       
+
+
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        
+                        <Setter Target="regProcenatTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="regNeregTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="neregProcenatTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="statistikaTextBlock.(TextBlock.FontSize)" Value="20"/>
+                        <Setter Target="brojBanovanihTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="brojRegistrovanihTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="procenatNeregTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="procenatRegTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="brRegistrovanihTextBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="brBanovanihTextBox.(Control.FontSize)" Value="18"/>
+              
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="*" MinHeight="50"/>
+            <RowDefinition Height="3*" MinHeight="50"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="7*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="brojRegistrovanihTextBlock"   HorizontalAlignment="Right" Text="Number of registered users:" VerticalAlignment="Center" Grid.Row="1" />
+        <TextBox x:Name="brRegistrovanihTextBox"  Grid.Column="1" HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="208" Grid.Row="1" Height="32" Background="White" IsReadOnly="True"/>
+        <TextBlock x:Name="brojBanovanihTextBlock"  HorizontalAlignment="Right" Grid.Row="2"  Text="Number of banned users:" VerticalAlignment="Center" />
+        <TextBox x:Name="brBanovanihTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="10,22,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="208"  Background="White" IsReadOnly="True"/>
+        <TextBlock x:Name="statistikaTextBlock" HorizontalAlignment="Left" Height="44" Margin="10,10,0,0" TextWrapping="Wrap" Text="Users statistics" VerticalAlignment="Center" Width="166"  FontWeight="Bold"/>
+        <TextBlock x:Name="regNeregTextBlock"   HorizontalAlignment="Left"  Grid.Row="3" TextWrapping="Wrap" Text="Registered/Unregistered users percentage" VerticalAlignment="Top" FontWeight="Bold"  />
+        <TextBlock x:Name="regProcenatTextBlock" HorizontalAlignment="Right" Grid.Row="4" TextWrapping="Wrap" Text="Registred users:" VerticalAlignment="Center" />
+        <TextBox x:Name="procenatRegTextBox"   Background="White" Grid.Column="1" HorizontalAlignment="Left" Height="10" Margin="10,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="208" RenderTransformOrigin="0.5,0.5" Grid.Row="4" IsReadOnly="True"/>
+        <TextBlock x:Name="neregProcenatTextBlock" HorizontalAlignment="Right" Grid.Row="5"  Text="Unregistred users:" VerticalAlignment="Center" />
+        <TextBox x:Name="procenatNeregTextBox"   Background="White" Grid.Column="1" HorizontalAlignment="Left" Height="10" Margin="10,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="208" RenderTransformOrigin="0.5,0.5" Grid.Row="5" IsReadOnly="True"/>
+   
+    </Grid>
+
+</Page>

@@ -1,0 +1,95 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c:8:9: warning: C++ style comments are not allowed in ISO C90\nmain.c:8:9: warning: (this will be reported only once per input file)",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "8",
+                "col": "9",
+                "message": "C++ style comments are not allowed in ISO C90",
+                "output": "/tmp/buildservice/bs_7725/main.c:8:9: warning: C++ style comments are not allowed in ISO C90"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "8",
+                "col": "9",
+                "message": "(this will be reported only once per input file)",
+                "output": "/tmp/buildservice/bs_7725/main.c:8:9: warning: (this will be reported only once per input file)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "-3 -1.19 0.1 1.19 1.2 3.1 4.111 5.3 8.3 98.7 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1476": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0 0 0 0 0 0 0 0 0 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1477": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 10 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1478": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 10 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1480607011
+}

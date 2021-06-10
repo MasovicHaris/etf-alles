@@ -1,0 +1,69 @@
+{
+    "id": 5522,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 5, zadatak 6",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 3 - [javni] konstruktor, metode DajMinimalnuCijenu i DajMaksimalnuCijenu\n    Berza b1 = Berza(1000,4000);\n    b1.RegistrirajCijenu(3000);\n    b1.RegistrirajCijenu(1500);\n    std::cout << \"Minimalna cijena: \" << b1.DajMinimalnuCijenu() << std::endl;\n    std::cout << \"Maksimalna cijena: \" << b1.DajMaksimalnuCijenu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Minimalna cijena: 1500\\nMaksimalna cijena: 3000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 4 - [javni] konstruktor, metode RegistrirajCijenu, Ispisi, BrisiSve\n    Berza b1 = Berza(1000,4000);\n    b1.RegistrirajCijenu(3000);\n    b1.RegistrirajCijenu(1500);\n    b1.RegistrirajCijenu(2000);\n    std::cout << \"Broj registrovanih cijena: \" << b1.DajBrojRegistriranihCijena() << std::endl;\n    b1.Ispisi();\n    b1.BrisiSve();\n    std::cout << \"Broj registrovanih cijena: \" << b1.DajBrojRegistriranihCijena();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj registrovanih cijena: 3\\n30.00\\n20.00\\n15.00\\nBroj registrovanih cijena: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

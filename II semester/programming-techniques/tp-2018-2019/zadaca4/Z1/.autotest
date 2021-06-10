@@ -1,0 +1,248 @@
+{
+    "id": 77728,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 4, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 (javni): Konstruktor i metode Postavi (obje verzije)\n\nTrougao trougao({1, 2}, {3, 4}, {4, 3});\nstd::cout << \"Koordinate tjemena: \";\ntrougao.Ispisi();\n\ntrougao.Postavi({4, 1}, {2, 3}, {0, 0});\nstd::cout << \"\\nNove koordinate tjemena: \";\ntrougao.Ispisi();\n\ntrougao.Postavi(3, {5, 5});\nstd::cout << \"\\nNove koordinate tjemena: \";\ntrougao.Ispisi();\n\n\/\/Izuzeci\ntry {\n    trougao.Postavi({1, 1}, {1, 1}, {3, 5});\n} catch (const std::domain_error &e) {\n    std::cout << \"\\nIzuzetak: \" << e.what() << std::endl;\n}\ntry {\n    trougao.Postavi(0, {3, 3});\n} catch (const std::range_error &e) {\n    std::cout << \"Izuzetak: \" << e.what() << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Koordinate tjemena: ((1,2),(3,4),(4,3))\\nNove koordinate tjemena: ((4,1),(2,3),(0,0))\\nNove koordinate tjemena: ((4,1),(2,3),(5,5))\\nIzuzetak: Nekorektne pozicije tjemena\\nIzuzetak: Nekorektan indeks"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 (javni): Metode DajTjeme, DajStranicu i DajUgao\n\nTrougao trougao({1, 0}, {4, 2}, {3, 5});\nstd::cout << \"Tjemena T1, T2 i T3 redom imaju koordinate: \";\nfor (int i = 1; i <= 3; i++)\n    std::cout << '(' << trougao.DajTjeme(i).first << ',' << trougao.DajTjeme(i).second << \") \";\n\nstd::cout << \"\\nDuzine stranica naspram tjemena T1, T2 i T3 redom iznose: \";\nfor (int i = 1; i <= 3; i++)\n    std::cout << trougao.DajStranicu(i) << ' ';\n\nstd::cout << \"\\nUglovi (u radijanima) naspram tjemena T1, T2 i T3 redom iznose: \";\nfor (int i = 1; i <= 3; i++)\n    std::cout << trougao.DajUgao(i) << ' ';",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tjemena T1, T2 i T3 redom imaju koordinate: (1,0) (4,2) (3,5)\\nDuzine stranica naspram tjemena T1, T2 i T3 redom iznose: 3.16228 5.38516 3.60555\\nUglovi (u radijanima) naspram tjemena T1, T2 i T3 redom iznose: 0.602287 1.83705 0.702257"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 (javni): Metode DajObim i DajPovrsinu\n\nTrougao trougao({0, 0}, {3,1}, {2,5});\nstd::cout << \"Obim trougla iznosi: \" << trougao.DajObim()\n          << \"\\nPovrsina trougla iznosi: \" << trougao.DajPovrsinu();",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Obim trougla iznosi: 12.6705\\nPovrsina trougla iznosi: 6.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 (javni): Metode DajCentar i Centriraj\n\nTrougao trougao({5, 1}, {0, -1}, {4, 0});\nTacka t = trougao.DajCentar();\nstd::cout << \"Centar trougla se nalazi u tacki (\" << t.first << ',' << t.second << ')';\ntrougao.Centriraj({0, 0});\nstd::cout << \"\\nTrougao centriran oko tacke (0,0) glasi: \";\ntrougao.Ispisi();",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Centar trougla se nalazi u tacki (3,0)\\nTrougao centriran oko tacke (0,0) glasi: ((2,1),(-3,-1),(1,0))"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 (javni): Metode Transliraj, Rotiraj i Skaliraj\n\nTrougao trougao({6, 4}, {6, 8}, {1, 8});\ntrougao.Transliraj(1, 2);\nstd::cout << \"Trougao nakon translacije za delta_x = 1 i delta_y = 2 glasi: \";\ntrougao.Ispisi();\n\ntrougao.Rotiraj({7, 6}, 2*std::atan(1));\nstd::cout << \"\\nTrougao nakon rotacije za PI\/2 radijana oko tacke (7,6) glasi: \";\ntrougao.Ispisi();\n\ntrougao.Skaliraj({7, 6}, 2);\nstd::cout << \"\\nTrougao nakon skaliranja 2x u odnosu na tacku (7,6) glasi: \";\ntrougao.Ispisi();",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao nakon translacije za delta_x = 1 i delta_y = 2 glasi: ((7,6),(7,10),(2,10))\\nTrougao nakon rotacije za PI\/2 radijana oko tacke (7,6) glasi: ((7,6),(3,6),(3,1))\\nTrougao nakon skaliranja 2x u odnosu na tacku (7,6) glasi: ((7,6),(-1,6),(-1,-4))"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 (javni): Metoda DaLiSuIdenticni - primjer iz postavke zadatka\n\nTrougao t1({1, 3}, {5, 2}, {4, 4}), t2({5, 2}, {1, 3}, {4, 4});\nif (DaLiSuIdenticni(t1, t2))\n    std::cout << \"Trouglovi t1 i t2 JESU identicni.\";\nelse\n    std::cout << \"Trouglovi t1 i t2 NISU identicni.\";\nstd::cout << std::endl;\n\nt1.Postavi(1, {2, 2});\nif (DaLiSuIdenticni(t1, t2))\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 JESU identicni.\";\nelse\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 NISU identicni.\";",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trouglovi t1 i t2 JESU identicni.\\nNakon izmjene trouglovi t1 i t2 NISU identicni."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT7 (javni) Metoda DaLiSuPodudarni - primjer iz postavke zadatka\n\nTrougao t1({2, 1}, {6, 1}, {6, 4}), t2({1, 3}, {1, 7}, {4, 3});\nif (DaLiSuPodudarni(t1, t2))\n    std::cout << \"Trouglovi t1 i t2 JESU podudarni.\";\nelse\n    std::cout << \"Trouglovi t1 i t2 NISU podudarni.\";\nstd::cout << std::endl;\n\nt1.Postavi({1, 3}, {4, 3}, {4, 7});\nif (DaLiSuPodudarni(t1, t2))\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 JESU podudarni.\";\nelse\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 NISU podudarni.\";",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trouglovi t1 i t2 JESU podudarni.\\nNakon izmjene trouglovi t1 i t2 NISU podudarni."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8 (javni): Metoda DaLiSuSlicni\n\nTrougao t1({0, 0}, {1, 3}, {3, 0}), t2({0, 0}, {6, 0}, {4, -6});\nif (DaLiSuSlicni(t1, t2))\n    std::cout << \"Trouglovi t1 i t2 JESU slicni.\";\nelse\n    std::cout << \"Trouglovi t1 i t2 NISU slicni.\";\nstd::cout << std::endl;\n\nt1.Postavi(1, {1, 0});\nif (DaLiSuSlicni(t1, t2))\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 JESU slicni.\";\nelse\n    std::cout << \"Nakon izmjene trouglovi t1 i t2 NISU slicni.\";",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trouglovi t1 i t2 JESU slicni.\\nNakon izmjene trouglovi t1 i t2 NISU slicni."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT9 (javni): Metoda DaLiJeUnutra\n\nTrougao trougao({-1, 2}, {4, 0}, {2, -2});\nif (trougao.DaLiJeUnutra({2, 0}))\n    std::cout << \"Tacka (2,0) je UNUTAR trougla.\";\nelse\n    std::cout << \"Tacka (2,0) je IZVAN trougla.\";\n\nif (trougao.DaLiJeUnutra({-1, 0}))\n    std::cout << \"\\nTacka (-1,0) je UNUTAR trougla.\";\nelse\n    std::cout << \"\\nTacka (-1,0) je IZVAN trougla.\";",
+            "global_above_main": "",
+            "global_top": "#define Trougao Trokut\n#define DajKut DajUgao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tacka (2,0) je UNUTAR trougla.\\nTacka (-1,0) je IZVAN trougla."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT10 (javni): skoro-random main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n1 2 6 7 10 13\n5 4 2 1 5 7\n1 3 5 2 4 4\n1 3 1 7 4 3\n5 2 1 3 4 4\n1 3 4 3 4 7\n2 1 6 1 6 4\n5 2 3 1 3 4\n1 1 2 2 5 8\n1 3 4 3 1 7\n2 3\n0\n2"
+            },
+            "expected": [
+                "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 3. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 4. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 5. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 6. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 7. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 8. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 9. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 10. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija: \\n((3,4),(5,6),(11,18))\\n((7,5),(3,3),(3,9))\\n((3,6),(11,4),(9,8))\\n((7,5),(-1,7),(5,9))\\n((7,7),(1,1),(7,13))\\n((3,5),(13,15),(21,27))\\n((3,6),(3,14),(9,6))\\n((3,6),(9,6),(9,14))\\n((4,4),(12,4),(12,10))\\n((3,6),(9,6),(3,14))\\nTrougao sa najmanjim obimom: ((7,5),(3,3),(3,9))\\nParovi identicnih trouglova: \\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\nParovi podudarnih trouglova: \\n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))\\nParovi slicnih trouglova: \\n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT11 (javni): skoro-random main (ima rotacija + neispravan trougao + nema podudarnih\/slicnih...)\n\/\/NAPOMENA: izuzetak ispisujete kao: e.what() << \", ponovite unos!\" << std::endl\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n1 3 5 2 7 1\n1 1 2 2 3 3\n1 6 3 4 7 9\n1 0\n1\n5"
+            },
+            "expected": [
+                "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Nekorektne pozicije tjemena, ponovite unos!\\nUnesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija:\\n((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\\n((3.50635,3.90931),(17.3241,6.921),(7.09336,37.258))\\nTrougao sa najmanjim obimom: ((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\\nNema identicnih trouglova!\\nNema podudarnih trouglova!\\nNema slicnih trouglova!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

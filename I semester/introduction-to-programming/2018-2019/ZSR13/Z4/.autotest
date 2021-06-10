@@ -1,0 +1,419 @@
+{
+    "id": 393803,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 10, Zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT1: Izbacujemo drzavu sa istim imenom grada *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Blabla\", { \"Grad1\", 123456}},\n\t\t{\"Neka\", { \"Grad2\", 345126}},\n\t\t{\"Truch\", { \"Grad3\", 521423}},\n\t\t{\"Jos jedna\", { \"Grad2\", 123456}}\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Regija1\", { \"Grad21\", 345126}},\n\t\t{\"Regija2\", { \"Grad2\", 123123}}, \/* Nema veze sto broj stanovnika nije isti *\/\n\t\t{\"Regija3\", { \"Grad18\", 123456}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 4, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 2\\nBlabla\\nTruch"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT2: Izbacujemo drzave koje pocinju sa Z *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Mozambik\", { \"Maputo\", 123456}},\n\t\t{\"Zimbabve\", { \"Harare\", 345126}},\n\t\t{\"zambija\", { \"Lusaka\", 521423}}, \/* Malo Z ! *\/\n\t\t{\"Bosna i Hercegovina\", { \"Sarajevo\", 123456}},\n\t\t{\"Zelenortska republika\", { \"Praia\", 123456}}\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Regija1\", { \"Grad21\", 345126}},\n\t\t{\"Regija2\", { \"Grad2\", 123123}}, \n\t\t{\"Regija3\", { \"Grad18\", 123456}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 5, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 3\\nMozambik\\nzambija\\nBosna i Hercegovina"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT3: Izbacujemo drzave sa Z i malim gradovima *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Mozambik\", { \"Maputo\", 9999}},\n\t\t{\"Zimbabve\", { \"Harare\", 345126}},\n\t\t{\"zambija\", { \"Lusaka\", 10001}}, \/* Malo Z ! *\/\n\t\t{\"Bosna i Hercegovina\", { \"Sarajevo\", 500000}},\n\t\t{\"Zelenortska republika\", { \"Praia\", 123456}},\n\t\t{\"Lihtenstajn\", { \"Lihtenstajn\", 5352}},\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Regija1\", { \"Grad21\", 345126}},\n\t\t{\"Regija2\", { \"Fojnica\", 1234}}, \n\t\t{\"Regija3\", { \"Grad18\", 1}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 6, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 2\\nzambija\\nBosna i Hercegovina"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT4: Izbacujemo drzave sa sva tri kriterija *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Mozambik\", { \"Maputo\", 9999}},\n\t\t{\"Zimbabve\", { \"Harare\", 345126}},\n\t\t{\"zambija\", { \"Lusaka\", 10001}}, \/* Malo Z ! *\/\n\t\t{\"Bosna i Hercegovina\", { \"Sarajevo\", 500000}},\n\t\t{\"Nauru\", { \"Yaren\", 747}},\n\t\t{\"Kanada\", { \"Otava\", 883391}},\n\t\t{\"Zelenortska republika\", { \"Praia\", 123456}},\n\t\t{\"Nigerija\", { \"Abuja\", 900211}}\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Regija1\", { \"Sarajevo\", 345126}},\n\t\t{\"Regija2\", { \"Maputo\", 1234}}, \n\t\t{\"Regija3\", { \"LusakaLusaka\", 1}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 8, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 3\\nzambija\\nKanada\\nNigerija"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT5: Sve izbaceno *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Mozambik\", { \"Maputo\", 10001}}\n\t};\n\tstruct Drzava niz1a[] = {\n\t\t{\"Mozambik\", { \"Maputo hello\", 10001}}\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Regija1\", { \"Sarajevo\", 345126}},\n\t\t{\"Regija2\", { \"Maputo\", 1234}}, \n\t\t{\"Regija3\", { \"LusakaLusaka\", 1}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 1, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\n\t\/* Nista nije izbaceno *\/\n\tvel = filtriraj(niz1a, 1, niz2, 3);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 0\\nVel: 1\\nMozambik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/* AT6: Redoslijed izbacivanja drzava *\/\n\tstruct Drzava niz1[] = {\n\t\t{\"Mozambik\", { \"Maputo\", 9999}},\n\t\t{\"bzimbabve\", { \"Harare\", 345126}},\n\t\t{\"zambija\", { \"Lusaka\", 10001}}, \/* Malo Z ! *\/\n\t\t{\"Bosna i Hercegovina\", { \"Sarajevo\", 500000}},\n\t\t{\"Nauru\", { \"Yaren\", 74747}},\n\t\t{\"Kanada\", { \"Otava\", 883391}},\n\t\t{\"bzelenortska republika\", { \"Praia\", 123456}},\n\t\t{\"Nigerija\", { \"Abuja\", 900211}}\n\t};\n\tstruct Regija niz2[] = {\n\t\t{\"Nigerija\", { \"Abuja\", 900211}},\n\t\t{\"Zelenortska republika\", { \"Praia\", 123456}},\n\t\t{\"Kanada\", { \"Otava\", 883391}},\n\t\t{\"Nauru\", { \"Yaren\", 747}},\n\t\t{\"zambija\", { \"Lusaka\", 10001}}, \/* Malo Z ! *\/\n\t\t{\"Zimbabve\", { \"Harare\", 345126}},\n\t\t{\"Mozambik\", { \"Maputo\", 9999}}\n\t};\n\tint i, vel;\n\tvel = filtriraj(niz1, 8, niz2, 7);\n\tprintf(\"Vel: %d\\n\", vel);\n\tfor (i=0; i<vel; i++) {\n\t\tprintf(\"%s\\n\", niz1[i].naziv);\n\t}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 1\\nBosna i Hercegovina"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Provjera funkcije zapisi_regije *\/\nstruct Regija niz[] = {\n\t{\"Nigerija\", { \"Abuja\", 900211}},\n\t{\"Zelenortska republika\", { \"Praia\", 123456}},\n\t{\"Kanada\", { \"Otava\", 883391}},\n\t{\"Nauru\", { \"Yaren\", 747}},\n\t{\"Zambija\", { \"Lusaka\", 10001}},\n\t{\"Zimbabve\", { \"Harare\", 345126}},\n\t{\"Mozambik\", { \"Maputo\", 9999}}\n};\nzapisi_regije(niz, 7);\n\nint c;\nFILE* provjera = fopen(\"regije.txt\", \"r\");\ndo {\n    c = fgetc(provjera);\n    if (c != EOF) printf(\"%c\", c);\n} while(c != EOF);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nigerija,Abuja,900211\\nZelenortska republika,Praia,123456\\nKanada,Otava,883391\\nNauru,Yaren,747\\nZambija,Lusaka,10001\\nZimbabve,Harare,345126\\nMozambik,Maputo,9999"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Provjera funkcije ucitaj_regije *\/\nstruct Regija niz[100];\nint vel, i;\nFILE* provjera = fopen(\"regije.txt\", \"w\");\nfprintf(provjera, \"Regija1,Grad1,10000\\nRegija2,Grad2,12121\\nRegija3,Grad3,43256\");\nfclose(provjera);\n    \nvel = ucitaj_regije(niz, 100);\n\nfor (i=0; i<vel; i++) {\n    printf(\"%s - %s (%d)\\n\", niz[i].naziv, niz[i].glavni.naziv, niz[i].glavni.br_stanovnika);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Regija1 - Grad1 (10000)\\nRegija2 - Grad2 (12121)\\nRegija3 - Grad3 (43256)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Regije sa razmacima *\/\nstruct Regija niz[100];\nint vel, i;\nFILE* provjera = fopen(\"regije.txt\", \"w\");\nfprintf(provjera, \"Regija1,Grad1,10000\\nRegija2 Regija2 Regija2,Grad2,12121\\nRegija3,Grad3 Grad3,43256\\nRegija4,Grad4 Grad4 Grad4 Grad4 Grad4,123456\");\nfclose(provjera);\n    \nvel = ucitaj_regije(niz, 100);\n\nfor (i=0; i<vel; i++) {\n    printf(\"%s - %s (%d)\\n\", niz[i].naziv, niz[i].glavni.naziv, niz[i].glavni.br_stanovnika);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Regija1 - Grad1 (10000)\\nRegija2 Regija2 Regija2 - Grad2 (12121)\\nRegija3 - Grad3 Grad3 (43256)\\nRegija4 - Grad4 Grad4 Grad4 G (123456)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Ponasanje funkcije ucitaj_regije u slucaju prekoracenja *\/\nstruct Regija niz[2];\nint vel, i;\nFILE* provjera = fopen(\"regije.txt\", \"w\");\nfprintf(provjera, \"Regija1,Grad1,10000\\nRegija2,Grad2,12121\\nRegija3,Grad3,43256\");\nfclose(provjera);\n    \nvel = ucitaj_regije(niz, 2);\n\nfor (i=0; i<vel; i++) {\n    printf(\"%s - %s (%d)\\n\", niz[i].naziv, niz[i].glavni.naziv, niz[i].glavni.br_stanovnika);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Regija1 - Grad1 (10000)\\nRegija2 - Grad2 (12121)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Provjera funkcije ucitaj_drzave *\/\nstruct Drzava niz[100];\nint i, vel;\n    \nvel = ucitaj_drzave(niz, 100);\n    \nfor (i=0; i<vel; i++)\n    printf(\"%s - %s (%d)\\n\", niz[i].naziv, niz[i].glavni.naziv, niz[i].glavni.br_stanovnika);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Mozambik - Maputo (9999)\\nZimbabve - Harare (345126)\\nZambija - Lusaka (10001)\\nBosna i Hercegovina - Sarajevo (507327)\\nNauru - Yaren (701)\\nKanada - Otava (883389)\\nZelenortska republika - Praia (114111)\\nNigerija - Abuja (900543)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 16,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Provjera funkcije max_glavni *\/\nstruct Drzava niz[100];\nint i, vel;\n    \nvel = ucitaj_drzave(niz, 100);\n\nstruct Grad g = max_glavni(niz, vel-1);\nprintf(\"%s\", g.naziv);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Otava"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 17,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Provjera funkcije drzave_regije *\/\nstruct Drzava nizd[100];\nint i, vel;\n    \nvel = ucitaj_drzave(nizd, 100);\n\nstruct Regija nizr[] = {\n    {\"Regija Nigerija\", { \"Abuja\", 900211}},\n    {\"Regija Zelenortska republika\", { \"Praia\", 123456}},\n    {\"Regija Kanada\", { \"Otava\", 883391}},\n    {\"Regija Nauru\", { \"Otava 2\", 747}},\n    {\"Regija Zambija\", { \"OtaLusaka\", 10001}},\n    {\"Regija Zimbabve\", { \"Harare\", 345126}},\n    {\"Regija Mozambik\", { \"Otava\", 9999}}\n};\n\ndrzave_regije(nizd, vel-1, nizr, 7);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Regija Kanada\\nRegija Mozambik"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 18,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT8: Ponasanje funkcije ucitaj_drzave u slucaju prekoracenja *\/\nstruct Drzava niz[3];\nint i, vel;\n    \nvel = ucitaj_drzave(niz, 3);\n    \nfor (i=0; i<vel; i++)\n    printf(\"%s - %s (%d)\\n\", niz[i].naziv, niz[i].glavni.naziv, niz[i].glavni.br_stanovnika);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Mozambik - Maputo (9999)\\nZimbabve - Harare (345126)\\nZambija - Lusaka (10001)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 19,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT9: Dodatne provjere funkcije drzave_regije *\/\nstruct Drzava nizd[100];\nint i, vel;\n    \nvel = ucitaj_drzave(nizd, 100);\n\nstruct Regija nizr[] = {\n    {\"Regija Nigerija\", { \"Abuja\", 900211}},\n    {\"Regija Zelenortska republika\", { \"Otava\", 123456}},\n    {\"Regija Kanada\", { \"Otavaa\", 883391}},\n    {\"Regija Nauru\", { \"Praia\", 747}},\n    {\"Regija Zambija\", { \"OtaLusaka\", 10001}},\n    {\"Regija Zimbabve\", { \"Otava\", 345126}},\n    {\"Regija Mozambik\", { \"Maput\", 9999}}\n};\n\nprintf(\"Test 1: prazan prvi niz\\n\");\ndrzave_regije(nizd, 0, nizr, 7);\n\nprintf(\"Test 2: prazan drugi niz\\n\");\ndrzave_regije(nizd, 8, nizr, 0);\n\nprintf(\"Test 3: nema rezultata\\n\");\nstrcpy(nizd[7].glavni.naziv, \"Pogresan\");\ndrzave_regije(nizd, vel, nizr, 7);\n\nprintf(\"Test 4: mnogo rezultata\\n\");\nstrcpy(nizd[0].glavni.naziv, \"Otava\");\nstrcpy(nizd[7].glavni.naziv, \"Otava\");\ndrzave_regije(nizd, vel, nizr, 7);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Test 1: prazan prvi niz\\nTest 2: prazan drugi niz\\nTest 3: nema rezultata\\nTest 4: mnogo rezultata\\nRegija Zelenortska republika\\nRegija Zimbabve"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 20,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT10: Mnogo regija *\/\nstruct Regija niz[100];\nchar test[100];\nint vel, i;\nFILE* provjera = fopen(\"regije.txt\", \"w\");\nfor (i=1; i<=200; i++)\n   fprintf(provjera, \"Regija %d,Grad %d,1000%d\\n\", i, i, i);\nfclose(provjera);\n    \nvel = ucitaj_regije(niz, 100);\n\nfor (i=0; i<vel; i++) {\n    sprintf(test, \"Regija %d\", i+1);\n    if (strcmp(test, niz[i].naziv)) printf(\"NOT \");\n    sprintf(test, \"Grad %d\", i+1);\n    if (strcmp(test, niz[i].glavni.naziv)) printf(\"NOT \");\n}\nprintf(\"OK\");",
+            "global_above_main": "#include <string.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

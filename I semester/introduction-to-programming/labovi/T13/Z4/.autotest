@@ -1,0 +1,44 @@
+{
+    "id": 7210,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2060,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();\n\/* Ponovo pozivamo main, koji sada treba raditi sa ranije generisanom datotekom *\/\nprintf(\"\\n\");\n_main();\n\/* Provjera da li je datoteka sortirana po broju bodova *\/\nprintf(\"\\nispit.txt:\\n\");\nFILE* dat = fopen(\"ispit.txt\", \"r\");\nif (dat == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\nint c;\ndo {\n   c = fgetc(dat);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(dat);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMeho\nMehic\n10\n8\n1\nHana\nHanic\n7\n4\n1\nDada\nDadic\n10\n14\n0\n2\n4\n2\n1\n3\n1\nHana\nHanic\n15\n17\n0"
+            },
+            "expected": [
+                "Unesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: \\nUnesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite redni broj studenta kojeg zelite obrisati: Student sa rednim brojem 4 ne postoji!\\nUnesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite redni broj studenta kojeg zelite obrisati: Student Meho Mehic obrisan\\nUnesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz: Unesite redni broj studenta kojeg zelite mijenjati: Unesite novo ime: Unesite novo prezime: Unesite novi broj bodova (I parcijalni): Unesite novi broj bodova (II parcijalni): Unesite 1 za dodavanje, 2 za brisanje, 3 za izmjenu, 4 za ispis, 0 za izlaz:\\nispit.txt:\\nHanic               Hana           15 17\\nDadic               Dada           10 14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

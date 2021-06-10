@@ -1,0 +1,130 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘std::vector<std::set<std::__cxx11::basic_string<char> > > Razvrstavanje(std::vector<std::__cxx11::basic_string<char> >, int)’:\nmain.cpp:51:24: warning: ‘prethodno’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n     prethodno->sljedeci=prvo;\n     ~~~~~~~~~~~~~~~~~~~^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "51",
+                "col": "24",
+                "message": "'prethodno' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_1862/main.cpp:51:24: warning: ‘prethodno’ may be used uninitialized in this function [-Wmaybe-uninitialized]     prethodno->sljedeci=prvo;     ~~~~~~~~~~~~~~~~~~~^~~~~",
+                "code": "prethodno->sljedeci=prvo;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3598": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: Ana, Damir, Mirsad, Muhamed\nTim 2: Ivan, Merima, Nikolina\nTim 3: Alen, Jasmina, Marko\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3599": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: Marija, Melisa\nTim 2: Dzan, Zara\nTim 3: Merima, Noa\nTim 4: Adin, Adna\nTim 5: Armin, Leon\nTim 6: Kenan, Tajra\nTim 7: Dario, Ines\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3600": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: Adna, Dzan, Marija, Melisa, Merima, Noa, Zara\nTim 2: Adin, Armin, Dario, Ines, Kenan, Leon, Tajra\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3601": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: Marija, Melisa\nTim 2: Dzan, Zara\nTim 3: Merima, Noa\nTim 4: Adin, Adna\nTim 5: Armin, Leon\nTim 6: Kenan, Tajra\nTim 7: Dario\nTim 8: Ines\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3602": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: Zara\nTim 2: Noa\nTim 3: Dario\nTim 4: Leon\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3603": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Tim 1: 2PAC, Noa\nTim 2: Lea Alma, Zara\nTim 3: 50 Cent, Nicole\nTim 4: Hermione Jean, Leon\nTim 5: Dario, Minevra\nTim 6: Albus Percival Wulfric Brian\nTim 7: Harry James\nTim 8: Ana-Marija\nTim 9: Rubeus\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3612": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj djece: Unesite imena djece: \nUnesite broj timova: Izuzetak: Razvrstavanje nemoguce",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1558198772
+}

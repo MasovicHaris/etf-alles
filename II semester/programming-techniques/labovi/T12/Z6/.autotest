@@ -1,0 +1,419 @@
+{
+    "id": 8626,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 12, Zadatak 6",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3767,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 testiranje operatora [] i izuzetka u slu\u010daju nesaglasnosti matrica za mno\u017eenje\n\n  try {\nMatrica<double> a(2, 3, 'a');\na[0][0] = 1; a[0][1] = 2; a[0][2] = 3;\na[1][0] = 4; a[1][1] = 5; a[1][2] = 7;\nMatrica<double> b(2, 3, 'b');\nb[0][0] = 1; b[0][1] = 2; b[0][2] = 3;\nb[1][0] = 4; b[1][1] = 5; b[1][2] = 6;\na=a*b;\n}\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n   catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrice nisu saglasne za mnozenje"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3773,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 testiranje operatora [] i +\n try {\nMatrica<double> a(2, 3, 'a');\na[0][0] = 1; a[0][1] = 2; a[0][2] = 3;\na[1][0] = 4; a[1][1] = 5; a[1][2] = 7;\nMatrica<double> b(2, 3, 'b');\nb[0][0] = 1; b[0][1] = 2; b[0][2] = 3;\nb[1][0] = 4; b[1][1] = 5; b[1][2] = 6;\na=a+b;\n for(int i = 0; i < 2; i++){\n      for(int j = 0; j < 3; j++)\n      std::cout << a[i][j] << \" \";\n      std::cout << std::endl;\n    }\n}\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n   catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 4 6 \\n8 10 13"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3774,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 Testiranje operatora () i izuzetka u slu\u010daju neispravnog indeksa\n try {\nMatrica<int> a(2, 3, 'a');\na(0,0) = 1; a(0,1) = 2; a(0,2) = 3;\na(1,0) = 4; a(1,1) = 5; a(1,2) = 7;\nMatrica<int> b(2, 3, 'b');\nb(0,0) = 1; b(0,1) = 2; b(0,2) = 3;\nb(1,0) = 4; b(1,1) = 5; b(1,2) = 6;\n}\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravan indeks"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3775,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT4 testiranje operatora () i -\n  try {\nMatrica<int> a(2, 3, 'a');\na(1,1) = 2; a(1,2) = 2; a(1,3) = 3;\na(2,1) = 4; a(2,2) = 5; a(2,3) = 7;\nMatrica<int> b(2, 3, 'b');\nb(1,1) = 1; b(1,2) = 1; b(1,3) = 3;\nb(2,1) = 4; b(2,2) = 6; b(2,3) = 6;\na = a - b;\n for(int i = 0; i < 2; i++){\n      for(int j = 0; j < 3; j++)\n      std::cout << a[i][j] << \" \";\n      std::cout << std::endl;\n    }\n}\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 0 \\n0 -1 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3776,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 5 testiranje izraza koji kombinuje vi\u0161e operatora, unosa i ispisa\n  int m,n;\n  std::cout << \"Unesi broj redova i kolona za matrice:\\n\";\n  std::cin >> m >> n;\n  try {\n    Matrica<double> a(m, n, 'A'), b(m, n, 'B');\n    std::cout << \"Unesi matricu A:\\n\";\n    std::cin >> a;\n    std::cout << \"Unesi matricu B:\\n\";\n    std::cin >> b;\n    a= (a + b) * (3 * a - b);\nstd::cout << std::setw(4) << a;\n  }\ncatch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 2 2 4 5 1 1 4 6"
+            },
+            "expected": [
+                "Unesi broj redova i kolona za matrice:\\nUnesi matricu A: \\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesi matricu B: \\nB(1,1) = B(1,2) = B(2,1) = B(2,2) =   39  42 \\n 128 139"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3777,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT6 testiranje operatora () i operatora * u 3 kombinacije\ntry {\nMatrica<int> a(2, 2, 'a');\na(1,1) = 2; a(1,2) = 2; \na(2,1) = 4; a(2,2) = 5; \nMatrica<int> b(2, 2, 'b');\nb(1,1) = 1; b(1,2) = 1;\nb(2,1) = 4; b(2,2) = 6;\n    a=a*b;\n    for(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << a(i+1,j+1) << \" \";\n      std::cout << std::endl;\n    }\nstd::cout << \"---------------\" << std::endl;\na=a*5;\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << a(i+1,j+1) << \" \";\n      std::cout << std::endl;\n}\nstd::cout << \"---------------\" << std::endl;\nb=5*b;\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << a(i+1,j+1) << \" \";\n      std::cout << std::endl;\n}\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 14 \\n24 34 \\n---------------\\n50 70 \\n120 170 \\n---------------\\n50 70 \\n120 170"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3778,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 7 testiranje operatora += , -=, unosa i ispisa\n  int m,n;\n  std::cout << \"Unesi broj redova i kolona za matrice:\\n\";\n  std::cin >> m >> n;\n  try {\n    Matrica<double> a(m, n, 'A'), b(m, n, 'B');\n    std::cout << \"Unesi matricu A:\\n\";\n    std::cin >> a;\n    std::cout << \"Unesi matricu B:\\n\";\n    std::cin >> b;\na+=b;\nb-=a;\nstd::cout << std::setw(4) << a;\nstd::cout << \"--------------\" << std::endl;\nstd::cout << std::setw(4) << b ;\n}\ncatch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 2 2 4 5 1 1 4 6"
+            },
+            "expected": [
+                "Unesi broj redova i kolona za matrice:\\nUnesi matricu A: \\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesi matricu B: \\nB(1,1) = B(1,2) = B(2,1) = B(2,2) =    3   3\\n   8  11\\n--------------\\n  -2  -2\\n  -4  -5\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3779,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8 testiranje operatora *=, [] i unosa\n  int m,n;\n  std::cout << \"Unesi broj redova i kolona za matrice:\\n\";\n  std::cin >> m >> n;\n  try {\n    Matrica<double> a(m, n, 'A'), b(m, n, 'B');\n    std::cout << \"Unesi matricu A:\\n\";\n    std::cin >> a;\n    std::cout << \"Unesi matricu B:\\n\";\n    std::cin >> b;\na*=b;\nb*=10;\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << a[i][j] << \" \";\n      std::cout << std::endl;\n}\nstd::cout << \"---------------\" << std::endl;\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << b[i][j] << \" \";\n      std::cout << std::endl;\n}\n}\ncatch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 2 2 4 5 1 1 4 6"
+            },
+            "expected": [
+                "Unesi broj redova i kolona za matrice: \\nUnesi matricu A: \\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesi matricu B: \\nB(1,1) = B(1,2) = B(2,1) = B(2,2) = 10 14 \\n24 34 \\n---------------\\n10 10 \\n40 60 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3780,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9 testiranje slo\u017eenih izraza sa operatorima +=, -=, +, -, unosa i ispisa\n  int m,n;\n  std::cout << \"Unesi broj redova i kolona za matrice:\\n\";\n  std::cin >> m >> n;\n  try {\n    Matrica<double> a(m, n, 'A'), b(m, n, 'B');\n    std::cout << \"Unesi matricu A:\\n\";\n    std::cin >> a;\n    std::cout << \"Unesi matricu B:\\n\";\n    std::cin >> b;\nMatrica<double>c(a);\na = b += c;\nb -= a * c;\nstd::cout << std::setw(4) << a;\nstd::cout << \"--------------\" << std::endl;\nstd::cout << std::setw(4) << b ;\n}\ncatch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 10 2 4 5 1 7 16 6"
+            },
+            "expected": [
+                "Unesi broj redova i kolona za matrice: \\nUnesi matricu A: \\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesi matricu B: \\nB(1,1) = B(1,2) = B(2,1) = B(2,2) =   11   9\\n  20  11\\n--------------\\n-135 -58\\n-224 -84"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3781,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10 testiranje kaskadnog ispisa i indeksiranja const matrice\n  int m,n;\n  std::cout << \"Unesi broj redova i kolona za matrice:\\n\";\n  std::cin >> m >> n;\n  try {\n    Matrica<double> a(m, n, 'A'), b(m, n, 'B');\n    std::cout << \"Unesi matricu A:\\n\";\n    std::cin >> a;\n    std::cout << \"Unesi matricu B:\\n\";\n    std::cin >> b;\nconst Matrica<double>c(a);\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << c(i+1,j+1) << \" \";\n      std::cout << std::endl;\n}\nstd::cout << \"---------------\" << std::endl;\nfor(int i = 0; i < 2; i++){\n      for(int j = 0; j < 2; j++)\n      std::cout << c[i][j] << \" \";\n      std::cout << std::endl;\n}\nstd::cout << std::setw(5) << a << std::setw(5) << b;\n}\ncatch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2 10 2 4 3 1 1 7 10\n"
+            },
+            "expected": [
+                "Unesi broj redova i kolona za matrice: \\nUnesi matricu A: \\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesi matricu B: \\nB(1,1) = B(1,2) = B(2,1) = B(2,2) = 10 2 \\n4 3 \\n---------------\\n10 2 \\n4 3 \\n   10    2\\n    4    3\\n    1    1\\n    7   10\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3782,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT11 testiranje operatora [] i eksplicitne konverzije matrice u string\n try {\nMatrica<double> a(2, 2, 'a');\na[0][0] = 10; a[0][1] = 2; \na[1][0] = 4; a[1][1] = 5; \nstd::cout << std::string(a);\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{{10,2},{4,5}}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3783,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT12 testiranje implicitne konverzije (const) matrice u string\n  try {\nMatrica<double> a(2, 2, 'a');\na[0][0] = 10; a[0][1] = 2; \na[1][0] = 4; a[1][1] = 5; \nstd::string s; \ns = a; \nstd::cout << s << std::endl;\nconst Matrica<double> b(a);\ns=a;\nstd::cout << s << std::endl;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{{10,2},{4,5}}\\n{{10,2},{4,5}}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3784,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT13 testiranje izuzetka sabiranja nesaglasnih matrica\ntry {\nMatrica<double> a(2, 2, 'a');\nMatrica<double> b(6, 4, 'b');\na+b;\n\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrice nemaju jednake dimenzije!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3785,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT14 testiranje izuzetka oduzimanja nesaglasnih matrica\ntry {\nMatrica<double> a(2, 2, 'a');\nMatrica<double> b(6, 4, 'b');\na-=b;\n\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrice nemaju jednake dimenzije!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3786,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT14 testiranje izuzetka oduzimanja nesaglasnih matrica\ntry {\nMatrica<double> a(2, 2, 'a');\nMatrica<double> b(6, 4, 'b');\na=a-b;\n\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrice nemaju jednake dimenzije!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3787,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT16 testiranje izuzetka sabiranja nesaglasnih matrica\ntry {\nMatrica<double> a(2, 2, 'a');\nMatrica<double> b(6, 4, 'b');\na+=b;\n\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nema dovoljno memorije!\\n\";\n  }\n    catch(std::domain_error e) {\n    std::cout << e.what();\n  }\n    catch(std::range_error e) {\n    std::cout << e.what();\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrice nemaju jednake dimenzije!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

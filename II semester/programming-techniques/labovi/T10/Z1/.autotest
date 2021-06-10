@@ -1,0 +1,244 @@
+{
+    "id": 8601,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 10, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3620,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje izuzetka: postavljanje negativne vrijednosti za stanje racuna\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\ntry tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nTestirajIzuzetak(std::logic_error, { StedniRacun s5(-50); }); ",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nedozvoljeno pocetno stanje"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3621,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje izuzetka u metodi Podigni: iznos veci od trenutnog stanja na racunu\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\ntry tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nStedniRacun s1=30;\n\nTestirajIzuzetak(std::logic_error, { s1.Podigni(1000); });",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Transakcija odbijena"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3622,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje izuzetka u metodi Ulozi: iznos negativan\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\ntry tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nStedniRacun s1=10;\n\nTestirajIzuzetak(std::logic_error, { s1.Ulozi(-1000); });  ",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Transakcija odbijena"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3623,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje izuzetka u metodi ObracunajKamatu: kamatna_stopa je negativna\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\ntry tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nStedniRacun s1=30; \n\nTestirajIzuzetak(std::logic_error, { s1.ObracunajKamatu(-5); });",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nedozvoljena kamatna stopa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3624,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Testiranje metode DajStanje\n\nStedniRacun s1=30,s2(150),s3=0; \n\nstd::cout << s1.DajStanje()<<\" \"<<s2.DajStanje()<<\" \"<<s3.DajStanje();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "30 150 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3626,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: Testiranje metode Ulozi\n\nStedniRacun s1=0; \ns1.Ulozi(20);\nstd::cout << s1.DajStanje()<<std::endl;\ns1.Ulozi(50);\nstd::cout << s1.DajStanje()<<std::endl;\ns1.Ulozi(-10);\nstd::cout << s1.DajStanje()<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20\\n70\\n60"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3627,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: Testiranje metode Podigni\n\nStedniRacun s1=150; \ns1.Podigni(100);\nstd::cout << s1.DajStanje()<<std::endl;\ns1.Podigni(-20);\nstd::cout << s1.DajStanje()<<std::endl;\ns1.Podigni(-20);\nstd::cout << s1.DajStanje()<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "50\\n70\\n90"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3628,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: Testiranje metode ObracunajKamatu\n\nStedniRacun s1(50); \ns1.ObracunajKamatu(5);\nstd::cout << s1.DajStanje()<<std::endl;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "52.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3629,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: Testiranje da li je konstruktor eksplicitan\n\nstd::cout << std::boolalpha                                     \n    << std::is_default_constructible<StedniRacun>::value << \" \"          \n    << std::is_default_constructible<StedniRacun>::value << \" \"         \n    << std::is_convertible<double, StedniRacun>::value << std::endl;         ",
+            "global_above_main": "#include <type_traits> ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "true true true"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

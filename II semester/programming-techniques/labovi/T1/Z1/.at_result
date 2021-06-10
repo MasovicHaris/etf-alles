@@ -1,0 +1,102 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:20:34: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if((razlika - (int)razlika)==0)\n                                  ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "20",
+                "col": "34",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7711/main.cpp:20:34: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if((razlika - (int)razlika)==0)                                  ^",
+                "code": "if((razlika - (int)razlika)==0)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3120": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \nZa poplocavanje bazena dimenzija 5x15x3m sa plocicama dimenzija 10x10cm\npotrebno je 19500 plocica.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3121": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \nPoplocavanje bazena dimenzija 5x15x3m sa plocicama dimenzija 13x13cm\nnije izvodljivo bez lomljenja plocica!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3122": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \nZa poplocavanje bazena dimenzija 1x1x1m sa plocicama dimenzija 100x100cm\npotrebno je 5 plocica.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3123": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \nZa poplocavanje bazena dimenzija 7x1x14m sa plocicama dimenzija 4x4cm\npotrebno je 144375 plocica.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3124": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite duzinu, sirinu i dubinu bazena u metrima: Unesite sirinu plocice u centimetrima: \nPoplocavanje bazena dimenzija 3x2x6m sa plocicama dimenzija 3x3cm\nnije izvodljivo bez lomljenja plocica!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1489084813
+}

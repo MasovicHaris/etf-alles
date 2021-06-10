@@ -1,0 +1,147 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:18:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    if(nasum==0)\n            ^~\nmain.c:23:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    else if(nasum!=0)\n                 ^~\nmain.c:30:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    if(nasum==0)\n            ^~\nmain.c:35:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    else if(nasum!=0)\n                 ^~\nmain.c:43:13: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(nasum==0)\n             ^~\nmain.c:48:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     else if(nasum!=0)\n                  ^~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "18",
+                "col": "12",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:18:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    if(nasum==0)            ^~",
+                "code": "if(nasum==0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "23",
+                "col": "17",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:23:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    else if(nasum!=0)                 ^~",
+                "code": "else if(nasum!=0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "30",
+                "col": "12",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:30:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    if(nasum==0)            ^~",
+                "code": "if(nasum==0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "35",
+                "col": "17",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:35:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    else if(nasum!=0)                 ^~",
+                "code": "else if(nasum!=0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "43",
+                "col": "13",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:43:13: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(nasum==0)             ^~",
+                "code": "if(nasum==0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "48",
+                "col": "18",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_820/main.c:48:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     else if(nasum!=0)                  ^~",
+                "code": "else if(nasum!=0)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "PON: Zlato $1201.20 (+0.1) Srebro $14.98 (-0.1) Nafta $70.07 (+0.1)\nUTO: Zlato $1203.60 (+0.2) Srebro $14.98 (+0.0) Nafta $70.21 (+0.2)\nSRI: Zlato $1204.81 (+0.1) Srebro $14.97 (-0.1) Nafta $70.42 (+0.3)\nCET: Zlato $1207.22 (+0.2) Srebro $14.94 (-0.2) Nafta $70.70 (+0.4)\nPET: Zlato $1208.42 (+0.1) Srebro $14.93 (-0.1) Nafta $71.06 (+0.5)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "PON: Zlato $1201.20 (+0.1) Srebro $14.98 (-0.1) Nafta $70.07 (+0.1)\nUTO: Zlato $1203.60 (+0.2) Srebro $14.98 (+0.0) Nafta $70.21 (+0.2)\nSRI: Zlato $1204.81 (+0.1) Srebro $14.97 (-0.1) Nafta $70.42 (+0.3)\nCET: Zlato $1207.22 (+0.2) Srebro $14.94 (-0.2) Nafta $70.70 (+0.4)\nPET: Zlato $1208.42 (+0.1) Srebro $14.93 (-0.1) Nafta $71.06 (+0.5)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Pogresan izbor!\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 82 ($99090.67) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $909.33\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "PON: Zlato $1201.20 (+0.1) Srebro $14.98 (-0.1) Nafta $70.07 (+0.1)\nUTO: Zlato $1203.60 (+0.2) Srebro $14.98 (+0.0) Nafta $70.21 (+0.2)\nSRI: Zlato $1204.81 (+0.1) Srebro $14.97 (-0.1) Nafta $70.42 (+0.3)\nCET: Zlato $1207.22 (+0.2) Srebro $14.94 (-0.2) Nafta $70.70 (+0.4)\nPET: Zlato $1208.42 (+0.1) Srebro $14.93 (-0.1) Nafta $71.06 (+0.5)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 82 ($99090.67) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $909.33\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): \nPON: Zlato $1208.42 (+0.0) Srebro $14.90 (-0.2) Nafta $71.34 (+0.4)\nUTO: Zlato $1207.21 (-0.1) Srebro $14.85 (-0.3) Nafta $71.70 (+0.5)\nSRI: Zlato $1204.80 (-0.2) Srebro $14.82 (-0.2) Nafta $72.13 (+0.6)\nCET: Zlato $1201.19 (-0.3) Srebro $14.78 (-0.3) Nafta $72.49 (+0.5)\nPET: Zlato $1198.78 (-0.2) Srebro $14.75 (-0.2) Nafta $72.92 (+0.6)\n\n\nImate:\nZlata: 82 ($98300.22) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $909.33\nUKUPNO: $99209.55 ($-790.45)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 82 ($98300.22) Srebra: 50 ($737.34) Nafte: 0 ($0.00) Novca: $171.98\nUKUPNO: $99209.55 ($-790.45)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "PON: Zlato $1201.20 (+0.1) Srebro $14.98 (-0.1) Nafta $70.07 (+0.1)\nUTO: Zlato $1203.60 (+0.2) Srebro $14.98 (+0.0) Nafta $70.21 (+0.2)\nSRI: Zlato $1204.81 (+0.1) Srebro $14.97 (-0.1) Nafta $70.42 (+0.3)\nCET: Zlato $1207.22 (+0.2) Srebro $14.94 (-0.2) Nafta $70.70 (+0.4)\nPET: Zlato $1208.42 (+0.1) Srebro $14.93 (-0.1) Nafta $71.06 (+0.5)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 500 ($35527.98) Novca: $64472.02\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1000 ($71055.97) Novca: $28944.03\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? Nemate toliko novca!\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1000 ($71055.97) Novca: $28944.03\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1250 ($88819.96) Novca: $11180.04\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "PON: Zlato $1201.20 (+0.1) Srebro $14.98 (-0.1) Nafta $70.07 (+0.1)\nUTO: Zlato $1203.60 (+0.2) Srebro $14.98 (+0.0) Nafta $70.21 (+0.2)\nSRI: Zlato $1204.81 (+0.1) Srebro $14.97 (-0.1) Nafta $70.42 (+0.3)\nCET: Zlato $1207.22 (+0.2) Srebro $14.94 (-0.2) Nafta $70.70 (+0.4)\nPET: Zlato $1208.42 (+0.1) Srebro $14.93 (-0.1) Nafta $71.06 (+0.5)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 0 ($0.00) Novca: $100000.00\nUKUPNO: $100000.00 ($+0.00)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1250 ($88819.96) Novca: $11180.04\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 700 ($10447.59) Nafte: 1250 ($88819.96) Novca: $732.45\nUKUPNO: $100000.00 ($+0.00)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): \nPON: Zlato $1208.42 (+0.0) Srebro $14.90 (-0.2) Nafta $71.34 (+0.4)\nUTO: Zlato $1207.21 (-0.1) Srebro $14.85 (-0.3) Nafta $71.70 (+0.5)\nSRI: Zlato $1204.80 (-0.2) Srebro $14.82 (-0.2) Nafta $72.13 (+0.6)\nCET: Zlato $1201.19 (-0.3) Srebro $14.78 (-0.3) Nafta $72.49 (+0.5)\nPET: Zlato $1198.78 (-0.2) Srebro $14.75 (-0.2) Nafta $72.92 (+0.6)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 700 ($10322.82) Nafte: 1250 ($91153.29) Novca: $732.45\nUKUPNO: $102208.56 ($+2208.56)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta prodajete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? Nemate toliko srebra!\n\nImate:\nZlata: 0 ($0.00) Srebra: 700 ($10322.82) Nafte: 1250 ($91153.29) Novca: $732.45\nUKUPNO: $102208.56 ($+2208.56)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta prodajete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? Nemate toliko zlata!\n\nImate:\nZlata: 0 ($0.00) Srebra: 700 ($10322.82) Nafte: 1250 ($91153.29) Novca: $732.45\nUKUPNO: $102208.56 ($+2208.56)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta prodajete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1250 ($91153.29) Novca: $11055.27\nUKUPNO: $102208.56 ($+2208.56)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): Sta kupujete (1 - Zlato, 2 - Srebro, 3 - Naftu): Koliko? \nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1370 ($99904.01) Novca: $2304.55\nUKUPNO: $102208.56 ($+2208.56)\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): \nPON: Zlato $1197.58 (-0.1) Srebro $14.70 (-0.3) Nafta $73.29 (+0.5)\nUTO: Zlato $1195.19 (-0.2) Srebro $14.67 (-0.2) Nafta $73.73 (+0.6)\nSRI: Zlato $1193.99 (-0.1) Srebro $14.63 (-0.3) Nafta $74.24 (+0.7)\nCET: Zlato $1191.61 (-0.2) Srebro $14.60 (-0.2) Nafta $74.84 (+0.8)\nPET: Zlato $1190.41 (-0.1) Srebro $14.59 (-0.1) Nafta $75.36 (+0.7)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1370 ($103244.38) Novca: $2304.55\nUKUPNO: $105548.93 ($+5548.93)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): \nPON: Zlato $1190.41 (+0.0) Srebro $14.56 (-0.2) Nafta $75.81 (+0.6)\nUTO: Zlato $1191.60 (+0.1) Srebro $14.51 (-0.3) Nafta $76.34 (+0.7)\nSRI: Zlato $1191.60 (+0.0) Srebro $14.48 (-0.2) Nafta $76.80 (+0.6)\nCET: Zlato $1190.41 (-0.1) Srebro $14.47 (-0.1) Nafta $77.19 (+0.5)\nPET: Zlato $1188.03 (-0.2) Srebro $14.44 (-0.2) Nafta $77.65 (+0.6)\n\n\nImate:\nZlata: 0 ($0.00) Srebra: 0 ($0.00) Nafte: 1370 ($106379.00) Novca: $2304.55\nUKUPNO: $108683.55 ($+8683.55)\n\n\nUnesite izbor (1 - Kupi, 2 - Prodaj, 3 - Sljedeca sedmica, 0 - Kraj igre): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1541691717
+}

@@ -1,0 +1,94 @@
+{
+    "id": 8579,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 9",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3489,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT 1: test int\nTest();",
+            "global_above_main": "void Test()\n{\n\tstd::cout << plus2(3)(5) << std::endl;\n  \tstd::cout << plus3(3)(5)(6) << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "8\\n14\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3490,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 2: test neutralni element 0\nTest1();",
+            "global_above_main": "void Test1()\n{\n\tstd::cout << plus2(0)(5.55) << std::endl;\n  \tstd::cout << plus3(103.15)(0.)(1e-7) << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5.55\\n103.15\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3491,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 3: test mali brojevi\nTest2();",
+            "global_above_main": "void Test2()\n{\n\tstd::cout << plus2(0.0)(1e-5) << std::endl;\n  \tstd::cout << plus3(15e-5)(0.)(1e-7) << std::endl;\n}\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1e-05\\n0.0001501\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

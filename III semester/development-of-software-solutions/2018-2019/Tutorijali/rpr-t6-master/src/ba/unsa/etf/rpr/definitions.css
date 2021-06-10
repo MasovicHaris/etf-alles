@@ -1,0 +1,19 @@
+#rectangle{
+    -fx-stroke: #ab8787;
+}
+.poljeIspravno {
+    -fx-control-inner-background: greenyellow;
+    -fx-border-width: 2;
+    -fx-border-radius: 2px;
+}
+.poljeNijeIspravno {
+    -fx-control-inner-background: #ff5e56;
+    -fx-border-width: 2;
+    -fx-border-radius: 2px;
+}
+#messageLabel{
+    -fx-text-fill: red;
+}
+#potvrdiButton{
+
+}

@@ -1,0 +1,294 @@
+{
+    "id": 8552,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3319,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testiramo funkciju RazmijeniBlokove \n\/\/ulazni parametri su nizovi cijelih brojeva\n\nint a[]{1, 2, 3, 4, 5}, b[]{6, 7, 8, 9, 10};\nRazmijeniBlokove(std::begin(a), std::end(a), std::begin(b));\nstd::cout << \"Prvi niz: \";\nfor(int x : a) std::cout << x << \" \";\nstd::cout << \"\\nDrugi niz: \";\nfor(int x : b) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi niz: 6 7 8 9 10 \\nDrugi niz: 1 2 3 4 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3320,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testiramo funkciju RazmijeniBlokove \n\/\/ulazni parametri su stringovi\n\nstd::string s1(\"String1\"), s2(\"String2\");\nRazmijeniBlokove(s1.begin(), s1.end(), s2.begin());\nstd::cout << \"Prvi string: \" << s1 << std::endl;\nstd::cout << \"Drugi string: \" << s2 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi string: String2\\nDrugi string: String1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3322,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (vector i deque)\n\nstd::vector<int> vektor{1, 2, 3, 4, 5};\nstd::deque <int> dek{6, 7, 8, 9, 10};\nRazmijeniBlokove(vektor.begin(),vektor.end(),dek.begin());\nstd::cout << \"Prvi kontejner: \";\nfor(int x : vektor) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : dek) std::cout << x << \" \";\nstd::cout << std::endl;\n",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3323,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (vector i deque)\n\nstd::deque <int> dek{1, 2, 3, 4, 5};\nstd::vector <int> vektor{6, 7, 8, 9, 10};\nRazmijeniBlokove(dek.begin(),dek.end(),vektor.begin());\nstd::cout << \"Prvi kontejner: \";\nfor(int x : dek) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : vektor) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3326,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (obi\u010dan niz cijelih brojeva i vektor)\n\nint niz[]{1,2,3,4,5};\nstd::vector <int> vektor{6, 7, 8, 9, 10};\nRazmijeniBlokove(std::begin(niz),std::end(niz),vektor.begin());\nstd::cout << \"Prvi kontejner: \";\nfor(int x : niz) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : vektor) std::cout << x << \" \";\nstd::cout << std::endl;\n",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3327,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (obi\u010dan niz cijelih brojeva i vektor)\n\nint niz[]{1,2,3,4,5};\nstd::vector <int> vektor{6, 7, 8, 9, 10};\nRazmijeniBlokove(vektor.begin(),vektor.end(),std::begin(niz));\nstd::cout << \"Prvi kontejner: \";\nfor(int x : niz) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : vektor) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3328,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (obi\u010dan niz cijelih brojeva i deque)\n\nint niz[]{1,2,3,4,5};\nstd::deque <int> dek{6, 7, 8, 9, 10};\nRazmijeniBlokove(dek.begin(),dek.end(),std::begin(niz));\nstd::cout << \"Prvi kontejner: \";\nfor(int x : niz) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : dek) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3329,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testiramo funkciju RazmijeniBlokove \n\/\/razliciti kontejneri kao ulazni parametri funkcije (obi\u010dan niz cijelih brojeva i deque) i razliciti tipovi\n\nint niz[]{1,2,3,4,5};\nstd::deque <short> dek{6,7,8,9,10};\nRazmijeniBlokove(std::begin(niz),std::end(niz),dek.begin());\nstd::cout << \"Prvi kontejner: \";\nfor(int x : niz) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : dek) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 6 7 8 9 10\\nDrugi kontejner: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3332,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: testiramo funkciju RazmijeniBlokove \n\/\/testiramo prazan kontejner\n\nstd::deque <int> dek1{1,2,3,4,5};\nstd::deque <int> dek2{6,7,8,9,10};\nRazmijeniBlokove(dek1.begin(),dek1.begin(),dek2.begin());\nstd::cout << \"Prvi kontejner: \";\nfor(int x : dek1) std::cout << x << \" \";\nstd::cout << \"\\nDrugi kontejner: \";\nfor(int x : dek2) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi kontejner: 1 2 3 4 5 \\nDrugi kontejner: 6 7 8 9 10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3335,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: testiramo funkciju RazmijeniBlokove \n\/\/ulazni parametri obicni nizovi cijelih brojeva\n\nint niz1[]{1,2,3,4,5};\nint niz2[]{6,7,8,9,10};\nRazmijeniBlokove(niz1,niz1+5,niz2);\nstd::cout << \"Prvi niz: \";\nfor(int x : niz1) std::cout << x << \" \";\nstd::cout << \"\\nDrugi niz: \";\nfor(int x : niz2) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi niz: 6 7 8 9 10\\nDrugi niz: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3371,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT11: testiramo funkciju RazmijeniBlokove \n\/\/testiramo da li funkcija vraca vrijednost\n\nstd::deque<double> a{1, 2, 3, 4, 5}, b{6, 7, 8, 9, 10};\nstd::deque<double>::iterator iza_kraja = RazmijeniBlokove(a.begin(), a.end(), b.begin());\nfor (auto it = b.begin(); it != iza_kraja; ++it)\nstd::cout << *it << \" \";\nstd::cout << \"\\nPoslije razmjene:\\n\";\nstd::cout << \"Prvi niz: \";\nfor(int x : a) std::cout << x << \" \";\nstd::cout << \"\\nDrugi niz: \";\nfor(int x : b) std::cout << x << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 4 5\\nPoslije razmjene:\\nPrvi niz: 6 7 8 9 10\\nDrugi niz: 1 2 3 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

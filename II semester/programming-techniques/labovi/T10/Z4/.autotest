@@ -1,0 +1,401 @@
+{
+    "id": 8604,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 10, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3649,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje da li klasa Ugao sadrzi samo dva atributa\n\nstd::cout << sizeof(Ugao) << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3650,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje metode Ispisi\n\/\/NAPOMENA: zbog nepreciznosti realne aritmetike ispis zaokruzite (fiksirano) na 5 decimala\n\nUgao u1, u2(1), u3(100), u4(-55), u5 = 1, u6=-5;\n\nu1.Ispisi(); std::cout << std::endl;\nu2.Ispisi(); std::cout << std::endl;\nu3.Ispisi(); std::cout << std::endl;\nu4.Ispisi(); std::cout << std::endl;\nu5.Ispisi(); std::cout << std::endl;\nu6.Ispisi(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.00000\\n1.00000\\n5.75222\\n1.54867\\n1.00000\\n1.28319"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3651,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje metode IspisiKlasicno\n\nUgao u1, u2(1), u3(100), u4(-55), u5 = 1, u6=-90;\nu1.IspisiKlasicno(); std::cout << std::endl;\nu2.IspisiKlasicno(); std::cout << std::endl;\nu3.IspisiKlasicno(); std::cout << std::endl;\nu4.IspisiKlasicno(); std::cout << std::endl;\nu5.IspisiKlasicno(); std::cout << std::endl;\nu6.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0deg 0min 0sec\\n57deg 17min 44sec\\n329deg 34min 40sec\\n88deg 43min 55sec\\n57deg 17min 44sec\\n243deg 22min 47sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3652,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje metoda DajRadijane, DajStepene, DajMinute, DajSekunde\n\nUgao u(1), v;          \nstd::cout << u.DajRadijane() << std::endl;\nstd::cout << u.DajStepene() << \" \" << u.DajMinute()\n<< \" \" << u.DajSekunde() << std::endl;\nstd::cout << v.DajRadijane() << std::endl;\nstd::cout << v.DajStepene() << \" \" << v.DajMinute()\n<< \" \" << v.DajSekunde() << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n57 17 44\\n0\\n0 0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3653,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Testiranje metode Postavi sa jednim parametrom\n\/\/NAPOMENA: zbog nepreciznosti realne aritmetike ispis zaokruzite (fiksirano) na 5 decimala\n\nUgao u(1), v;\nu.Postavi(2);\nu.Ispisi(); std::cout << std::endl;\nu.IspisiKlasicno(); std::cout << std::endl;\nv.Postavi(u.DajRadijane());\nv.Ispisi(); std::cout << std::endl;\nv.IspisiKlasicno();",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2.00000\\n114deg 35min 29sec\\n2.00000\\n114deg 35min 29sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3654,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: Testiranje metode Postavi sa tri parametrom\n\/\/NAPOMENA: zbog nepreciznosti realne aritmetike ispis zaokruzite (fiksirano) na 5 decimala\n\nUgao u,v;\nu.Postavi(212, 57, 28.062), v.Postavi(1,1,-1);\nu.Ispisi(); std::cout << std::endl;\nu.IspisiKlasicno(); std::cout << std::endl;\nv.Ispisi(); std::cout << std::endl;\nv.IspisiKlasicno();",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3.71681\\n212deg 57min 28sec\\n0.01774\\n1deg 0min 59sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3655,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: Testiranje redukcije na opseg od 0 do 2*pi (od 0 do 360deg)\n\nUgao u1,u2(50, 25, 12), u3(500, 300, 200), u4(-10, -20, -30);;\nu1.Postavi(500, 300, 200);\nu1.IspisiKlasicno(); std::cout << std::endl;\nu1.Postavi(-10, -20, -30);\nu1.IspisiKlasicno(); std::cout << std::endl;\nu2.IspisiKlasicno(); std::cout << std::endl;\nu3.IspisiKlasicno(); std::cout << std::endl;\nu4.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "145deg 3min 19sec\\n349deg 39min 30sec\\n50deg 25min 12sec\\n145deg 3min 19sec\\n349deg 39min 30sec",
+                "145deg 3min 20sec\\n349deg 39min 30sec\\n50deg 25min 12sec\\n145deg 3min 20sec\\n349deg 39min 30sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3656,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: Testiranje metode SaberiSa (slucaj sa i bez redukcije na opseg od 0 do 2*pi)\n\nUgao u(50, 25, 12), v(500, 300, 200), f(50, 30, 10);\nu.SaberiSa(f);\nu.IspisiKlasicno(); std::cout << std::endl;\nu.SaberiSa(v);\nu.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "100deg 55min 22sec\\n245deg 58min 41sec",
+                "100deg 55min 22sec\\n245deg 58min 42sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3657,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: Testiranje metode SaberiSa \n\nUgao u(50, 25, 12), v(500, 300, 200), f(50, 30, 10);\nu.SaberiSa(f).SaberiSa(v);                    \nu.IspisiKlasicno(); std::cout << std::endl;\nu.SaberiSa(v).SaberiSa(f).Ispisi(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "245deg 58min 41sec\\n1.42308",
+                "245deg 58min 42sec\\n1.42308"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3658,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: Testiranje sabiranja objekta tipa Ugao (ili Kut) sa realnim brojem\n\nUgao u(50, 25, 12), v(500, 300, 200), f(50, 30, 10);\nu.SaberiSa(1);\nu.IspisiKlasicno(); std::cout << std::endl;\nu.SaberiSa(1).SaberiSa(f).Ispisi();",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "107deg 42min 56sec\\n3.76143"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3659,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT11: Testiranje metode PomnoziSa\n\nUgao u(50, 25, 12);\nu.PomnoziSa(5);\nu.IspisiKlasicno(); std::cout << std::endl;\nu.PomnoziSa(-5);\nu.IspisiKlasicno(); std::cout << std::endl;\nu.PomnoziSa(-5.5);\nu.IspisiKlasicno(); std::cout << std::endl;\nu.PomnoziSa(-5.5).PomnoziSa(2);\nu.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "252deg 6min 0sec\\n179deg 30min 59sec\\n92deg 45min 0sec\\n59deg 44min 59sec",
+                "252deg 5min 59sec\\n179deg 30min 0sec\\n92deg 44min 59sec\\n59deg 45min 0sec",
+                "252deg 6min 0sec\\n179deg 29min 59sec\\n92deg 45min 0sec\\n59deg 44min 59sec",
+                "252deg 6min 0sec\\n179deg 30min 0sec\\n92deg 44min 59sec\\n59deg 45min 0sec",
+                "252deg 6min 0sec\\n179deg 30min 0sec\\n92deg 45min 0sec\\n59deg 45min 0sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3660,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT12: Testiranje kombinacije SaberiSa i PomnoziSa\n\nUgao u(90, 0, 0);\nu.PomnoziSa(5).SaberiSa(u).Ispisi(); std::cout << std::endl;\nu.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3.14159\\n180deg 0min 0sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3661,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT13: Testiranje metode ZbirUglova\n\nUgao u(90, 0, 0), v(180, 0, 0), f(90, 0, 0);\n\nu=ZbirUglova(u, v);\nu.IspisiKlasicno(); std::cout << std::endl;\nZbirUglova(u, f).IspisiKlasicno(); std::cout << std::endl;\nu=ZbirUglova(u, 90);\nu.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "270deg 0min 0sec\\n0deg 0min 0sec\\n26deg 37min 12sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3662,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT14: Testiranje metode ProduktUglaSaBrojem\n\nUgao u(90, 0, 0);\n\nu = ProduktUglaSaBrojem(u, 5);\nu.IspisiKlasicno(); std::cout << std::endl;\nProduktUglaSaBrojem(u, -5).IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "90deg 0min 0sec\\n270deg 0min 0sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3663,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT15: Testiranje inspektora\n\nUgao u(57, 17, 45);\n\nconst Ugao u1(u);\nstd::cout << u1.DajRadijane() << \" \" << u1.DajStepene() << \" \"\n<< u1.DajMinute() << \" \" << u1.DajSekunde() << std::endl;\nu1.Ispisi(); std::cout << std::endl;\nu1.IspisiKlasicno(); std::cout << std::endl;",
+            "global_above_main": "#define Kut Ugao ",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 57 17 45\\n1.00000\\n57deg 17min 45sec"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

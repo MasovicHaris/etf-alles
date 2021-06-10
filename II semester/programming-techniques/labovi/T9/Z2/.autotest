@@ -1,0 +1,69 @@
+{
+    "id": 8592,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 9, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3567,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje da li klasa Vektor3d idalje sadrzi isti interface i da li sve radi kako treba.\n\n  Vektor3d v1, v2;\n  v1.Postavi(4,3,0);\n  v2.PostaviX(1);\n  v2.PostaviY(2);\n  v2.PostaviZ(3);\n  v1.Ispisi();\n  std::cout << std::endl;\n  v2.Ispisi();\n  double x, y, z;\n  v2.Ocitaj(x, y, z);\n  std::cout << std::endl << x << \" \" << y << \" \" << z;\n  std::cout << std::endl << v2.DajX() << \" \" << v2.DajY() << \" \" << v2.DajZ();\n  std::cout << std::endl << v1.DajDuzinu() << std::endl;\n  v2.PomnoziSaSkalarom(-1).PomnoziSaSkalarom(2).Ispisi();\n  std::cout << std::endl;\n  v2.SaberiSa(v2).Ispisi();\n  auto v3 = ZbirVektora(v1, v2);\n  std::cout << std::endl;\n  v3.Ispisi();\n  \n  const Vektor3d vConst(v1);\n  std::cout << std::endl;\n  vConst.Ispisi();\n  vConst.Ocitaj(x, y, z);\n  std::cout << std::endl << x << \" \" << y << \" \" << z << std::endl;\n  std::cout << vConst.DajX() << \" \" << vConst.DajY() << \" \" << vConst.DajZ() << std::endl;\n  std::cout << vConst.DajDuzinu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{4,3,0}\\n{1,2,3}\\n1 2 3\\n1 2 3\\n5\\n{-2,-4,-6}\\n{-4,-8,-12}\\n{0,-5,-12}\\n{4,3,0}\\n4 3 0\\n4 3 0\\n5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3568,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje da li klasa zaista ima niz od tri double elementa.\n\/\/Napomena: ako vasa klasa sadrzi niz od tri double elementa a test pada vjerovatno se atribut ne zove \"koordinate\".\n\/\/Napomena 2: ako test pada dobijate 0 bodova na zadatku.\n\nVektor3d v;\nv.koordinate[0] = 0;\nv.koordinate[1] = 0;\nv.koordinate[2] = 0;",
+            "global_top": "#define class struct\n#define private public\n",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                ""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

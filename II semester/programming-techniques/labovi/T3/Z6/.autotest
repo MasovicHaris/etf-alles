@@ -1,0 +1,319 @@
+{
+    "id": 8536,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 6",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3192,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n3 124 -11 9\n6\n42 1001 0 -213 16 5"
+            },
+            "expected": [
+                "Unesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora:\\n    126   3003      0   -639     48     15\\n   5208 124124      0 -26412   1984    620\\n   -462 -11011      0   2343   -176    -55\\n    378   9009      0  -1917    144     45"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3193,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Svi negativni brojevi u matrici. Na rezultat NajvecaSirina se mora dodati +2 zbog minusa i jednog dodatnog mjesta. U ovom slucaju je to 9.\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n-154 -666 -7 -21 -223\n7\n12 54 123 11 332 7777 898"
+            },
+            "expected": [
+                "Unesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora:\\n    -1848    -8316   -18942    -1694   -51128 -1197658  -138292\\n    -7992   -35964   -81918    -7326  -221112 -5179482  -598068\\n      -84     -378     -861      -77    -2324   -54439    -6286\\n     -252    -1134    -2583     -231    -6972  -163317   -18858\\n    -2676   -12042   -27429    -2453   -74036 -1734271  -200254"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3195,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje funkcije KroneckerovProizvod sa praznom matricom\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\nstd::vector<int> v1;\nstd::vector<int> v2;\nstd::vector<std::vector<int>> mat = KroneckerovProizvod(v1, v2);\n\nfor(int i=0; i<mat.size(); i++)\n{\n   for(int j=0; j<mat[i].size(); j++)\n     std::cout << mat[i][j];\n   \n   std::cout << std::endl;\n}\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3196,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje funkcije KroneckerovProizvod sa praznom matricom\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\nstd::vector<int> v1(3,1);\nstd::vector<int> v2;\nstd::vector<std::vector<int>> mat = KroneckerovProizvod(v1, v2);\n\nfor(int i=0; i<mat.size(); i++)\n{\n   for(int j=0; j<mat[i].size(); j++)\n     std::cout << mat[i][j];\n   \n   std::cout << std::endl;\n}\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3197,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Testiranje funkcije KroneckerovProizvod sa matricom 1x1\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\nstd::vector<int> v1(1,2);\nstd::vector<int> v2(1,3);\nstd::vector<std::vector<int>> mat = KroneckerovProizvod(v1, v2);\n\nfor(int i=0; i<mat.size(); i++)\n{\n   for(int j=0; j<mat[i].size(); j++)\n     std::cout << mat[i][j];\n   \n   std::cout << std::endl;\n}\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6\\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3198,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: Testiranje sa pojavom donje granice cjelobrojne vrijednosti u matrici\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\nstd::vector<int> v1{1,0};\nstd::vector<int> v2{1,std::numeric_limits<int>::min()};\nstd::vector<std::vector<int>> mat = KroneckerovProizvod(v1, v2);\n\nfor(int i=0; i<mat.size(); i++)\n{\n   for(int j=0; j<mat[i].size(); j++)\n     std::cout << mat[i][j] << \" \";\n   \n   std::cout << std::endl;\n}\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 -2147483648 \\n0 0 \\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3199,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: Testiranje sa pojavom gornje granice cjelobrojne vrijednosti u matrici\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\nstd::vector<int> v1{1,0};\nstd::vector<int> v2{1,std::numeric_limits<int>::max()};\nstd::vector<std::vector<int>> mat = KroneckerovProizvod(v1, v2);\n\nfor(int i=0; i<mat.size(); i++)\n{\n   for(int j=0; j<mat[i].size(); j++)\n     std::cout << mat[i][j] << \" \";\n   \n   std::cout << std::endl;\n}\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2147483647 \\n0 0 \\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3200,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: Proslje\u0111ivanje prazne matrice funkciji NajvecaSirina\nstd::vector<int> v1;\nstd::vector<int> v2;\n\nstd::cout << \"Sirina: \" << NajvecaSirina(KroneckerovProizvod(v1, v2));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sirina: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3201,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: Slucaj kada se funkciji NajvecaSirina proslijedi grbava matrica\n\nstd::cout << \"Sirina: \" << NajvecaSirina({{11, -232, 555}, {1423, 23211}, {-66, 437, 88, -1231239}});",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sirina: 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3202,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: Funkcija NajvecaSirina uzima u obzir i minuse\n\nstd::cout << \"Sirina: \" << NajvecaSirina({{11, -232, 555}, {1423, 23211}}) << std::endl;\nstd::cout << \"Sirina: \" << NajvecaSirina({{11, -232, 555}, {1423, -23211}});",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sirina: 5\\nSirina: 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3231,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT11: Testiranje funkcije NajvecaSirina kada joj se proslijedi donja \n\/\/ granica cjelobrojnih vrijednosti\nstd::cout << \"Sirina: \" << NajvecaSirina({{1, -2, 3}, {-4, std::numeric_limits<int>::min()}}) << std::endl;",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sirina: 11\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3232,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT11: Testiranje funkcije NajvecaSirina kada joj se proslijedi gornja \n\/\/ granica cjelobrojnih vrijednosti\nstd::cout << \"Sirina: \" << NajvecaSirina({{1, -2, 3}, {-4, std::numeric_limits<int>::max()}}) << std::endl;",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sirina: 10\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

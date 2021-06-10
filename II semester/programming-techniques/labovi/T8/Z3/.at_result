@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3548": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima ucenika: Unesite podatke za 1. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 3. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 4. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 5. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 6. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \nUcenik Niko Nikic rodjen 17/11/1995 ima prosjek 8.5\nUcenik Neno Nenic rodjen 12/8/1995 ima prosjek 8.38\nUcenik Suljo Suljic rodjen 7/10/1996 ima prosjek 8.12\nUcenik Nino Ninic rodjen 5/12/1995 ima prosjek 8\nUcenik Meho Mehic rodjen 3/11/1997 ima prosjek 7.62\nUcenik Neko Nekic rodjen 15/4/1996 ima prosjek 7.5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3549": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima ucenika: Unesite podatke za 1. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \nUcenik Niko Nikic rodjen 17/11/1995 ima prosjek 8.5\nUcenik Neko Nekic rodjen 15/4/1996 ima prosjek 7.5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3550": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima ucenika: Unesite podatke za 1. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 3. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 4. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \nUcenik Neno Nenic rodjen 12/8/1994 ima prosjek 8.38\nUcenik Suljo Suljic rodjen 7/10/1993 ima prosjek 8.12\nUcenik Nino Ninic rodjen 5/12/1995 ima prosjek 8\nUcenik Meho Mehic rodjen 3/10/1996 ima prosjek 7.62\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3551": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima ucenika: Unesite podatke za 1. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:\n  Ime:   Prezime:   Datum rodjenja (D/M/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \nUcenik Suljo Suljic rodjen 7/10/1996 ima prosjek 8.12\nUcenik Meho Mehic rodjen 3/11/1997 ima prosjek 7.62\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1494487016
+}

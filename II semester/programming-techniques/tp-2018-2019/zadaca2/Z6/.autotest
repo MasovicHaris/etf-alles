@@ -1,0 +1,122 @@
+{
+    "id": 303405,
+    "name": "Tehnike programiranja (2014\/2015), Zada\u0107a 2, zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2453,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT1: test maina: ovaj AT definira oficijelni izlaz programa. U slucaju nedostatka memorije ispisati \"Nedovoljno memorije!\"\n        _main(); \/\/5 aab zz cz zc aaa zc\n        \/\/Unesite broj rijeci: Unesite rijeci: Sortirane rijeci: cz zc zz aaa aab\n        \/\/Unesite rijec za pretragu: Rijec 'zc' se nalazi u nizu.\n    }",
+            "global_above_main": "#include <string>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 aab zz cz zc aaa zc\n"
+            },
+            "expected": [
+                "Unesite broj rijeci: Unesite rijeci: Sortirane rijeci: cz zc zz aaa aab\\nUnesite rijec za pretragu: Rijec 'zc' se nalazi u nizu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2454,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT2: test maina: ovaj AT (zajedno s AT1) definira oficijelni izlaz programa.  U slucaju nedostatka memorije ispisati \"Nedovoljno memorije!\"\n        _main(); \/\/5 kajmak marmelada sok meso med kruska\n        \/\/Unesite broj rijeci: Unesite rijeci: Sortirane rijeci: med sok meso kajmak marmelada\n        \/\/Unesite rijec za pretragu: Rijec 'kruska' se ne nalazi u nizu.\n    }",
+            "global_above_main": "#include <string>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 kajmak marmelada sok meso med kruska"
+            },
+            "expected": [
+                "Unesite broj rijeci: Unesite rijeci: Sortirane rijeci: med sok meso kajmak marmelada\\nUnesite rijec za pretragu: Rijec 'kruska' se ne nalazi u nizu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2455,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT3: KriterijSortiranja funkcija\n        std::cout << KriterijSortiranja(\"a\", \"b\") << KriterijSortiranja(\"b\", \"a\") << KriterijSortiranja(\"aa\", \"b\"); \/\/100\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "100"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2456,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT4: PretraziBinarno funkcija\n    std::string n[]{\"a\", \"b\", \"c\"};\n    std::cout << PretraziBinarno(n, 3, \"b\") << PretraziBinarno(n, 2, \"c\"); \/\/10\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 2457,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT5: SortirajPoDuzini funkcija\n    std::string n[]{\"c\", \"a\", \"b\"};\n    SortirajPoDuzini(n, 3);\n    std::cout << n[0] << n[1] << n[2]; \/\/abc\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

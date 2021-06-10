@@ -1,0 +1,169 @@
+{
+    "id": 7159,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 11, zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1742,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 15 30\n2 30 15\n"
+            },
+            "expected": [
+                "Unesite prvo vrijeme (h m s): \\nUnesite drugo vrijeme (h m s): \\nIzmedju dva vremena je proteklo 4485 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1743,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 30 15\n1 15 30\n"
+            },
+            "expected": [
+                "Unesite prvo vrijeme (h m s): \\nUnesite drugo vrijeme (h m s): \\nIzmedju dva vremena je proteklo 4485 sekundi."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1744,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: funkcija 'proteklo' treba vracati \"unsigned int\"\nstruct Vrijeme v1 = {10, 10, 10};\nstruct Vrijeme v2 = {11, 11, 11};\nprintf (\"Proteklo: %u\", proteklo(v1, v2));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Proteklo: 3661"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1745,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT4\n            struct Vrijeme v1 = {1, 1, 1};\n            struct Vrijeme v2 = {1, 1, 1};\n            printf (\"Proteklo: %u\", proteklo(v1, v2));\n        }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Proteklo: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1746,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT5: cijeli dan\n            struct Vrijeme v1 = {0, 0, 0};\n            struct Vrijeme v2 = {23, 59, 59};\n            printf (\"Proteklo: %u\", proteklo(v1, v2));\n        }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Proteklo: 86399"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1747,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "        {\/\/AT6: cijeli dan (v1 i v2 zamijenjeni pri pozivu)\n            struct Vrijeme v1 = {0, 0, 0};\n            struct Vrijeme v2 = {23, 59, 59};\n            printf (\"Proteklo: %u\", proteklo(v2, v1));\n        }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Proteklo: 86399"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

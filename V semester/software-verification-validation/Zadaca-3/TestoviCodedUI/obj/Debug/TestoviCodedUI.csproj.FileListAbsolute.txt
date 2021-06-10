@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\bin\Debug\TestoviCodedUI.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\bin\Debug\TestoviCodedUI.pdb
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\obj\Debug\TestoviCodedUI.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\obj\Debug\TestoviCodedUI.dll
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\obj\Debug\TestoviCodedUI.pdb
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\bin\Debug\UPS.exe
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\bin\Debug\UPS.pdb
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\bin\Debug\UPS.exe.config
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\obj\Debug\TestoviCodedUI.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Zadaca 3\TestoviCodedUI\obj\Debug\TestoviCodedUI.csproj.CopyComplete

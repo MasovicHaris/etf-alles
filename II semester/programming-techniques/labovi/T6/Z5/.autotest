@@ -1,0 +1,245 @@
+{
+    "id": 8565,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 6, Zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3417,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1 testiranje maina koji sadrzi vektor dekova integera\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 3 12 5 123 -6 2 17 4 -31"
+            },
+            "expected": [
+                "Unesite broj redova kvadratne matrice: Unesite elemente matrice: 3 12 5\\n123 -6 2\\n17 4 -31"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3418,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT2 testiranje izuzetka u slu\u010daju nedovoljno memorije\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "100000000"
+            },
+            "expected": [
+                "Unesite broj redova kvadratne matrice: Nedovoljno memorije"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3419,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 testiranje funkcije koja prima grbavu matricu - vektor vektora integera\ntry {\n   std::vector<std::vector<int>> m {{1}, { 2, 2 }, {3,3,3}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <=i; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 \\n2 2 \\n3 3 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3420,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ vektor vektora stringova\n\n try {\n   std::vector<std::vector<std::string>> m {{\"Ja\"}, { \"testiram\", \"vas\"}, {\"program\",\"na\",\"stringove\"}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <=i; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ja \\ntestiram vas \\nprogram na stringove"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3421,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 dek vektora double-ova\ntry {\n   std::deque<std::vector<double>> m {{1.35, 2.45, -5}, {100, -50, 11.5}, {1.35, 2.45, -5}, {1.35, 2.45, -5}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 4; i++) {\n      for(int j = 0; j <3; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 4; i++) delete[] m1[i];\n    delete[] m1;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.35 2.45 -5 \\n100 -50 11.5 \\n1.35 2.45 -5 \\n1.35 2.45 -5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3422,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT6 dek dekova unsigned int \ntry {\n   std::deque<std::deque<unsigned int>> m {{6,6,6,7}, {12,23,34,45}, {1000,1,2,30}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <4; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6 6 6 7\\n12 23 34 45 \\n1000 1 2 30"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3423,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT7 vector dekova long long int\n\ntry {\n   std::vector<std::deque<long long int>> m {{10000,20000,20000,10000}, {11000,12,12,11}, {1000,12222,2000,30000}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <4; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10000 20000 20000 10000 \\n11000 12 12 11 \\n1000 12222 2000 30000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3436,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT8 provjera da li je ispravno kori\u0161tena fragmentirana alokacija\ntry {\n   std::vector<std::deque<int>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <3; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\nstd::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n    for (int i=0; i<brojac_new;i++) std::cout << alokacije[i] << \" \";\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[20];\n\nvoid *operator new[] (size_t vel)\n{ \n alokacije[brojac_new]=vel;\n brojac_new++;\n alocirano+=vel; \n return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr) {\n brojac_deleteniz++;\n free(ptr);\n}\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 \\n1 2 3 \\n1 2 3 \\nNew pozvan 4 puta,  delete [] pozvan 4 puta, a alocirano ukupno 60 bajta i to redom: 24 12 12 12 ",
+                "1 2 3 \\n1 2 3 \\n1 2 3 \\nNew pozvan 4 puta,  delete [] pozvan 4 puta, a alocirano ukupno 48 bajta i to redom: 12 12 12 12 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3437,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT9 provjera da li se alocira vi\u0161e memorije nego \u0161to je neophodno\n\ntry {\n  std::vector<std::deque<double>> m {{1,2,3}, {1,2,3}, {1,2,3}};\n    auto m1(KreirajDinamickuKopiju2D(m));\n    for(int i = 0; i < 3; i++) {\n      for(int j = 0; j <3; j++) std::cout << m1[i][j] << \" \";\n      std::cout << std::endl;\n    }\n    for(int i = 0; i < 3; i++) delete[] m1[i];\n    delete[] m1;\n    std::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n    for (int i=0; i<brojac_new;i++) std::cout << alokacije[i] << \" \";\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }",
+            "global_above_main": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[20];\nconst size_t RAM = 12 * sizeof(double);\n\nvoid *operator new[] (size_t vel)\n{\n    if (RAM < alocirano+vel) throw std::bad_alloc();\n    alokacije[brojac_new]=vel;\n    brojac_new++;\n    alocirano+=vel;   \n    return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr) {\n  brojac_deleteniz++;\n  free(ptr);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 \\n1 2 3 \\n1 2 3 \\nNew pozvan 4 puta,  delete [] pozvan 4 puta, a alocirano ukupno 96 bajta i to redom: 24 24 24 24"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

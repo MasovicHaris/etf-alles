@@ -1,0 +1,119 @@
+{
+    "id": 7200,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 12, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 993,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    izlaz = fopen(\"test.txt\", \"w\");\n    fprintf(izlaz, \"Kubu je otkrio Kolumbo 1492. god., a od 1511. god. zemlju pocinju osvajati\\nSpanjolci istrebljujuci indijske domoroce. Vec 1523. god. poceli su\\ndovoditi crnce-robove iz Afrike koji su ubrzo postali vecinsko stanovnistvo.\");\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test.txt\n"
+            },
+            "expected": [
+                "Broj redova: 3\\nBroj rijeci: 32\\nBroj znakova: 188\\nBroj samoglasnika: 70\\nBroj velikih slova: 5\\nBroj cifara: 12\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 994,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    izlaz = fopen(\"test.txt\", \"w\");\n    fprintf(izlaz, \"Welcome my son, welcome to the machine.\\nWhere have you been?\\nIt's alright we know where you've been.\\nYou've been in the pipeline, filling in time,\\nProvided with toys and 'Scouting for Boys'.\\nYou brought a guitar to punish your ma,\\nAnd you didn't like school, and you\\nKnow you're nobody's fool,\\nSo welcome to the machine.\");\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test.txt\n"
+            },
+            "expected": [
+                "Broj redova: 9\\nBroj rijeci: 57\\nBroj znakova: 264\\nBroj samoglasnika: 101\\nBroj velikih slova: 11\\nBroj cifara: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 995,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    izlaz = fopen(\"test.txt\", \"w\");\n    fprintf(izlaz, \"Joe: You see, I understand you men were just playin' around, but the mule, he just doesn't get it. Course, if you were to all apologize...\\n[Men Laugh]\\nJoe: I don't think it's nice, you laughin'. You see, my mule don't like people laughing. He gets the crazy idea you're laughin' at him. Now if you apologize, like I know you're going to, I might convince him that you really didn't mean it.\");\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test.txt\n"
+            },
+            "expected": [
+                "Broj redova: 3\\nBroj rijeci: 73\\nBroj znakova: 318\\nBroj samoglasnika: 126\\nBroj velikih slova: 13\\nBroj cifara: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 996,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "build_up();\n_main();",
+            "global_above_main": "void build_up()\n{\n    FILE* izlaz;\n\n    izlaz = fopen(\"test.txt\", \"w\");\n    fprintf(izlaz, \"99 little bugs in the code\\n99 little bugs in the code\\nTake one down, patch it around\\n117 little bugs in the code\");\n    fclose(izlaz);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "test.txt\n"
+            },
+            "expected": [
+                "Broj redova: 4\\nBroj rijeci: 24\\nBroj znakova: 89\\nBroj samoglasnika: 31\\nBroj velikih slova: 1\\nBroj cifara: 7\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

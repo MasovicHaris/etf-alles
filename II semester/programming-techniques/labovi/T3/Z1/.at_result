@@ -1,0 +1,133 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3170": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: 15 -26 0 73 -312 \n23 18 142 -333 11111 9 5555555 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3172": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: 24 73 112 -17 0 \n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3173": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: \n32 -23 111 45 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3174": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Broj elemenata mora biti veci od 0!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3175": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: 0 2 4 6 8 \n1 3 5 7 9 ",
+                "duration": 1,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3176": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: \n-1 -333 -5567 -3321 -6678 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3227": {
+            "status": 1,
+            "run_result": {
+                "output": "1 -2147483648 -3 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3228": {
+            "status": 1,
+            "run_result": {
+                "output": "6 2147483647 -2 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1490256996
+}

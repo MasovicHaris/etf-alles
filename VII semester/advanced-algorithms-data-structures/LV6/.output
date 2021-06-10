@@ -1,0 +1,14 @@
+------------------------------------------------------------
+Izaberite opciju -
+1) Unos formule
+2) Unos grafa
+3) Je li formula ispunjiva
+4) Postoji li k-nezavisnih cvorova
+5) Postoji li k-klika
+6) Verifikacija formule
+7) Verifikacija skupa nezavisnih cvorova
+8) Verifikacija k-klike
+9) Redukcija 3-SAT-TO-INDSET
+10)Redukcija 3-SAT-TO-CLIQUE
+11)Izlaz
+------------------------------------------------------------

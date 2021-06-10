@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+
+<HEAD>
+    <TITLE>Zadatak3</TITLE>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</HEAD>
+
+<BODY>
+    <div id="meni" style="border:1px solid black;">
+        <ul style="display: flex; list-style: none;">
+            <li style="margin-left: 0.5%"><a href="" onclick="funkcija(1)">Stranica 1</a></li>
+            <li style="margin-left: 0.5%"><a href="" onclick="funkcija(2)">Stranica 2</a></li>
+            <li style="margin-left: 0.5%"><a href="" onclick="funkcija(3)">Stranica 3</a></li>
+        </ul>
+    </div>
+    <div id="stranica" style="border:1px solid black; background-color: aqua;">Jesi li kliknuo na stranice? Još ne, ali hoću..</div>
+
+    <script>
+        $(document).ready(function () {
+            $("ul li a").click(function (event) {
+                event.preventDefault();
+            });
+        });
+
+        function funkcija(n) {
+            $.ajax({
+                url: "index/" + n.toString(),
+                type: "GET",
+                data: {},
+                success: function (data, status, settings) {
+                    console.log(data);
+                    document.getElementById("stranica").innerHTML = data;
+                },
+                error: function (ajaxrequest, ajaxOptions, thrownError) {
+                    alert("error");
+                }
+            });
+        }
+    </script>
+</BODY>
+
+</HTML>

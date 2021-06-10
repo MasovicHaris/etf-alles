@@ -1,0 +1,133 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "26": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenzije prve matrice:\nUnesite elemente prve matrice:\nUnesite dimenzije druge matrice:\nUnesite elemente druge matrice:\nNjihov Kroneckerov proizvod glasi:\n  12   9  45  -4  -3 -15\n   0 -15   6   0   5  -2\n   0   0   0  20  15  75\n   0   0   0   0 -25  10\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "27": {
+            "status": 1,
+            "run_result": {
+                "output": "3,12,-6,9,5,20,-10,15,2,8,-4,6,\n0,15,12,3,0,25,20,5,0,10,8,2,\n6,0,0,9,10,0,0,15,4,0,0,6,\n4,16,-8,12,0,0,0,0,-1,-4,2,-3,\n0,20,16,4,0,0,0,0,0,-5,-4,-1,\n8,0,0,12,0,0,0,0,-2,0,0,-3,\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "28": {
+            "status": 1,
+            "run_result": {
+                "output": "Drugi parametar nema formu matrice",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "29": {
+            "status": 1,
+            "run_result": {
+                "output": "Parametri nemaju formu matrice",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "30": {
+            "status": 1,
+            "run_result": {
+                "output": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "31": {
+            "status": 1,
+            "run_result": {
+                "output": "Prvi parametar nema formu matrice",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "32": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "33": {
+            "status": 1,
+            "run_result": {
+                "output": "1 1 4",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1554494359
+}

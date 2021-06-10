@@ -1,0 +1,74 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:49:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n  else if (d==k.poluprecnik)\n            ^~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "49",
+                "col": "12",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4117/main.c:49:12: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]  else if (d==k.poluprecnik)            ^~",
+                "code": "else if (d==k.poluprecnik)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "938": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite kruznicu:\nUnesite centar kruznice:\nUnesite koordinate tacke (x, y): \nUnesite poluprecnik kruznice: \nUnesite neku tacku:\nUnesite koordinate tacke (x, y): \nTacka je unutar kruznice.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "939": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite kruznicu:\nUnesite centar kruznice:\nUnesite koordinate tacke (x, y): \nUnesite poluprecnik kruznice: \nUnesite neku tacku:\nUnesite koordinate tacke (x, y): \nTacka je izvan kruznice.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "940": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite kruznicu:\nUnesite centar kruznice:\nUnesite koordinate tacke (x, y): \nUnesite poluprecnik kruznice: \nUnesite neku tacku:\nUnesite koordinate tacke (x, y): \nTacka je na kruznici.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1482949639
+}

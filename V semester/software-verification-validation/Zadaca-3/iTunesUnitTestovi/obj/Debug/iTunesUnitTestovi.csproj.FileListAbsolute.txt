@@ -1,0 +1,32 @@
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\iTunesUnitTestovi.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\iTunesUnitTestovi.pdb
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\iTunes.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\iTunes.pdb
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csprojAssemblyReference.cache
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csproj.CopyComplete
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.pdb
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\iTunesUnitTestovi.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\iTunesUnitTestovi.pdb
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\iTunes.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\iTunes.pdb
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csprojAssemblyReference.cache
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.csproj.CopyComplete
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunesUnitTestovi\obj\Debug\iTunesUnitTestovi.pdb

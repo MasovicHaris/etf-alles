@@ -1,0 +1,24 @@
+#informationLabel{
+    -fx-text-fill: red;
+}
+
+.size{
+    -fx-min-width: 200;
+    -fx-max-width: 200;
+    -fx-pref-width: 200;
+    -fx-min-height: 30;
+    -fx-max-height: 30;
+    -fx-pref-height: 30;
+    -fx-alignment: center;
+}
+
+.right {
+    -fx-control-inner-background: greenyellow;
+    -fx-border-width: 2;
+    -fx-border-radius: 2px;
+}
+.wrong {
+    -fx-control-inner-background: #ff5e56;
+    -fx-border-width: 2;
+    -fx-border-radius: 2px;
+}

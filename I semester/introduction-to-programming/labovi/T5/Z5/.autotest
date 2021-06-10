@@ -1,0 +1,144 @@
+{
+    "id": 5399,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 5, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 5083,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15\n22\n151\n15\n35\n22\n35\n15\n7\n-1\n"
+            },
+            "expected": [
+                "Unesite brojeve:\\nBrojevi moraju biti izmedju 0 i 100!\\nBroj 7 se javlja 1 puta.\\nBroj 15 se javlja 3 puta.\\nBroj 22 se javlja 2 puta.\\nBroj 35 se javlja 2 puta."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1422,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "100\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n30\n31\n32\n33\n34\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n48\n49\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n40\n41\n42\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n43\n44\n45\n46\n47\n48\n49\n-1"
+            },
+            "expected": [
+                "Unesite brojeve:\\nBroj 0 se javlja 2 puta.\\nBroj 1 se javlja 2 puta.\\nBroj 2 se javlja 2 puta.\\nBroj 3 se javlja 2 puta.\\nBroj 4 se javlja 2 puta.\\nBroj 5 se javlja 2 puta.\\nBroj 6 se javlja 2 puta.\\nBroj 7 se javlja 2 puta.\\nBroj 8 se javlja 2 puta.\\nBroj 9 se javlja 2 puta.\\nBroj 30 se javlja 4 puta.\\nBroj 31 se javlja 4 puta.\\nBroj 32 se javlja 4 puta.\\nBroj 33 se javlja 4 puta.\\nBroj 34 se javlja 4 puta.\\nBroj 35 se javlja 4 puta.\\nBroj 36 se javlja 4 puta.\\nBroj 37 se javlja 4 puta.\\nBroj 38 se javlja 4 puta.\\nBroj 39 se javlja 4 puta.\\nBroj 40 se javlja 5 puta.\\nBroj 41 se javlja 5 puta.\\nBroj 42 se javlja 5 puta.\\nBroj 43 se javlja 5 puta.\\nBroj 44 se javlja 5 puta.\\nBroj 45 se javlja 5 puta.\\nBroj 46 se javlja 5 puta.\\nBroj 47 se javlja 5 puta.\\nBroj 48 se javlja 5 puta.\\nBroj 49 se javlja 5 puta.\\nBroj 100 se javlja 1 puta.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1423,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-2\n101\n100000000\n-100000000\n-1"
+            },
+            "expected": [
+                "Unesite brojeve:\\nBrojevi moraju biti izmedju 0 i 100!\\nBrojevi moraju biti izmedju 0 i 100!\\nBrojevi moraju biti izmedju 0 i 100!\\nBrojevi moraju biti izmedju 0 i 100!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1424,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-1"
+            },
+            "expected": [
+                "Unesite brojeve:\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1426,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n50\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n100\n-1"
+            },
+            "expected": [
+                "Unesite brojeve:\\nBroj 50 se javlja 60 puta.\\nBroj 100 se javlja 60 puta."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

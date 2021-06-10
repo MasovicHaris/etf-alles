@@ -1,0 +1,1066 @@
+{
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1: Testiranje izuzetaka LeftDiv - Matrice\n    try\n    {\n        Matrix M1 {{1,1,1},{2,2,2}}, M2 {{1,2},{1,2}};\n        Matrix M=LeftDiv(M1,M2);\n        \/\/Divisor matrix is not square\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,1},{2,2}}, M2 {{1,2}};\n        Matrix M=LeftDiv(M1,M2);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}}, M2 {{1,2},{1,2},{1,2}};\n        Matrix M=LeftDiv(M1,M2);\n        \/\/Divisor matrix is singular\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Divisor matrix is not square'\\n'Incompatible formats'\\n'Divisor matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2: Testiranje izuzetaka LeftDiv - Vektor\n    try\n    {\n        Matrix M1 {{1,1,1},{2,2,2}};\n        Vector V2 {1,2};\n        Vector V=LeftDiv(M1,V2);\n        \/\/Divisor matrix is not square\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,1},{2,2}};\n        Vector V2 {1};\n        Vector V=LeftDiv(M1,V2);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}};\n        Vector V2 {1,2,3};\n        Vector V=LeftDiv(M1,V2);\n        \/\/Divisor matrix is singular\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Divisor matrix is not square'\\n'Incompatible formats'\\n'Divisor matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3: Testiranje izuzetaka operator \/= i \/ - 0\n    try{\n            Matrix M1 {{1,1,1},{2,2,2}};\n            M1=M1\/0;\n            \/\/Division by zero\n        }\n        catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n        catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n        try{\n            Matrix M1 {{1,1,1},{2,2,2}};\n            M1\/=0;\n            \/\/Division by zero\n        }        \n        catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n        catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Division by zero'\\n'Division by zero'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4: Testiranje izuzetaka operator \/ - Matrica\n    try\n    {\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}}, M2 {{1,2,3},{1,2,3}};\n        Matrix M=M1\/M2;\n        \/\/Divisor matrix is not square\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,1},{2,2}}, M2 {{1}};\n        Matrix M=M1\/M2;\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\\n\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }\n    try\n    {\n        Matrix M1 {{1,2},{2,2},{3,3}}, M2 {{1,2},{1,2}};\n        Matrix M=M1\/M2;\n        \/\/Divisor matrix is singular\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"'\" << e.what() << \"'\";\n    }\n    catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka\";\n    }",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Divisor matrix is not square'\\n'Incompatible formats'\\n'Divisor matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5: Testiranje izuzetaka operator \/= - Matrica\n    try{\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}}, M2{{1,2,3},{1,2,3}};\n         M1\/=M2;\n        \/\/Divisor matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n        Matrix M1 {{1,1},{2,2}}, M2{{1}};\n         M1\/=M2;\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n        Matrix M1 {{1,2},{2,2},{3,3}}, M2{{1,2},{1,2}};\n        M1\/=M2;\n        \/\/Divisor matrix is singular\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Divisor matrix is not square'\\n'Incompatible formats'\\n'Divisor matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6: Testiranje izuzetaka - Det\n    try{\n        Matrix M1 {{1,1,1},{2,2,2}};\n        std::cout<<Det(M1);\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n        Matrix M1 {{1,1,1},{2,2,2}};\n        std::cout<<M1.Det();\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is not square'\\n'Matrix is not square'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT7: Testiranje izuzetaka - Invert i Inverse\n    try{\n        Matrix M1 {{1,1,1},{2,2,2}};\n        Inverse(M1).Print();\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n\n    try{\n        Matrix M1 {{1,1,1},{2,2,2}};\n        M1.Invert();\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is not square'\\n'Matrix is not square'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8: Testiranje izuzetaka - Invert i Inverse\n    try{\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}};\n        Inverse(M1).Print();\n        \/\/Matrix is singular\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n\n    try{\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}};\n        M1.Invert();\n        \/\/Matrix is singular\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is singular'\\n'Matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT9: Testiranje izuzetaka LU - konstruktor\n    try{\n        Matrix M1 {{1,1,1},{2,2,2}};\n        LUDecomposer lu(M1);\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n        Matrix M1 {{1,1,1},{2,2,2},{3,3,3}};\n        LUDecomposer lu(M1);\n        \/\/Matrix is singular\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is not square'\\n'Matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT10: Testiranje izuzetaka LU - Solve - Matrice\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        LUDecomposer lu(A);\n        lu.Solve(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,3}};\n        LUDecomposer lu(A);\n        lu.Solve(c,b);;\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,3}};\n        LUDecomposer lu(A);\n        lu.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5,6},{1,2,1,1},{1,2,1,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,1}};\n        LUDecomposer lu(A);\n        lu.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'\\n'Incompatible formats'\\n'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT11: Testiranje izuzetaka LU - Solve - Vektor\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1};\n        LUDecomposer lu(A);\n        lu.Solve(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1,3};\n        Vector c{2,3};\n        LUDecomposer lu(A);\n        lu.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1,3};\n        Vector c{2,3};\n        LUDecomposer lu(A);\n        lu.Solve(c,b);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'\\n'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT12: Testiranje izuzetaka QR - konstruktor\n    try{\n         Matrix A{{0,3,2},{4,6,1}};\n        QRDecomposer qr(A);\n        \/\/Invalid matrix format\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{1,1,1},{2,2,2},{3,3,3}};\n        QRDecomposer qr(A);\n        \/\/Matrix is singular\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid matrix format'\\n'Matrix is singular'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT13: Testiranje izuzetaka QR - Solve - Vektor\n    try{\n         Matrix A{{0,3},{4,6},{3,1}};\n        Vector b{4,1,3};\n        Vector c{2,3,2};\n        QRDecomposer qr(A);\n        qr.Solve(c,b);\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1,3};\n        Vector c{2,3};\n        QRDecomposer qr(A);\n        qr.Solve(c,b);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1,3};\n        Vector c{2,3};\n        QRDecomposer qr(A);\n        qr.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is not square'\\n'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT14: Testiranje izuzetaka QR - Solve - Matrice\n    try{\n         Matrix A{{0,3},{4,6},{3,1}};\n        Matrix b{{4,1,5,6},{1,2,1,1},{1,2,1,1}};\n        Matrix c(Transpose(b));\n        QRDecomposer qr(A);\n        qr.Solve(c);\n        \/\/Matrix is not square\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5,6},{1,2,1,1},{1,2,1,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,1}};\n        QRDecomposer qr(A);\n        qr.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n     try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,3}};\n        QRDecomposer qr(A);\n        qr.Solve(b,c);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        Matrix c{{4,1,5},{1,2,1},{1,2,3}};\n        QRDecomposer qr(A);\n        qr.Solve(c,b);\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Matrix is not square'\\n'Incompatible formats'\\n'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 16,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT15: Testiranje izuzetaka QR - MulQ i MulQT - Matrice\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        QRDecomposer qr(A);\n        qr.MulQTWith(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Matrix b{{4,1,5},{1,2,1}};\n        QRDecomposer qr(A);\n        qr.MulQWith(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 17,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT16: Testiranje izuzetaka QR - MulQ i MulQT - Vektor\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1};\n        QRDecomposer qr(A);\n        qr.MulQTWith(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\\n\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}\n    try{\n         Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n        Vector b{4,1};\n        QRDecomposer qr(A);\n        qr.MulQWith(b).Print();\n        \/\/Incompatible formats\n    }\n    catch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\n    catch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'\\n'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 18,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT17: Testiranje LeftDiv s provjerama pivotizacije - vektor\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector v{1,2,4};\n    Vector rez=A*v;\n    std::cout<<v.EqualTo(LeftDiv(A,rez),-10)<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    rez=B*v;\n    std::cout<<v.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 19,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT18: Testiranje LeftDiv s provjerama pivotizacije - matrica\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=A*x;\n    std::cout<<x.EqualTo(LeftDiv(A,rez),-5)<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    rez=B*x;\n    std::cout<<x.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 20,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT19: Testiranje dijeljenja sa skalarom\n    Matrix A{{0,4,2},{4,6,2},{8,6,2}};\n    (A\/2).Print();\n    std::cout<<\"\\n\\n\";\n    A\/=2;\n    A.Print();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 0 2 1\\n 2 3 1\\n 4 3 1\\n\\n 0 2 1\\n 2 3 1\\n 4 3 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 21,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT20: Testiranje desnog matricnog dijeljenja\n      Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n      Matrix b{{4,1,5},{1,2,1}};\n      Matrix rez=b * Inverse(A);\n      std::cout << rez.EqualTo(b\/A)<<std::endl;\n      Matrix C{{2,3,5},{2,3,7},{4,1,8}};\n      rez=b * Inverse(C);\n      std::cout << rez.EqualTo(b\/C);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 22,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT21: Testiranje operatora \/=\n    Matrix A {{0,3,2},{4,6,1},{3,1,7}};\n    Matrix b {{4,1,5},{1,2,1}};\n    Matrix rez=b * Inverse(A);\n    b\/=A;\n    std::cout << b.EqualTo(rez)<<std::endl;\n    Matrix C {{2,3,5},{2,3,7},{4,1,8}};\n    rez=b * Inverse(C);\n    b\/=C;\n    std::cout << b.EqualTo(rez);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 23,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT22: RREF 1\n    Matrix M1{{3,4,18,34,0,2,31},{1,-3,-7,-6,2,4,26},{2,1,7,16,3,-1,27},{5,11,43,74,2,0,56},{3,-3,-3,6,-1,14,55},{-2,0,-4,-12,1,5,6},{1,-6,-16,-18,4,4,33}};\n    M1.ReduceToRREF();\n    M1.Chop(-5);\n    M1.Print();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 1 0 2 6 0 0 7\\n 0 1 3 4 0 0 1\\n 0 0 0 0 1 0 5\\n 0 0 0 0 0 1 3\\n 0 0 0 0 0 0 0\\n 0 0 0 0 0 0 0\\n 0 0 0 0 0 0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 24,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT23: RREF 2\n    Matrix M2{{4,16,-8,-2,14,1,13,6},{-3,-12,6,1,-10,-1,-10,-5},{1,4,-2,-2,5,1,-2,3}};\nMatrix M3(RREF(M2));\n    M3.Chop();\n    M3.Print(2);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 1 4 -2 0 3 0 5 1\\n 0 0 0 1 -1 0 2 0\\n 0 0 0 0 0 1 -3 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 25,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT24: Determinanta\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    std::cout<<Det(A)<<std::endl;\n    std::cout<<A.Det()<<std::endl;\n    Matrix C{{2,3,5},{2,3,7},{4,1,8}};\n    std::cout<<Det(C)<<std::endl;\n    std::cout<<C.Det();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-103\\n-103\\n20\\n20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 26,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT25: Determinanta singular\n    Matrix A{{1,1,1},{2,2,2},{3,3,3}};\n    std::cout<<Det(A)<<std::endl;\n    std::cout<<A.Det();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 27,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT26: Inverzna 1\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}}, jedinicna{{1,0,0},{0,1,0},{0,0,1}};\n    std::cout<<jedinicna.EqualTo(Inverse(A)*A)<<std::endl;\n    Matrix B=A;\n    A.Invert();\n    std::cout<<jedinicna.EqualTo(A*B);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 28,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT27: Inverzna 2\n    Matrix C{{2,3,5},{2,3,7},{4,1,8}}, jedinicna{{1,0,0},{0,1,0},{0,0,1}};\n    std::cout<<jedinicna.EqualTo(Inverse(C)*C)<<std::endl;\n    Matrix B=C;\n    C.Invert();\n    std::cout<<jedinicna.EqualTo(C*B);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 29,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT28: Rang\n    Matrix M1{{3,4,18,34,0,2,31},\n        {1,-3,-7,-6,2,4,26},\n        {2,1,7,16,3,-1,27},\n        {5,11,43,74,2,0,56},\n        {3,-3,-3,6,-1,14,55},\n        {-2,0,-4,-12,1,5,6},\n        {1,-6,-16,-18,4,4,33}\n    };\n    std::cout<<Rank(M1)<<std::endl;\n    std::cout<<M1.Rank();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4\\n4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 30,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT29: Rang 2\n    Matrix M2{{1,2},{2,3}};\n    std::cout<<Rank(M2)<<std::endl;\n    std::cout<<M2.Rank();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2\\n2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 31,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT30: LU Solve isti vektor\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    Vector rez=A*x;\n    LUDecomposer lu(A);\n    lu.Solve(rez,rez);\n    std::cout<<x.EqualTo(rez);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 32,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT31: LU Solve vektor\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    LUDecomposer lu2(B);\n    Vector x{1,2,4};\n    Vector rez=B*x;\n    lu2.Solve(rez,x);\n    std::cout<<x.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 33,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT32: LU Solve vektor\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    Vector rez=A*x;\n    LUDecomposer lu(A);\n    std::cout<<x.EqualTo(lu.Solve(rez))<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    LUDecomposer lu2(B);\n    rez=B*x;\n    std::cout<<lu2.Solve(rez).EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 34,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT33: LU Solve matrica\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=A*x;\n    LUDecomposer lu(A);\n    lu.Solve(rez,rez);\n    std::cout<<x.EqualTo(rez);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 35,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT34: LU Solve matrica\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    LUDecomposer lu2(B);\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=B*x;\n    lu2.Solve(rez,x);\n    std::cout<<x.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 36,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT35: LU Solve matrica\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=A*x;\n    LUDecomposer lu(A);\n    std::cout<<x.EqualTo(lu.Solve(rez))<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    LUDecomposer lu2(B);\n    rez=B*x;\n    std::cout<<lu2.Solve(rez).EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 37,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT36: LU solve permutacije\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    LUDecomposer lu(A);\n    std::cout<<lu.GetPermuation().NElems();",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 38,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT37: L+U - CompactLU\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}},jedinicna{{1,0,0},{0,1,0},{0,0,1}};\n    LUDecomposer lu(A);\n    std::cout<<lu.GetCompactLU().EqualTo(lu.GetL()+lu.GetU()-jedinicna);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 39,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT38: L+U - CompactLU\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}},jedinicna{{1,0,0},{0,1,0},{0,0,1}};\n    LUDecomposer lu2(B);\n    std::cout<<lu2.GetCompactLU().EqualTo(lu2.GetL()+lu2.GetU()-jedinicna);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 40,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT39: QR Solve\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    Vector rez=A*x;\n    QRDecomposer qr(A);\n    qr.Solve(rez,rez);\n    std::cout<<x.EqualTo(rez);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 41,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT40: QR Solve\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    QRDecomposer qr2(B);\n    Vector x{1,2,4};\n    Vector rez=B*x;\n    qr2.Solve(rez,x);\n    std::cout<<x.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 42,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT41: QR Solve\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    Vector rez=A*x;\n    QRDecomposer qr(A);\n    std::cout<<x.EqualTo(qr.Solve(rez))<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    QRDecomposer qr2(B);\n    rez=B*x;\n    std::cout<<qr2.Solve(rez).EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 43,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT42: QR Solve\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=A*x;\n    QRDecomposer qr(A);\n    qr.Solve(rez,rez);\n    std::cout<<x.EqualTo(rez);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 44,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT43: QR Solve\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    QRDecomposer qr2(B);\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=B*x;\n    qr2.Solve(rez,x);\n    std::cout<<x.EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 45,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT44: QR Solve\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    Matrix rez=A*x;\n    QRDecomposer qr(A);\n    std::cout<<x.EqualTo(qr.Solve(rez))<<std::endl;\n    Matrix B{{2,3,5},{2,3,7},{4,1,8}};\n    QRDecomposer qr2(B);\n    rez=B*x;\n    std::cout<<qr2.Solve(rez).EqualTo(LeftDiv(B,rez));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 46,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT45: Q*R=A\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    QRDecomposer qr(A);\n    std::cout<<A.EqualTo(qr.GetQ() * qr.GetR())<<std::endl;\n    Matrix B{{0,3},{4,6},{3,1}};\n    QRDecomposer qr2(B);\n    std::cout<<B.EqualTo(qr2.GetQ() * qr2.GetR());;",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 47,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT46: Q*QT\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}},jedinicna{{1,0,0},{0,1,0},{0,0,1}};\n    QRDecomposer qr(A);\n    std::cout<<jedinicna.EqualTo(qr.GetQ() * Transpose(qr.GetQ()));",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 48,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT47: MulQ\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    QRDecomposer qr(A);\n    Matrix Q=qr.MulQWith(x);\n    std::cout<<Q.EqualTo(qr.GetQ() * x);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 49,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT48: MulQT\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Vector x{1,2,4};\n    QRDecomposer qr(A);\n    Matrix Q=qr.MulQTWith(x);\n    std::cout<<Q.EqualTo(Transpose(qr.GetQ())* x);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 50,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT49 MulQ\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    QRDecomposer qr(A);\n    Matrix Q=qr.MulQWith(x);\n    std::cout<<Q.EqualTo(qr.GetQ() * x);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 51,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT50: MulQT\n    Matrix A{{0,3,2},{4,6,1},{3,1,7}};\n    Matrix x{{4,1,5},{1,2,1},{8,7,9}};\n    QRDecomposer qr(A);\n    Matrix Q=qr.MulQTWith(x);\n    std::cout<<Q.EqualTo(Transpose(qr.GetQ())* x);",
+            "global_above_main": "",
+            "global_top": "\t\n#include <cmath>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ],
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 2, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true"
+}

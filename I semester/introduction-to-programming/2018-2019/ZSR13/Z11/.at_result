@@ -1,0 +1,172 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘sacuvaj’:\nmain.c:115:6: warning: unused variable ‘zapisano’ [-Wunused-variable]\n  int zapisano=fwrite(p, sizeof(struct Prodavnica), n, dat);\n      ^~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "115",
+                "col": "6",
+                "message": "unused variable 'zapisano'",
+                "output": "/tmp/buildservice/bs_2591/main.c:115:6: warning: unused variable ‘zapisano’ [-Wunused-variable]  int zapisano=fwrite(p, sizeof(struct Prodavnica), n, dat);      ^~~~~~~~",
+                "code": "int zapisano=fwrite(p, sizeof(struct Prodavnica), n, dat);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "6121": {
+            "status": 1,
+            "run_result": {
+                "output": "Brasno (cijena: 5.2, prodavnica: 1)\nUlje (cijena: 2, prodavnica: 1)\nSecer (cijena: 1.5, prodavnica: 1)\nBrasno (cijena: 5.2, prodavnica: 2)\nUlje (cijena: 2.1, prodavnica: 2)\nSecer (cijena: 2.2, prodavnica: 2)\nBrasno (cijena: 5.2, prodavnica: 3)\nUlje (cijena: 1.1, prodavnica: 3)\nSecer (cijena: 1.2, prodavnica: 3)\nGrah (cijena: 5, prodavnica: 3)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6122": {
+            "status": 1,
+            "run_result": {
+                "output": "'Amko', id: 1\n'Bingo', id: 2\n'Robot', id: 3\n'Konzum', id: 4\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6123": {
+            "status": 1,
+            "run_result": {
+                "output": "'Amko', id: 1\n'Bingo Tuzla', id: 2\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6124": {
+            "status": 1,
+            "run_result": {
+                "output": "Brasno (cijena: 5.2, prodavnica: 1)\nUlje (cijena: 2, prodavnica: 1)\nSecer (cijena: 1.5, prodavnica: 1)\nBrasno (cijena: 5.2, prodavnica: 2)\nUlje (cijena: 2.1, prodavnica: 2)\nSecer (cijena: 2.2, prodavnica: 2)\nBrasno (cijena: 5.2, prodavnica: 3)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6125": {
+            "status": 1,
+            "run_result": {
+                "output": "'Amko', id: 10\n'Konzum', id: 12345\n'Bingo Tuzla d.o.o (vl. Senad Dzambic 1993.g) - Bosanska Poljana bb - Tuzla - Bosna i Hercegovina EU', id: 1\n'Kod Seje', id: 15\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6126": {
+            "status": 1,
+            "run_result": {
+                "output": "Uspjesno: 1\nUspjesno: 1\nSpaseno:\n'Amko', ID: 1\n'Amko', ID: 2\n'Amko', ID: 3\n'Bingo Tuzla', ID: 10\n'Bingo Konjic', ID: 11\n'Bingo Pofalici', ID: 12\n'Konzum', ID: 20\n'Konzum ZG', ID: 21\n'Amko', ID: 1\n'Amko', ID: 2\n'Amko', ID: 3\n'Bingo Tuzla', ID: 10\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6127": {
+            "status": 1,
+            "run_result": {
+                "output": "Ostalo je 1 prodavnica, i to: \n'Amko', ID: 1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6128": {
+            "status": 1,
+            "run_result": {
+                "output": "Amko, ID: 1\nBingo, ID: 2\nKonzum, ID: 3\nAmko, ID: 1\nKonzum, ID: 3\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6129": {
+            "status": 1,
+            "run_result": {
+                "output": "Amko, ID: 1\nBingo, ID: 2\nKonzum, ID: 3\nAmko, ID: 1\nBingo, ID: 2\nKonzum, ID: 3\nAmko, ID: 1\nBingo, ID: 2\nKonzum, ID: 3\nAmko, ID: 1\nKonzum, ID: 3\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6130": {
+            "status": 1,
+            "run_result": {
+                "output": "Uspjesno: 1, vel_a: 10, vel_p: 2\nUspjesno snimljeno bajta: 208",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1568058759
+}

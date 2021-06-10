@@ -1,0 +1,804 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘void Vector::Print(char, double) const’:\nmain.cpp:72:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(eps == -1) {\n                    ^\nmain.cpp: In member function ‘Vector& Vector::operator/=(double)’:\nmain.cpp:114:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(s == 0) throw std::domain_error(\"Division by zero\");\n                 ^\nmain.cpp: In function ‘void PrintVector(const Vector&, char, double)’:\nmain.cpp:130:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(eps == -1) {\n                ^\nmain.cpp: In function ‘Vector operator/(const Vector&, double)’:\nmain.cpp:184:13: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(s == 0) throw std::domain_error(\"Division by zero\");\n             ^\nmain.cpp: In constructor ‘Matrix::Matrix(std::initializer_list<std::vector<double> >)’:\nmain.cpp:217:26: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]\n         if(l.size() == 1 && kvel == 0 || l.size() == 0) throw std::range_error(\"Bad dimension\");\n            ~~~~~~~~~~~~~~^~~~~~~~~~~~\nmain.cpp: In member function ‘void Matrix::Print(int, double) const’:\nmain.cpp:270:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(eps == -1) {\n                    ^\nmain.cpp: In function ‘void PrintMatrix(const Matrix&, int, double)’:\nmain.cpp:363:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(eps == -1) {\n                ^\nmain.cpp: In member function ‘Matrix& Matrix::operator+=(const Matrix&)’:\nmain.cpp:295:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^\nmain.cpp: In member function ‘Matrix& Matrix::operator-=(const Matrix&)’:\nmain.cpp:302:5: warning: control reaches end of non-void function [-Wreturn-type]\n     }\n     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "72",
+                "col": "20",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:72:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(eps == -1) {                    ^/tmp/buildservice/bs_4956/main.cpp: In member function ‘Vector& Vector::operator/=(double)’:",
+                "code": "if(eps == -1) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "114",
+                "col": "17",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:114:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(s == 0) throw std::domain_error(\"Division by zero\");                 ^",
+                "code": "if(s == 0) throw std::domain_error(\"Division by zero\");"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "130",
+                "col": "16",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:130:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(eps == -1) {                ^",
+                "code": "if(eps == -1) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "184",
+                "col": "13",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:184:13: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(s == 0) throw std::domain_error(\"Division by zero\");             ^/tmp/buildservice/bs_4956/main.cpp: In constructor ‘Matrix::Matrix(std::initializer_list<std::vector<double> >)’:",
+                "code": "if(s == 0) throw std::domain_error(\"Division by zero\");"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "217",
+                "col": "26",
+                "message": "suggest parentheses around '&&' within '||'",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:217:26: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]         if(l.size() == 1 && kvel == 0 || l.size() == 0) throw std::range_error(\"Bad dimension\");            ~~~~~~~~~~~~~~^~~~~~~~~~~~/tmp/buildservice/bs_4956/main.cpp: In member function ‘void Matrix::Print(int, double) const’:",
+                "code": "if(l.size() == 1 && kvel == 0 || l.size() == 0) throw std::range_error(\"Bad dimension\");"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "270",
+                "col": "20",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:270:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(eps == -1) {                    ^",
+                "code": "if(eps == -1) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "363",
+                "col": "16",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:363:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(eps == -1) {                ^/tmp/buildservice/bs_4956/main.cpp: In member function ‘Matrix& Matrix::operator+=(const Matrix&)’:",
+                "code": "if(eps == -1) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "295",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:295:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^/tmp/buildservice/bs_4956/main.cpp: In member function ‘Matrix& Matrix::operator-=(const Matrix&)’:",
+                "code": "}"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "302",
+                "col": "5",
+                "message": "control reaches end of non-void function",
+                "output": "/tmp/buildservice/bs_4956/main.cpp:302:5: warning: control reaches end of non-void function [-Wreturn-type]     }     ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1493": {
+            "status": 1,
+            "run_result": {
+                "output": "<0 0 0 0 0>",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1494": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad dimension'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1495": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad dimension'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1496": {
+            "status": 1,
+            "run_result": {
+                "output": "1.25,2.34,3.87,4.12,5.123",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1497": {
+            "status": 1,
+            "run_result": {
+                "output": "10",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1498": {
+            "status": 1,
+            "run_result": {
+                "output": "7.12 8.87\n12 13",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1499": {
+            "status": 1,
+            "run_result": {
+                "output": "7.57 9.46 12.74 13.56 15.433\n-5.07 -4.78 -5 -5.32 -5.187",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1500": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1501": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1502": {
+            "status": 1,
+            "run_result": {
+                "output": "1\n2\n3\n4\n5\n\n-1\n-2\n-3\n-4\n-5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1503": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1504": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1505": {
+            "status": 1,
+            "run_result": {
+                "output": "10 15 20 25 30\n1 1.5 2 2.5 3\n4 6 8 10 12",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1506": {
+            "status": 1,
+            "run_result": {
+                "output": "40 60 80 100 120\n4 6 8 10 12",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1507": {
+            "status": 1,
+            "run_result": {
+                "output": "70",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1508": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1509": {
+            "status": 1,
+            "run_result": {
+                "output": "'Division by zero'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1510": {
+            "status": 1,
+            "run_result": {
+                "output": "'Division by zero'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1511": {
+            "status": 1,
+            "run_result": {
+                "output": "00\n00\n00\n\n3,2",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1512": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad dimension'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1513": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad dimension'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1514": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad dimension'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1515": {
+            "status": 1,
+            "run_result": {
+                "output": "'Bad matrix'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1516": {
+            "status": 1,
+            "run_result": {
+                "output": "9.44 6.32\n12 13",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1517": {
+            "status": 1,
+            "run_result": {
+                "output": "      8.75      4.98\n     11.64      6.23\n    10.243    10.886\n\n\n     -6.25      -0.3\n      -3.9      2.01\n     0.003     0.434\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1518": {
+            "status": 1,
+            "run_result": {
+                "output": "      1.25      2.34\n      3.87      4.12\n     5.123      5.66\n\n         0         0\n         0         0\n         0         0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1519": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1520": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1521": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1522": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1523": {
+            "status": 1,
+            "run_result": {
+                "output": "  6.25  11.7\n 19.35  20.6\n25.615  28.3\n\n   2.5  4.68\n  7.74  8.24\n10.246 11.32\n\n  12.5  23.4\n  38.7  41.2\n 51.23  56.6\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1524": {
+            "status": 1,
+            "run_result": {
+                "output": "   28.6558   30.9896\n   61.0028   66.4472\n   82.5816   89.9062\n\n   455.982   496.571\n   974.924    1061.6\n   1319.38   1436.69\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1525": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1526": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1527": {
+            "status": 1,
+            "run_result": {
+                "output": "15.5 21.5 33.5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1528": {
+            "status": 1,
+            "run_result": {
+                "output": "'Incompatible formats'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1529": {
+            "status": 1,
+            "run_result": {
+                "output": " 1 4\n 2 5\n 3 6\n\n 1 2 3\n 4 5 6\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1530": {
+            "status": 1,
+            "run_result": {
+                "output": " 1 4 7\n 2 5 8\n 3 6 9\n\n 1 2 3\n 4 5 6\n 7 8 9\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1531": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid index'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1532": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid index'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1533": {
+            "status": 1,
+            "run_result": {
+                "output": "0.325 -1.345 16.007\n0\n0\n16.007\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1534": {
+            "status": 1,
+            "run_result": {
+                "output": "0.325\n-2.345\n16.007\n\n0.325 -2.345 16.007\n0 -2.345 16.007",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1535": {
+            "status": 1,
+            "run_result": {
+                "output": "3.59907e-14\n3.59907e-14\n3.59907e-14\n1.44898e-14",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1536": {
+            "status": 1,
+            "run_result": {
+                "output": "20.4384 20.4384 14.0548 16.3929",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1537": {
+            "status": 1,
+            "run_result": {
+                "output": "20.4384 16.3929 14.0548 16.3929",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1538": {
+            "status": 1,
+            "run_result": {
+                "output": "    0.325   -1.345   16.007\n     2.35     6.54   -6.124\n\n          0          0     16.007\n       2.35       6.54     -6.124\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1539": {
+            "status": 1,
+            "run_result": {
+                "output": "     0.325    -1.345    16.007\n      2.35      6.54    -6.124\n\n    0.325   -1.345   16.007\n     2.35     6.54   -6.124\n\n        0   -1.345   16.007\n     2.35     6.54   -6.124\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1540": {
+            "status": 1,
+            "run_result": {
+                "output": "4.11793e-14\n2.45808e-14\n4.12154e-14\n2.11353e-14",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1541": {
+            "status": 1,
+            "run_result": {
+                "output": "18.5455 11.0702 18.5618 9.51851",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1542": {
+            "status": 1,
+            "run_result": {
+                "output": "18.5455 11.0702 18.5618 9.51851",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1572740423
+}

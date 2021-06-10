@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3014": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite vrijednosti M i N: Unesite clanove matrice: \nNakon izbacivanja matrica glasi:\n   1.1   2.2   3.3\n   4.4   5.5   6.6\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3015": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite vrijednosti M i N: Unesite clanove matrice: \nNakon izbacivanja matrica glasi:\n   1.0   1.0   1.0\n   1.0   1.0   1.0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3016": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite vrijednosti M i N: Unesite clanove matrice: \nNakon izbacivanja matrica glasi:\n   1.0   2.0   3.0\n   1.0   2.0   3.0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3095": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite vrijednosti M i N: Vrijednosti su van opsega!\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\nUnesite vrijednosti M i N: Unesite clanove matrice: \nNakon izbacivanja matrica glasi:\n   0.0   1.0   2.0   3.0   4.0   5.0   6.0   7.0   8.0   9.0  10.0  11.0  12.0  13.0  14.0  15.0  16.0  17.0  18.0  19.0  20.0  21.0  22.0  23.0  24.0  25.0  26.0  27.0  28.0  29.0  30.0  31.0  32.0  33.0  34.0  35.0  36.0  37.0  38.0  39.0  40.0  41.0  42.0  43.0  44.0  45.0  46.0  47.0  48.0  49.0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3096": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite vrijednosti M i N: Unesite clanove matrice: \nNakon izbacivanja matrica glasi:\n   3.0   2.0   1.0\n   3.0   2.0   1.0\n   3.0   2.0   1.0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1543089797
+}

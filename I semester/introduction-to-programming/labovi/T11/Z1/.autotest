@@ -1,0 +1,94 @@
+{
+    "id": 7156,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 11, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 938,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0,0\n4\n1,2.5\n"
+            },
+            "expected": [
+                "Unesite kruznicu:\\nUnesite centar kruznice:\\nUnesite koordinate tacke (x, y): \\nUnesite poluprecnik kruznice: \\nUnesite neku tacku:\\nUnesite koordinate tacke (x, y): \\nTacka je unutar kruznice."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 939,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5,5\n5\n-1,0\n"
+            },
+            "expected": [
+                "Unesite kruznicu:\\nUnesite centar kruznice:\\nUnesite koordinate tacke (x, y): \\nUnesite poluprecnik kruznice: \\nUnesite neku tacku:\\nUnesite koordinate tacke (x, y): \\nTacka je izvan kruznice."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 940,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3,3\n3\n3,0\n"
+            },
+            "expected": [
+                "Unesite kruznicu:\\nUnesite centar kruznice:\\nUnesite koordinate tacke (x, y): \\nUnesite poluprecnik kruznice: \\nUnesite neku tacku:\\nUnesite koordinate tacke (x, y): \\nTacka je na kruznici."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

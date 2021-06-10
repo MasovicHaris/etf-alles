@@ -1,0 +1,219 @@
+{
+    "id": 8538,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 8",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3207,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n   Na     vrh brda    vrba  mrda   "
+            },
+            "expected": [
+                "Unesite redni broj rijeci: Unesite recenicu: Rijec na poziciji 4 je vrba"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3208,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n   Na     vrh brda    vrba  mrda   "
+            },
+            "expected": [
+                "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3209,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Na ulazu unesen prazan string\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\n"
+            },
+            "expected": [
+                "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3210,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Na ulazu unesene razne kombinacije praznih mjesta sa jednom rijeci\nstd::cout << \"'\" << IzdvojiRijec(\" rijec \", 1) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"  rijec  \", 1) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"  rijec\", 1) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"rijec  \", 1) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"               rijec       \", 1) << \"'\" << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'rijec'\\n'rijec'\\n'rijec'\\n'rijec'\\n'rijec'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3211,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Na ulazu unesene razne kombinacije praznih mjesta sa dvije rijeci\nstd::cout << \"'\" << IzdvojiRijec(\"rijec1 rijec 2\", 1) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\" rijec1 rijec2 \", 2) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"  rijec2  rijec1  \", 2) << \"'\" << std::endl;\nstd::cout << \"'\" << IzdvojiRijec(\"           rijec1 rijec2      \", 2) << \"'\" << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'rijec1'\\n'rijec2'\\n'rijec1'\\n'rijec2'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3212,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Potraga za rijeci koja je manja ili jednaka nuli\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-1\n  Na vrh vrbe    brdo    mrda.    "
+            },
+            "expected": [
+                "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3213,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Recenica sa dvije komplikovane rijeci\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\n Ja.sam\/student#Elektrotehnickog.fakulteta    u   Sarajevu  "
+            },
+            "expected": [
+                "Unesite redni broj rijeci: Unesite recenicu: Rijec na poziciji 1 je Ja.sam\/student#Elektrotehnickog.fakulteta"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3214,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  \/\/AT8: std::string najcesce kao svoj kraj cuva \\0, kao i C string. \n  \/\/     Ipak, to nije standardom propisano i vrlo je moguce da std::string\n  \/\/     na neki drugi nacin oznacava vlastiti kraj.  Stoga ovo C-ovsko rjesenje\n  \/\/     NIJE VALIDNO: \n  \n  \/\/     char *pok = &s[0]; \n  \/\/     while (*pok!= '\\0') {...}\n  \n  std::string s = \" prva    druga    treca   ovo    se   isto mora  razmatrati  ovo je c++   \";\n  s[24] = '\\0'; \/\/ubacujemo \\0 na sredinu stringa, a trazimo rijec IZA \\0\n  std::cout << \"'\" << IzdvojiRijec (s, 9) << \"'\"; \/\/treba ispisati 'razmatrati'!",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'razmatrati'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/User/Desktop/custom-process-vm/SVEU16emulator/main.cpp
+iostream
+-
+fstream
+-
+sys/stat.h
+-
+string
+-
+bitset
+-
+dirent.h
+-
+vector
+-
+fcntl.h
+-
+sys/types.h
+-
+unistd.h
+-
+stdio.h
+-
+sstream
+-
+cmath
+-
+

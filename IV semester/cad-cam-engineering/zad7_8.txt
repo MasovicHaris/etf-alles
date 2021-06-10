@@ -1,0 +1,54 @@
+Option Explicit
+Public Sub RectChamfer(x As Double, y As Double, a As Double, b As Double, c1 As Double, c2 As Double)
+    Dim niz(0 To 15) As Double
+    niz(0) = x: niz(1) = y + c1
+    niz(2) = x: niz(3) = y + b - c2
+    niz(4) = x + c1: niz(5) = y + b
+    niz(6) = x + a - c2: niz(7) = y + b
+    niz(8) = x + a: niz(9) = y + b - c1
+    niz(10) = x + a: niz(11) = y + c2
+    niz(12) = x + a - c1: niz(13) = y
+    niz(14) = x + c2: niz(15) = y
+    Dim pline As AcadLWPolyline
+    Set pline = ThisDrawing.ModelSpace.AddLightWeightPolyline(niz)
+    pline.Closed = True
+    pline.Update
+End Sub
+
+Public Sub RectFillet(x As Double, y As Double, a As Double, b As Double, f As Double)
+    Dim niz(0 To 15) As Double
+    niz(0) = x: niz(1) = y + f
+    niz(2) = x: niz(3) = y + b - f
+    niz(4) = x + f: niz(5) = y + b
+    niz(6) = x + a - f: niz(7) = y + b
+    niz(8) = x + a: niz(9) = y + b - f
+    niz(10) = x + a: niz(11) = y + f
+    niz(12) = x + a - f: niz(13) = y
+    niz(14) = x + f: niz(15) = y
+    Dim pline As AcadLWPolyline
+    Set pline = ThisDrawing.ModelSpace.AddLightWeightPolyline(niz)
+    pline.Closed = True
+    Dim pi As Double
+    pi = 4# * Math.Atn(1#)
+    Call pline.SetBulge(1, -Math.Tan(pi / 8))
+    Call pline.SetBulge(3, -Math.Tan(pi / 8))
+    Call pline.SetBulge(5, -Math.Tan(pi / 8))
+    Call pline.SetBulge(7, -Math.Tan(pi / 8))
+    pline.Update
+End Sub
+
+Public Sub Keyboard(columns As Integer, rows As Integer, width As Double, height As Double, hspace As Double, vspace As Double)
+    Dim f As Double, x As Double, y As Double, i As Integer, j As Integer
+    If width < height Then f = width / 10 Else f = height / 10
+    For i = 0 To rows - 1
+        For j = 0 To columns - 1
+            x = j * (width + hspace)
+            y = i * (height + vspace)
+            Call RectFillet(x, y, width, height, f)
+        Next j
+    Next i
+End Sub
+
+Public Sub main()
+    Call Keyboard(12, 4, 10, 12, 2, 4)
+End Sub

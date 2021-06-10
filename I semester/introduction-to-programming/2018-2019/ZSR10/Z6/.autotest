@@ -1,0 +1,101 @@
+{
+    "id": 7223,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 10, zadatak 17",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2187,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[100] = \"  Zeko   pije   CAJ.  Pije caj mali zeko!\";\nzamijeni_tekst (tekst, \"caj\", \"mlijeko\", 0); \/\/cs = 0\nprintf (\"'%s'\", tekst);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'  Zeko   pije   mlijeko.  Pije mlijeko mali zeko!'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2188,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[100] = \"  Zeko   pije   CAJ.  Pije caj mali zeko!\";\nzamijeni_tekst (tekst, \"caj\", \"mlijeko\", 1); \/\/cs = 0\nprintf (\"'%s'\", tekst);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'  Zeko   pije   CAJ.  Pije mlijeko mali zeko!'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2189,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[100] = \"nananananananana batmaaaan\";\nzamijeni_tekst (tekst, \"ana\", \"ANA\", 1); \/\/cs = 0\nprintf (\"'%s'\", tekst);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'nANAnANAnANAnANA batmaaaan'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2190,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char tekst[100] = \"nananananananana batmaaaan\";\nzamijeni_tekst (tekst, \"an\", \"x\", 1); \/\/cs = 0\nprintf (\"'%s'\", tekst);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'nxxxxxxxa batmaaax'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

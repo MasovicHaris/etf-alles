@@ -1,0 +1,161 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-431.29.2.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3125": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 7, 5 i 8 iznosi 20.\nNjegova povrsina iznosi 17.3205.\nNjegov najmanji ugao ima 38 stepeni, 12 minuta i 47 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3126": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 7.7, 8.4 i 5.1 iznosi 21.2.\nNjegova povrsina iznosi 19.2861.\nNjegov najmanji ugao ima 36 stepeni, 36 minuta i 33 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3127": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Ne postoji trougao cije su duzine stranica 5, 15 i 7!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3128": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Ne postoji trougao cije su duzine stranica 7, 5 i -8!Unesite tri broja: Ne postoji trougao cije su duzine stranica 7, 8 i 0!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3129": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 0.5, 0.7 i 0.3 iznosi 1.5.\nNjegova povrsina iznosi 0.0649519.\nNjegov najmanji ugao ima 21 stepeni, 47 minuta i 12 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3130": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 7, 7 i 7 iznosi 21.\nNjegova povrsina iznosi 21.2176.\nNjegov najmanji ugao ima 60 stepeni, 0 minuta i 0 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3131": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 3, 4 i 5 iznosi 12.\nNjegova povrsina iznosi 6.\nNjegov najmanji ugao ima 36 stepeni, 52 minuta i 11 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3132": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 7, 7 i 9.89949 iznosi 23.8995.\nNjegova povrsina iznosi 24.5.\nNjegov najmanji ugao ima 45 stepeni, 0 minuta i 0 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3138": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Ne postoji trougao cije su duzine stranica 1, 2 i 3!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3139": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tri broja: Obim trougla sa duzinama stranica 123, 321 i 222 iznosi 666.\nNjegova povrsina iznosi 9651.26.\nNjegov najmanji ugao ima 15 stepeni, 42 minuta i 57 sekundi.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1489043619
+}

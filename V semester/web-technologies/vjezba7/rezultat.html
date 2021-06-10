@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+
+<HEAD>
+  <TITLE>Zadatak3</TITLE>
+  <link rel="stylesheet" href="/css/zadatak2.css">
+</HEAD>
+
+<BODY>
+
+  <script>
+    window.onload = function pozovi() {
+      var xhr = new XMLHttpRequest();
+      const url = "http://localhost:8085/dajPodatkeJson";
+      xhr.open("GET", url, true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var json = JSON.parse(xhr.responseText);
+          console.log(json);
+
+          var d_nested = document.getElementById("tabela");
+          if (d_nested !== null && document.querySelector("body").contains(d_nested)) document.querySelector("body")
+            .removeChild(d_nested);
+
+          tbl = document.createElement("table");
+          tbl.setAttribute("id", "tabela");
+
+          row = document.createElement("tr");
+          cell = document.createElement("th");
+          cellText = document.createTextNode("Ime");
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          cell2 = document.createElement("th");
+          cellText2 = document.createTextNode("Prezime");
+          cell2.appendChild(cellText2);
+          row.appendChild(cell2);
+          cell3 = document.createElement("th");
+          cellText3 = document.createTextNode("Adresa");
+          cell3.appendChild(cellText3);
+          row.appendChild(cell3);
+          cell4 = document.createElement("th");
+          cellText4 = document.createTextNode("Broj telefona");
+          cell4.appendChild(cellText4);
+          row.appendChild(cell4);
+          tbl.appendChild(row);
+
+          for (let i = 0; i < json.length - 1; ++i) {
+            row = document.createElement("tr");
+            cell = document.createElement("td");
+            cellText = document.createTextNode(json[i].ime);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            cell2 = document.createElement("td");
+            cellText2 = document.createTextNode(json[i].prezime);
+            cell2.appendChild(cellText2);
+            row.appendChild(cell2);
+            cell3 = document.createElement("td");
+            cellText3 = document.createTextNode(json[i].adresa);
+            cell3.appendChild(cellText3);
+            row.appendChild(cell3);
+            cell4 = document.createElement("td");
+            cellText4 = document.createTextNode(json[i].broj_telefona);
+            cell4.appendChild(cellText4);
+            row.appendChild(cell4);
+
+            cell5 = document.createElement("td");
+            var btn = document.createElement('input');
+            btn.type = "button";
+            btn.value = "Delete";
+            btn.onclick = (function (red) {
+              return function () {
+                // brisemo iz imenika određeni red
+                let objekatUredu = json[red];
+                console.log(objekatUredu);
+
+                $.ajax({
+                  url: "/" + objekatUredu.ime.toString(),
+                  type: "POST",
+                  data: {
+                    red : red
+                  },
+                  success: function (data, status, settings) {
+                    if(data === "OK") location.reload();
+                  },
+                  error: function (ajaxrequest, ajaxOptions, thrownError) {
+                    alert("error iz deleta");
+                  }
+                });
+              }
+            })(i);
+            cell5.appendChild(btn);
+            row.appendChild(cell5);
+
+            cell6 = document.createElement("td");
+            var btn = document.createElement('input');
+            btn.type = "button";
+            btn.value = "Edit";
+            btn.onclick = (function (red) {
+              return function () {
+                // pozivamo localhost/unos sa parametrima koje znamo iz reda
+                let objekatUredu = json[red];
+                console.log(objekatUredu);
+
+                $.ajax({
+                  url: "/unos",
+                  type: "POST",
+                  data: {
+                    info: objekatUredu,
+                    red: red
+                  },
+                  success: function (data, status, settings) {
+                    location.href = data + "?ime=" + objekatUredu.ime + "&prezime=" + objekatUredu.prezime + "&adresa=" + objekatUredu.adresa
+                    + "&broj_telefona=" + objekatUredu.broj_telefona;
+                  },
+                  error: function (ajaxrequest, ajaxOptions, thrownError) {
+                    alert("error iz edita");
+                  }
+                });
+
+              }
+            })(i);
+            cell6.appendChild(btn);
+            row.appendChild(cell6);
+
+
+            tbl.appendChild(row);
+          }
+          document.querySelector("body").appendChild(tbl);
+        }
+      };
+      xhr.send();
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</BODY>
+
+</HTML>

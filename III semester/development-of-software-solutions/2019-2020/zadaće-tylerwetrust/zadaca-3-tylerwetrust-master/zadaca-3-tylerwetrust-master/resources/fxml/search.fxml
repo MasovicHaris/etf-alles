@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="404.0" prefWidth="599.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <content>
+            <TilePane fx:id="tilePane" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefColumns="4" prefHeight="399.0" prefWidth="608.0" vgap="10.0" />
+         </content>
+      </ScrollPane>
+    </center>
+   <top>
+<HBox prefHeight="50.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+   <children>
+      <TextField fx:id="fldSearch" prefHeight="27.0" prefWidth="342.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </TextField>
+      <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#searchAction" text="%search" />
+      <Button fx:id="btnOk" mnemonicParsing="false" onAction="#okAction" text="%ok" />
+      <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelAction" text="%cancel" />
+   </children>
+   <padding>
+      <Insets left="5.0" top="10.0" />
+   </padding>
+</HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "891": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 5.50.\nSrednja vrijednost parnih brojeva je 6.00.\nNajveci element je 10 a najmanji 1.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "892": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 1.00.\nSrednja vrijednost parnih brojeva je 0.00.\nNajveci element je 1 a najmanji 1.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "893": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je -5.50.\nSrednja vrijednost parnih brojeva je -6.00.\nNajveci element je -1 a najmanji -10.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1383": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1. cijeli broj: Unesite 2. cijeli broj: Unesite 3. cijeli broj: Unesite 4. cijeli broj: Unesite 5. cijeli broj: Unesite 6. cijeli broj: Unesite 7. cijeli broj: Unesite 8. cijeli broj: Unesite 9. cijeli broj: Unesite 10. cijeli broj: Srednja vrijednost unesenih brojeva je 1.50.\nSrednja vrijednost parnih brojeva je 2.00.\nNajveci element je 2 a najmanji 1.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1478851566
+}

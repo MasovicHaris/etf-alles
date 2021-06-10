@@ -1,0 +1,194 @@
+{
+    "id": 9126,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 3, Zadatak 6",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3604,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - Primjer iz postavke zadatka\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 \nDamir\nAna\nMuhamed\nMarko\nIvan\nMirsad\nNikolina\nAlen\nJasmina\nMerima\n3\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: Ana, Damir, Mirsad, Muhamed\\nTim 2: Ivan, Merima, Nikolina\\nTim 3: Alen, Jasmina, Marko\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3605,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "14\nMarija\nDario\nNoa\nZara\nArmin\nKenan\nMelisa\nAdna\nMerima\nLeon\nInes\nTajra\nDzan\nAdin\n7\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: Marija, Melisa\\nTim 2: Dzan, Zara\\nTim 3: Merima, Noa\\nTim 4: Adin, Adna\\nTim 5: Armin, Leon\\nTim 6: Kenan, Tajra\\nTim 7: Dario, Ines\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3606,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - Test main-a\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "14\nMarija\nDario\nNoa\nZara\nArmin\nKenan\nMelisa\nAdna\nMerima\nLeon\nInes\nTajra\nDzan\nAdin\n2\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: Adna, Dzan, Marija, Melisa, Merima, Noa, Zara\\nTim 2: Adin, Armin, Dario, Ines, Kenan, Leon, Tajra\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3607,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - Test main-a\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "14\nMarija\nDario\nNoa\nZara\nArmin\nKenan\nMelisa\nAdna\nMerima\nLeon\nInes\nTajra\nDzan\nAdin\n8\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: Marija, Melisa\\nTim 2: Dzan, Zara\\nTim 3: Merima, Noa\\nTim 4: Adin, Adna\\nTim 5: Armin, Leon\\nTim 6: Kenan, Tajra\\nTim 7: Dario\\nTim 8: Ines\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3608,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - test main-a\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\nZara\nNoa\nDario\nLeon\n4\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: Zara\\nTim 2: Noa\\nTim 3: Dario\\nTim 4: Leon\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3609,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - test 'skakljivih' imena\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "14\nNoa\nZara\nAna-Marija\n2PAC\nDario\nLeon\n50 Cent\nLea Alma\nAlbus Percival Wulfric Brian\nHarry James\nHermione Jean\nRubeus\nMinevra\nNicole\n9\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Tim 1: 2PAC, Noa\\nTim 2: Lea Alma, Zara\\nTim 3: 50 Cent, Nicole\\nTim 4: Hermione Jean, Leon\\nTim 5: Dario, Minevra\\nTim 6: Albus Percival Wulfric Brian\\nTim 7: Harry James\\nTim 8: Ana-Marija\\nTim 9: Rubeus\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3613,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9 (javni) - Bacanje izuzetka sa studentskim mainom\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\nAna\nNoa\n5\n"
+            },
+            "expected": [
+                "Unesite broj djece: Unesite imena djece: \\nUnesite broj timova: Izuzetak: Razvrstavanje nemoguce"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+Option Explicit
+
+Public Sub RectFillet()
+    Dim x As Double, y As Double
+    Dim a As Double, b As Double, c As Double
+    Dim niz(0 To 15) As Double
+    
+    x = -2: y = 2
+    a = 4: b = 4: c = 0.8
+    
+    niz(0) = x + c
+    niz(1) = y
+    
+    niz(2) = x + a - c
+    niz(3) = y
+    
+    niz(4) = x + a
+    niz(5) = y - c
+     
+    niz(6) = x + a
+    niz(7) = y - b + c
+    
+    niz(8) = x + a - c
+    niz(9) = y - b
+    
+    niz(10) = x + c
+    niz(11) = y - b
+    
+    niz(12) = x
+    niz(13) = y - b + c
+    
+    niz(14) = x
+    niz(15) = y - c
+         
+    Dim pline As AcadLWPolyline
+    Dim pi As Double
+    pi = 4 * Atn(1)
+    Set pline = ThisDrawing.ModelSpace.AddLightWeightPolyline(niz)
+    pline.Closed = True
+    Call pline.SetBulge(1, -Tan(pi / 8))
+    Call pline.SetBulge(3, -Tan(pi / 8))
+    Call pline.SetBulge(5, -Tan(pi / 8))
+    Call pline.SetBulge(7, -Tan(pi / 8))
+    
+    pline.Update
+    
+    Dim regija As AcadRegion
+    Dim nizObjekata(0 To 0) As AcadEntity
+    Set nizObjekata(0) = pline
+    Dim nizRegija As Variant
+    nizRegija = ModelSpace.AddRegion(nizObjekata)
+    Set regija = nizRegija(0)
+    Dim solid As Acad3DSolid
+     
+    Dim p1(0 To 2) As Double, p2(0 To 2) As Double
+    p2(0) = 0: p2(1) = 0.5: p2(2) = 2
+    Dim line As AcadLine
+    Set line = ModelSpace.AddLine(p1, p2)
+    
+    Set solid = ModelSpace.AddExtrudedSolid(regija, 2, 0.3)
+    solid.color = acGreen
+
+    solid.Update
+    regija.Delete
+    pline.Delete
+    
+End Sub
+
+Public Sub Main()
+    Call RectFillet
+    ZoomExtents
+End Sub

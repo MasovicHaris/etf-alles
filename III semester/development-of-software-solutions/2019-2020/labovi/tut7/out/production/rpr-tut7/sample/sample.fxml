@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="4" prefHeight="237.0" prefWidth="537.0" vgap="4" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints maxHeight="37.400000000000006" minHeight="10.0" prefHeight="33.400000000000006" />
+      <RowConstraints maxHeight="40.400000000000006" minHeight="10.0" prefHeight="40.400000000000006" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <children>
+      <Label prefHeight="18.0" prefWidth="95.0" text="Ime:" GridPane.columnIndex="2" />
+      <Label prefHeight="18.0" prefWidth="96.0" text="Prezime:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label prefHeight="18.0" prefWidth="94.0" text="E-mail:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label prefHeight="18.0" prefWidth="102.0" text="Korisničko ime:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label prefHeight="18.0" prefWidth="86.0" text="Lozinka:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <TextField fx:id="imeF" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="prezimeF" prefHeight="26.0" prefWidth="142.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="emailF" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="korisnickoImeF" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </GridPane.margin></TextField>
+      <Button fx:id="dugmeDodaj" mnemonicParsing="false" onAction="#dodajKlik" prefHeight="26.0" prefWidth="116.0" text="Dodaj" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="9.0" />
+         </GridPane.margin></Button>
+      <Button fx:id="dugmeKraj" mnemonicParsing="false" onAction="#prekiniProgram" prefHeight="26.0" prefWidth="87.0" text="Kraj" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="9.0" />
+         </GridPane.margin></Button>
+      <VBox fx:id="vertikalBox" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #00c5ff; -fx-border-width: 2;" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowSpan="5" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+         <children>
+            <ListView fx:id="listKorisnici" prefHeight="200.0" prefWidth="200.0" />
+         </children></VBox>
+      <PasswordField fx:id="sifraF" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+   </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>

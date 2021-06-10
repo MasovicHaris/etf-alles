@@ -1,0 +1,78 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.Forme"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:View="using:Vicinor.View"
+    x:Class="Vicinor.Forme.PocetnaForma"
+    mc:Ignorable="d">
+    <!--ScrollViewer VerticalScrollBarVisibility="Auto"-->
+    <Grid x:Name="grid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="continueHyperlinkButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,5,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="continueHyperlinkButton.(Grid.Row)" Value="6"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="300" MinWindowWidth="200"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+                        <Setter Target="continueHyperlinkButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="continueHyperlinkButton.(Grid.Row)" Value="7"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="loginUC.(FrameworkElement.Width)" Value="500"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image" Height="150" Width="150" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1"  Source="ms-appx:///Assets/vicinor-logo.png"/>
+
+        <HyperlinkButton x:Name="registerHyperlinkButton" Content="or Register" Margin="0,0,20,0" HorizontalAlignment="Right"  Grid.Column="1" Grid.Row="6" Click="registerHyperlinkButton_Click"/>
+        <HyperlinkButton x:Name="continueHyperlinkButton"  Margin="20,0,0,20" Content="Continue as guest" HorizontalAlignment="Left"  Grid.Row="7" FontStretch="Expanded" Grid.Column="1" Click="continueHyperlinkButton_Click" VerticalAlignment="Bottom" Width="119"/>
+        <TextBlock x:Name="errorTextBlock" Grid.Column="1"  Margin="20,0,0,0" HorizontalAlignment="Left" Foreground="Red"  Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Bottom" Visibility="Collapsed"/>
+
+        <View:loginUserControl x:Name="loginUC" Grid.Column="1" Grid.Row="1" Grid.RowSpan="5"/>
+
+    </Grid>
+    <!--/ScrollViewer-->
+</Page>

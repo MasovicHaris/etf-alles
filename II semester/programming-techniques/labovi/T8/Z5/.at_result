@@ -1,0 +1,172 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In instantiation of ‘Cvor<TipElemenata>* KreirajPovezanuListu(TipElemenata) [with TipElemenata = double]’:\nmain.cpp:70:45:   required from here\nmain.cpp:17:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(broj == zavrsni) break;\n            ~~~~~^~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "17",
+                "col": "17",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_699/main.cpp:17:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(broj == zavrsni) break;            ~~~~~^~~~~~~~~~",
+                "code": "if(broj == zavrsni) break;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3531": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3532": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3533": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 3 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3534": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 4 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3535": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 4 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3536": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 0 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3537": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3538": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma elemenata 55\nBroj elemenata 10\nBroj vecih od praga: 6\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3539": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma elemenata 10\nBroj elemenata 4\nBroj vecih od praga: 0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3540": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma elemenata 10\nBroj elemenata 4\nBroj vecih od praga: 0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1494487078
+}

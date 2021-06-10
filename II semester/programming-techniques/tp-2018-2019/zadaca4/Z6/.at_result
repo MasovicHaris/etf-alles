@@ -1,0 +1,203 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "6975": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6976": {
+            "status": 1,
+            "run_result": {
+                "output": "12345 Neko Nekic 1/B Bascarsija 1 1/1-1\n12346 Neko Nekic 1/M Bascarsija 2 1/1-1\n12347 Neko Nekic 1/D Bascarsija 3 1/1-1\n12348 Neko Nekic 1/B Bascarsija 4 1/1-1\n12349 Neko Nekic 3/B Bascarsija 5 1/1-1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6977": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj indeksa: 12345\nGodina studija: 1/D\nIme i prezime: Neko Nekic\nAdresa: Bascarsija 1\nTelefon: 1/1-1\n\nBroj indeksa: 12346\nGodina studija: 1/B\nIme i prezime: Neko Nekic\nAdresa: Bascarsija 2\nTelefon: 1/1-1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6978": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6979": {
+            "status": 1,
+            "run_result": {
+                "output": "123 ASUS X554LIntel CPU 2.4 GHz, 8 GB RAM",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6980": {
+            "status": 1,
+            "run_result": {
+                "output": "Evidencijski broj: 123\nNaziv: ASUS X554L\nKarakteristike: Intel CPU 2.4 GHz, 8 GB RAM\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6981": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6982": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6983": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Student nije nadjen\nIzuzetak: Student nije nadjen",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6984": {
+            "status": 1,
+            "run_result": {
+                "output": "Broj indeksa: 14212\nGodina studija: 1/B\nIme i prezime: Benjamin\nAdresa: Francuska revolucija 23\nTelefon: 12/34-56\nBroj indeksa: 17528\nGodina studija: 2/B\nIme i prezime: Ivan\nAdresa: Trg vjecnih studenata 12\nTelefon: 048/597-585\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6985": {
+            "status": 1,
+            "run_result": {
+                "output": "Evidencijski broj: 122\nNaziv: Dell 2\nKarakteristike: CPU 3.2 GHz, 6 GB RAM\n\nEvidencijski broj: 123\nNaziv: Dell\nKarakteristike: CPU 3.0 GHz, 4 GB RAM\n\nEvidencijski broj: 331\nNaziv: ASUS\nKarakteristike: CPU 3.5 GHz, 2 GB RAM\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6986": {
+            "status": 1,
+            "run_result": {
+                "output": "Student Benjamin (14212) zaduzio/la laptop broj 123\nStudent Ivan (17528) zaduzio/la laptop broj 331\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6987": {
+            "status": 1,
+            "run_result": {
+                "output": "Evidencijski broj: 122\nNaziv: Dell 2\nKarakteristike: CPU 3.2 GHz, 6 GB RAM\n\nZaduzio(la): Benjamin (14212)\nEvidencijski broj: 123\nNaziv: Dell\nKarakteristike: CPU 3.0 GHz, 4 GB RAM\n\nEvidencijski broj: 331\nNaziv: ASUS\nKarakteristike: CPU 3.5 GHz, 2 GB RAM\n\nZaduzio(la): Ante (17525)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1559846915
+}

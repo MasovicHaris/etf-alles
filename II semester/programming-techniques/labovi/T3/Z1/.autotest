@@ -1,0 +1,219 @@
+{
+    "id": 8531,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3170,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Primjer 1 iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "12\n15 23 18 -26 0 142 -333 73 11111 -312 9 5555555"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 15 -26 0 73 -312\\n23 18 142 -333 11111 9 5555555"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3172,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Primjer 2 iz postavke (nema elemenata sa neparnom sumom cifara)\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\n_main();\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n24 73 112 -17 0"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 24 73 112 -17 0\\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3173,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Primjer 3 iz postavke (nema elemenata sa parnom sumom cifara)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n32 -23 111 45"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: \\n32 -23 111 45"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3174,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Za broj elemenata n je unesena 0\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Broj elemenata mora biti veci od 0!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3175,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Provjera ispravnosti rada sa jednocifrenim brojevima (0-9)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n0 1 2 3 4 5 6 7 8 9"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 0 2 4 6 8\\n1 3 5 7 9"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3176,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: Provjera rada sa negativnim brojevima\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n-1 -333 -5567 -3321 -6678"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente:\\n-1 -333 -5567 -3321 -6678"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3227,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT7: Situacija kada se u vektoru cijelih brojeva na\u0111e i minimalna\n\/\/ vrijednost integer tipa\nstd::vector<int> ulaz{1, std::numeric_limits<int>::min(), -3};\nstd::vector<int> rezultat = IzdvojiElemente(ulaz, false);\nfor(int x : rezultat) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 -2147483648 -3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3228,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT8: Situacija kada se u vektoru cijelih brojeva na\u0111e i maksimalna\n\/\/ vrijednost integer tipa\nstd::vector<int> ulaz{6, std::numeric_limits<int>::max(), -2};\nstd::vector<int> rezultat = IzdvojiElemente(ulaz, true);\nfor(int x : rezultat) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include<limits>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6 2147483647 -2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

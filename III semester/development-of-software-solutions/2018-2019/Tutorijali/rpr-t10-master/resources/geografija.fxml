@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.GeografijaController">
+   <center>
+       <TabPane maxHeight="360" maxWidth="600" minHeight="360" minWidth="600" prefHeight="360" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+               <Tab text="%pretraga">
+                   <content>
+                       <GridPane>
+                           <columnConstraints>
+                               <ColumnConstraints halignment="CENTER" maxWidth="150" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="150" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="150" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="150" minWidth="150.0" prefWidth="150.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                           </rowConstraints>
+                           <padding>
+                               <Insets left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <opaqueInsets>
+                               <Insets />
+                           </opaqueInsets>
+
+                           <Label styleClass="label" text="%naziv" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+                           <TextField fx:id="nazivTextField" promptText="%unesiteNazivDrzave" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="0" GridPane.rowSpan="2" />
+                           <Button fx:id="nadjiDrzavuButton" maxHeight="30" maxWidth="100" minHeight="30" minWidth="100" onAction="#nadjiDrzavuClicked" prefHeight="30" prefWidth="100" text="%nadjiDrzavu" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+
+                           <Label styleClass="label" text="%drzava" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+                           <Label styleClass="label" text="%naziv" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                           <TextField fx:id="nazivDrzavePretraga" editable="false" promptText="%rezultatPretrage" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+
+                           <Label styleClass="label" text="%grad" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="4" />
+                           <Label text="%naziv" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                           <TextField fx:id="nazivGradaPretraga" promptText="%rezultatPretrage" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                           <Label text="%brojStanovnika" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                           <TextField fx:id="brojStanovnikaPretraga" promptText="%rezultatPretrage" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                           <Label fx:id="porukaPretraga" alignment="CENTER" maxHeight="30" maxWidth="600" minHeight="30" minWidth="600" prefHeight="30" prefWidth="600" textFill="#ee0303" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="7" />
+
+                       </GridPane>
+                   </content>
+               </Tab>
+               <Tab text="%dodavanje">
+                   <content>
+                       <GridPane alignment="CENTER">
+                           <columnConstraints>
+                               <ColumnConstraints halignment="CENTER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                               <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40.0" prefHeight="40.0" valignment="CENTER" />
+                           </rowConstraints>
+                           <padding>
+                               <Insets left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <opaqueInsets>
+                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </opaqueInsets>
+
+                           <Label styleClass="label" text="%drzava" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" />
+                           <Label styleClass="label" text="%naziv" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           <TextField fx:id="nazivDrzaveDodavanje" promptText="%unesiteNazivDrzave" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                           <Label styleClass="label" text="%grad" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+                           <Label styleClass="label" text="%naziv" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                           <TextField fx:id="nazivGradaDodavanje" promptText="%unesiteNazivGrada" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                           <Label styleClass="label" text="%brojStanovnika" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                           <TextField fx:id="brojStanovnikaDodavanje" promptText="%unesiteBrojStanovnika" styleClass="textfield" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                           <Button fx:id="dodajButton" maxHeight="30" maxWidth="120" minHeight="30" minWidth="120" onAction="#dodajClicked" prefHeight="30" prefWidth="120" text="%dodaj" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           <Button fx:id="obrisiDrzavu" maxHeight="30" maxWidth="120" minHeight="30" minWidth="120" onAction="#obrisiDrzavuClicked" prefHeight="30" prefWidth="120" text="%obrisiDrzavu" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           <Label fx:id="porukaDodavanje" maxHeight="30" maxWidth="600" minHeight="30" minWidth="600" prefHeight="30" prefWidth="600" textFill="#dd0202" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="6" />
+
+                       </GridPane>
+                   </content>
+               </Tab>
+
+               <Tab text="%ispisi">
+                   <content>
+                       <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                           <columnConstraints>
+                               <ColumnConstraints halignment="CENTER" maxWidth="600" prefWidth="600" />
+                           </columnConstraints>
+                           <rowConstraints>
+                               <RowConstraints maxHeight="220" minHeight="220" prefHeight="220" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40" prefHeight="40" valignment="CENTER" />
+                           </rowConstraints>
+                           <children>
+                               <ListView fx:id="ispisView" maxHeight="220" maxWidth="600" minHeight="220" minWidth="600" prefHeight="600" prefWidth="220" GridPane.rowIndex="0" />
+                               <Button fx:id="ispisi" maxHeight="30" maxWidth="150" minHeight="30" minWidth="150" onAction="#ispisi" prefHeight="30" prefWidth="150" text="%ispisi" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           </children>
+
+                       </GridPane>
+                   </content>
+               </Tab>
+               <Tab text="%reportDrzave">
+                   <content>
+                       <GridPane alignment="CENTER" hgap="5" vgap="5">
+                           <columnConstraints>
+                               <ColumnConstraints halignment="CENTER" maxWidth="200" prefWidth="200" />
+                               <ColumnConstraints halignment="CENTER" maxWidth="200" prefWidth="200" />
+                           </columnConstraints>
+                           <rowConstraints>
+                               <RowConstraints maxHeight="220" minHeight="220" prefHeight="220" valignment="CENTER" />
+                               <RowConstraints maxHeight="40" minHeight="40" prefHeight="40" valignment="CENTER" />
+                           </rowConstraints>
+                           <children>
+                               <Label text="%naziv" styleClass="label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                               <TextField fx:id="nazivDrzave" promptText="%unesiteNazivDrzave" styleClass="textfield" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                               <Button text="%ispisi" minWidth="200" maxWidth="200" minHeight="50" maxHeight="50" prefWidth="200" prefHeight="50" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" onAction="#ispisiZaDrzavu"/>
+                           </children>
+                       </GridPane>
+                   </content>
+               </Tab>
+           </tabs>
+       </TabPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%jezik">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#bosanskiClicked" text="%bosanski" />
+                <MenuItem mnemonicParsing="false" onAction="#njemackiClicked" text="%njemacki" />
+                <MenuItem mnemonicParsing="false" onAction="#engleskiClicked" text="%engleski" />
+                <MenuItem mnemonicParsing="false" onAction="#francuskiClicked" text="%francuski" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" onAction="#saveAs" text="%save">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#saveAs" text="%saveAs" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

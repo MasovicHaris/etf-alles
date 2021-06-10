@@ -1,0 +1,110 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:41: warning: ISO C90 forbids mixed declarations and code\nmain.c:78:2: warning: C++ style comments are not allowed in ISO C90\nmain.c:78:2: warning: (this will be reported only once per input file)\nAt top level:\ncc1: warning: unrecognized command line option \"-Wno-unused-result\"",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "78",
+                "col": "2",
+                "message": "C++ style comments are not allowed in ISO C90",
+                "output": "/tmp/buildservice/bs_4704/main.c:78:2: warning: C++ style comments are not allowed in ISO C90"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "78",
+                "col": "2",
+                "message": "(this will be reported only once per input file)",
+                "output": "/tmp/buildservice/bs_4704/main.c:78:2: warning: (this will be reported only once per input file)At top level:cc1: warning: unrecognized command line option \"-Wno-unused-result\"",
+                "code": "At top level:"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1422": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve:\nBroj 0 se javlja 2 puta.\nBroj 1 se javlja 2 puta.\nBroj 2 se javlja 2 puta.\nBroj 3 se javlja 2 puta.\nBroj 4 se javlja 2 puta.\nBroj 5 se javlja 2 puta.\nBroj 6 se javlja 2 puta.\nBroj 7 se javlja 2 puta.\nBroj 8 se javlja 2 puta.\nBroj 9 se javlja 2 puta.\nBroj 30 se javlja 4 puta.\nBroj 31 se javlja 4 puta.\nBroj 32 se javlja 4 puta.\nBroj 33 se javlja 4 puta.\nBroj 34 se javlja 4 puta.\nBroj 35 se javlja 4 puta.\nBroj 36 se javlja 4 puta.\nBroj 37 se javlja 4 puta.\nBroj 38 se javlja 4 puta.\nBroj 39 se javlja 4 puta.\nBroj 40 se javlja 5 puta.\nBroj 41 se javlja 5 puta.\nBroj 42 se javlja 5 puta.\nBroj 43 se javlja 5 puta.\nBroj 44 se javlja 5 puta.\nBroj 45 se javlja 5 puta.\nBroj 46 se javlja 5 puta.\nBroj 47 se javlja 5 puta.\nBroj 48 se javlja 5 puta.\nBroj 49 se javlja 5 puta.\nBroj 100 se javlja 1 puta.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1423": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve:\nBrojevi moraju biti izmedju 0 i 100!\nBrojevi moraju biti izmedju 0 i 100!\nBrojevi moraju biti izmedju 0 i 100!\nBrojevi moraju biti izmedju 0 i 100!\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1424": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve:\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1426": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve:\nBroj 50 se javlja 60 puta.\nBroj 100 se javlja 60 puta.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5083": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite brojeve:\nBrojevi moraju biti izmedju 0 i 100!\nBroj 7 se javlja 1 puta.\nBroj 15 se javlja 3 puta.\nBroj 22 se javlja 2 puta.\nBroj 35 se javlja 2 puta.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1478852269
+}

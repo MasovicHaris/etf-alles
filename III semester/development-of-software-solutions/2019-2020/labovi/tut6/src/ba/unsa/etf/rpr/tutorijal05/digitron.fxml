@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="420.0" prefWidth="311.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="301.2" minWidth="10.0" prefWidth="65.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="301.2" minWidth="10.0" prefWidth="64.20000000000002" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="328.79998474121095" minWidth="0.0" prefWidth="74.19999999999999" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="389.7999847412109" minWidth="10.0" prefWidth="71.40000000000003" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="120.8" vgrow="ALWAYS" />
+        <RowConstraints prefHeight="57.0" vgrow="ALWAYS" />
+        <RowConstraints prefHeight="57.0" vgrow="ALWAYS" />
+        <RowConstraints prefHeight="57.0" vgrow="ALWAYS" />
+        <RowConstraints prefHeight="57.0" vgrow="ALWAYS" />
+        <RowConstraints prefHeight="80.0" vgrow="ALWAYS" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    </rowConstraints>
+    <children>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="35.0" prefWidth="60.0" text="\%" GridPane.rowIndex="1">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="35.0" prefWidth="60.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="35.0" prefWidth="60.0" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="7" GridPane.rowIndex="2">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="4" GridPane.rowIndex="3">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="1" GridPane.rowIndex="4">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="Infinity" maxWidth="Infinity" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="35.0" prefWidth="60.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="Infinity" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="128.0" prefWidth="62.0" style="-fx-background-color: ff9595;" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="5">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <GridPane.margin>
+                <Insets bottom="5.0" right="5.0" />
+            </GridPane.margin></Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="98.0" prefWidth="89.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="3">
+            <GridPane.margin>
+                <Insets bottom="62.5" right="5.0" />
+            </GridPane.margin>
+            <font>
+                <Font size="18.0" />
+            </font></Button>
+        <Button contentDisplay="CENTER" layoutX="10.0" layoutY="92.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiOperatore" prefHeight="26.0" prefWidth="69.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+         </GridPane.margin>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="44.0" prefWidth="136.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" />
+            </GridPane.margin>
+        </Button>
+        <Button contentDisplay="CENTER" layoutX="161.0" layoutY="264.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#obradiBrojeve" prefHeight="45.0" prefWidth="55.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" />
+            </GridPane.margin>
+        </Button>
+        <StackPane prefHeight="99.0" prefWidth="191.0" GridPane.columnSpan="4">
+            <children>
+                <Label fx:id="rezultat" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="84.0" prefWidth="285.0" style="-fx-background-color: #90ee90;" text="0">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+                </Label>
+            </children></StackPane>
+    </children>
+    <GridPane.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </GridPane.margin>
+</GridPane>

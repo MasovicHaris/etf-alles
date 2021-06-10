@@ -1,0 +1,29 @@
+table, th, td {
+    border: 1px solid black;
+    font-family: sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    width: 5%;
+    height: 5%;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-of-type(2n+1){
+    background-color: #FFF2CC;
+}
+
+input {
+    width: 100%;
+}
+
+th {
+    background-color: #CCCCCC;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}

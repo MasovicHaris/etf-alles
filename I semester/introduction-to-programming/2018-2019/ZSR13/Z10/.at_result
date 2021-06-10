@@ -1,0 +1,134 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘dodaj_oblik’:\nmain.c:21:6: warning: variable ‘zapisano’ set but not used [-Wunused-but-set-variable]\n  int zapisano=fwrite(&br_oblika, sizeof(br_oblika), 1, dat); //promijeni valjda samo prvi broj u datoteci koji govori koliko oblika ima u njoj\n      ^~~~~~~~\nmain.c:16:6: warning: unused variable ‘ucitano’ [-Wunused-variable]\n  int ucitano=fread(&br_oblika, sizeof(unsigned short), 1, dat);  //povecavanje broja oblika\n      ^~~~~~~\nmain.c: In function ‘izbaci_duple’:\nmain.c:91:6: warning: variable ‘zapisano’ set but not used [-Wunused-but-set-variable]\n  int zapisano=fwrite(&broj_obl, sizeof(broj_obl), 1, dat);\n      ^~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "21",
+                "col": "6",
+                "message": "variable 'zapisano' set but not used",
+                "output": "/tmp/buildservice/bs_8665/main.c:21:6: warning: variable ‘zapisano’ set but not used [-Wunused-but-set-variable]  int zapisano=fwrite(&br_oblika, sizeof(br_oblika), 1, dat); //promijeni valjda samo prvi broj u datoteci koji govori koliko oblika ima u njoj      ^~~~~~~~",
+                "code": "int zapisano=fwrite(&br_oblika, sizeof(br_oblika), 1, dat); //promijeni valjda samo prvi broj u datoteci koji govori koliko oblika ima u njoj"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "16",
+                "col": "6",
+                "message": "unused variable 'ucitano'",
+                "output": "/tmp/buildservice/bs_8665/main.c:16:6: warning: unused variable ‘ucitano’ [-Wunused-variable]  int ucitano=fread(&br_oblika, sizeof(unsigned short), 1, dat);  //povecavanje broja oblika      ^~~~~~~",
+                "code": "int ucitano=fread(&br_oblika, sizeof(unsigned short), 1, dat);  //povecavanje broja oblika"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "91",
+                "col": "6",
+                "message": "variable 'zapisano' set but not used",
+                "output": "/tmp/buildservice/bs_8665/main.c:91:6: warning: variable ‘zapisano’ set but not used [-Wunused-but-set-variable]  int zapisano=fwrite(&broj_obl, sizeof(broj_obl), 1, dat);      ^~~~~~~~",
+                "code": "int zapisano=fwrite(&broj_obl, sizeof(broj_obl), 1, dat);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "6115": {
+            "status": 1,
+            "run_result": {
+                "output": "5 0 63 83 101 115 116 111 117 103 97 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6116": {
+            "status": 1,
+            "run_result": {
+                "output": "Trougao 21.21 18.18 1.1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6117": {
+            "status": 1,
+            "run_result": {
+                "output": "Trougao 100.1 100.1 100.1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6118": {
+            "status": 1,
+            "run_result": {
+                "output": "Trougao 100.1 100.1 100.1\nTrougao 21.21 18.18 1.1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6119": {
+            "status": 1,
+            "run_result": {
+                "output": "4 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6120": {
+            "status": 1,
+            "run_result": {
+                "output": "255ugao",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1568065381
+}

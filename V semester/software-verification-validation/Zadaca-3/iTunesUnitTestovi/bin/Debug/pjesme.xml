@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tests>
+  <pjesma>
+    <title>
+      Californication
+    </title>
+    <artist>
+      Red Hot Chili Peppers
+    </artist>
+    <album>
+      Californication
+    </album>
+    <genre>
+      Rock/Funk
+    </genre>
+    <rating>
+      9.0
+    </rating>
+    <format>
+      .mp3
+    </format>
+    <length>
+      241
+    </length>
+    <bitRate>
+      256
+    </bitRate>
+    <price>
+      2.15
+    </price>
+  </pjesma>
+  <pjesma>
+    <title>
+      Snow
+    </title>
+    <artist>
+      Red Hot Chili Peppers
+    </artist>
+    <album>
+      Stadium Arcadium
+    </album>
+    <genre>
+      Rock/Funk
+    </genre>
+    <rating>
+      9.2
+    </rating>
+    <format>
+      .mp3
+    </format>
+    <length>
+      241
+    </length>
+    <bitRate>
+      256
+    </bitRate>
+    <price>
+      2.15
+    </price>
+  </pjesma>
+</tests>

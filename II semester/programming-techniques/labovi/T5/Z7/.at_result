@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "uticov",
+        "os": "Linux 4.8.0-34-generic x86_64\nUbuntu 16.10\n",
+        "compiler_version": "g++ (Ubuntu 6.2.0-5ubuntu12) 6.2.0 20161005",
+        "debugger_version": "GNU gdb (Ubuntu 7.11.90.20161005-0ubuntu1) 7.11.90.20161005-git",
+        "profiler_version": "valgrind-3.12.0.SVN"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3365": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma bloka je: 45",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3366": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma bloka je: 415",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3367": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma bloka je: 14",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3368": {
+            "status": 1,
+            "run_result": {
+                "output": "'Predmet: Tehnike programiranja 2016/2017'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3369": {
+            "status": 1,
+            "run_result": {
+                "output": "Blok je prazan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3370": {
+            "status": 1,
+            "run_result": {
+                "output": "'Predmet: Tehnike programiranja 2016/2017'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1491463377
+}

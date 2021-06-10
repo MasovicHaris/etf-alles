@@ -1,0 +1,94 @@
+{
+    "id": 8513,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 1, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3133,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "95 103"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: \\n+---------+----------+----------+-----------+\\n| Brojevi | Kvadrati | Korijeni | Logaritmi |\\n+---------+----------+----------+-----------+\\n| 95      |     9025 |    9.747 |   4.55388 |\\n| 96      |     9216 |    9.798 |   4.56435 |\\n| 97      |     9409 |    9.849 |   4.57471 |\\n| 98      |     9604 |    9.899 |   4.58497 |\\n| 99      |     9801 |    9.950 |   4.59512 |\\n| 100     |    10000 |   10.000 |   4.60517 |\\n| 101     |    10201 |   10.050 |   4.61512 |\\n| 102     |    10404 |   10.100 |   4.62497 |\\n| 103     |    10609 |   10.149 |   4.63473 |\\n+---------+----------+----------+-----------+"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3134,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/[5, 20]\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 20\n\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: \\n+---------+----------+----------+-----------+\\n| Brojevi | Kvadrati | Korijeni | Logaritmi |\\n+---------+----------+----------+-----------+\\n| 5       |       25 |    2.236 |   1.60944 |\\n| 6       |       36 |    2.449 |   1.79176 |\\n| 7       |       49 |    2.646 |   1.94591 |\\n| 8       |       64 |    2.828 |   2.07944 |\\n| 9       |       81 |    3.000 |   2.19722 |\\n| 10      |      100 |    3.162 |   2.30259 |\\n| 11      |      121 |    3.317 |   2.39790 |\\n| 12      |      144 |    3.464 |   2.48491 |\\n| 13      |      169 |    3.606 |   2.56495 |\\n| 14      |      196 |    3.742 |   2.63906 |\\n| 15      |      225 |    3.873 |   2.70805 |\\n| 16      |      256 |    4.000 |   2.77259 |\\n| 17      |      289 |    4.123 |   2.83321 |\\n| 18      |      324 |    4.243 |   2.89037 |\\n| 19      |      361 |    4.359 |   2.94444 |\\n| 20      |      400 |    4.472 |   2.99573 |\\n+---------+----------+----------+-----------+"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3135,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: a = 9990, b = 9999\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "9990 9999\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: \\n+---------+----------+----------+-----------+\\n| Brojevi | Kvadrati | Korijeni | Logaritmi |\\n+---------+----------+----------+-----------+\\n| 9990    | 99800100 |   99.950 |   9.20934 |\\n| 9991    | 99820081 |   99.955 |   9.20944 |\\n| 9992    | 99840064 |   99.960 |   9.20954 |\\n| 9993    | 99860049 |   99.965 |   9.20964 |\\n| 9994    | 99880036 |   99.970 |   9.20974 |\\n| 9995    | 99900025 |   99.975 |   9.20984 |\\n| 9996    | 99920016 |   99.980 |   9.20994 |\\n| 9997    | 99940009 |   99.985 |   9.21004 |\\n| 9998    | 99960004 |   99.990 |   9.21014 |\\n| 9999    | 99980001 |   99.995 |   9.21024 |\\n+---------+----------+----------+-----------+"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

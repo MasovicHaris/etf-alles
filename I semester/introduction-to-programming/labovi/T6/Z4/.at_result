@@ -1,0 +1,119 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 4.4.7 20120313 (Red Hat 4.4.7-16)",
+        "debugger_version": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-83.el6)",
+        "profiler_version": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:21: warning: ‘novaduz’ may be used uninitialized in this function\nAt top level:\ncc1: warning: unrecognized command line option \"-Wno-unused-result\""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1170": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 2,3,5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1464": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1465": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 1,2,3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1472": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 1,2,3,4,5,6,7,8,9,10",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1473": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 2,3,4,5,6,7,8,9,10",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1474": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 1,2,3,4,5,6,7,8,9",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1475": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite elemente niza: Unesite element koji treba izbaciti: Novi niz glasi: 2,3,4,5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1479459252
+}

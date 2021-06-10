@@ -1,0 +1,251 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c:17:5: warning: conflicting types for built-in function ‘strcmp’\n int strcmp(const char *s1, const char *s2, int velikamala)\n     ^~~~~~\nmain.c: In function ‘strcmp’:\nmain.c:24:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s1);\n          ^~\nmain.c:3:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nmain.c:25:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s2);\n          ^~\nmain.c:3:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nmain.c:28:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok1=s1;\n      ^\nmain.c:29:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok2=s2;\n      ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "17",
+                "col": "5",
+                "message": "conflicting types for built-in function 'strcmp'",
+                "output": "/tmp/buildservice/bs_850/main.c:17:5: warning: conflicting types for built-in function ‘strcmp’ int strcmp(const char *s1, const char *s2, int velikamala)     ^~~~~~",
+                "code": "int strcmp(const char *s1, const char *s2, int velikamala)"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "24",
+                "col": "10",
+                "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                "output": "/tmp/buildservice/bs_850/main.c:24:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s1);          ^~",
+                "code": "velika(s1);"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "25",
+                "col": "10",
+                "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                "output": "/tmp/buildservice/bs_850/main.c:25:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s2);          ^~",
+                "code": "velika(s2);"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "28",
+                "col": "6",
+                "message": "assignment discards 'const' qualifier from pointer target type",
+                "output": "/tmp/buildservice/bs_850/main.c:28:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok1=s1;      ^",
+                "code": "pok1=s1;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "29",
+                "col": "6",
+                "message": "assignment discards 'const' qualifier from pointer target type",
+                "output": "/tmp/buildservice/bs_850/main.c:29:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok2=s2;      ^",
+                "code": "pok2=s2;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "797": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_797.c:19:5: warning: conflicting types for built-in function ‘strcmp’\n int strcmp(const char *s1, const char *s2, int velikamala)\n     ^~~~~~\nbs_test_797.c: In function ‘strcmp’:\nbs_test_797.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s1);\n          ^~\nbs_test_797.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_797.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s2);\n          ^~\nbs_test_797.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_797.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok1=s1;\n      ^\nbs_test_797.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok2=s2;\n      ^",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_797.c",
+                        "line": "19",
+                        "col": "5",
+                        "message": "conflicting types for built-in function 'strcmp'",
+                        "output": "/tmp/buildservice/bs_850/bs_test_797.c:19:5: warning: conflicting types for built-in function ‘strcmp’ int strcmp(const char *s1, const char *s2, int velikamala)     ^~~~~~",
+                        "code": "int strcmp(const char *s1, const char *s2, int velikamala)"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_797.c",
+                        "line": "26",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_797.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s1);          ^~",
+                        "code": "velika(s1);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_797.c",
+                        "line": "27",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_797.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s2);          ^~",
+                        "code": "velika(s2);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_797.c",
+                        "line": "30",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_797.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok1=s1;      ^",
+                        "code": "pok1=s1;"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_797.c",
+                        "line": "31",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_797.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok2=s2;      ^",
+                        "code": "pok2=s2;"
+                    }
+                ]
+            }
+        },
+        "798": {
+            "status": 1,
+            "run_result": {
+                "output": "0 -1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_798.c:19:5: warning: conflicting types for built-in function ‘strcmp’\n int strcmp(const char *s1, const char *s2, int velikamala)\n     ^~~~~~\nbs_test_798.c: In function ‘strcmp’:\nbs_test_798.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s1);\n          ^~\nbs_test_798.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_798.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s2);\n          ^~\nbs_test_798.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_798.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok1=s1;\n      ^\nbs_test_798.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok2=s2;\n      ^",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_798.c",
+                        "line": "19",
+                        "col": "5",
+                        "message": "conflicting types for built-in function 'strcmp'",
+                        "output": "/tmp/buildservice/bs_850/bs_test_798.c:19:5: warning: conflicting types for built-in function ‘strcmp’ int strcmp(const char *s1, const char *s2, int velikamala)     ^~~~~~",
+                        "code": "int strcmp(const char *s1, const char *s2, int velikamala)"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_798.c",
+                        "line": "26",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_798.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s1);          ^~",
+                        "code": "velika(s1);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_798.c",
+                        "line": "27",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_798.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s2);          ^~",
+                        "code": "velika(s2);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_798.c",
+                        "line": "30",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_798.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok1=s1;      ^",
+                        "code": "pok1=s1;"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_798.c",
+                        "line": "31",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_798.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok2=s2;      ^",
+                        "code": "pok2=s2;"
+                    }
+                ]
+            }
+        },
+        "1612": {
+            "status": 1,
+            "run_result": {
+                "output": "-1 1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_1612.c:19:5: warning: conflicting types for built-in function ‘strcmp’\n int strcmp(const char *s1, const char *s2, int velikamala)\n     ^~~~~~\nbs_test_1612.c: In function ‘strcmp’:\nbs_test_1612.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s1);\n          ^~\nbs_test_1612.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_1612.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n   velika(s2);\n          ^~\nbs_test_1612.c:5:7: note: expected ‘char *’ but argument is of type ‘const char *’\n char* velika(char* s)\n       ^~~~~~\nbs_test_1612.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok1=s1;\n      ^\nbs_test_1612.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]\n  pok2=s2;\n      ^",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1612.c",
+                        "line": "19",
+                        "col": "5",
+                        "message": "conflicting types for built-in function 'strcmp'",
+                        "output": "/tmp/buildservice/bs_850/bs_test_1612.c:19:5: warning: conflicting types for built-in function ‘strcmp’ int strcmp(const char *s1, const char *s2, int velikamala)     ^~~~~~",
+                        "code": "int strcmp(const char *s1, const char *s2, int velikamala)"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1612.c",
+                        "line": "26",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_1612.c:26:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s1);          ^~",
+                        "code": "velika(s1);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1612.c",
+                        "line": "27",
+                        "col": "10",
+                        "message": "passing argument 1 of 'velika' discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_1612.c:27:10: warning: passing argument 1 of ‘velika’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]   velika(s2);          ^~",
+                        "code": "velika(s2);"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1612.c",
+                        "line": "30",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_1612.c:30:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok1=s1;      ^",
+                        "code": "pok1=s1;"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_1612.c",
+                        "line": "31",
+                        "col": "6",
+                        "message": "assignment discards 'const' qualifier from pointer target type",
+                        "output": "/tmp/buildservice/bs_850/bs_test_1612.c:31:6: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]  pok2=s2;      ^",
+                        "code": "pok2=s2;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1481875397
+}

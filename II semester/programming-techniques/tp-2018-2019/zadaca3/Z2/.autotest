@@ -1,0 +1,122 @@
+{
+    "id": 9302,
+    "name": "Tehnike programiranja (2016\/2017), Zada\u0107a 3, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT1 (c9): main, postavka\n    _main();\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "abc qwe stsda abc abc dhi qwe hrkw dhi\nabc\nhrkw\nxyzzy\n.\n"
+            },
+            "expected": [
+                "Unesite tekst: abc: 0,14,18\\ndhi: 22,35\\nhrkw: 30\\nqwe: 4,26\\nstsda: 8\\nUnesite rijec: 0 14 18 \\nUnesite rijec: 30 \\nUnesite rijec: Unesena rijec nije nadjena!\\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT2 (c9): main, novi\n    _main();\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "tp je najbolji predmet u ii semestru prve godine etfa da da tp cijelog etfa\ntp\nje\nii\nda\netfa\nu\n.\n"
+            },
+            "expected": [
+                "Unesite tekst: cijelog: 63\nda: 54,57\netfa: 49,71\ngodine: 42\nii: 25\nje: 3\nnajbolji: 6\npredmet: 15\nprve: 37\nsemestru: 28\ntp: 0,60\nu: 23\nUnesite rijec: 0 60 \nUnesite rijec: 3 \nUnesite rijec: 25 \nUnesite rijec: 54 57 \nUnesite rijec: 49 71 \nUnesite rijec: 23 \nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT3 (c9): IspisiIndeksPojmova\n    IspisiIndeksPojmova({\n        {\"abc\", {0, 1, 2}},\n        {\"cde\", {0, 1, 2}},\n        {\"ab\", {0, 1, 2}},\n        {\"---\", {0, 1, 2}},\n        {\"xabc\", {0, 1, 2, 4, 5, 6, 7}},\n        {\"abcd\", {7}}\n    });\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "---: 0,1,2\nab: 0,1,2\nabc: 0,1,2\nabcd: 7\ncde: 0,1,2\nxabc: 0,1,2,4,5,6,7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT4 (c9): PretraziIndeksPojmova\n    std::map<std::string, std::set<int>> m = {\n        {\"abc\", {0, 1, 2}},\n        {\"cde\", {3, 1, 5}},\n        {\"ab\", {0, 1, 2}},\n        {\"---\", {0, 3, 2}},\n        {\"xabc\", {0, 1, 2, 4, 5, 6, 7}},\n        {\"abcd\", {7}}\n    };\n    std::set<int> s1, s2, s3;\n    s1 = PretraziIndeksPojmova(\"abc\", m);\n    s2 = PretraziIndeksPojmova(\"cde\", m);\n    s3 = PretraziIndeksPojmova(\"---\", m);\n    for (const auto &i : s1)\n        std::cout << i << \", \";\n    std::cout << std::endl;\n    for (const auto &i : s2)\n        std::cout << i << \", \";\n    std::cout << std::endl;\n    for (const auto &i : s3)\n        std::cout << i << \", \";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0, 1, 2,\n1, 3, 5,\n0, 2, 3,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT5 (c9): KreirajIndeksPojmova\n    std::map<std::string, std::set<int>> m = KreirajIndeksPojmova(\"abc cde def ghi ghi def cde abc\");\n    for (const auto &i : m)\n    {\n        for (const auto &j : i.second)\n            std::cout << j << \" \";\n        std::cout << \" <--- \" << i.first << std::endl;\n    }\n} ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 28  <--- abc\n4 24  <--- cde\n8 20  <--- def\n12 16  <--- ghi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

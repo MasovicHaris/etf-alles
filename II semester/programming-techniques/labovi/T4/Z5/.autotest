@@ -1,0 +1,294 @@
+{
+    "id": 8545,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3274,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: test za integer brojeve\n\nstd::vector<int> v1 = {3,7,2,6,3,4,8,1,6,5};\nstd::vector<int> v2 = {4,9,5,9,7,0,4,6};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7 6 4 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3275,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: test za integer brojeve\n    \nstd::vector<int> v1 = {};\nstd::vector<int> v2 = {};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3276,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: test za integer brojeve\n\nstd::vector<int> v1 = {1,1,1,1,1};\nstd::vector<int> v2 = {1,1,1,1,1,1,1,1,1,1};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3277,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: test za integer brojeve\n\nstd::vector<int> v1 = {-1, 2, 9, 8, -3, 3, 2};\nstd::vector<int> v2 = {};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3278,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: test za double brojeve\n\nstd::vector<double> v1 = {1.2, 3.4, 5.6, 7.8, 7.8, 7.8, 9.123};\nstd::vector<double> v2 = {9.123, 7.8, 1.2, 5.6, -1, 1.2, 1.2, 1.2};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.2 5.6 7.8 9.123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3279,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: test za double brojeve\n\nstd::vector<double> v1 = {};\nstd::vector<double> v2 = {3.33333, 4.2345, 12.433, -1.2324, 1.2233};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3280,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: test za stringove\n\nstd::vector<std::string> v1 = {\"abc\", \"abc\", \"abcd\", \"abcd\", \"abc\", \"abcd\"};\nstd::vector<std::string> v2 = {\"arf\", \"abd\", \"abc\", \"abcd\", \"abcd\"};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc abcd"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3281,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: test za stringove\n\nstd::vector<std::string> v1 = {\"abc\", \"abc\", \"abcd\", \"abcd\", \"abc\", \"abcd\"};\nstd::vector<std::string> v2 = {\"arf\", \"ABD\", \"ABC\", \"ABCD\", \"ABCD\", \"aBc\", \"AbCd\", \"abC\"};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3282,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: test za stringove\n\nstd::vector<std::string> v1 = {\"arf\", \"abd\", \"abc\", \"abcd\", \"abcd\"};\nstd::vector<std::string> v2 = {\"arf\", \"abd\", \"abc\", \"abcd\", \"abcd\"};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "arf abd abc abcd"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3283,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: test za stringove\n\nstd::vector<std::string> v1 = {\"abc \", \" abc\", \"ab cd\", \"a bcd\", \"ab c\", \"abc d\"};\nstd::vector<std::string> v2 = {\"arf\", \"ab ld\", \"a b c\", \"abc d\", \" abc d\"};\nauto v3 = Presjek(v1, v2);\nfor(auto x : v3) std::cout << x << \" \";",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc d"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3300,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT11: testira main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#include <vector>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n3 7 2 6 3 4 8 1 6 5\n8\n4 9 5 9 7 0 4 6\n3\nasd www xy\nxvbb zzz ppe\nstrstr kvekk\n3\nstrstr kvekk\nasd www xy\nvuuvu\n"
+            },
+            "expected": [
+                "Test za realne brojeve...\\nUnesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora: Zajednicki elementi su: 7 6 4 5\\n\\nTest za stringove...\\nUnesite broj elemenata prvog vektora: Unesite elemente prvog vektora (ENTER nakon svakog unosa): Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora (ENTER nakon svakog unosa): Zajednicki elementi su:\\nasd www xy\\nstrstr kvekk\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

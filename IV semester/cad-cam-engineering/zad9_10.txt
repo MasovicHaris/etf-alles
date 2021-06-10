@@ -1,0 +1,32 @@
+Public Function Udaljenost(a() As Double, b() As Double) As Double
+    Udaljenost = ((a(0) - b(0)) ^ 2 + (a(1) - b(1)) ^ 2) ^ 0.5
+End Function
+
+Public Sub MetalniFilter(r1 As Double, r2 As Double, h As Double)
+    Dim i As Integer, j As Integer, n As Integer
+    Dim cilindar As Acad3DSolid
+    Dim centar(0 To 2) As Double
+
+    Set cilindar = ModelSpace.AddCylinder(centar, r1, h)
+
+    n = r2 / (3 * h)
+    
+    For i = -n To n
+        For j = -n To n
+            Dim centarManjeg(0 To 2) As Double
+            centarManjeg(0) = i * 3 * h
+            centarManjeg(1) = j * 3 * h
+            If Udaljenost(centar, centarManjeg) <= r2 - h Then
+                Dim cilindarMali As Acad3DSolid
+                Set cilindarMali = ModelSpace.AddCylinder(centarManjeg, h, 2 * h)
+                cilindar.Boolean acSubtraction, cilindarMali
+            End If
+        Next j
+    Next i
+    cilindar.Update
+End Sub
+
+Public Sub Main()
+    Call MetalniFilter(30, 25, 3)
+    ZoomExtents
+End Sub

@@ -1,0 +1,29 @@
+Broj elemenata u redu: 5
+Elementi reda: 1 5 4 3 2 
+Red nakon brisanja: 
+Broj elemenata u redu: 0
+------------------------------------
+Broj elemenata u redu: 0
+Elementi reda: 
+Red nakon dodavanja 1 elementa pomocu stavi(): 
+Broj elemenata u redu: 1
+1337 
+------------------------------------
+Broj elemenata u redu: 1
+Elementi reda: 1337 
+Red nakon skidanja 1 elementa tj. nakon skini(): 
+Broj elemenata u redu: 0
+------------------------------------
+Broj elemenata u redu: 2
+Elementi reda: 1 2 
+Red nakon promjena cela tj. 1 elementa: 
+Broj elemenata u redu: 2
+1337 2 
+Element na celu: 1337
+------------------------------------
+Broj elemenata u redu: 2
+Elementi reda: 1337 2 
+Red nakon dodavanja 1 elementa: 
+Elementi Reda: 1337 1338 2 
+Broj elemenata u redu nakon dodavanja na kraj reda: 3
+------------------------------------

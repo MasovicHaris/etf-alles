@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tests>
+  <osoba>
+    <ime>Amir</ime>
+    <prezime>Muminovic</prezime>
+    <datumRodjenja>19.02.1998</datumRodjenja>
+    <bkk>4012888888881881</bkk>
+    <username>amuminovic</username>
+    <password>cokolada</password>
+  </osoba>
+  <osoba>
+    <ime>Amir</ime>
+    <prezime>Muminovic</prezime>
+    <datumRodjenja>19.02.1998</datumRodjenja>
+    <bkk>4012888888881881</bkk>
+    <username>amuminovic1</username>
+    <password>cokolada</password>
+  </osoba>
+</tests>

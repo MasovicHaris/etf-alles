@@ -1,0 +1,122 @@
+{
+    "id": 7227,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 10, zadatak 21",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2207,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char a[] = \"ababab\", b[] = \"abcabca\", c[]=\"DanasDanasDa\";\nprintf(\"%d %d %d\", periodican(a), periodican(b), periodican(c));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 3 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2208,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char a[] = \"ababac\", b[]=\"nakobezveze\", c[]=\"DanasDanasS\";\nprintf(\"%d %d %d\", periodican(a), periodican(b), periodican(c));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2209,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char a[] = \"abacaba\", b[] = \"abaca\", c[]=\"ababcaba\";\nprintf(\"%d %d %d\", periodican(a), periodican(b), periodican(c));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4 4 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2210,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char a[] = \"aaabba\", b[] = \"aaaabaaab\", c[]=\"baacaacaacaa\";\nprintf(\"%d %d %d\", periodican(a), periodican(b), periodican(c));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2211,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Testiranje sa peridiodom vecim od pola duzine recenice\nchar a[] = \"SutraSu\", b[] = \"SutraSut\", c[]=\"SutraSutimS\";\nprintf(\"%d %d %d\", periodican(a), periodican(b), periodican(c));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 5 10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

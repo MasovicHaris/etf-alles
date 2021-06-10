@@ -1,0 +1,219 @@
+{
+    "id": 8542,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3251,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testiranje funkcije IzvrniString\n\nstd::string s(\"Ovo je neki tekst...\");\nIzvrniString(s);\nstd::cout << s;",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "...tsket iken ej ovO"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3252,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testiranje funkcije IzvrniString\n\nstd::string s(\"...tsket iken ej ovO\");\nIzvrniString(s);\nstd::cout << s;\n",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ovo je neki tekst..."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3253,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testiranje funkcije IzvrniString\n\nstd::string s(\"   123   abc   ...   ttt   ppp   \");\nIzvrniString(s);\nstd::cout << s;\n",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "   ppp   ttt   ...   cba   321   "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3254,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testiranje funkcije IzvrniString\n\nstd::string s(\"   ? . ! 1 _ \");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "   ? . ! 1 _ "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3255,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testiranje funkcije IzvrniString\n\nstd::string s(\"\\n 123 abc\");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 123 abc"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3294,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testiranje funkcije IzvrniString\n\nstd::string s(\"-1-1-1-\");\nIzvrniString(s);\nIzvrniString(s);\nstd::cout << s;",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-1-1-1-"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3298,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testira main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "tutorijal\n"
+            },
+            "expected": [
+                "Unesi string: Izvrnuti string je: lajirotut"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3299,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testira main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#include <string>\n#define vector !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "teHnikE proGrAmiRanjA\n"
+            },
+            "expected": [
+                "Unesi string: Izvrnuti string je: AjnaRimArGorp EkinHet"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

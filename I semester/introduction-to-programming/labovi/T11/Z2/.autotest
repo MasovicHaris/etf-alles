@@ -1,0 +1,94 @@
+{
+    "id": 7157,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorijal 11, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1739,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   {\/\/AT1: obim (PI racunati kao: \"4.0 * atan (1.0)\")\n       struct Kruznica K = {{0, 0}, 10};\n       printf(\"Obim: %.3f\", obim_kruznice(K));\n   }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Obim: 62.832"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1740,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "   {\/\/AT2: povrsina (PI racunati kao: \"4.0 * atan (1.0)\")\n       struct Kruznica K = {{0, 0}, 10};\n       printf(\"Povrsina: %.3f\", povrsina_kruznice(K));\n   }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Povrsina: 314.159"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1741,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: cijeli main. Ispisi obima i povrsine su nakon ispisa da\n\/\/li se tacka nalazi izvan\/na\/unutar kruznice.\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1,1\n5\n6,1\n"
+            },
+            "expected": [
+                "Unesite kruznicu:\\nUnesite centar kruznice:\\nUnesite koordinate tacke (x, y): \\nUnesite poluprecnik kruznice: \\nUnesite neku tacku:\\nUnesite koordinate tacke (x, y): \\nTacka je na kruznici.\\nObim kruznice: 31.416\\nPovrsina kruznice: 78.540"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

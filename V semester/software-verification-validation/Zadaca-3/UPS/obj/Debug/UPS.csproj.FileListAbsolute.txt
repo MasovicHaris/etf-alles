@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Zadaca 3\UPS\bin\Debug\UPS.exe.config
+C:\Users\User\Desktop\Zadaca 3\UPS\bin\Debug\UPS.exe
+C:\Users\User\Desktop\Zadaca 3\UPS\bin\Debug\UPS.pdb
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.Form1.resources
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.Properties.Resources.resources
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.exe
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.pdb
+C:\Users\User\Desktop\Zadaca 3\UPS\obj\Debug\UPS.csprojAssemblyReference.cache

@@ -1,0 +1,185 @@
+{
+    "id": 5606,
+    "name": "Tehnike programiranja (2018\/2019), Zada\u0107a 1, zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 26,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2\n3 -1 0 5\n2 3\n4 3 15 0 -5 2"
+            },
+            "expected": [
+                "Unesite dimenzije prve matrice:\\nUnesite elemente prve matrice:\\nUnesite dimenzije druge matrice:\\nUnesite elemente druge matrice:\\nNjihov Kroneckerov proizvod glasi:\\n  12   9  45  -4  -3 -15\\n   0 -15   6   0   5  -2\\n   0   0   0  20  15  75\\n   0   0   0   0 -25  10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 27,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A{{3,5,2},{4,0,-1}};\nstd::vector<std::vector<int> > B{{1,4,-2,3},{0,5,4,1},{2,0,0,3}};\nstd::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\nfor (std::vector<int> v : rez) {\n    for (int i : v)\n        std::cout << i << \",\";\n    std::cout << \"\\n\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3,12,-6,9,5,20,-10,15,2,8,-4,6,\\n0,15,12,3,0,25,20,5,0,10,8,2,\\n6,0,0,9,10,0,0,15,4,0,0,6,\\n4,16,-8,12,0,0,0,0,-1,-4,2,-3,\\n0,20,16,4,0,0,0,0,0,-5,-4,-1,\\n8,0,0,12,0,0,0,0,-2,0,0,-3,\t"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 28,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A{{3,5,2},{4,0,-1}};\nstd::vector<std::vector<int> > B{{1,4,-2,3},{0,5,4,1},{2,0,0}};\ntry {\n    std::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\n} catch(std::domain_error poruka) {\n    std::cout << poruka.what();\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Drugi parametar nema formu matrice"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 29,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nstd::vector<std::vector<int> > A{{3,5,2},{4,0,-1,4}};\nstd::vector<std::vector<int> > B{{1,4,-2,3},{0,5,4,1},{2,0,0}};\ntry {\n    std::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\n} catch(std::domain_error poruka) {\n    std::cout << poruka.what();\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Parametri nemaju formu matrice"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 30,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A{{-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1}};\nstd::vector<std::vector<int> > B{{-1,-1,-1,-1,-1}};\nstd::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\nfor (std::vector<int> v : rez) {\n    for (int i : v)\n        std::cout << i << \",\";\n    std::cout << \"\\n\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\\n1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,\t"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 31,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A{{3,5,2},{4,0,-1}};\nstd::vector<std::vector<int> > B{{1,4,-2,3},{0,5,4,1},{2,0,0}};\ntry {\n    std::vector<std::vector<int> > rez(KroneckerovProizvod(B,A));\n} catch(std::domain_error poruka) {\n    std::cout << poruka.what();\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi parametar nema formu matrice"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 32,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A;\nstd::vector<std::vector<int> > B;\nstd::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\nstd::cout << rez.size();",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 33,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::vector<std::vector<int> > A{{2}};\nstd::vector<std::vector<int> > B{{2}};\nstd::vector<std::vector<int> > rez(KroneckerovProizvod(A,B));\nstd::cout << rez.size() << \" \" << rez[0].size() << \" \" << rez[0][0];",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

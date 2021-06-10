@@ -1,0 +1,144 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool funkcion(int&)’:\nmain.cpp:32:39: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n  if(std::sqrt(x) == round(std::sqrt(x))) return true;\n                                       ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "32",
+                "col": "39",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_7216/main.cpp:32:39: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]  if(std::sqrt(x) == round(std::sqrt(x))) return true;                                       ^",
+                "code": "if(std::sqrt(x) == round(std::sqrt(x))) return true;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3336": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 998001\nNajmanji element niza se pojavljuje 3 puta u nizu\nU nizu ima 4 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je -27\nElementi koji nisu trocifreni su: 1849 3327 12544 -27 998001 49 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3337": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 2123\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 2 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 1\nElementi koji nisu trocifreni su: 1000 1 2123 -12 9 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3338": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 99110\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 0 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 12\nElementi koji nisu trocifreni su: 12 35 99110 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3339": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 100\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 10 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 1\nElementi koji nisu trocifreni su: 1 4 9 16 25 36 49 64 81 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3340": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 333333\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 0\nElementi koji nisu trocifreni su: 1053 0 333333 55 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3341": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 0\nNajmanji element niza se pojavljuje 10 puta u nizu\nU nizu ima 10 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 0\nElementi koji nisu trocifreni su: 0 0 0 0 0 0 0 0 0 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3342": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 225\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je -64\nElementi koji nisu trocifreni su: -64 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3343": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 999\nNajmanji element niza se pojavljuje 1 puta u nizu\nU nizu ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 100\nElementi koji nisu trocifreni su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1491463238
+}

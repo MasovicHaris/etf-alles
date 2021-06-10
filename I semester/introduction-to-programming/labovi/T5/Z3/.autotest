@@ -1,0 +1,119 @@
+{
+    "id": 5397,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 5, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1414,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3 4 5\n1 2 3 4 5"
+            },
+            "expected": [
+                "Unesite clanove niza A: Unesite clanove niza B: Niz A glasi: 1.00, 2.00, 3.00, 4.00, 5.00\\nNiz B glasi: 1.00, 2.00, 3.00, 4.00, 5.00\\nNiz C glasi: 3.00, 6.00, 9.00, 12.00, 15.00\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1415,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.1 1.1 1.1 1.1 1.1\n2.2 2.2 2.2 2.2 2.2"
+            },
+            "expected": [
+                "Unesite clanove niza A: Unesite clanove niza B: Niz A glasi: 1.10, 1.10, 1.10, 1.10, 1.10\\nNiz B glasi: 2.20, 2.20, 2.20, 2.20, 2.20\\nNiz C glasi: 4.40, 4.40, 4.40, 4.40, 4.40\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1416,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.1 1.1 1.1 1.1 1.1\n-2.2 -2.2 -2.2 -2.2 -2.2"
+            },
+            "expected": [
+                "Unesite clanove niza A: Unesite clanove niza B: Niz A glasi: 1.10, 1.10, 1.10, 1.10, 1.10\\nNiz B glasi: -2.20, -2.20, -2.20, -2.20, -2.20\\nNiz C glasi: 0.00, 0.00, 0.00, 0.00, 0.00\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1417,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.033 0.025 0.005 -0.0025 100.002\n1.234 1.0499 0.990 0.005 100.003"
+            },
+            "expected": [
+                "Unesite clanove niza A: Unesite clanove niza B: Niz A glasi: 1.03, 0.03, 0.01, -0.00, 100.00\\nNiz B glasi: 1.23, 1.05, 0.99, 0.01, 100.00\\nNiz C glasi: 3.30, 1.10, 1.00, 0.00, 300.01"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

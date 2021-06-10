@@ -1,0 +1,121 @@
+{
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 5, zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 76,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 1: Runge-Kutta y'=2x+y+1, od 0 do 1.5, h=0.1, neadaptivan\nauto res = RK4Integrator([](double x, double y) { return 2 * x + y + 1; },\n0, 1, 1.5, 0.1);\nauto exact = [](double x) { return -3 - 2 * x + 4 * std::exp(x); };\nfor(int i = 0; i < res.size(); i++) {\n    double x = res[i].first;\n    std::cout << x << \" \" << res[i].second << \" \" << exact(x) << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1 1\\n0.1 1.22068 1.22068\\n0.2 1.48561 1.48561\\n0.3 1.79943 1.79944\\n0.4 2.1673 2.1673\\n0.5 2.59488 2.59489\\n0.6 3.08847 3.08848\\n0.7 3.65501 3.65501\\n0.8 4.30216 4.30216\\n0.9 5.03841 5.03841\\n1 5.87312 5.87313\\n1.1 6.81665 6.81666\\n1.2 7.88046 7.88047\\n1.3 9.07717 9.07719\\n1.4 10.4208 10.4208\\n1.5 11.9267 11.9268\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 77,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 2: Runge-Kutta y'=2x+y+1, od 0 do -1.5 unazad, h=-0.1, neadaptivan\nauto res = RK4Integrator([](double x, double y) { return 2 * x + y + 1; },\n0, 1, -1.5, -0.1);\nauto exact = [](double x) { return -3 - 2 * x + 4 * std::exp(x); };\nfor(int i = 0; i < res.size(); i++) {\n    double x = res[i].first;\n    std::cout << x << \" \" << res[i].second << \" \" << exact(x) << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1 1\\n-0.1 0.81935 0.81935\\n-0.2 0.674924 0.674923\\n-0.3 0.563274 0.563273\\n-0.4 0.481281 0.48128\\n-0.5 0.426124 0.426123\\n-0.6 0.395248 0.395247\\n-0.7 0.386342 0.386341\\n-0.8 0.397317 0.397316\\n-0.9 0.42628 0.426279\\n-1 0.471519 0.471518\\n-1.1 0.531486 0.531484\\n-1.2 0.604778 0.604777\\n-1.3 0.690128 0.690127\\n-1.4 0.786389 0.786388\\n-1.5 0.892522 0.892521\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 78,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 3: Runge-Kutta y'=2x+y+1, od 0 do 0.4, hinit=0.1, adaptivan\nauto res = RK4Integrator([](double x, double y) { return 2 * x + y + 1; },\n0, 1, 0.4, 0.1, 1e-8, true);\nauto exact = [](double x) { return -3 - 2 * x + 4 * std::exp(x); };\nfor(int i = 0; i < res.size(); i++) {\n    double x = res[i].first;\n    std::cout << x << \" \" << res[i].second << \" \" << exact(x) << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.0213313 1.04358 1.04358\\n0.0427212 1.08915 1.08915\\n0.0639972 1.13636 1.13636\\n0.0851599 1.18524 1.18524\\n0.10621 1.2358 1.2358\\n0.12715 1.28805 1.28805\\n0.14798 1.342 1.342\\n0.168701 1.39766 1.39766\\n0.189314 1.45505 1.45505\\n0.209821 1.51419 1.51419\\n0.230223 1.57508 1.57508\\n0.25052 1.63773 1.63773\\n0.270714 1.70217 1.70217\\n0.290806 1.76841 1.76841\\n0.310797 1.83646 1.83646\\n0.330688 1.90633 1.90633\\n0.35048 1.97804 1.97804\\n0.370174 2.0516 2.0516\\n0.38977 2.12703 2.12703\\n0.4 2.1673 2.1673\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 79,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 4: Runge-Kutta y'=2x+y+1, od 0 do -0.4 unazad, hinit=-0.1, adaptivan\nauto res = RK4Integrator([](double x, double y) { return 2 * x + y + 1; },\n0, 1, -0.4, -0.1, 1e-8, true);\nauto exact = [](double x) { return -3 - 2 * x + 4 * std::exp(x); };\nfor(int i = 0; i < res.size(); i++) {\n    double x = res[i].first;\n    std::cout << x << \" \" << res[i].second << \" \" << exact(x) << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-0.02148 0.957956 0.957956\\n-0.0429016 0.917826 0.917826\\n-0.0644386 0.879252 0.879252\\n-0.0860914 0.842224 0.842224\\n-0.107861 0.806731 0.806731\\n-0.129749 0.772761 0.772761\\n-0.151757 0.740303 0.740303\\n-0.173885 0.709344 0.709344\\n-0.196135 0.679875 0.679875\\n-0.218509 0.651882 0.651882\\n-0.241008 0.625357 0.625357\\n-0.263634 0.600287 0.600287\\n-0.286387 0.576662 0.576662\\n-0.309269 0.554471 0.554471\\n-0.332282 0.533704 0.533704\\n-0.355426 0.514351 0.514351\\n-0.378705 0.4964 0.4964\\n-0.4 0.48128 0.48128\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 80,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 5: Runge-Kutta, trivijalni slucaj\nauto res = RK4Integrator([](double x, double y) { return 1; }, 0, 1, 0, -1);\nfor(int i = 0; i < res.size(); i++)\n    std::cout << res[i].first << \" \" << res[i].second << std::endl;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\bin\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.UserControl1.resources
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\obj\Debug\KorisnickaKontrola.csproj.GenerateResource.Cache
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.dll
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.pdb
+C:\Users\User\documents\visual studio 2015\Projects\NMK_17993\WindowsFormsControlLibrary1\obj\Debug\WindowsFormsControlLibrary1.Properties.Resources.resources

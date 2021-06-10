@@ -1,0 +1,46 @@
+Option Explicit
+
+Private Sub cmdOK_Click()
+    Dim CentarGlavne(0 To 2) As Double
+    Dim CentarPeriferne(0 To 2) As Double
+    Dim PoluprecnikGlavne As Double
+    Dim BrojPerifernih As Integer
+    Dim PoluprecnikPeriferne As Double
+    Dim Var As Variant
+    Dim i As Integer
+    Dim Ugao As Double
+    Dim UgaoRotacije As Double
+    Dim GlavnaKruznica As AcadCircle
+    Dim PerifernaKruznica As AcadCircle
+    Dim Pi As Double
+    Pi = 4 * Atn(1)
+    
+    Var = Split(Me.txtCentar.Text, ",")
+    For i = LBound(Var) To UBound(Var)
+            CentarGlavne(i) = CDbl(Var(i))
+    Next
+    PoluprecnikGlavne = CDbl(Me.txtPoluprecnik.Text)
+    BrojPerifernih = CDbl(Me.txtBrojPerif.Text)
+    PoluprecnikPeriferne = CDbl(Me.txtPoluprPerif.Text)
+
+    Ugao = 2 * Pi / BrojPerifernih
+    UgaoRotacije = 0
+
+    Set GlavnaKruznica = ThisDrawing.ModelSpace.AddCircle(CentarGlavne, PoluprecnikGlavne)
+    GlavnaKruznica.Update
+
+    For i = 0 To BrojPerifernih - 1
+        UgaoRotacije = UgaoRotacije + Ugao
+        CentarPeriferne(0) = CentarGlavne(0) + (PoluprecnikGlavne + PoluprecnikPeriferne) * Cos(UgaoRotacije)
+        CentarPeriferne(1) = CentarGlavne(1) + (PoluprecnikGlavne + PoluprecnikPeriferne) * Sin(UgaoRotacije)
+        CentarPeriferne(2) = CentarGlavne(2)
+        Set PerifernaKruznica = ThisDrawing.ModelSpace.AddCircle(CentarPeriferne, PoluprecnikPeriferne)
+        PerifernaKruznica.Update
+    Next
+
+    Unload Me
+End Sub
+
+Private Sub cmdOpozovi_Click()
+    Unload Me
+End Sub

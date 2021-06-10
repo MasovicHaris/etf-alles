@@ -1,0 +1,143 @@
+{
+    "id": 5561,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 4, zadatak 2",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "char recenica[] = \"Ovo je primjer recenice sa dugackim, kratkim rijecima.\";\nprintf (\"'%s'\", zamijeni_min_max(recenica));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Ovo recenice primjer je sa dugackim, kratkim rijecima.'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Sve rijeci su iste duzine *\/\nchar recenica[] = \"Ovo sam dao kao zez\";\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n\n\/* Funkcija koja ne radi nista nije dobra *\/\nrecenica[10] = ' ';\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Ovo sam dao kao zez'\\n'da sam Ovo  kao zez'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Puno razmaka, samo jedna rijec *\/\nchar recenica[] = \"        proba          \";\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n\n\/* Dodacemo jos jednu 'rijec' *\/\nrecenica[1] = 'x';\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'        proba          '\\n' proba      x          '\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Neki glupi primjeri *\/\nchar recenica[] = \".\";\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n\nrecenica[0] = 'a';\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n\nchar r2[] = \"Jeste nije\";\nprintf (\"'%s'\\n\", zamijeni_min_max(r2));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'.'\\n'a'\\n'nije Jeste'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Rijeci koje se sastoje od cudnih znakova *\/\nchar recenica[] = \"!@#$%^&*()_+-=<>?:\\\"{}|,.\/;'[]\\\\\";\nprintf (\"'%s'\\n\", zamijeni_min_max(recenica));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'!\/?:\"{}|,.@#$%^&*()_+-=<>;'[]\\'\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT6: Propisan broj karaktera *\/\nchar recenica[] = \"..,ab!!cdef?!?;ghijk\";\nprintf (\"'%s'\", zamijeni_min_max(recenica));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'..,ghijk!!cdef?!?;ab'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

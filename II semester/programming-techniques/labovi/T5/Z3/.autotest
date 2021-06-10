@@ -1,0 +1,219 @@
+{
+    "id": 8553,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3336,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira primjer iz postavke\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n1849 374 3327 -112 12544 -27 -112 998001 -112 49\n"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 998001 \\nNajmanji element niza se pojavljuje 3 puta u nizu\\nU nizu ima 4 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je -27\\nElementi koji nisu trocifreni su: 1849 3327 12544 -27 998001 49"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3337,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testira slucaj niza bez trocifrenih brojeva\n\n_main();",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n1000 1 2123 -12 9 "
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 2123 \\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 2 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 1\\nElementi koji nisu trocifreni su: 1000 1 2123 -12 9 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3338,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testira niz bez elemenata koji su potpuni kvadrati\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\n12 35 789 99110 205 -111"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 99110 \\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 0 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 12\\nElementi koji nisu trocifreni su: 12 35 99110"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3339,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testira niz koji se sastavljen iskljucivo od elemenata koji su potpuni kvadrati\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n1 4 9 16 25 36 49 64 81 100"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 100 \\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 10 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 1\\nElementi koji nisu trocifreni su: 1 4 9 16 25 36 49 64 81"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3340,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testira niz koji sadrzi jednu nulu kao element \n\/\/(ispitivanje vrijednosti za koje je definisana funkcija log)\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 \n1053 0 125 333333 55 "
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 333333 \\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 1 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 0\\nElementi koji nisu trocifreni su: 1053 0 333333 55"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3341,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testira niz koji sadrzi sve nule kao elemente \n\/\/(ispitivanje vrijednosti za koje je definisana funkcija log)\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n0 0 0 0 0 0 0 0 0 0"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 0 \\nNajmanji element niza se pojavljuje 10 puta u nizu\\nU nizu ima 10 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 0\\nElementi koji nisu trocifreni su: 0 0 0 0 0 0 0 0 0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3342,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testira niz koji sadrzi negativan broj koji je po apsolutnoj vrijednosti potpun kvadrat\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n225 -64"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 225\\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 1 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je -64\\nElementi koji nisu trocifreni su: -64"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3343,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testira niz koji sadr\u017ei samo grani\u010dne vrijednosti iz opsega trocifrenih brojeva\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n100 -100 999 -999"
+            },
+            "expected": [
+                "Unesite broj elemenata (max. 1000): Unesite elemente: Najveci element niza je 999 \\nNajmanji element niza se pojavljuje 1 puta u nizu\\nU nizu ima 1 brojeva koji su potpuni kvadrati\\nPrvi element sa najmanjim brojem cifara je 100\\nElementi koji nisu trocifreni su: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

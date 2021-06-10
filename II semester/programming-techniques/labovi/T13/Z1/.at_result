@@ -1,0 +1,119 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3797": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravni parametri\nNeispravni parametri\nKrug poluprecnika 10\nObim: 62.8319 Povrsina: 314.159\nKrug poluprecnika 5.1\nObim: 32.0442 Povrsina: 81.7128\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3798": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravni parametri\nNeispravni parametri\nNeispravni parametri\nNeispravni parametri\nPravougaonik sa stranicama duzine 5 i 1\nObim: 12 Povrsina: 5\nPravougaonik sa stranicama duzine 5.5 i 1.1\nObim: 13.2 Povrsina: 6.05\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3799": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravni parametri\nNeispravni parametri\nNeispravni parametri\nNeispravni parametri\nNeispravni parametri\nNeispravni parametri\nTrougao sa stranicama duzine 3, 4 i 5\nObim: 12 Povrsina: 6\nTrougao sa stranicama duzine 4, 4 i 4\nObim: 12 Povrsina: 6.9282\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3800": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite likova: Lik 1: Pogresni podaci, ponovite unos!\nLik 1: Pogresni podaci, ponovite unos!\nLik 1: Lik 2: Lik 3: Pogresni podaci, ponovite unos!\nLik 3: Pogresni podaci, ponovite unos!\nLik 3: Pogresni podaci, ponovite unos!\nLik 3: Pogresni podaci, ponovite unos!\nLik 3: Lik 4: Lik 5: Pogresni podaci, ponovite unos!\nLik 5: Pogresni podaci, ponovite unos!\nLik 5: Pogresni podaci, ponovite unos!\nLik 5: Pogresni podaci, ponovite unos!\nLik 5: Pogresni podaci, ponovite unos!\nLik 5: Pogresni podaci, ponovite unos!\nLik 5: Lik 6: \nKrug poluprecnika 10\nObim: 62.8319 Povrsina: 314.159\nKrug poluprecnika 5.1\nObim: 32.0442 Povrsina: 81.7128\nPravougaonik sa stranicama duzine 5 i 1\nObim: 12 Povrsina: 5\nPravougaonik sa stranicama duzine 5.5 i 1.1\nObim: 13.2 Povrsina: 6.05\nTrougao sa stranicama duzine 3, 4 i 5\nObim: 12 Povrsina: 6\nTrougao sa stranicama duzine 4, 4 i 4\nObim: 12 Povrsina: 6.9282\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3801": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite likova: Lik 1: Lik 2: Pogresni podaci, ponovite unos!\nLik 2: Pogresni podaci, ponovite unos!\nLik 2: Lik 3: Pogresni podaci, ponovite unos!\nLik 3: Lik 4: Lik 5: \nPravougaonik sa stranicama duzine 3 i 2\nObim: 10 Povrsina: 6\nKrug poluprecnika 5\nObim: 31.4159 Povrsina: 78.5398\nTrougao sa stranicama duzine 3, 4 i 5\nObim: 12 Povrsina: 6\nPravougaonik sa stranicama duzine 10 i 20\nObim: 60 Povrsina: 200\nKrug poluprecnika 10\nObim: 62.8319 Povrsina: 314.159\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3802": {
+            "status": 1,
+            "run_result": {
+                "output": "Pozvan ispravan destruktor!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "71234": {
+            "status": 1,
+            "run_result": {
+                "output": "Krug poluprecnika 10\nPravougaonik sa stranicama duzine 10 i 10\nTrougao sa stranicama duzine 3, 4 i 5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1497122746
+}

@@ -1,0 +1,25 @@
+Testiramo DvostrukiRed:
+
+Broj elemenata: 5
+Novi broj elemenata nakon dodavanja 1 elementa: 6
+--------------------------------------
+Citava lista: 
+1 2 3 4 5 3 
+Element na vrhu: 3--------------------------------------
+1 2 3 4 5 3 
+Element na celu: 1
+--------------------------------------
+1 2 3 4 5 3 
+Red nakon skidanja sa cela: 2 3 4 5 3 
+--------------------------------------
+2 3 4 5 3 
+Red nakon skidanja sa vrha: 3 4 5 3 
+--------------------------------------
+Broj elemenata prije dodavanja na celo: 4
+Broj elemenata nakon dodavanja na celo pomocu staviNACelo: 5
+--------------------------------------
+Broj elemenata prije dodavanja na vrh: 5
+Broj elemenata nakon dodavanja na vrh pomocu staviNAVrh: 6
+--------------------------------------
+Elementi u redu: 1 3 1 4 5 3 
+Elementi u redu: 

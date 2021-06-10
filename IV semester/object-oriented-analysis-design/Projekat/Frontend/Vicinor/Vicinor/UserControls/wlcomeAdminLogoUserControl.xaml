@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="Vicinor.View.wlcomeAdminLogoUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="200"
+    d:DesignWidth="200">
+
+    <Grid Background="White">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="image.(Image.Height)" Value="100"/>
+                        <Setter Target="image.(Image.Width)" Value="100"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="100"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="image.(Image.Height)" Value="200"/>
+                        <Setter Target="image.(Image.Width)" Value="200"/>
+                    </VisualState.Setters>
+
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock.(TextBlock.FontSize)" Value="20"/>
+                        <Setter Target="image.(Image.Height)" Value="300"/>
+                        <Setter Target="image.(Image.Width)" Value="300"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Welcome!" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Image x:Name="image" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Source="ms-appx:///Assets/admin_logo.png" />
+   
+       
+    </Grid>
+</UserControl>

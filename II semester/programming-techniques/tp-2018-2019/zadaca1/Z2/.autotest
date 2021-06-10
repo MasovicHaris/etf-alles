@@ -1,0 +1,584 @@
+{
+    "id": 5605,
+    "name": "Tehnike programiranja (2018\/2019), Zada\u0107a 1, zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 63,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 2}, {3, 4}, {-9, 7}};\n    std::cout << VrhMatrice(v, 0, 5);\n}\ncatch(std::range_error e)\n{\n    std::cout << \"Izuzetak: \" << e.what();\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna pocetna pozicija"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 64,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 4);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (3,2)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 65,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 2, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 2, 2);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (2,3)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 66,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{};\n    std::cout << VrhMatrice(v, 1, 2);\n}\ncatch(std::range_error e)\n{\n    std::cout << \"Izuzetak: \" << e.what();\n}\ncatch(std::domain_error e)\n{\n    std::cout << \"Izuzetak: \" << e.what();\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna matrica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 67,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 2, 3}, {3, 4, 5, 6}, {-9, 0, 7}};\n    std::cout << VrhMatrice(v, 1, 2);\n}\ncatch(std::domain_error e)\n{\n    std::cout << \"Izuzetak: \" << e.what();\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna matrica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 68,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 2}, {3, 4}, {-9, 7}};\n    std::cout << VrhMatrice(v, -1, 0);\n}\ncatch(std::range_error e)\n{\n    std::cout << \"Izuzetak: \" << e.what();\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna pocetna pozicija"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 69,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 2, 3, 4, 5, 6}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 2);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,5)\t"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 70,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 4, 4);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (3,2)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 71,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 4, 0);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (4,0)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 72,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 0);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 73,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 50, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 2);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,3)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 74,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 2, 4);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (3,2)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 75,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 28, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 4, 2);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (4,3)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 76,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 50, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 2);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (1,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 77,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 1, 1);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (1,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 78,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 1, 1}, {1, 2, 1}, {1, 1, 1}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 1, 1);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (1,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 79,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 1, 1}, {1, 1, 1}, {1, 1, 2}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 1, 1);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (2,2)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 80,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 2, 17, 19}, {15, 11, 16, 10, 18}};\nstd::complex<double> d = VrhMatrice(v, 1, 2);\n        std::cout << \"Rezultat: \" << d;\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 81,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 2, 17, 19}, {15, 11, 16, 10, 18}};\nstd::complex<double> d = VrhMatrice(v, 2, 1);\n        std::cout << \"Rezultat: \" << d;\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (1,0)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 82,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1, 1, 1, 2, 2, 2}, {1, 50, 1, 2, 50, 2}, {1, 1, 1, 2, 2, 2}, {2, 2, 2, 1, 1, 1}, {2, 50, 2, 1, 50, 1}, {2, 2, 2, 1, 1, 1}};\nstd::complex<double> d = VrhMatrice(v, 3, 3);\n        std::cout << \"Rezultat: \" << d;\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (4,4)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 83,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1}, {5}, {6}, {7}, {8}, {9}};\nstd::complex<double> d = VrhMatrice(v, 0, 0);\n        std::cout << \"Rezultat: \" << d;\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (5,0)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 84,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n{\n    std::vector<std::vector<int>> v{{1}};\n    std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 0);\n}\ncatch(...)\n{\n    std::cout << \"Izuzetak!\";\n}",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,0)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 85,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": " try\n    {\n        std::vector<std::vector<int>> v{{1, 50, 3, 4, 5}, {50, 6, 2, 13, 8}, {7, 15, 9, 20, 12}, {14, 13, 27, 17, 19}, {15, 11, 16, 10, 18}};\n        std::complex<double> d = VrhMatrice(v, 0, 0);\n        std::cout << \"Rezultat: \" << d;\n    }\n    catch(...)\n    {\n        std::cout << \"Izuzetak!\";\n    }",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Rezultat: (0,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 86,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n    {\n        std::vector<std::vector<int>> v(5, std::vector<int>(0));\n        std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 0);\n        std::cout << \"Ovo se ne smije ispisati.\" << std::endl;\n    }\n    catch(std::domain_error e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }\n    catch(std::range_error e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }\n    catch(...)\n    {\n        std::cout << \"Izuzetak!\";\n    }",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna matrica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 87,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try\n    {\n        std::vector<std::vector<int>> v(0, std::vector<int>(5));\n        std::cout << \"Rezultat: \" << VrhMatrice(v, 0, 0);\n        std::cout << \"Ovo se ne smije ispisati.\" << std::endl;\n    }\n    catch(std::domain_error e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }\n    catch(std::range_error e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }\n    catch(...)\n    {\n        std::cout << \"Izuzetak!\";\n    }",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nekorektna matrica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 88,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 5\n1 50 3 4 5\n50 6 2 13 8\n7 15 9 20 12\n14 13 27 17 19\n15 11 16 10 18\n0 4"
+            },
+            "expected": [
+                "Unesite broj redova i kolona matrice:\\nUnesite elemente matrice:\\nUnesite poziciju odakle zapocinje pretraga:\\nNadjen je vrh matrice na poziciji 3 2\\nNjegova vrijednost je 27"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 89,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "#include <vector>\n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2\n1 2 3 4\n5 -2"
+            },
+            "expected": [
+                "Unesite broj redova i kolona matrice:\\nUnesite elemente matrice:\\nUnesite poziciju odakle zapocinje pretraga:\\nGreska: Nekorektna pocetna pozicija"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

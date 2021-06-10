@@ -1,0 +1,94 @@
+{
+    "id": 7209,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2057,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Test rada programa - bez datoteke *\/\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMeho\nMehic\n10\n8\n2\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \\n1. Meho Mehic - 10, 8\\nUnesite 1 za unos, 2 za ispis, 0 za izlaz:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2058,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Da li se generise datoteka? *\/\nremove(\"ispit.txt\");\n_main();\nprintf(\"\\nispit.txt:\\n\");\nFILE* dat = fopen(\"ispit.txt\", \"r\");\nif (dat == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\nint c;\ndo {\n   c = fgetc(dat);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(dat);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMeho\nMehic\n10\n8\n0"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \\nispit.txt:\\nMehic               Meho           10  8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2059,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Provjera dodavanja u postojecu datoteku *\/\nremove(\"ispit.txt\");\n_main();\nprintf(\"\\n\");\n_main();\nprintf(\"\\nispit.txt:\\n\");\nFILE* dat = fopen(\"ispit.txt\", \"r\");\nif (dat == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\nint c;\ndo {\n   c = fgetc(dat);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(dat);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nHana\nHanic\n15\n14\n0\n1\nDada\nDadic\n18\n18\n0\n"
+            },
+            "expected": [
+                "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \\nUnesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz:\\nispit.txt:\\nHanic               Hana           15 14\\nDadic               Dada           18 18"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

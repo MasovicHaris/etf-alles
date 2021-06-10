@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<drzave>
+    <drzava stanovnika="3500000">
+        <naziv>Bosna i Hercegovina</naziv>
+        <glavnigrad stanovnika="400000">
+            <naziv>Sarajevo</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">51129</povrsina>
+    </drzava>
+    <drzava stanovnika="40000000">
+        <naziv>Prva drzava</naziv>
+        <glavnigrad stanovnika="2500000">
+            <naziv>Prvi grad</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">200000</povrsina>
+    </drzava>
+    <drzava stanovnika="862849842">
+        <naziv>Druga drzava</naziv>
+        <glavnigrad stanovnika="345616">
+            <naziv>Drugi grad</naziv>
+        </glavnigrad>
+        <povrsina jedinica="km2">355487</povrsina>
+    </drzava>
+</drzave>
+

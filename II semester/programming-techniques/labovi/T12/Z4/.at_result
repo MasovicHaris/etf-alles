@@ -1,0 +1,141 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool operator==(const Kompleksni&, const Kompleksni&)’:\nmain.cpp:37:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   return a.re == b.re && a.im == b.im;\n                    ^~\nmain.cpp:37:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   return a.re == b.re && a.im == b.im;\n                                    ^~\nmain.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Kompleksni&)’:\nmain.cpp:66:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   if(realni == 0 && imaginarni == 0) tok << \"0\";\n                ^\nmain.cpp:66:35: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   if(realni == 0 && imaginarni == 0) tok << \"0\";\n                                   ^\nmain.cpp:67:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   else if(imaginarni ==0) tok << realni;\n                        ^\nmain.cpp:68:21: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   else if(realni == 0){\n                     ^\nmain.cpp:69:21: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    if(imaginarni == 1) tok << \"i\";\n                     ^\nmain.cpp:70:27: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    else if(imaginarni == -1) tok << \"-i\";\n                           ^\nmain.cpp:74:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(imaginarni == 1) tok << realni << \"+i\";\n                      ^\nmain.cpp:77:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(imaginarni == -1) tok << realni << \"-i\";\n                       ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "37",
+                "col": "20",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:37:20: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   return a.re == b.re && a.im == b.im;                    ^~",
+                "code": "return a.re == b.re && a.im == b.im;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "37",
+                "col": "36",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:37:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   return a.re == b.re && a.im == b.im;                                    ^~",
+                "code": "return a.re == b.re && a.im == b.im;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "66",
+                "col": "16",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:66:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   if(realni == 0 && imaginarni == 0) tok << \"0\";                ^",
+                "code": "if(realni == 0 && imaginarni == 0) tok << \"0\";"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "66",
+                "col": "35",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:66:35: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   if(realni == 0 && imaginarni == 0) tok << \"0\";                                   ^",
+                "code": "if(realni == 0 && imaginarni == 0) tok << \"0\";"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "67",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:67:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   else if(imaginarni ==0) tok << realni;                        ^",
+                "code": "else if(imaginarni ==0) tok << realni;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "68",
+                "col": "21",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:68:21: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   else if(realni == 0){                     ^",
+                "code": "else if(realni == 0){"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "69",
+                "col": "21",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:69:21: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    if(imaginarni == 1) tok << \"i\";                     ^",
+                "code": "if(imaginarni == 1) tok << \"i\";"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "70",
+                "col": "27",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:70:27: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    else if(imaginarni == -1) tok << \"-i\";                           ^",
+                "code": "else if(imaginarni == -1) tok << \"-i\";"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "74",
+                "col": "22",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:74:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(imaginarni == 1) tok << realni << \"+i\";                      ^",
+                "code": "if(imaginarni == 1) tok << realni << \"+i\";"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "77",
+                "col": "23",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2003/main.cpp:77:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(imaginarni == -1) tok << realni << \"-i\";                       ^",
+                "code": "if(imaginarni == -1) tok << realni << \"-i\";"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3765": {
+            "status": 1,
+            "run_result": {
+                "output": "0 1 5 -1 -5 i -i 5i -5i\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3766": {
+            "status": 1,
+            "run_result": {
+                "output": "2+i 2+5i 2-i 2-5i -1+i -1+3i -1-i -1-5i\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1496858383
+}

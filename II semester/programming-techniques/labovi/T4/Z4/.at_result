@@ -1,0 +1,167 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:53:4: warning: this ‘else’ clause does not guard... [-Wmisleading-indentation]\n    else std::cout << suma;\n    ^~~~\nmain.cpp:54:2: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘else’\n  return 0;\n  ^~~~~~\nmain.cpp: In instantiation of ‘void UnosBroja(std::__cxx11::string, std::__cxx11::string, tip&) [with tip = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’:\nmain.cpp:41:75:   required from here\nmain.cpp:26:51: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n       if(std::cin.peek()!='\\n' || broj - tip(broj)!=0){\n                                   ~~~~~~~~~~~~~~~~^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "53",
+                "col": "4",
+                "message": "this 'else' clause does not guard...",
+                "output": "/tmp/buildservice/bs_2514/main.cpp:53:4: warning: this ‘else’ clause does not guard... [-Wmisleading-indentation]    else std::cout << suma;    ^~~~",
+                "code": "else std::cout << suma;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "26",
+                "col": "51",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2514/main.cpp:26:51: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]       if(std::cin.peek()!='\\n' || broj - tip(broj)!=0){                                   ~~~~~~~~~~~~~~~~^~~",
+                "code": "if(std::cin.peek()!='\\n' || broj - tip(broj)!=0){"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3284": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: Pogresan unos!\nUnesi broj: \n5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3285": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: Pogresan unos!\nUnesi broj: Pogresan unos!\nUnesi broj: Pogresan unos!\nUnesi broj: \n1.233",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3287": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: Pogresan unos!\nUnesi broj: Pogresan unos!\nUnesi broj: \n123",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3288": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: Pogresan unos!\nUnesi broj: \n456",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3289": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: Pogresan unos!\nUnesi broj: Pogresan unos!\nUnesi broj: Pogresan unos!\nUnesi broj: \n404",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3290": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesi broj: \n123",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3291": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \n\nUnesite cjelobrojni eksponent: \nNeispravan unos, pokusajte ponovo...\nUnesite cjelobrojni eksponent: \n\n3.215 na -2 iznosi 0.0967471",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3292": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \n\nUnesite cjelobrojni eksponent: \nNeispravan unos, pokusajte ponovo...\nUnesite cjelobrojni eksponent: \n\n4.5 na 3 iznosi 91.125",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3293": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \nNeispravan unos, pokusajte ponovo...\nUnesite bazu: \n\nUnesite cjelobrojni eksponent: \n\n5 na -1 iznosi 0.2",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1490857918
+}

@@ -1,0 +1,536 @@
+{
+    "buildhost_description": {
+        "id": "lab002c28",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘BarycentricInterpolator::BarycentricInterpolator(const std::vector<std::pair<double, double> >&, int)’:\nmain.cpp:218:21: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             w[i] += p;\n                     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "218",
+                "col": "21",
+                "message": "'p' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_9291/main.cpp:218:21: warning: ‘p’ may be used uninitialized in this function [-Wmaybe-uninitialized]             w[i] += p;                     ^",
+                "code": "w[i] += p;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "299": {
+            "status": 1,
+            "run_result": {
+                "output": "5.5\n5\n5\n11.6667\n8.5\n7",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "300": {
+            "status": 1,
+            "run_result": {
+                "output": "5.5\n5\n5\n11.6667\n8.5\n7",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "301": {
+            "status": 1,
+            "run_result": {
+                "output": "0.5\n1\n8\n-0.1\n3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "302": {
+            "status": 1,
+            "run_result": {
+                "output": "0.5\n1\n8\n-0.1\n3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "303": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid data set'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "304": {
+            "status": 1,
+            "run_result": {
+                "output": "22.043\n24.2643\n41.3789\n-94.3164",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "305": {
+            "status": 1,
+            "run_result": {
+                "output": "1132.14\n56.3569",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "306": {
+            "status": 1,
+            "run_result": {
+                "output": "3 13.75 -3.10417 0.260417 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "307": {
+            "status": 1,
+            "run_result": {
+                "output": "3 2.25952 -3.64107 4.84706 -0.0897817 -0.430655 0.0549272 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "308": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid data set'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "309": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0\n0.825924 0.841471\n0.89821 0.909297\n0.134845 0.14112\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "310": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0\n0.825924 0.841471\n0.89821 0.909297\n0.134845 0.14112\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "311": {
+            "status": 1,
+            "run_result": {
+                "output": "1.0546 0.995004\n1.10943 0.980067\n0 0\n-0.0834038 -0.0998334\n4.02436 -0.995004\n4.19874 -0.980067",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "312": {
+            "status": 1,
+            "run_result": {
+                "output": "1.0546 0.995004\n1.10943 0.980067\n0 0\n-0.0834038 -0.0998334\n4.02436 -0.995004\n4.19874 -0.980067",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "313": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid data set'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "314": {
+            "status": 1,
+            "run_result": {
+                "output": "7\n5.68908\n10.9028\n15.3343",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "315": {
+            "status": 1,
+            "run_result": {
+                "output": "-39\n26.9665\n42.4485\n-65.2328",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "316": {
+            "status": 1,
+            "run_result": {
+                "output": "1 -1 1 -1 1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "317": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid data set'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "318": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid order'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "319": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid point'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "320": {
+            "status": 1,
+            "run_result": {
+                "output": "3.79688 4.45312 6.75 6.4375 7.8125 5.9375 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "321": {
+            "status": 1,
+            "run_result": {
+                "output": "31.25 3.79688 4.45312 6.75 6.4375 7.8125 5.9375 4.69531 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "322": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid order'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "323": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid order'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "324": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid order'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "325": {
+            "status": 1,
+            "run_result": {
+                "output": "6",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "326": {
+            "status": 1,
+            "run_result": {
+                "output": "21.75\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "327": {
+            "status": 1,
+            "run_result": {
+                "output": "6.75",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "328": {
+            "status": 1,
+            "run_result": {
+                "output": "7.88668",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "329": {
+            "status": 1,
+            "run_result": {
+                "output": "7.4898",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "330": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid order'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "331": {
+            "status": 1,
+            "run_result": {
+                "output": "'Invalid point'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "332": {
+            "status": 1,
+            "run_result": {
+                "output": "0 2 5 1 3 3 2 0 2 2 3 0 4 4 0 2 5 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "333": {
+            "status": 1,
+            "run_result": {
+                "output": "19989200000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "334": {
+            "status": 1,
+            "run_result": {
+                "output": "104991530000\n",
+                "duration": 1,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1576627327
+}

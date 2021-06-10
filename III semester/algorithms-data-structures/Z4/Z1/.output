@@ -1,0 +1,6 @@
+Za dodavanje 500000 elemenata u BinStabloMapu, bilo je potrebno 1191 ms.
+Za dodavanje 500000 elemenata u AVLStabloMapu, bilo je potrebno 775 ms.
+Za pristup elementima BinStabloMape bilo je potrebno 1171 ms.
+Za pristup elementima AVLStabloMape bilo je potrebno 731 ms.
+Za brisanje elemenata BinStabloMape bilo je potrebno 236 ms.
+Za brisanje elemenata AVLStabloMape bilo je potrebno 169 ms.

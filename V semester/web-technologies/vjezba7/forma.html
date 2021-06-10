@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+
+<HEAD>
+    <TITLE>Zadatak3</TITLE>
+</HEAD>
+
+<BODY>
+    <form id="forma" method="POST" action="/">
+        Ime: <input type="text" name="ime"><br><br>
+        Prezime: <input type="text" name="prezime"><br><br>
+        Adresa: <input type="text" name="adresa"><br><br>
+        Broj telefona: <input type="text" name="broj_telefona"><br><br>
+        <input type="submit" value="Posalji zahtjev">
+    </form><br><br>
+    <script>
+        window.onload = function pozovi() {
+            var url = new URL(window.location.href);
+            var ime = url.searchParams.get("ime");
+            var prezime = url.searchParams.get("prezime");
+            var adresa = url.searchParams.get("adresa");
+            var brtel = url.searchParams.get("broj_telefona");
+            if(ime !== null && prezime !== null && adresa !== null && brtel !== null){
+                document.getElementsByName("ime")[0].value = ime;
+                document.getElementsByName("prezime")[0].value = prezime;
+                document.getElementsByName("adresa")[0].value = adresa;
+                document.getElementsByName("broj_telefona")[0].value = brtel;
+            }
+        }
+    </script>
+</BODY>
+
+</HTML>

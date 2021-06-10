@@ -1,0 +1,116 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In lambda function:\nmain.cpp:193:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    if(pok1->DajProsjek() == pok2->DajProsjek()) return pok1->DajBrojIndeksa() < pok2->DajBrojIndeksa();\n                                              ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "193",
+                "col": "46",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_8302/main.cpp:193:46: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    if(pok1->DajProsjek() == pok2->DajProsjek()) return pok1->DajBrojIndeksa() < pok2->DajBrojIndeksa();                                              ^",
+                "code": "if(pok1->DajProsjek() == pok2->DajProsjek()) return pok1->DajBrojIndeksa() < pok2->DajBrojIndeksa();"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3811": {
+            "status": 1,
+            "run_result": {
+                "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 8.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3812": {
+            "status": 1,
+            "run_result": {
+                "output": "Dusko Dugousko 1234 0 5\nPaja Patak 4312 0 5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3813": {
+            "status": 1,
+            "run_result": {
+                "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3814": {
+            "status": 1,
+            "run_result": {
+                "output": "Student master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3815": {
+            "status": 1,
+            "run_result": {
+                "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "71234": {
+            "status": 1,
+            "run_result": {
+                "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1497122631
+}

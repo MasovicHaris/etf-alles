@@ -1,0 +1,219 @@
+{
+    "id": 7011,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 7, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 738,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int n = 5;\ndouble pi = 4. * atan (1.);\nprintf (\"sin(%g, %d) = %.5f\", pi, n, sinus (pi, n));\n",
+            "global_above_main": "",
+            "global_top": "#include <math.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "sin(3.14159, 5) = 0.00693"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 739,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int n = 5;\ndouble pi = 4. * atan (1.);\nprintf (\"sin(%g, %d) = %.5f\\n\", pi \/ 2., n, sinus (pi \/ 2., n));\nn = 3;\nprintf (\"sin(%g, %d) = %.5f\", pi \/ 2., n, sinus (pi \/ 2., n));",
+            "global_above_main": "",
+            "global_top": "#include <math.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "sin(1.5708, 5) = 1.00000\\nsin(1.5708, 3) = 1.00452"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 740,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int n = 5;\ndouble pi = 4. * atan (1.);\nprintf (\"sin(%g, %d) = %.5f\", pi \/ 4., n, sinus (pi \/ 4., n));",
+            "global_above_main": "",
+            "global_top": "#include <math.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "sin(0.785398, 5) = 0.70711"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 741,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int n = 5;\ndouble pi = 4. * atan (1.);\nprintf (\"sin(%g, %d) = %.5f\", pi \/ 8., n, sinus (pi \/ 8., n));",
+            "global_above_main": "",
+            "global_top": "#include <math.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "sin(0.392699, 5) = 0.38268"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 742,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int n = 5;\ndouble pi = 4. * atan (1.);\nprintf (\"sin(%g, %d) = %.5f\", 1.2345678, n, sinus (1.2345678, n));",
+            "global_above_main": "",
+            "global_top": "#include <math.h>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "sin(1.23457, 5) = 0.94401"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1490,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "int x = faktorijel(5);\nprintf(\"%d\", x);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "120"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1494,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\n4"
+            },
+            "expected": [
+                "Unesite x: \\nUnesite n: \\nsin(x)=0.841471\\nsinus(x)=0.841468\\nRazlika: 0.000003 (0.00%)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1495,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.1234\n5"
+            },
+            "expected": [
+                "Unesite x: \\nUnesite n: \\nsin(x)=0.901577\\nsinus(x)=0.901577\\nRazlika: 0.000000 (0.00%)."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

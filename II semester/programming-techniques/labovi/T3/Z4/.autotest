@@ -1,0 +1,119 @@
+{
+    "id": 8534,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3186,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Primjer kada ima i parnih i neparnih elemenata\n_main();",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_back zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "12\n15 23 18 -26 0 142 -333 73 11111 -312 9 5555555"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: -312,73,0,-26,15\\n5555555,9,11111,-333,142,18,23"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3187,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Primjer kada nema neparnih elemenata\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\n_main();\nstd::cout<<'_';\n",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_back zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n24 73 112 -17 0"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 0,-17,112,73,24\\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3188,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Primjer kada nema parnih elemenata\n_main();",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_back zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n32 -23 111 45 32"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: \\n32,45,111,-23,32"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3240,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje funkcije IzdvojiElemente sa integer granicama\nstd::deque<int> v1 {1,std::numeric_limits<int>::min(),2,std::numeric_limits<int>::max(),5};\nstd::deque<int> v2;\n  \nv2 = IzdvojiElemente(v1, true);\n  \nfor(int i=0; i < v2.size(); i++)\n   std::cout << v2[i] << \" \";",
+            "global_above_main": "",
+            "global_top": "#include<limits>\n#define vector zabranjen\n#define push_back zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2147483647 2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

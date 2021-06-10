@@ -1,0 +1,87 @@
+﻿<UserControl
+    x:Class="Vicinor.UserControls.banUserUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid Background="AntiqueWhite" Margin="0,0,0,-482">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="banUserTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="usernameAusoSuggestBox.(Control.FontSize)" Value="16"/>
+                        <Setter Target="banButton.(Control.FontSize)" Value="16"/>
+                        <Setter Target="unbanButton.(Control.FontSize)" Value="16"/>
+                        <Setter Target="listaKorisnikaTextBlock.(TextBlock.FontSize)" Value="16"/>
+                        <Setter Target="showProfileButton.(Control.FontSize)" Value="16"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Tablet">
+                    <VisualState.Setters>
+                        <Setter Target="banUserTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="usernameAusoSuggestBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="banButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="unbanButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="listaKorisnikaTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="showProfileButton.(Control.FontSize)" Value="18"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="banUserTextBlock.(TextBlock.FontSize)" Value="18"/>
+                        <Setter Target="usernameAusoSuggestBox.(Control.FontSize)" Value="18"/>
+                        <Setter Target="banButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="unbanButton.(Control.FontSize)" Value="18"/>
+                        <Setter Target="showProfileButton.(Control.FontSize)" Value="18"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+          
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock x:Name="listaKorisnikaTextBlock" HorizontalAlignment="Left"  Margin="20,20,20,20"  Grid.Row="0"  Text="Users list:" VerticalAlignment="Center" />
+
+        <ListView x:Name="usersListView" HorizontalAlignment="Left" Height="177" Margin="20,20,20,20" Grid.Row="1" VerticalAlignment="Top" Width="208">
+            <x:String>User 1</x:String>
+            <x:String>User 2</x:String>
+            <x:String>User 3</x:String>
+            <x:String>User 4</x:String>
+        </ListView>
+        <Button x:Name="showProfileButton" Background="Tan" Content="Show User Profile"  HorizontalAlignment="Center" Margin="20,20,20,20" Grid.Row="2" VerticalAlignment="Top" Click="showProfileButton_Click"/>
+
+     
+        <AutoSuggestBox x:Name="usernameAusoSuggestBox"  Margin="20,20,20,20"  Background="White" Grid.Row="4" VerticalAlignment="Center" />
+        <TextBlock x:Name="banUserTextBlock"  Margin="20,20,20,20" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Center" />
+        <Button x:Name="banButton" Background="Tan" Content="Ban User"  HorizontalAlignment="Left"   Margin="20,20,20,20" Grid.Row="5" VerticalAlignment="Center" Click="banButton_Click_1" />
+        <Button x:Name="unbanButton" Background="Tan" Content="Unban User"  HorizontalAlignment="Right" Margin="20,20,20,20" Grid.Row="5" VerticalAlignment="Center" Click="unbanButton_Click_1"  />
+
+    </Grid>
+</UserControl>

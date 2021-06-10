@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C553FC6A-60F3-4B3B-83F3-FF8067F61DA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NMK_17993</RootNamespace>
+    <AssemblyName>NMK_17993</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entiteti\TerapijaDodatno.cs" />
+    <Compile Include="Entiteti\Doktor.cs" />
+    <Compile Include="Entiteti\InterfaceKlinika.cs" />
+    <Compile Include="Entiteti\KartonPacijenta.cs" />
+    <Compile Include="Entiteti\Klinika.cs" />
+    <Compile Include="Entiteti\NaplataPregleda.cs" />
+    <Compile Include="Entiteti\Ordinacija.cs" />
+    <Compile Include="Entiteti\Osoba.cs" />
+    <Compile Include="Entiteti\Pacijent.cs" />
+    <Compile Include="Entiteti\Pregled.cs" />
+    <Compile Include="Entiteti\Terapija.cs" />
+    <Compile Include="Entiteti\Uposlenik.cs" />
+    <Compile Include="Forme\DodatnaAnaliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodatnaAnaliza.Designer.cs">
+      <DependentUpon>DodatnaAnaliza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\NovaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\NovaForma.Designer.cs">
+      <DependentUpon>NovaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaDoktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaDoktora.Designer.cs">
+      <DependentUpon>OrdinacijaDoktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaUposlenika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaUposlenika.Designer.cs">
+      <DependentUpon>OrdinacijaUposlenika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaUposlenikaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrdinacijaUposlenikaView.Designer.cs">
+      <DependentUpon>OrdinacijaUposlenikaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PacijentPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PacijentPregled.Designer.cs">
+      <DependentUpon>PacijentPregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PacijentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PacijentView.Designer.cs">
+      <DependentUpon>PacijentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Portirnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Portirnica.Designer.cs">
+      <DependentUpon>Portirnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\Registracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validacije.cs" />
+    <EmbeddedResource Include="Forme\DodatnaAnaliza.resx">
+      <DependentUpon>DodatnaAnaliza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\NovaForma.resx">
+      <DependentUpon>NovaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrdinacijaDoktora.resx">
+      <DependentUpon>OrdinacijaDoktora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrdinacijaUposlenika.resx">
+      <DependentUpon>OrdinacijaUposlenika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrdinacijaUposlenikaView.resx">
+      <DependentUpon>OrdinacijaUposlenikaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PacijentPregled.resx">
+      <DependentUpon>PacijentPregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PacijentView.resx">
+      <DependentUpon>PacijentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Portirnica.resx">
+      <DependentUpon>Portirnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Registracija.dje-NE.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Registracija.en.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WindowsFormsControlLibrary1\KorisnickaKontrola.csproj">
+      <Project>{7F924781-D3FA-4585-BC93-268DE28291D1}</Project>
+      <Name>KorisnickaKontrola</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

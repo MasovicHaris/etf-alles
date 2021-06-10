@@ -1,0 +1,119 @@
+{
+    "id": 8622,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 12, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3757,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1 testiranje unije i presjeka\n  std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n  std::cout << s1 + s2 << std::endl;\n  std::cout << s1 * s2 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1,2,3,4,5,7,8}\\n{2,8}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3758,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 testiranj ispisa praznog skupa\n  std::set<int> s1{3, 5, 1, 2, 8}, s2{7, 2, 8, 4};\n  std::cout << s1 * std::set<int>{10, 20, 30} << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3759,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 testiranje operatora += i *=  \nstd::set<double> s1{3.6, 5.1, 1, 2, 8};\n  s1 *= std::set<double>{3.6,10,3, 2., 9};\n  std::cout << s1 << std::endl;\n  s1 += std::set<double>{3.6,10,3, 2., 9};\n  std::cout << s1 << std::endl;\n  std::set<std::string> s3{\"dajte\", \"mi\", \"presjek\", \"molim\", \"vas\"};\n  s3 *= std::set<std::string>{\"izvolite\", \"va\u0161\", \"presjek\"};\n  std::cout << s3 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{2,3.6}\\n{2,3,3.6,9,10}\\n{presjek}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3760,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 testiranje Dekartovog proizvoda\nstd::set<char> s3{'A', 'B'};\nstd::set<int> s4{1, 2, 3};\nstd::cout << s3 % s4 << std::endl;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{(A,1),(A,2),(A,3),(B,1),(B,2),(B,3)}\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

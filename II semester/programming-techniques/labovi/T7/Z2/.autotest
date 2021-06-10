@@ -1,0 +1,169 @@
+{
+    "id": 8572,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3495,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1 testiranje hvatanja izuzetka u slu\u010daju nedostatka memorije prilikom alokacije niza pokazivaca\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2000000000"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nProblemi s memorijom!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3496,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT2 testiranje kada nestane memorije prilikom alokacije za svaku od recenica\n_main();",
+            "global_above_main": "static size_t alocirano(0);\nconst size_t RAM = 5 * sizeof(double);\n\n\nvoid *operator new[](size_t vel)\n{\n    if (RAM < alocirano + vel) throw std::bad_alloc();\n    alocirano += vel;\n    return std::malloc(vel);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\nabcdefg\nabc\n"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nProblemi s memorijom!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3497,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 provjera sortiranja recenica\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\nOtiso si sarme probo nisi\nHop cup na kalup cetir babe jedan zub\nI jogurt ujutro goji\n"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nSortirane recenice:\\nHop cup na kalup cetir babe jedan zub\\nI jogurt ujutro goji\\nOtiso si sarme probo nisi"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3498,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT4 test ispravne dealokacije\n_main();",
+            "global_above_main": "static int brojac_new(0);\nstatic size_t alokacije[10];\n\nvoid *operator new[] (size_t vel)\n{\n    alokacije[brojac_new]=vel;   \n    brojac_new++;\n    return std::malloc (vel);\n}\n\nvoid operator delete [] (void* ptr)\n{\n  std::cout << alokacije[brojac_new - 1] << std::endl;\n  brojac_new--;\n  free(ptr);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\nPrva recenica\nDruga recenica\nTreca recenica\nCetvrta recenica\nPeta recenica\n"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nSortirane recenice:\\nCetvrta recenica\\nDruga recenica\\nPeta recenica\\nPrva recenica\\nTreca recenica\\n14\\n17\\n15\\n15\\n14\\n40"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3514,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT5 provjera sortiranja 2\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "20\nA\nA\nAA\nAAA\nZZZ\nZZ\nZ\nG\nGG\nG  \nH\nH\nI\nI\nY\nX\nZ\nAAA\nB\nXXX"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nSortirane recenice:\\nA\\nA\\nAA\\nAAA\\nAAA\\nB\\nG\\nG\\nGG\\nH\\nH\\nI\\nI\\nX\\nXXX\\nY\\nZ\\nZ\\nZZ\\nZZZ"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3516,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 6:test koristenja sort funkcije - ako padne ovaj test zadatak se ne priznaje \n_main();\nstd::cout << broj_sortiranja2 << std::endl;",
+            "global_above_main": "",
+            "global_top": "#include<algorithm>\n\nstatic int broj_sortiranja1{0}, broj_sortiranja2{0};\n\nnamespace std\n{\n    template <class T>\n    void MojSort (T p, T k) { broj_sortiranja1++; std::sort (p, k);}\n\n    template <class T, class F>\n    void MojSort (T p, T k, F f) { broj_sortiranja2++; std::sort (p, k, f);}\n}\n#define sort MojSort\n\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\nJedna recenica\nDvije recenice\nTri recenice\n"
+            },
+            "expected": [
+                "Koliko zelite recenica: Unesite recenice:\\nSortirane recenice:\\nDvije recenice\\nJedna recenica\\nTri recenice\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

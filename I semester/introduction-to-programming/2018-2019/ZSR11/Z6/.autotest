@@ -1,0 +1,169 @@
+{
+    "id": 393603,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Ispit 8, Zadatak 3",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Jednostavan primjer sa dvije tacke*\/\nstruct Tacka niz[] = { {0,0}, {0,2} };\nstruct Kruznica test = obuhvat(niz, 2);\nispis_kruznice(test);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(0.00,1.00) 1.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Nesto slozeniji primjer sa dvije tacke *\/\n\/* Poluprecnik je sqrt(2)\/2 *\/\nstruct Tacka niz[] = { {1,1}, {2,2} };\nstruct Kruznica test = obuhvat(niz, 2);\nispis_kruznice(test);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(1.50,1.50) 0.71"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Samo jedna tacka *\/\nstruct Tacka niz[] = { {42, 42} };\nstruct Kruznica test = obuhvat(niz, 1);\nispis_kruznice(test);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(42.00,42.00) 0.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Puno tacaka, da li je uopste u kruznici? *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = ((i+1)*7)%10;\n\tniz[i].y = ((i+1)*6)%10;\n}\nstruct Kruznica test = obuhvat(niz, 100);\nfor (i=0; i<100; i++)\n\tif (udaljenost_at4(niz[i], test.centar) > test.poluprecnik)\n\t\tprintf(\"NOT \");\nprintf(\"OK\");",
+            "global_above_main": "#include <math.h>\ndouble udaljenost_at4(struct Tacka t1, struct Tacka t2) {\n\treturn sqrt( (t1.x-t2.x)*(t1.x-t2.x) + (t1.y-t2.y)*(t1.y-t2.y) );\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Puno tacaka, ocekivani rezultat *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = ((i+1)*7)%10;\n\tniz[i].y = ((i+1)*6)%10;\n}\nstruct Kruznica test = obuhvat(niz, 100);\nispis_kruznice(test);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(4.50,4.00) 6.02"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Male vrijednosti koordinata *\/\nstruct Tacka niz[100];\nint i;\nfor (i=0; i<100; i++) {\n\tniz[i].x = (double)(((i+1)*11)%10) \/ 100;\n\tniz[i].y = (double)(((i+1)*17)%10) \/ 100;\n}\nstruct Kruznica k = obuhvat(niz, 100);\nprintf(\"(%.4f,%.4f) %.4f\", k.centar.x, k.centar.y, k.poluprecnik);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "(0.0450,0.0450) 0.0636"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

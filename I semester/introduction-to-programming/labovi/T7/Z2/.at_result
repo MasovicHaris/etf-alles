@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "c9.etf.unsa.ba",
+        "os": "Linux 3.16.0-49-generic x86_64\nUbuntu 14.04.4 LTS\n",
+        "compiler_version": "gcc (Ubuntu 4.8.4-2ubuntu1~14.04.1) 4.8.4",
+        "debugger_version": "GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1",
+        "profiler_version": "valgrind-3.10.1"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "721": {
+            "status": 1,
+            "run_result": {
+                "output": "1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "722": {
+            "status": 1,
+            "run_result": {
+                "output": "1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "723": {
+            "status": 1,
+            "run_result": {
+                "output": "Faktorijel od 1 je 1\nFaktorijel od 2 je 2\nFaktorijel od 3 je 6\nFaktorijel od 4 je 24\nFaktorijel od 5 je 120\nFaktorijel od 6 je 720\nFaktorijel od 7 je 5040\nFaktorijel od 8 je 40320\nFaktorijel od 9 je 362880\nFaktorijel od 10 je 3628800\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "724": {
+            "status": 1,
+            "run_result": {
+                "output": "-\nUnesite broj n u intervalu [1, 12]: Unesite realan broj x: Suma od 1 do 1 za x = 2.450 je 2.450\n-",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "725": {
+            "status": 1,
+            "run_result": {
+                "output": "-\nUnesite broj n u intervalu [1, 12]: Unesite realan broj x: Suma od 1 do 5 za x = 2.450 je 4.206\n-",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1480513098
+}

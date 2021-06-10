@@ -1,0 +1,189 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3192": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora: \n    126   3003      0   -639     48     15\n   5208 124124      0 -26412   1984    620\n   -462 -11011      0   2343   -176    -55\n    378   9009      0  -1917    144     45\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3193": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata prvog vektora: Unesite elemente prvog vektora: Unesite broj elemenata drugog vektora: Unesite elemente drugog vektora: \n    -1848    -8316   -18942    -1694   -51128 -1197658  -138292\n    -7992   -35964   -81918    -7326  -221112 -5179482  -598068\n      -84     -378     -861      -77    -2324   -54439    -6286\n     -252    -1134    -2583     -231    -6972  -163317   -18858\n    -2676   -12042   -27429    -2453   -74036 -1734271  -200254\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3195": {
+            "status": 1,
+            "run_result": {
+                "output": "_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3196": {
+            "status": 1,
+            "run_result": {
+                "output": "\n\n\n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3197": {
+            "status": 1,
+            "run_result": {
+                "output": "6\n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3198": {
+            "status": 1,
+            "run_result": {
+                "output": "1 -2147483648 \n0 0 \n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3199": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2147483647 \n0 0 \n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3200": {
+            "status": 1,
+            "run_result": {
+                "output": "Sirina: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3201": {
+            "status": 1,
+            "run_result": {
+                "output": "Sirina: 8",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3202": {
+            "status": 1,
+            "run_result": {
+                "output": "Sirina: 5\nSirina: 6",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3231": {
+            "status": 1,
+            "run_result": {
+                "output": "Sirina: 11\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3232": {
+            "status": 1,
+            "run_result": {
+                "output": "Sirina: 10\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1490257128
+}

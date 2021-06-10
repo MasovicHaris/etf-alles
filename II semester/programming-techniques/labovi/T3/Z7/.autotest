@@ -1,0 +1,119 @@
+{
+    "id": 8537,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 7",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3203,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "#define PascalovTrokut PascalovTrougao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7"
+            },
+            "expected": [
+                "Unesite broj redova: \\n  1\\n  1  1\\n  1  2  1\\n  1  3  3  1\\n  1  4  6  4  1\\n  1  5 10 10  5  1\\n  1  6 15 20 15  6  1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3204,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Situacija kada je n=0 i kada je n negativan broj\ntry \n{\n   std::cout << PascalovTrokut(0).size();\n   std::cout << std::endl;\n   PascalovTrokut(-1);\n}\ncatch(std::domain_error izuzetak) {\n   std::cout << izuzetak.what() << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "#define PascalovTrokut PascalovTrougao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0\\nBroj redova ne smije biti negativan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3205,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: PascalovTrokut za n=10\n_main();",
+            "global_above_main": "",
+            "global_top": "#define PascalovTrokut PascalovTrougao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10"
+            },
+            "expected": [
+                "Unesite broj redova: \\n   1\\n   1   1\\n   1   2   1\\n   1   3   3   1\\n   1   4   6   4   1\\n   1   5  10  10   5   1\\n   1   6  15  20  15   6   1\\n   1   7  21  35  35  21   7   1\\n   1   8  28  56  70  56  28   8   1\\n   1   9  36  84 126 126  84  36   9   1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3206,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Pascalov trokut za n=1\n_main();",
+            "global_above_main": "",
+            "global_top": "#define PascalovTrokut PascalovTrougao",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1"
+            },
+            "expected": [
+                "Unesite broj redova: \\n 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

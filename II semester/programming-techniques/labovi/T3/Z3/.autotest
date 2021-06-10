@@ -1,0 +1,119 @@
+{
+    "id": 8533,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 3, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3183,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje kada ima elemenata i sa parnom i sa neparnom sumom\n\/\/ cifara\n_main();",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_front zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n15 16 -23 555 -727 -122344 0 23 45 -777"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 15,-727,-122344,0\\n16,-23,555,23,45,-777"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3184,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje kada nema elemenata sa neparnom sumom cifara\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\n_main();\nstd::cout<<'_';",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_front zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n121 121 -334 6 0"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: 121,121,-334,6,0\\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3185,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje kada nema elemenata sa parnom sumom cifara\n_main();",
+            "global_above_main": "",
+            "global_top": "#define vector zabranjen\n#define push_front zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n12 54541 -23 667 -56"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: \\n12,54541,-23,667,-56"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3239,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje funkcije IzdvojiElemente sa integer granicama\nstd::deque<int> v1 {1,std::numeric_limits<int>::min(),2,std::numeric_limits<int>::max(),5};\nstd::deque<int> v2;\n  \nv2 = IzdvojiElemente(v1, true);\n  \nfor(int i=0; i < v2.size(); i++)\n   std::cout << v2[i] << \" \";",
+            "global_above_main": "",
+            "global_top": "#include<limits>\n#define vector zabranjen\n#define push_front zabranjen",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2 2147483647 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

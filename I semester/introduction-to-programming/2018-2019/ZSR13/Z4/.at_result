@@ -1,0 +1,256 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:146:6: warning: unused variable ‘zapisano’ [-Wunused-variable]\n  int zapisano=fwrite(niz1, sizeof(struct Drzava), 8, dat);\n      ^~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "146",
+                "col": "6",
+                "message": "unused variable 'zapisano'",
+                "output": "/tmp/buildservice/bs_773/main.c:146:6: warning: unused variable ‘zapisano’ [-Wunused-variable]  int zapisano=fwrite(niz1, sizeof(struct Drzava), 8, dat);      ^~~~~~~~",
+                "code": "int zapisano=fwrite(niz1, sizeof(struct Drzava), 8, dat);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 2\nBlabla\nTruch\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 3\nMozambik\nzambija\nBosna i Hercegovina\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 2\nzambija\nBosna i Hercegovina\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 3\nzambija\nKanada\nNigerija\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 0\nVel: 1\nMozambik\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Vel: 1\nBosna i Hercegovina\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "11": {
+            "status": 1,
+            "run_result": {
+                "output": "Nigerija,Abuja,900211\nZelenortska republika,Praia,123456\nKanada,Otava,883391\nNauru,Yaren,747\nZambija,Lusaka,10001\nZimbabve,Harare,345126\nMozambik,Maputo,9999\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "12": {
+            "status": 1,
+            "run_result": {
+                "output": "Regija1 - Grad1 (10000)\nRegija2 - Grad2 (12121)\nRegija3 - Grad3 (43256)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "13": {
+            "status": 1,
+            "run_result": {
+                "output": "Regija1 - Grad1 (10000)\nRegija2 Regija2 Regija2 - Grad2 (12121)\nRegija3 - Grad3 Grad3 (43256)\nRegija4 - Grad4 Grad4 Grad4 G (123456)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "14": {
+            "status": 1,
+            "run_result": {
+                "output": "Regija1 - Grad1 (10000)\nRegija2 - Grad2 (12121)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "15": {
+            "status": 1,
+            "run_result": {
+                "output": "Mozambik - Maputo (9999)\nZimbabve - Harare (345126)\nZambija - Lusaka (10001)\nBosna i Hercegovina - Sarajevo (507327)\nNauru - Yaren (701)\nKanada - Otava (883389)\nZelenortska republika - Praia (114111)\nNigerija - Abuja (900543)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "16": {
+            "status": 1,
+            "run_result": {
+                "output": "Otava",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "17": {
+            "status": 1,
+            "run_result": {
+                "output": "Regija Kanada\nRegija Mozambik\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "18": {
+            "status": 1,
+            "run_result": {
+                "output": "Mozambik - Maputo (9999)\nZimbabve - Harare (345126)\nZambija - Lusaka (10001)\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "19": {
+            "status": 1,
+            "run_result": {
+                "output": "Test 1: prazan prvi niz\nTest 2: prazan drugi niz\nTest 3: nema rezultata\nTest 4: mnogo rezultata\nRegija Zelenortska republika\nRegija Zimbabve\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "20": {
+            "status": 1,
+            "run_result": {
+                "output": "OK",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1567973325
+}

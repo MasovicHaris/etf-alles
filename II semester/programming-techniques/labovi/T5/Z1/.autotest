@@ -1,0 +1,219 @@
+{
+    "id": 8551,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3311,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira primjer iz postavke\n\/\/NAPOMENA: Znak \"_\" je sastavni dio autotesta\n_main();\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Na vrh brda vrba mrda...\n"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: vrh brda vrba mrda...\\n_\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3312,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testira recenicu sastavljenu od razmaka\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "      \n"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3313,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testira recenicu sastavljenu od jedne rije\u010di\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Rijec\n"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi:\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3314,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testira recenicu sa razmacima ispred prve rijeci\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "   Na vrh brda vrba mrda...\n"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: vrh brda vrba mrda..."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3315,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testira recenicu koja se sastoji od jedne rijeci i vi\u0161e razmaka ispred nje\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "   Rijec"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3316,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testira recenicu koja se sastoji od jedne rijeci i razmaka ispred i iza nje\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": " Rijec "
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3317,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testira recenicu sa 100+ znakova\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Ova recenica je jako duga, i koristi samo u svrhu testiranja unosa dugih recenica te stoga nema nikakvog drugog smisla.\n"
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: recenica je jako duga, i koristi samo u svrhu testiranja unosa dugih recenica te stoga nema nikakvog drugog smisla.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3318,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testira recenicu koja se sastoji od jedne rijeci i \n\/\/vise razmaka ispred nje, kao i vise razmaka iza nje\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#define string !zabranjeno!!\n#define cstring !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "   Rijec   "
+            },
+            "expected": [
+                "Unesite recenicu: Recenica bez prve rijeci glasi: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

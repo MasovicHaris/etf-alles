@@ -1,0 +1,94 @@
+{
+    "id": 8612,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 11, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3699,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje ispravnog kreiranja objekata i broja\u010da kreiranih i atkivnih ra\u010duna. Pored toga, testiranje izuzetka.\n\nStedniRacun s1(100), s2, s3(200), s4, s5;\n\ns1.Podigni(50);\ns2.Ulozi(555);\ns3.Podigni(200);\n\t\t\ntry {\n\ts1.Podigni(50);\n\ts2.Podigni(555);\n\ts4.Ulozi(-10);\n\ts3.Ulozi(555);\n\ts1.Ulozi(50000);\n\ts4.Ulozi(33);\n\ts5.Ulozi(666);\n}\ncatch(std::logic_error e)\n{\n\tstd::cout << e.what() << std::endl;\n}\n\t\nstd::cout << s1.DajStanje() << \" \" << s2.DajStanje() << \" \" << s3.DajStanje() << \" \" << s4.DajStanje() << \" \" << s5.DajStanje() << std::endl;\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n\t",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Transakcija odbijena\\n0 0 0 0 0\\nBroj kreiranih: 5\\nBroj aktivnih: 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3701,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT2: Testiranje pona\u0161anja broja\u010da kada ima i situacija gdje se izvr\u0161ava brisanje uz testiranje izuzetaka.\n\nStedniRacun s1(100), s2, s3(200), s4, s5;\n{\n\tStedniRacun s6, s7(1000), s8, s9, s10;\n\ts9.Ulozi(1000);\n\n\tstd::cout << s6.DajStanje() << \" \" << s7.DajStanje() << \" \" << s8.DajStanje() <<\" \" << s9.DajStanje() <<\" \" << s10.DajStanje() << std::endl;\n\tstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n\tstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n}\n\t\ns1.Podigni(50);\ns3.Podigni(200);\ns2.Ulozi(555);\n\t\t\ntry {\n\t\t\n\tStedniRacun s6, s7(1000);\n\t\t\n\ts1.Podigni(50);\n\ts2.Podigni(555);\n\ts4.ObracunajKamatu(-10);\n\tStedniRacun s8, s9, s10;\n\ts3.Ulozi(555);\n\ts1.Ulozi(50000);\n\ts4.Ulozi(33);\n\ts5.Ulozi(666);\n}\t\ncatch(std::logic_error e)\n{\n\tstd::cout << e.what() << std::endl;\n}\n\t\nstd::cout << s1.DajStanje() << \" \" << s2.DajStanje() << \" \" << s3.DajStanje() << \" \" << s4.DajStanje() << \" \" << s5.DajStanje() << std::endl;\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1000 0 1000 0\\nBroj kreiranih: 10\\nBroj aktivnih: 10\\nNedozvoljena kamatna stopa\\n0 0 0 0 0\\nBroj kreiranih: 12\\nBroj aktivnih: 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3702,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje broja\u010da u situacijama kada se pojavljuje i kopiraju\u0107a inicijalizacija\n\nStedniRacun s1(1000), s2(s1), s3(s2), s4(s3), s5(s4);\n\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n\t\n{ StedniRacun s6(s1), s7(1000), s8, s9(s8), s10; }\n\t\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n\t\t\ntry {\n\t\t\n\tStedniRacun s6(s1), s7(1000), s8, s9(s8), s10;\n}\n\t\ncatch(std::logic_error e)\n{\n\tstd::cout << e.what() << std::endl;\n}\n\t\t\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n\t\nStedniRacun s6(s1), s7(1000), s8, s9(s8), s10;\n\t\nstd::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\nstd::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj kreiranih: 5\\nBroj aktivnih: 5\\nBroj kreiranih: 10\\nBroj aktivnih: 5\\nBroj kreiranih: 15\\nBroj aktivnih: 5\\nBroj kreiranih: 20\\nBroj aktivnih: 10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

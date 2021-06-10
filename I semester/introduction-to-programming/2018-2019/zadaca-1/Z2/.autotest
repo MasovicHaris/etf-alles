@@ -1,0 +1,164 @@
+{
+    "id": 5550,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 1, zadatak 2",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "93"
+            },
+            "expected": [
+                "Unesite iznos: 1 novcanica od 50 KM\\n2 novcanica od 20 KM\\n0 novcanica od 10 KM\\n0 novcanica od 5 KM\\n1 novcanica od 2 KM\\n1 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1"
+            },
+            "expected": [
+                "Unesite iznos: 0 novcanica od 50 KM\\n0 novcanica od 20 KM\\n0 novcanica od 10 KM\\n0 novcanica od 5 KM\\n0 novcanica od 2 KM\\n1 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "50"
+            },
+            "expected": [
+                "Unesite iznos: 1 novcanica od 50 KM\\n0 novcanica od 20 KM\\n0 novcanica od 10 KM\\n0 novcanica od 5 KM\\n0 novcanica od 2 KM\\n0 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "40"
+            },
+            "expected": [
+                "Unesite iznos: 0 novcanica od 50 KM\\n2 novcanica od 20 KM\\n0 novcanica od 10 KM\\n0 novcanica od 5 KM\\n0 novcanica od 2 KM\\n0 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "51"
+            },
+            "expected": [
+                "Unesite iznos: 1 novcanica od 50 KM\\n0 novcanica od 20 KM\\n0 novcanica od 10 KM\\n0 novcanica od 5 KM\\n0 novcanica od 2 KM\\n1 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "88"
+            },
+            "expected": [
+                "Unesite iznos: 1 novcanica od 50 KM\\n1 novcanica od 20 KM\\n1 novcanica od 10 KM\\n1 novcanica od 5 KM\\n1 novcanica od 2 KM\\n1 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "999"
+            },
+            "expected": [
+                "Unesite iznos: 19 novcanica od 50 KM\\n2 novcanica od 20 KM\\n0 novcanica od 10 KM\\n1 novcanica od 5 KM\\n2 novcanica od 2 KM\\n0 novcanica od 1 KM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

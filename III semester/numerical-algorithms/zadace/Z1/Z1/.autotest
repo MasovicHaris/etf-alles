@@ -1,0 +1,1067 @@
+{
+    "id": 1364,
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 1, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1493,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1: Testiranje inicijalizacije vektora nula\nstd::cout << \"<\";\nVector v1(5);\nv1.Print(' ');\nstd::cout << \">\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "<0 0 0 0 0>"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1494,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT2: Testiranje konstruktora s negativnom dimenzijom\ntry {Vector v2 (-2);}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad dimension'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1495,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT3: Testiranje prazne inicijalizacijske liste\ntry {Vector v3 {};}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad dimension'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1496,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4: Inicijalizacija vektora listom\nVector v2 {1.25,2.34,3.87,4.12,5.123};\nv2.Print(',');",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.25,2.34,3.87,4.12,5.123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1497,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5: Provjera broja elementa vektora\nVector v1(10);\nstd::cout<<v1.NElems();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1498,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT6: Provjera operatora [] i ()\nVector v3 {6.32,7.12,8.87,9.44,10.31};\nstd::cout<<v3[1]<<\" \"<<v3(3)<<\"\\n\";\nv3[1]=12;\nv3(3)=13;\nstd::cout<<v3[1]<<\" \"<<v3(3);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7.12 8.87\\n12 13"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1499,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT7: Provjera sabiranja i oduzimanja vektora\nVector v2 {1.25,2.34,3.87,4.12,5.123}, v3 {6.32,7.12,8.87,9.44,10.31};\n(v2+v3).Print(' ');\nstd::cout<<\"\\n\";\n(v2-v3).Print(' ');",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7.57 9.46 12.74 13.56 15.433\\n-5.07 -4.78 -5 -5.32 -5.187"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1500,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8: Provjera sabiranja vektora razlicitih velicina\ntry {\nVector v3 {1,2,3}, v4{1,2}, v(2);\nv=v3+v4;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1501,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT9: Provjera oduzimanja vektora razlicitih velicina\ntry {\nVector v3 {1,2,3}, v4{1,2}, v(2);\nv=v3-v4;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1502,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT10: Provjera operatora += i -=\nVector v1 {1,2,3,4,5}, v2(5);\nv1+=v2;\nv1.Print();\nv2-=v1;\nstd::cout<<\"\\n\";\nv2.Print();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n2\\n3\\n4\\n5\\n-1\\n-2\\n-3\\n-4\\n-5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1503,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT11: Provjera operatora += na vektore razlicitih velicina\ntry {\nVector v3 {1,2,3}, v4{1,2};\nv3+=v4;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1504,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT12: Provjera operatora -= na vektore razlicitih velicina\ntry {\nVector v3 {1,2,3}, v4{1,2};\nv3-=v4;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1505,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT13: Provjera mnozenja i dijeljenja vektora sa skalarom\nVector vk{2,3,4,5,6};\nVector v4=vk*5;\nv4.Print(' ');\nv4=vk\/2;\nstd::cout<<\"\\n\";\nv4.Print(' ');\nv4=2*vk;\nstd::cout<<\"\\n\";\nv4.Print(' ');",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 15 20 25 30\\n1 1.5 2 2.5 3\\n4 6 8 10 12"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1506,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT14: Provjera operatora += i \/= vektora sa skalarima\nVector vk{2,3,4,5,6};\nvk*=20;\nvk.Print(' ');\nvk\/=10;\nstd::cout<<\"\\n\";\nvk.Print(' ');",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "40 60 80 100 120\\n4 6 8 10 12"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1507,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT15: Provjera skalarnog proizvoda dva vektora\nVector va{2,3,4,5,6}, vb{6,5,4,3,2};\nstd::cout<<va*vb;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "70"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1508,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT16: Provjera skalarnog proizvoda dva nekompatibilna vektora\ntry{\nVector v3 {1,2,3}, v4{1,2};\ndouble a=v3*v4;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1509,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT17: Provjera dijeljenja sa 0\ntry{\nVector vk{2,3,4,5,6};\nVector v4=vk\/0;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Division by zero'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1510,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT18: Provjera operatora \/= sa 0\ntry{\nVector vk{2,3,4,5,6};\nvk\/=0;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Division by zero'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1511,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT19: Testiranje inicijalizacije matrice nula i broj redova i kolona\nMatrix mat1(3,2);\nmat1.Print(1);\nstd::cout<<\"\\n\"<<mat1.NRows()<<\",\"<<mat1.NCols();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "00\\n00\\n00\\n3,2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1512,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT20: Testiranje konstruktora s negativnom dimenzijom \ntry {Matrix mat2 (-2,2);}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad dimension'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1513,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT21: Testiranje konstruktora s nultom dimenzijom \ntry {Matrix mat2 (2,0);}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad dimension'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1514,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT22: Testiranje prazne inicijalizacijske liste\ntry {Matrix mat3 {{}};}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad dimension'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1515,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT23: Testiranje grbave matrice\ntry {Matrix mat2 {{1.25},{3.87,4.12},{5.123,5.66,4.333}};}\ncatch (std::logic_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad matrix'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1516,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT24: Provjera operatora [] i ()\nMatrix mat3 {{6.32,7.12},{8.87,9.44}};\nstd::cout<<mat3[1][1]<<\" \"<<mat3(1,1);\nmat3[1][1]=12;\nmat3(1,1)=13;\nstd::cout<<\"\\n\"<<mat3[1][1]<<\" \"<<mat3(1,1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9.44 6.32\\n12 13"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1517,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT25: Testiranje zbira i razlike matrica\nMatrix mat2 {{1.25,2.34},{3.87,4.12},{5.123,5.66}},mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}};\n(mat2+mat4).Print(10);\nstd::cout<<\"\\n\\n\";\n(mat2-mat4).Print(10);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "      8.75      4.98\\n     11.64      6.23\\n    10.243    10.886\\n\\n\\n     -6.25      -0.3\\n      -3.9      2.01\\n     0.003     0.434"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1518,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT26: Testiranje operatora += i -=\nMatrix mat1(3,2), mat2 {{1.25,2.34},{3.87,4.12},{5.123,5.66}};\nmat1+=mat2;\nmat1.Print(10);\nmat1-=mat2;\nstd::cout<<\"\\n\";\nmat1.Print(10);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "      1.25      2.34\\n      3.87      4.12\\n     5.123      5.66\\n\\n         0         0\\n         0         0\\n         0         0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1519,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT27: Provjera sabiranja matrica razlicitih velicina\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2},{2,3}};\n(mat4+mat7).Print();\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1520,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT28: Provjera oduzimanja matrica razlicitih velicina\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2},{2,3}};\n(mat4-mat7).Print();\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1521,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT29: Provjera operatora += na matrice razlicitih velicina\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2},{2,3}};\nmat4+=mat7;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1522,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT30: Provjera operatora -= na matrice razlicitih velicina\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2},{2,3}};\nmat4-=mat7;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1523,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT31: Provjera mnozenja sa skalarom i operatora *=\nMatrix mat2 {{1.25,2.34},{3.87,4.12},{5.123,5.66}};\nMatrix mat5=mat2*5;\nmat5.Print(6);\nmat5=2*mat2;\nstd::cout<<\"\\n\";\nmat5.Print(6);\nmat2*=10;\nstd::cout<<\"\\n\";\nmat2.Print(6);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "  6.25  11.7\\n 19.35  20.6\\n25.615  28.3\\n\\n   2.5  4.68\\n  7.74  8.24\\n10.246 11.32\\n\\n  12.5  23.4\\n  38.7  41.2\\n 51.23  56.6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1524,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT32: Provjera mnozenja matrica i operatora *=\nMatrix  mata {{1.25,2.34},{3.87,4.12},{5.123,5.66}}, matb {{6.32,7.12},{8.87,9.44}};\nMatrix mat6=mata*matb;\nmat6.Print();\nmat6*=matb;\nstd::cout<<\"\\n\";\nmat6.Print();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "   28.6558   30.9896\\n   61.0028   66.4472\\n   82.5816   89.9062\\n\\n   455.982   496.571\\n   974.924    1061.6\\n   1319.38   1436.69"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1525,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT33: Provjera mnozenja matrica nekompatibilnih formata\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2,5},{2,3,4},{5,7,8}};\n(mat4*mat7).Print();\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1526,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT34: Provjera operatora *= nekompatibilnih marica\ntry {\nMatrix mat4 {{7.5,2.64},{7.77,2.11},{5.12,5.226}},mat7 {{1,2,5},{2,3,4},{5,7,8}};\nmat4*=mat7;\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1527,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT35: Provjera mnozenja matrice i vektora\nVector v10{2.5,3.5};\nMatrix mat8{{2,3},{3,4},{5,6}};\nVector v=mat8*v10;\nv.Print(' ');",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "15.5 21.5 33.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1528,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT36: Provjera mnozenja nekompatibilne matrice i vektora\ntry{\nVector v10{2.5,3.5,4.5,2.8};\nMatrix mat8{{2,3},{3,4},{5,6}};\nVector v=mat8*v10;\nv.Print(' ');\n}\ncatch (std::domain_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Incompatible formats'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1529,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT37: Provjera transponovanja matrice koja nije kvadratna\nMatrix mat{{1,2,3},{4,5,6}};\nmat.Transpose();\nmat.Print(2);\nstd::cout<<\"\\n\";\nmat=Transpose(mat);\nmat.Print(2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 4\\n 2 5\\n 3 6\\n 1 2 3\\n 4 5 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1530,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT38: Provjera transponovanja kvadratne matrice\nMatrix mat{{1,2,3},{4,5,6},{7,8,9}};\nmat.Transpose();\nmat.Print(2);\nstd::cout<<\"\\n\";\nmat=Transpose(mat);\nmat.Print(2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 1 4 7\\n 2 5 8\\n 3 6 9\\n\\n 1 2 3\\n 4 5 6\\n 7 8 9"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1531,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT39: Provjera validnosti indexa vektora\ntry{\nVector v3 {6.32,7.12,8.87,9.44,10.31};\nstd::cout<<v3(6)<<\"\\n\";\n}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid index'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1532,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT40: Provjera operatora () na index\ntry{\nMatrix mat3 {{6.32,7.12},{8.87,9.44}};\nstd::cout<<mat3(3,-1);\n}\ncatch (std::range_error e) {std::cout << \"'\" << e.what() << \"'\";}\ncatch (...) {std::cout << \"Pogresan tip izuzetka\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid index'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1533,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT41: Testiranje funkcije Print\n  const Vector v{0.325, -1.345, 16.007};\n  v.Print(' '); \n  std::cout << std::endl;\n  v.Print('\\n', 2); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.325 -1.345 16.007\\n0\\n0\\n16.007"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1534,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT42: Testiranje funkcije PrintVector\n  Vector v{0.325, -2.345, 16.007};\n  PrintVector(v); \n  std::cout << std::endl;\n  PrintVector(v, ' ');\n  std::cout << std::endl ;\n  PrintVector(v, ' ', 1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.325\\n-2.345\\n16.007\\n\\n0.325 -2.345 16.007\\n0 -2.345 16.007"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1535,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT43: Testiranje funkcije GetEpsilon\n  Vector v1{1.0003, -2.345, 16.007};\n  Vector v2{-2.345, 1.0003, 16.007};\n  Vector v3{16.007, 1.0003, -2.345,};\n  Vector v4{6.007, 1.0003, -2.345,};\n  std::cout << v1.GetEpsilon() << std::endl << v2.GetEpsilon() << std::endl << v3.GetEpsilon() << std::endl << v4.GetEpsilon();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3.59907e-14\\n3.59907e-14\\n3.59907e-14\\n1.44898e-14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1536,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT44: Testiranje funkcije Norm\n  Vector v1{1.0003, -2.345, 16.007, 12.45};\n  Vector v2{-1.0003, -2.345, -16.007, 12.45};\n  Vector v3{1.0003, 2.345, 6.003, 12.45};\n  Vector v4{1.0003, -2.345, 16.007, 2.45};\n  std::cout << v1.Norm() << \" \" << v2.Norm() << \" \" << v3.Norm() << \" \" << v4.Norm();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20.4384 20.4384 14.0548 16.3929"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1537,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT45: Testiranje funkcije VectorNorm\n  Vector v1{1.0003, -2.345, 16.007, 12.45};\n  Vector v2{-1.0003, -2.345, -16.007, 2.45};\n  Vector v3{1.0003, 2.345, 6.003, 12.45};\n  Vector v4{1.0003, -2.345, 16.007, 2.45};\n  std::cout << VectorNorm(v1) << \" \" << VectorNorm(v2) << \" \" << VectorNorm(v3) << \" \" << VectorNorm(v4);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20.4384 16.3929 14.0548 16.3929"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1538,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT46: Testiranje funkcije Print\n  const Matrix m{{0.325, -1.345, 16.007}, {2.35, 6.54, -6.124}};\n  m.Print(9); \n  std::cout << std::endl;\n  m.Print(11, 2); ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "    0.325   -1.345   16.007\\n     2.35     6.54   -6.124\\n\\n          0          0     16.007\\n       2.35       6.54     -6.124"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1539,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT47: Testiranje funkcije PrintVector\n  Matrix m{{0.325, -1.345, 16.007}, {2.35, 6.54, -6.124}};\n  PrintMatrix(m);\n  std::cout << std::endl;\n  PrintMatrix(m, 9);\n  std::cout << std::endl ;\n  PrintMatrix(m, 9, 1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     0.325    -1.345    16.007\\n      2.35      6.54    -6.124\\n\\n    0.325   -1.345   16.007\\n     2.35     6.54   -6.124\\n\\n        0   -1.345   16.007\\n     2.35     6.54   -6.124"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1540,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT48: Testiranje funkcije GetEpsilon\n  Matrix m1{{0.325, -1.345, 16.007}, {2.35, 6.54, -6.124}};\n  Matrix m2{{0.325, 1.345, 6.007}, {2.35, 6.444, -6.124}};\n  Matrix m3{{1.325, 1.344, 16.007}, {1.35, 6.74, 6.124}};\n  Matrix m4{{0.325, -1.345, 1.7}, {-2.35, 6.54, -6.124}};\n  std::cout << m1.GetEpsilon() << std::endl << m2.GetEpsilon() << std::endl << m3.GetEpsilon() << std::endl << m4.GetEpsilon();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4.11793e-14\\n2.45808e-14\\n4.12154e-14\\n2.11353e-14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1541,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT49: Testiranje funkcije Norm\n  Matrix m1{{0.325, -1.345, 16.007}, {2.35, 6.54, -6.124}};\n  Matrix m2{{0.325, 1.345, 6.007}, {2.35, 6.444, -6.124}};\n  Matrix m3{{1.325, 1.344, 16.007}, {1.35, 6.74, 6.124}};\n  Matrix m4{{0.325, -1.345, 1.7}, {-2.35, 6.54, -6.124}};\n  std::cout << m1.Norm() << \" \" << m2.Norm() << \" \" << m3.Norm() << \" \" << m4.Norm();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "18.5455 11.0702 18.5618 9.51851"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1542,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT50: Testiranje funkcije MatrixNorm\n  Matrix m1{{0.325, -1.345, 16.007}, {2.35, 6.54, -6.124}};\n  Matrix m2{{0.325, 1.345, 6.007}, {2.35, 6.444, -6.124}};\n  Matrix m3{{1.325, 1.344, 16.007}, {1.35, 6.74, 6.124}};\n  Matrix m4{{0.325, -1.345, 1.7}, {-2.35, 6.54, -6.124}};\n  std::cout << MatrixNorm(m1) << \" \" << MatrixNorm(m2) << \" \" << MatrixNorm(m3) << \" \" << MatrixNorm(m4);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "18.5455 11.0702 18.5618 9.51851"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

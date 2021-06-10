@@ -1,0 +1,48 @@
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\StubsMocks.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\StubsMocks.pdb
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csprojAssemblyReference.cache
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csproj.CopyComplete
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.dll
+C:\Users\Amir\Downloads\AmirVVSZ3\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.pdb
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\StubsMocks.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\StubsMocks.pdb
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\UPS.exe
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\UPS.pdb
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\UPS.exe.config
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\obj\Debug\StubsMocks.csprojAssemblyReference.cache
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\obj\Debug\StubsMocks.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\obj\Debug\StubsMocks.csproj.CopyComplete
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\obj\Debug\StubsMocks.dll
+C:\Users\Amir\Downloads\Zadaća 3\Zadaća 3\StubsMocks\obj\Debug\StubsMocks.pdb
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\StubsMocks.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\StubsMocks.pdb
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\UPS.exe
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\UPS.pdb
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\UPS.exe.config
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.csproj.CopyComplete
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.dll
+C:\Users\User\Desktop\Zadaca 3\StubsMocks\obj\Debug\StubsMocks.pdb

@@ -1,0 +1,119 @@
+{
+    "id": 8621,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 12, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3753,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 testiranje konstruktora  \n  Sat s1(20, 4, 39);\n  std::cout << s1 << std::endl;\n  Sat s2(25, 150, 290);\n  std::cout << s2 << std::endl;\n  Sat s3;\n  std::cout << s3 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20:04:39\\n03:34:50\\n00:00:00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3754,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 testiranje operatora ++ i --,  \n  Sat s1(10, 4, 39);\n  std::cout << s1 << std::endl;\n  Sat s2(26, 160, 290);\n  std::cout << s2 << std::endl;\n  ++s1;\n  std::cout << s1 << std::endl;\n  std::cout << ++s1 << std::endl;\n  s1++;\n  std::cout << s1 << std::endl;\n  std::cout << s1++ << std::endl;\n  std::cout << s1 << std::endl;\n  --s1;\n  std::cout << s1 << std::endl;\n  std::cout << --s1 << std::endl;\n  s1--;\n  std::cout << s1 << std::endl;\n  std::cout << s1-- << std::endl;\n  std::cout << s1 << std::endl;\n  (--(++(++(++(++s1)))));\n  std::cout << s1 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10:04:39\\n04:44:50\\n10:04:40\\n10:04:41\\n10:04:42\\n10:04:42\\n10:04:43\\n10:04:42\\n10:04:41\\n10:04:40\\n10:04:40\\n10:04:39\\n10:04:42"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3755,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  \/\/AT3 testiranje operatora += i -=\n  Sat s1(11, 4, 39);\n  std::cout << s1 << std::endl;\n  s1 += 25000;\n  std::cout << s1 << std::endl;\n  s1 -= 25000;\n  std::cout << s1 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "11:04:39\\n18:01:19\\n11:04:39"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3756,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  \/\/AT 4 testiranje operatora +, - i +=\n  Sat s1(11, 4, 39);\n  std::cout << s1 << std::endl;\n  Sat s2(25, 150, 1000);\n  std::cout << s2 << std::endl;\n  std::cout << s1 - s2 << std::endl;\n  std::cout << s1 + 100 << std::endl;\n  std::cout << s1 << std::endl;        \n  std::cout << s1 - 100 << std::endl;\n  std::cout << s1 << std::endl;\n  s2 = s1 += 100; \n  std::cout << s2 << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "11:04:39\\n03:46:40\\n26279\\n11:06:19\\n11:04:39\\n11:02:59\\n11:04:39\\n11:06:19"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

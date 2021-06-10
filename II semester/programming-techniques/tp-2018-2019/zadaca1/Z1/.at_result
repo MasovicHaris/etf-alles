@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1202": {
+            "status": 1,
+            "run_result": {
+                "output": "10 7 0 2 6 6 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1203": {
+            "status": 1,
+            "run_result": {
+                "output": "1 1 1 1 1 3 1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1204": {
+            "status": 1,
+            "run_result": {
+                "output": "10 7 0 2 2 1 12 1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1205": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 3 1 0 3 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1210": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: Palindromska otpornost broja 9991 iznosi 7\nPalindromska otpornost broja 8882 iznosi 6\nPalindromska otpornost broja 7773 iznosi 4\nPalindromska otpornost broja 6664 iznosi 2\nPalindromska otpornost broja 5555 iznosi 0\nPalindromska otpornost broja 4446 iznosi 4\nPalindromska otpornost broja 3337 iznosi 6\nPalindromska otpornost broja 2228 iznosi 2\nPalindromska otpornost broja 11119 iznosi 2\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1553950300
+}

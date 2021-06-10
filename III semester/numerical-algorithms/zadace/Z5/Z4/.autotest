@@ -1,0 +1,121 @@
+{
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 5, zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 76,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 1: DCT\/IDCT\nstd::vector<double> x{1, 2, 3, 4, 4, 3, 2, 1};\nauto y = LossyCompress(x, 8);\nfor(double e : y) std::cout << e << \" \";\nstd::cout << std::endl;\nauto xx = LossyDecompress(y);\nfor(auto e : xx) std::cout << e << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20 0 -6.30864 0 0 0 -0.448342 8\\n1 2 3 4 4 3 2 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 77,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 2: uzorci zbira nekoliko harmonijskih funkcija kompresuju se odlicno\nconst double PI = 4 * std::atan(1);\nstd::vector<double> x(128);\nfor(int i = 0; i < 128; i++) {\n    double t = PI * (i + 0.5) \/ 128;\n    x[i] = 3 * std::cos(t) - 0.4 * std::cos(2 * t) + 0.2 * std::cos(3 * t);\n}\nauto y = LossyCompress(x, 5);\nauto xx = LossyDecompress(y);\ndouble maxerr = 0;\nfor(int i = 0; i < x.size(); i++)\nif(std::fabs(xx[i] - x[i]) > maxerr) maxerr = std::fabs(xx[i] - x[i]);\nif(maxerr < 1e-10) std::cout << \"OK\";\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 78,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 3: kompresija na polovicu du\u017eine\nconst double PI = 4 * std::atan(1);\nstd::vector<double> x(128);\nfor(int i = 0; i < 128; i++) x[i] = i;\nauto y = LossyCompress(x, 64);\nauto xx = LossyDecompress(y);\ndouble toterr = 0;\nfor(int i = 0; i < x.size(); i++) toterr += std::fabs(xx[i] - x[i]);\nstd::cout << toterr \/ 128;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.0109891"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 79,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 4: kompresija na osminu du\u017eine\nconst double PI = 4 * std::atan(1);\nstd::vector<double> x(128);\nfor(int i = 0; i < 128; i++) x[i] = i;\nauto y = LossyCompress(x, 16);\nauto xx = LossyDecompress(y);\ndouble toterr = 0;\nfor(int i = 0; i < x.size(); i++) toterr += std::fabs(xx[i] - x[i]);\nstd::cout << toterr \/ 128;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.184188"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 80,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 5: kompresija izuzeci\ntry {\n    LossyCompress({1, 2, 3, 4}, -1);\n}\ncatch(std::range_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    LossyCompress({1, 2, 3, 4}, 5);\n}\ncatch(std::range_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    LossyCompress({1, 2, 3, 4, 5}, 2);\n}\ncatch(std::range_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    LossyDecompress({0, 0, 0, 0, 3});\n}\ncatch(std::logic_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    LossyDecompress({0, 0, 0, 0, 0, 0, 4});\n}\ncatch(std::logic_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    LossyDecompress({0, 0, 0, 0, 1.5});\n}\ncatch(std::logic_error e) {\n    std::cout << \"'\" << e.what() << \"'\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad new size'\\n'Bad new size'\\n'Data size must be a power of two'\\n'Bad compressed sequence'\\n'Bad compressed sequence'\\n'Bad compressed sequence'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

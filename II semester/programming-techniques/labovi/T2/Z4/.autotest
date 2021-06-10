@@ -1,0 +1,94 @@
+{
+    "id": 8524,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 2, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3164,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: primjer iz zadatka\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n3.5\n2.8\n10\n-1.54\n12.37\n0.24\n\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: \\nR1 = X1 = \\nR2 = X2 = \\nR3 = X3 = \\nParalelna veza ovih elemenata ima R = 2.51479 i X = 0.897637."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3165,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: postoji otpor 0, ukupno kolo nema impedanse\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n10\n-10\n0\n0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: \\nR1 = X1 = \\nR2 = X2 = \\nParalelna veza ovih elemenata ima R = 0 i X = 0."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3166,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: 7 otpornika\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7\n1\n1\n2\n-2\n3.3\n-3.3\n0.4\n0.4\n5\n-0.55\n6.1\n0.69\n77\n77\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: \\nR1 = X1 =\\nR2 = X2 =\\nR3 = X3 = \\nR4 = X4 = \\nR5 = X5 = \\nR6 = X6 = \\nR7 = X7 = \\nParalelna veza ovih elemenata ima R = 0.308349 i X = 0.165542."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

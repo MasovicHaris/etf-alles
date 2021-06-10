@@ -1,0 +1,144 @@
+{
+    "id": 8584,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 8, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3526,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1\n\n  std::map<std::string, std::string> rjecnik \n    { \n        {\"jabuka\", \"apple\"}, \n        {\"da\", \"yes\"}, \n        {\"kako\", \"how\"}, \n        {\"ne\", \"no\"}, \n        {\"majmun\", \"monkey\"}, \n        {\"mart\", \"ozujak\"},\n        {\"maj\", \"svibanj\"}, \n        {\"jul\", \"srpanj\"}\n    };\n    \n  std::cout << ZamijeniPremaRjecniku(\"  kako   da   ne   \", rjecnik) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "  how   yes   no   \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3527,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2\n\n  std::map<std::string, std::string> rjecnik \n    { \n        {\"jabuka\", \"apple\"}, \n        {\"da\", \"yes\"}, \n        {\"kako\", \"how\"}, \n        {\"ne\", \"no\"}, \n        {\"majmun\", \"monkey\"}, \n        {\"mart\", \"ozujak\"},\n        {\"maj\", \"svibanj\"}, \n        {\"jul\", \"srpanj\"}\n    };\n    \n  std::cout << ZamijeniPremaRjecniku(\"danas je 8. mart a 1. maj je praznik rada\", rjecnik) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "danas je 8. ozujak a 1. svibanj je praznik rada\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3528,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/AT3\n\n    std::map<std::string, std::string> rjecnik \n    { \n        {\"jabuka\", \"apple\"}, \n        {\"da\", \"yes\"}, \n        {\"kako\", \"how\"}, \n        {\"ne\", \"no\"}, \n        {\"majmun\", \"monkey\"}, \n        {\"mart\", \"ozujak\"},\n        {\"maj\", \"svibanj\"}, \n        {\"jul\", \"srpanj\"}\n    };\n\n    std::cout << ZamijeniPremaRjecniku(\"davor martic ima sestre maju i juliju\", rjecnik) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "davor martic ima sestre maju i juliju\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3529,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4\n\n    std::map<std::string, std::string> rjecnik \n    { \n        {\"ana\", \"nan\"}, \n        {\"lov\", \"hunt\"}, \n        {\"volim\", \"love\"},\n    };\n    std::cout << ZamijeniPremaRjecniku(\"ana voli milovana nanan\", rjecnik) << std::endl;\n\n   \n    std::map<std::string, std::string> rjecnik1 \n    { \n        {\"ana\", \"nan\"}, \n        {\"lov\", \"hunt\"}, \n        {\"voli\", \"love\"},\n    };\n    std::cout << ZamijeniPremaRjecniku(\"ana voli milovana nanan\", rjecnik1) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "nan voli milovana nanan\\nnan love milovana nanan\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3530,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5\n\n    std::map<std::string, std::string> rjecnik\n    { \n        {\"km\", \"kilometar\"}, \n        {\"kg\", \"kilogram\"}, \n        {\"dl\", \"decilitar\"}, \n        {\"cal\", \"kalorija\"}, \n        {\"rad\", \"radijan\"}, \n        {\"hu\", \"madjarska\"}\n    };\n    \n    std::cout << ZamijeniPremaRjecniku(\"   rad     hudl    kg hugh kmkg jackman   dl      kg     k g\", rjecnik) << std::endl;\n    ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "   radijan     hudl    kilogram hugh kmkg jackman   decilitar      kilogram     k g\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

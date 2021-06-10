@@ -1,0 +1,119 @@
+{
+    "id": 7020,
+    "name": "Osnove ra\u010dunarstva (2015\/2016), Tutorial 8, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 762,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "double niz[] = { 1.23, 3.47, 0, 1.23666 };\nzaokruzi(niz, 4);\n    \nint i;\n\nfor(i = 0; i < 4; i++) {\n    printf(\"%g \", niz[i]);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.2 3.5 0 1.2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 763,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "double niz[] = { 1.23, 3.47, 0, 1.23666 };\nzaokruzi(niz, 0);\nprintf (\"OK\");",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 764,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "double niz[]={14.4499, 14.4500, 14.39999, -14.4499, -14.4500};\nint i;\nzaokruzi(niz, 5);\nfor (i=0; i<5; i++) \n    printf(\"%g, \", niz[i]);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "14.4, 14.5, 14.4, -14.4, -14.5, "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1547,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "double niz[10000], razlika;\nint i;\nniz[0]=0;\nfor (i=1; i<10000; i++)\n   niz[i] = i \/ 100.0;\nzaokruzi(niz,10000);\nfor (i=1; i<10000; i++) {\n   razlika = niz[i]-niz[i-1];\n   if (i%10 == 5 && fabs(razlika-0.1) > EPSILON)\n      printf(\"Greska %d\\n\", i);\n   if (i%10 != 5 && fabs(razlika) > EPSILON)\n      printf(\"Greska %d\\n\", i);\n}\nprintf(\"OK\");",
+            "global_above_main": "#define EPSILON 0.00001\n#include <math.h>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,158 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In lambda function:\nmain.cpp:47:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n   if(std::sqrt(x) == round(std::sqrt(x))) return true;\n                                        ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "47",
+                "col": "40",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_5217/main.cpp:47:40: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]   if(std::sqrt(x) == round(std::sqrt(x))) return true;                                        ^",
+                "code": "if(std::sqrt(x) == round(std::sqrt(x))) return true;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3344": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 998001\nNajmanji element deka se pojavljuje 3 puta u deku\nU deku ima 4 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je -27\nElementi koji nisu trocifreni su: 1849 3327 12544 -27 998001 49 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3345": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 2123\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 2 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 1\nElementi koji nisu trocifreni su: 1000 1 2123 -12 9 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3346": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 99110\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 0 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 12\nElementi koji nisu trocifreni su: 12 35 99110 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3347": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 100\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 10 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 1\nElementi koji nisu trocifreni su: 1 4 9 16 25 36 49 64 81 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3348": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 333333\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 0\nElementi koji nisu trocifreni su: 1053 0 333333 55 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3349": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 0\nNajmanji element deka se pojavljuje 10 puta u deku\nU deku ima 10 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 0\nElementi koji nisu trocifreni su: 0 0 0 0 0 0 0 0 0 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3350": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 225\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je -64\nElementi koji nisu trocifreni su: -64 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3351": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 999\nNajmanji element deka se pojavljuje 1 puta u deku\nU deku ima 1 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 100\nElementi koji nisu trocifreni su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3374": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata: Unesite elemente: Najveci element deka je 7\nNajmanji element deka se pojavljuje 14 puta u deku\nU deku ima 43 brojeva koji su potpuni kvadrati\nPrvi element sa najmanjim brojem cifara je 6\nElementi koji nisu trocifreni su: 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 6 4 7 5 3 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 1 2 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1491463274
+}

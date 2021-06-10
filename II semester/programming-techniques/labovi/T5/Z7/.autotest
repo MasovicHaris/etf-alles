@@ -1,0 +1,169 @@
+{
+    "id": 8557,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 7",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3365,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testiramo funkciju SumaBloka za dek cijelih brojeva\n\nstd::deque<double> d{1,2,3,4,5,6,7,8,9};\ncout<<\"Suma bloka je: \"<<SumaBloka(d.begin(), d.end());",
+            "global_above_main": "#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Suma bloka je: 45"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3366,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testiramo funkciju SumaBloka za vektor cijelih brojeva\n\nstd::vector<double> v{-95,25,333,96,6,12,1,2,35,0};\ncout<<\"Suma bloka je: \"<<SumaBloka(v.begin(), v.end());",
+            "global_above_main": "#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Suma bloka je: 415"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3367,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testiramo funkciju SumaBloka za niz realnih brojeva\n\ndouble niz[] {1.5,5.5,3.6,1.4,2};\ncout<<\"Suma bloka je: \"<<SumaBloka(std::begin(niz), std::end(niz));",
+            "global_above_main": "#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Suma bloka je: 14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3368,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testiramo funkciju SumaBloka za kontejner stringova (dek)\n\nstd::deque<std::string> d {\"Predmet:\",\" \",\"Tehnike\", \" \", \"programiranja\", \" \", \"2016\/2017\"};\nstd::string suma = SumaBloka (d.begin(), d.end());\nstd::cout << \"'\" << suma << \"'\";",
+            "global_above_main": "#include <string>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Predmet: Tehnike programiranja 2016\/2017'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3369,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Slucaj kada je blok prazan \n\/\/ulazni parametar je dek \n\ntry \n{\nstd::deque<double> d(0);\nauto suma= SumaBloka(d.begin(),d.end());\nstd::cout<<\"NE SMIJE SE ISPISATI!\";\n}\ncatch(std::range_error izuzetak) {\nstd::cout << izuzetak.what() << std::endl;\n}\ncatch(...){\nstd::cout<<\"POGRESAN TIP IZUZETKA!\";}",
+            "global_above_main": "#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Blok je prazan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3370,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: Testiramo funkciju SumaBloka za vektor stringova\n\nstd::vector<std::string> s{\"Predmet:\",\" \",\"Tehnike\", \" \", \"programiranja\", \" \", \"2016\/2017\"};\nstd::string suma = SumaBloka (s.begin(), s.end());\nstd::cout << \"'\" << suma << \"'\";\n",
+            "global_above_main": "#include <string>\n#include <vector>\n#include <deque>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Predmet: Tehnike programiranja 2016\/2017'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

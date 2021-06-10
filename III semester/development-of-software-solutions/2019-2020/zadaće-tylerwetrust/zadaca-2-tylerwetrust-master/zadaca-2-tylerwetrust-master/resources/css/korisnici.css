@@ -1,0 +1,27 @@
+.poljeIspravno {
+   -fx-control-inner-background: greenyellow;
+}
+.poljeNijeIspravno {
+   -fx-control-inner-background: lightpink;
+}
+#btnObrisi {
+   -fx-background-image: url("/img/edit-delete.png");
+   -fx-background-size: 15px;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 90%;
+
+}
+#btnDodaj{
+   -fx-background-image: url("/img/list-add.png");
+   -fx-background-size: 15px;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 90%;
+
+}
+#btnKraj {
+   -fx-background-image: url("/img/application-exit.png");
+   -fx-background-size: 15px;
+   -fx-background-repeat: no-repeat;
+   -fx-background-position: 90%;
+
+}

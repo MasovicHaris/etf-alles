@@ -1,0 +1,270 @@
+{
+    "id": 8614,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 11, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3709,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje izuzetka kada nisu saglasni kapaciteti liga u kopirajucem operatoru dodjele\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\nLiga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};\n\ntry { l1=l2; }\ncatch(std::logic_error e) { std::cout << e.what() << std::endl; }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nesaglasni kapaciteti liga"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3712,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje izuzetka kada nisu saglasni kapaciteti liga u pomjerajucem operatoru dodjele\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\nLiga l2{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Krupa\"};\n\ntry { l1=std::move(l2); }\ncatch(std::logic_error e) { std::cout << e.what() << std::endl; }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nesaglasni kapaciteti liga"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3713,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje izuzetka kada se dodaje tim preko maksimalnog kapaciteta lige\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n\ntry { l1.DodajNoviTim(\"FK Borac Banja Luka\"); }\ncatch(std::range_error e) { std::cout << e.what() << std::endl; }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Liga popunjena"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3714,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje izuzetka kada se rezultat utakmice registruje na tim koji nije u istoj ligi\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n\ntry { l1.RegistrirajUtakmicu(\"NK Zeljeznicar\", \"FK Krupa\", 1, 1); }\ncatch(std::logic_error e) { std::cout << e.what() << std::endl; }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tim nije nadjen"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3718,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: Testiranje izuzetka kada se unese pogresan rezultat utakmice\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\"};\n\ntry { l1.RegistrirajUtakmicu(\"NK Zeljeznicar\", \"FK Sarajevo\", 1, -10); }\ncatch(std::range_error e) { std::cout << e.what() << std::endl; }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravan broj golova"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3722,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT6: Testiranje da li se kopirajuci konstruktor ponasa konzistentno i da li je ispravno implementirano duboko kopiranje\n \nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\nl1.RegistrirajUtakmicu(\"NK Zeljeznicar\", \"HSK Zrinjski\",2,0);\nLiga l2(l1);\n\nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();\nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();\n\nl2.RegistrirajUtakmicu(\"FK Krupa\", \"FK Sloboda\",1,1);\n\nstd::cout << std::endl << \"Nakon izmjene kopije: \" << std::endl << std::endl;\n\nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();  \nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Orginalna Liga za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nKopija Lige za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nNakon izmjene kopije: \\n\\nOrginalna Liga za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nKopija Lige za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               1   0   1   0   1   1   1\\nFK Sloboda             1   0   1   0   1   1   1\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3724,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT7: Testiranje da li se operator dodjele ponasa konzistentno i da li je ispravno implementirano duboko kopiranje\n \nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\nl1.RegistrirajUtakmicu(\"NK Zeljeznicar\", \"HSK Zrinjski\",2,0);\n\nLiga l2 = l1;\n\nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();\nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();\n\nl2.RegistrirajUtakmicu(\"FK Krupa\", \"FK Sloboda\",1,1);\n\nstd::cout << std::endl << \"Nakon izmjene kopije: \" << std::endl << std::endl;\n\nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();  \nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Orginalna Liga za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nKopija Lige za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nNakon izmjene kopije: \\n\\nOrginalna Liga za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0\\n\\nKopija Lige za Prvaka: \\nNK Zeljeznicar         1   1   0   0   2   0   3\\nFK Krupa               1   0   1   0   1   1   1\\nFK Sloboda             1   0   1   0   1   1   1\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nHSK Zrinjski           1   0   0   1   0   2   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3726,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT8: Provjera ispravnog funkcionisanja operatora dodjele ako je varijabla vec incijalizirana\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\nLiga l2{\"NK Siroki Brijeg\", \"FK Mladost DK\", \"NK Celik\", \"NK Vitez\", \"NK Metalleghe BSI\", \"FK Olimpic\"};\n  \nl1.RegistrirajUtakmicu(\"FK Sloboda\", \"HSK Zrinjski\",1,1);\nl1.RegistrirajUtakmicu(\"FK Sarajevo\", \"HSK Zrinjski\",1,2);\nl1.RegistrirajUtakmicu(\"FK Krupa\", \"FK Radnik Bijeljina\",1,1);\nl1.RegistrirajUtakmicu(\"NK Zeljeznicar\",\"FK Krupa\",1,0);\nl1.RegistrirajUtakmicu(\"FK Radnik Bijeljina\", \"FK Sloboda\",0,1);\nl1.RegistrirajUtakmicu(\"FK Sarajevo\", \"NK Zeljeznicar\",0,3);\n  \nl2 = l1;\n  \nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();\nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Orginalna Liga za Prvaka: \\nNK Zeljeznicar         2   2   0   0   4   0   6\\nFK Sloboda             2   1   1   0   2   1   4\\nHSK Zrinjski           2   1   1   0   3   2   4\\nFK Krupa               2   0   1   1   1   2   1\\nFK Radnik Bijeljina    2   0   1   1   1   2   1\\nFK Sarajevo            2   0   0   2   1   5   0\\n\\nKopija Lige za Prvaka: \\nNK Zeljeznicar         2   2   0   0   4   0   6\\nFK Sloboda             2   1   1   0   2   1   4\\nHSK Zrinjski           2   1   1   0   3   2   4\\nFK Krupa               2   0   1   1   1   2   1\\nFK Radnik Bijeljina    2   0   1   1   1   2   1\\nFK Sarajevo            2   0   0   2   1   5   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3727,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT9: Provjera ispravnog funkcionisanja operatora dodjele kada je trenutni kapacitet lige u koju se dodjeljuje manji\n\nLiga l1{\"NK Zeljeznicar\", \"HSK Zrinjski\", \"FK Sarajevo\", \"FK Sloboda\", \"FK Krupa\", \"FK Radnik Bijeljina\"};\nLiga l2(6);\n  \nl2.DodajNoviTim(\"NK Siroki Brijeg\");\nl2.DodajNoviTim(\"NK Vitez\");\n\nl2.RegistrirajUtakmicu(\"NK Siroki Brijeg\", \"NK Vitez\",1,1);\n\nstd::cout << \"Djelimicna Liga za Ispadanje: \" << std::endl;\nl2.IspisiTabelu();\nstd::cout << std::endl;\n  \nl2 = l1;\n  \nl1.RegistrirajUtakmicu(\"FK Sloboda\", \"HSK Zrinjski\",1,1);\nl1.RegistrirajUtakmicu(\"FK Sarajevo\", \"HSK Zrinjski\",1,2);\nl1.RegistrirajUtakmicu(\"FK Krupa\", \"FK Radnik Bijeljina\",1,1);\nl1.RegistrirajUtakmicu(\"NK Zeljeznicar\",\"FK Krupa\",1,0);\nl1.RegistrirajUtakmicu(\"FK Radnik Bijeljina\", \"FK Sloboda\",0,1);\nl1.RegistrirajUtakmicu(\"FK Sarajevo\", \"NK Zeljeznicar\",0,3);\n  \nstd::cout << \"Orginalna Liga za Prvaka: \" << std::endl;\nl1.IspisiTabelu();\nstd::cout << std::endl << \"Kopija Lige za Prvaka: \" << std::endl;\nl2.IspisiTabelu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Djelimicna Liga za Ispadanje: \\nNK Siroki Brijeg       1   0   1   0   1   1   1\\nNK Vitez               1   0   1   0   1   1   1\\n\\nOrginalna Liga za Prvaka: \\nNK Zeljeznicar         2   2   0   0   4   0   6\\nFK Sloboda             2   1   1   0   2   1   4\\nHSK Zrinjski           2   1   1   0   3   2   4\\nFK Krupa               2   0   1   1   1   2   1\\nFK Radnik Bijeljina    2   0   1   1   1   2   1\\nFK Sarajevo            2   0   0   2   1   5   0\\n\\nKopija Lige za Prvaka: \\nFK Krupa               0   0   0   0   0   0   0\\nFK Radnik Bijeljina    0   0   0   0   0   0   0\\nFK Sarajevo            0   0   0   0   0   0   0\\nFK Sloboda             0   0   0   0   0   0   0\\nHSK Zrinjski           0   0   0   0   0   0   0\\nNK Zeljeznicar         0   0   0   0   0   0   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3743,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT10: Jednostavni memorijski test koji testira da li je dealokacija u destruktoru uspje\u0161na\n\n{\n  Liga l1{\"NK Zeljeznicar\", \"FK Sarajevo\"};\n  std::cout << \"Alocirano je: \" << ukupno_alocirano << \" B\" << std::endl;\n}\nstd::cout << \"Nakon brisanja je ostalo alocirano: \" << ukupno_alocirano << \" B\";",
+            "global_above_main": "#include<cstdlib>\n\nstruct Info {\n  void *adresa;\n  std::size_t velicina;\n  Info *veza;\n};\n\nInfo *mapa_alokacija(nullptr);\nstd::size_t ukupno_alocirano(0);\nstd::size_t maksimalno_dozvoljeno(1000);\n\nvoid *operator new(std::size_t broj_bajtova) {\n  if(ukupno_alocirano + broj_bajtova > maksimalno_dozvoljeno)\n    throw std::bad_alloc();\n  void *adresa(std::malloc(broj_bajtova));\n  if(!adresa) throw std::bad_alloc();\n  ukupno_alocirano += broj_bajtova;\n  Info info{adresa, broj_bajtova, mapa_alokacija};\n  mapa_alokacija = (Info*)std::malloc(sizeof(Info));\n  if(!mapa_alokacija) throw std::bad_alloc();\n  *mapa_alokacija = info;\n  return adresa;\n}\n\nvoid operator delete(void *adresa) noexcept {\n  Info *tekuci(mapa_alokacija), *prethodni(nullptr);\n  while(tekuci && tekuci->adresa != adresa) {\n    prethodni = tekuci; tekuci = tekuci->veza;\n  }\n  if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");\n  ukupno_alocirano -= tekuci->velicina;\n  if(prethodni) prethodni->veza = tekuci->veza;\n  else mapa_alokacija = tekuci->veza;\n  std::free(tekuci); std::free(adresa);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Alocirano je: 120 B\\nNakon brisanja je ostalo alocirano: 0 B",
+                "Alocirano je: 112 B\\nNakon brisanja je ostalo alocirano: 0 B"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

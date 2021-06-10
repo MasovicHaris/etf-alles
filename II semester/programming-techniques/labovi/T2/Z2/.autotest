@@ -1,0 +1,219 @@
+{
+    "id": 8522,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 2, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3153,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 3 1 4 2 1 3 1 4 2 1 3 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): Slijed je periodican sa osnovnim periodom 5."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3154,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: primjer iz postavke (nije periodican)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 5 1 7 1 5 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): Slijed nije periodican!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3155,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT3: poziv funkcije TestPerioda (1)\n    std::cout << std::boolalpha << TestPerioda({1, 2, 3, 1, 2}, 2) << \" \"\n              << TestPerioda({1, 2, 3, 1, 2}, 3) << \" \"\n              << TestPerioda({1, 2, 3, 1, 2, 3}, 2) << \" \"\n              << TestPerioda({1, 2, 3, 1, 2, 5, 1}, 4) << \" \"\n              << TestPerioda({1, 2, 3, 1, 2, 5, 1}, 6) << \" \"\n              << TestPerioda({1}, 1) << \" \"\n              << TestPerioda({1}, 2) << \" \"\n              << TestPerioda({1}, 0);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "false true false false true false false false"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3156,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT4: poziv funkcije TestPerioda (2)\n    std::cout << std::boolalpha << TestPerioda({1, 2, 1}, 2) << \" \"\n              << TestPerioda({1, 2, 1}, 1) << \" \"\n              << TestPerioda({1, 2, 1}, 3) << \" \"\n              << TestPerioda({0, 1, 2, 3, 0, 1, 2, 3, 4}, 4) << \" \"\n              << TestPerioda({0, 1, 2, 3, 0, 1, 2, 3, 4}, 3) << \" \"\n              << TestPerioda({0, 1, 2, 3, 0, 1, 2, 3, 0}, 4) << \" \"\n              << TestPerioda({1, 2}, 1) << \" \"\n              << TestPerioda({1, 1}, 2) << \" \"\n              << TestPerioda({1, 1}, 1) << \" \"\n              << TestPerioda({1, 1, 2, 3, 4, 5, 6}, 1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "true false false false false true false false true false"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3157,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT5: poziv funkcije OdrediOsnovniPeriod (1)\n    std::cout << OdrediOsnovniPeriod({1, 2}) << \" \"\n              << OdrediOsnovniPeriod({1, 2, 3, 4, 5, 0}) << \" \"\n              << OdrediOsnovniPeriod({1, 2, 3, 4, 5, 1}) << \" \"\n              << OdrediOsnovniPeriod({1, 2, 3, 4, 5, 1, 2, 7, 1});",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 5 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3158,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "    \/\/AT6: poziv funkcije OdrediOsnovniPeriod (2)\n    std::cout << OdrediOsnovniPeriod({1.1, 2.2}) << \" \"\n              << OdrediOsnovniPeriod({.1, .2, .3, .1, .5, .1, .2}) << \" \"\n              << OdrediOsnovniPeriod({-1, -2, -3, -4, -5, 1, 0, 6, -1, -2}) << \" \"\n              << OdrediOsnovniPeriod({-1, -2, -3, -4, -5, 1, 0, 6, -1, -2, -1}) << \" \"\n              << OdrediOsnovniPeriod({-1, -2, -3, -4, -5, 1, 0, 6, -1, -2, -2});",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 5 8 10 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3159,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: main sa realnim brojevima\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.2 -1 0.5 301 1.2 -1 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): Slijed je periodican sa osnovnim periodom 4."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3160,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: stress test\n    std::vector<double> v1 (1000, 7.7);\n    std::cout << OdrediOsnovniPeriod(v1) << std::endl; \/\/1\n    std::vector<double> v2 (1000);\n    for (unsigned int i = 0; i < v2.size(); ++i)\n        v2.at (i) = i;\n    v2.push_back (0);\n    std::cout << OdrediOsnovniPeriod(v2) << std::endl; \/\/1000\n    v2.push_back (0);\n    std::cout << OdrediOsnovniPeriod(v2) << std::endl; \/\/1001\n    v2.push_back (1);\n    std::cout << OdrediOsnovniPeriod(v2) << std::endl; \/\/1001\n    v2.push_back (1);\n    std::cout << OdrediOsnovniPeriod(v2) << std::endl; \/\/0",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1\\n1000\\n1001\\n1001\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

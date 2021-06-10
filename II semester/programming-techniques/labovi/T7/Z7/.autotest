@@ -1,0 +1,94 @@
+{
+    "id": 8577,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 7",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3483,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 1: test string unija i presjek\nTest();",
+            "global_above_main": "void Test()\n{\n  std::set<std::string> s1{\"A\", \"B\", \"C\", \"C\", \"C\"}, s2{\"B\", \"B\", \"D\"};\n  for(auto x: Unija(s1, s2)) std::cout << x << \" \";\n  std::cout << std::endl;\n  for(auto x: Presjek(s1, s2)) std::cout << x << \" \";\n  std::cout << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "A B C D \\nB "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3484,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 2: test int\nTest1();",
+            "global_above_main": "void Test1()\n{\n  std::set<int> s1{500, -200, 100, 50, 30}, s2{30, 40, 50, 60, 100};\n  for(auto x: Unija(s1, s2)) std::cout << x << \" \";\n  std::cout << std::endl;\n  for(auto x: Presjek(s1, s2)) std::cout << x << \" \";\n  std::cout << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-200 30 40 50 60 100 500 \\n30 50 100 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3485,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 3: test par unija i presjek\nTest2();",
+            "global_above_main": "#include <utility>\n\nvoid Test2()\n{\n  std::set<std::pair<int, std::string>> s1{{1,\"abc\"}, {2,\"abc\"}, {3,\"bcd\"}}, s2{{4,\"abc\"}, {2,\"abc\"}, {5,\"bcd\"}};\n  for(auto x: Unija(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";\n  std::cout << std::endl;\n  for(auto x: Presjek(s1, s2)) std::cout << \"{\" << x.first << \",\" << x.second << \"}\";\n  std::cout << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1,abc}{2,abc}{3,bcd}{4,abc}{5,bcd}\\n{2,abc}\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

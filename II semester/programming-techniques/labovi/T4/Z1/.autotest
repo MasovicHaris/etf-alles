@@ -1,0 +1,219 @@
+{
+    "id": 8541,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3246,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testiramo funkciju Cifre\n\nint mini, maxi;\nint e = Cifre(123456789, mini, maxi);\nif(e != 9) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 9 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 1) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 1 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 9) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 9 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 9 && mini == 1 && maxi == 9) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3247,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testiramo funkciju Cifre sa negativnim brojevima\n\nint mini, maxi;\nint e = Cifre(-123456789, mini, maxi);\nif(e != 9) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 9 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 1) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 1 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 9) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 9 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 9 && mini == 1 && maxi == 9) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3248,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testiramo funkciju Cifre na broj 0\n\nint mini, maxi;\nint e = Cifre(0, mini, maxi);\nif(e != 1) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 1 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 0) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 0 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 0) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 0 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 1 && mini == 0 && maxi == 0) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3249,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testiramo funkciju Cifre na velike brojeve\n\nint mini, maxi;\nint e = Cifre(85147483649, mini, maxi);\nif(e != 11) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 11 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 1) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 1 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 9) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 9 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 11 && mini == 1 && maxi == 9) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3250,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testiramo funkciju Cifre na veoma male brojeve\n\nint mini, maxi;\nint e = Cifre(std::numeric_limits<long long int>::min(), mini, maxi);\nif(e != 19) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 19 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 0) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 0 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 9) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 9 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 19 && mini == 0 && maxi == 9) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#include <limits>\n#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3272,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testiramo funkciju Cifre na iste brojeve\n\nint mini, maxi;\nint e = Cifre(55555, mini, maxi);\nif(e != 5) std::cout << \"Pogresan broj cifara, ocekivani je: \" << 5 << \" a vas program je izracunao: \"  << e << std::endl;\nif(mini != 5) std::cout << \"Pogresna minimalna cifra, ocekivana je: \" << 5 << \" a vas program je izracunao: \" << mini << std::endl;\nif(maxi != 5) std::cout << \"Pogresna maksimalna cifra, ocekivana je: \" << 5 << \" a vas program je izracunao \" << maxi << std::endl;\nif(e == 5 && mini == 5 && maxi == 5) std::cout << \"OK\";\nelse std::cout << \"NotOK\";",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3296,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testiranje main-a\n\n_main();",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "372324412645\n"
+            },
+            "expected": [
+                "Unesite broj: Broj 372324412645 ima 12 cifara, najveca je 7 a najmanja 1."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3297,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testiranje main-a\n\n_main();",
+            "global_above_main": "#define unsigned !zabranjeno!!!",
+            "global_top": "#define vector !zabranjeno!!\n",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-54746639\n"
+            },
+            "expected": [
+                "Unesite broj: Broj -54746639 ima 8 cifara, najveca je 9 a najmanja 3."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

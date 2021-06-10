@@ -1,0 +1,130 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘main’:\nmain.c:64:9: warning: unused variable ‘nepostojeci’ [-Wunused-variable]\n     int nepostojeci=0;\n         ^~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "64",
+                "col": "9",
+                "message": "unused variable 'nepostojeci'",
+                "output": "/tmp/buildservice/bs_3074/main.c:64:9: warning: unused variable ‘nepostojeci’ [-Wunused-variable]     int nepostojeci=0;         ^~~~~~~~~~~",
+                "code": "int nepostojeci=0;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1030": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Prosjecna ocjena: 6.50\nProlaznost: 50%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1031": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Prosjecna ocjena: 6.25\nProlaznost: 75%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1032": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Prosjecna ocjena: 8.33\nProlaznost: 100%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1033": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Prosjecna ocjena: 8.67\nProlaznost: 100%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1034": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Prosjecna ocjena: 9.50\nProlaznost: 100%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1035": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Nepostojeci predmet!Unesite predmet: Prosjecna ocjena: 8.67\nProlaznost: 100%",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "1036": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite predmet: Zalimo, ali ne postoje podaci o predmetu Tehnike programiranja!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1484082130
+}

@@ -1,0 +1,122 @@
+{
+    "id": 5560,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 4, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Primjeri iz zadatka *\/\nprintf(\"%d \", provjeri_zagrade(\"[x)\"));\nprintf(\"%d \", provjeri_zagrade(\"(x)\"));\n\/* Za string koji ne sadrzi zagrade treba vratiti 1 *\/\nprintf(\"%d \", provjeri_zagrade(\"Dobro dosli na drugi zadatak!\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Male zagrade u malim *\/\nprintf(\"%d \", provjeri_zagrade(\"(x+(y+(z%a)+b)+c)\"));\nprintf(\"%d \", provjeri_zagrade(\"((x,y))\"));\nprintf(\"%d \", provjeri_zagrade(\"(x^y)\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Male zagrade u malim *\/\nprintf(\"%d \", provjeri_zagrade(\"(((x+y)))\"));\nprintf(\"%d \", provjeri_zagrade(\"(x.y)\"));\n\/* Za string koji ne sadrzi zagrade treba vratiti 1 *\/\nprintf(\"%d \", provjeri_zagrade(\"\"));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Otvorene zagrade nisu zatvorene *\/\nprintf(\"%d \", provjeri_zagrade(\"(poceo sam da pisem nesto...\"));\nprintf(\"%d \", provjeri_zagrade(\"(poceo sam da pisem nesto...)\"));\nprintf(\"%d \", provjeri_zagrade(\"pocetak [a sada(u maloj zagradi...) kraj\"));\nprintf(\"%d \", provjeri_zagrade(\"pocetak [a sada(u maloj zagradi...) kraj]\"));\nprintf(\"%d \", provjeri_zagrade(\"pocetak {u velikoj zagradi...} asdf\"));\nprintf(\"%d \", provjeri_zagrade(\"pocetak {u velikoj zagradi...\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 1 0 1 1 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Ukrstanje - primjer iz zadatka *\/\nprintf(\"%d \", provjeri_zagrade(\"[(A)]\"));\nprintf(\"%d \", provjeri_zagrade(\"[(A])\"));\nprintf(\"%d \", provjeri_zagrade(\"meso [ meso (meso) meso ] meso\"));\nprintf(\"%d \", provjeri_zagrade(\"meso [ meso (meso] meso ) meso\"));\nprintf(\"%d \", provjeri_zagrade(\"{(A)}\"));\nprintf(\"%d \", provjeri_zagrade(\"{[A]}\"));\nprintf(\"%d \", provjeri_zagrade(\"({A)}\"));\nprintf(\"%d \", provjeri_zagrade(\"{[A}]\"));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 0 1 0 1 1 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

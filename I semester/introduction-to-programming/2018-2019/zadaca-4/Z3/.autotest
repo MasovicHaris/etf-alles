@@ -1,0 +1,143 @@
+{
+    "id": 5557,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 3, zadatak 3",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "M\nK\nV\nV\nJ"
+            },
+            "expected": [
+                "Zamislite neki broj...\\nDa li je taj broj 50? Da li je taj broj 25? Pogresan unos, probajte ponovo.\\nDa li je taj broj 25? Da li je taj broj 37? Da li je taj broj 43? Pogodio sam!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf (\"%d \", daj_sljedeci_broj(0));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "50 25 37 43 40 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(1));",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "75 62 56 59 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\nprintf (\"%d \", daj_sljedeci_broj(1));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "75 87 93 96 98 99 99 99 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\nprintf (\"%d \", daj_sljedeci_broj(-1));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "25 12 6 3 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "printf (\"%d \", daj_sljedeci_broj(0));\nprintf (\"%d \", daj_sljedeci_broj(0));\nprintf (\"%d \", daj_sljedeci_broj(0));\nprintf (\"%d \", daj_sljedeci_broj(0));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "50 50 50 50 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

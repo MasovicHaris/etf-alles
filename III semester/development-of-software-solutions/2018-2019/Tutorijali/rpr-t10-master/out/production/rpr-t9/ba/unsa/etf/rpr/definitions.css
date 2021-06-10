@@ -1,0 +1,19 @@
+.label{
+    -fx-pref-width: 150;
+    -fx-pref-height: 30;
+    -fx-min-width: 150;
+    -fx-max-width: 150;
+    -fx-min-height: 30;
+    -fx-max-height: 30;
+    -fx-alignment: center;
+}
+
+.textfield{
+    -fx-pref-width: 300;
+    -fx-pref-height: 40;
+    -fx-min-width: 300;
+    -fx-max-width: 300;
+    -fx-min-height: 40;
+    -fx-max-height: 40;
+    -fx-alignment: center;
+}

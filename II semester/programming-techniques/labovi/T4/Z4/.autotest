@@ -1,0 +1,249 @@
+{
+    "id": 8544,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3284,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira se unos integer broja\n\nint broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "necu\n5\n"
+            },
+            "expected": [
+                "Unesi broj: Pogresan unos!\\nUnesi broj:\\n5",
+                "Unesi broj: \\nPogresan unos!\\nUnesi broj:\\n5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3285,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testira se unos double broja\n\ndouble broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "hocu1\nmalo2\nsutra3\n1.233\n"
+            },
+            "expected": [
+                "Unesi broj: Pogresan unos!\\nUnesi broj: Pogresan unos!\\nUnesi broj: Pogresan unos!\\nUnesi broj:\\n1.233",
+                "Unesi broj: \\nPogresan unos!\\nUnesi broj: \\nPogresan unos!\\nUnesi broj: \\nPogresan unos!\\nUnesi broj:\\n1.233"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3287,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testira se unos integer broja\n\nint broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "xyz123\nx1y2z3\n123\n"
+            },
+            "expected": [
+                "Unesi broj: Pogresan unos!\\nUnesi broj: Pogresan unos!\\nUnesi broj:\\n123",
+                "Unesi broj: \\nPogresan unos!\\nUnesi broj: \\nPogresan unos!\\nUnesi broj:\\n123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3288,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testira se unos integer broja\n\nint broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "123abc\n456\n\n\n"
+            },
+            "expected": [
+                "Unesi broj: Pogresan unos!\\nUnesi broj:\\n456",
+                "Unesi broj:\\nPogresan unos!\\nUnesi broj:\\n456"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3289,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testira se unos integer broja\n\nint broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "      a\n      6a\nskljt\n404\n"
+            },
+            "expected": [
+                "Unesi broj: Pogresan unos!\\nUnesi broj: Pogresan unos!\\nUnesi broj: Pogresan unos!\\nUnesi broj:\\n404",
+                "Unesi broj: \\nPogresan unos!\\nUnesi broj: \\nPogresan unos!\\nUnesi broj: \\nPogresan unos!\\nUnesi broj:\\n404"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3290,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testira se unos integer broja\n\nint broj;\nUnosBroja(\"Unesi broj: \", \"Pogresan unos!\", broj);\nstd::cout << std::endl << broj;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "\n\n123\n"
+            },
+            "expected": [
+                "Unesi broj:\\n123"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3291,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testiranje main primjera iz postavke tutorijala\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "necu\n3.215ppp\n3.215\n2.5\n-2\n"
+            },
+            "expected": [
+                "Unesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\n\\nUnesite cjelobrojni eksponent:\\nNeispravan unos, pokusajte ponovo...\\nUnesite cjelobrojni eksponent:\\n\\n3.215 na -2 iznosi 0.0967471"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3292,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testiranje main-a\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "abc123\n123abc\n1a2b3c\n4.5\nabc\n3\n"
+            },
+            "expected": [
+                "Unesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\n\\nUnesite cjelobrojni eksponent:\\nNeispravan unos, pokusajte ponovo...\\nUnesite cjelobrojni eksponent:\\n\\n4.5 na 3 iznosi 91.125"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3293,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: testiranje main-a\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-_-\njedan dva\n5\n-1\n"
+            },
+            "expected": [
+                "Unesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\nNeispravan unos, pokusajte ponovo...\\nUnesite bazu:\\n\\nUnesite cjelobrojni eksponent:\\n\\n5 na -1 iznosi 0.2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,675 @@
+%MIT License
+%
+%Copyright (c) 2017 dinkoosmankovic
+%
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+%
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+
+
+    \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    \usepackage{mathtools}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    
+    
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{2}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Matematička logika i teorija izračunljivosti}
+
+      \vspace*{2cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.75cm}
+      {\Large Br. indexa: \brIndexa}
+
+      \vspace*{3cm}
+      \renewcommand{\arraystretch}{1.75}
+      \begin{tabular}{|c|c|}
+    	\hline Zadatak & Bodovi \\
+    	\hline 1 &  \\
+    	\hline 2 &  \\
+    	\hline 3 &  \\
+    	\hline 4 &  \\
+    	\hline 5 &  \\
+    	\hline
+     \end{tabular}
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka
+		
+		(a) \begin{equation*}
+		    \vdash q \Rightarrow ( p \Rightarrow ( p \Rightarrow ( q \Rightarrow p )))
+		    \end{equation*}
+		
+		    * Ukoliko krenemo od samog aksioma (LA1): \\   
+		    X {$\Rightarrow$} ( Y {$\Rightarrow$} X)~ i ukoliko označimo X~=~p i Y~=~q za početak imamo:  
+		    \begin{align*}
+		    
+		        (1)~~ p \Rightarrow (q \Rightarrow p) ~~ (aksiom~LA1) \\
+		        
+		        (2)~~ (p \Rightarrow (q \Rightarrow p)) \Rightarrow (p \Rightarrow ( p \Rightarrow ( q \Rightarrow p))) ~~ (aksiom~LA1)~(X = (p \Rightarrow (q \Rightarrow p))~ i ~ Y = p~) \\
+		        
+		        (3)~~ p \Rightarrow ( p \Rightarrow ( q \Rightarrow p)) ~~(modus~ponens~iz~(1)~i~(2)~) \\
+		        
+		        (4)~~ (p \Rightarrow ( p \Rightarrow ( q \Rightarrow p))) \Rightarrow ( q \Rightarrow (p \Rightarrow ( p \Rightarrow ( q \Rightarrow p)))) ~~ (aksiom~LA1)~(X = (3)~ i ~ Y = q~) \\
+		        
+		        (5)~~ q \Rightarrow (p \Rightarrow ( p \Rightarrow ( q \Rightarrow p))) ~~(modus~ponens~iz~(3)~i~(4)~) 
+		    \end{align*}
+		    
+		    * Iz krajnjeg izraza (5) vidimo naš sami početni izraz, samim tim smo dokazali ovaj model. \\
+		    
+		    
+		    \\
+		    
+		    \\
+		    
+		    
+		    
+	    (b) \begin{equation*}
+	        (q \Rightarrow ( p \Rightarrow r))~\overline{r}~q \vdash \overline{p}
+	    \end{equation*}
+	    
+	    * Pošto nam je potrebna kontrapozicija koja glasi: p {$\Rightarrow$} q {$\Leftrightarrow$} 
+	    {$\overline{q}$} {$\Rightarrow$} {$\overline{p}$} sada ćemo je i dokazati. 
+	    
+	    \begin{equation*}
+	        p \Rightarrow q \Leftrightarrow \overline{q} \Rightarrow \overline{p} =
+	        \overline{p} \vee q \Leftrightarrow q \vee \overline{p} =
+	        (\overline{p} \vee q)(q \vee \overline{p}) \vee (\overline{\overline{p} \vee q})(\overline{q \vee \overline{p}}) = \\
+	        \end{equation*}
+	        \begin{equation*}
+	        = \overline{p}~q \vee \overline{p} \vee q \vee q~\overline{p} \vee p~\overline{q} =
+	        \overline{p} \vee q \vee p~\overline{q} = \overline{p}~q \vee \overline{p}~\overline{q} \vee q \vee p~\overline{q} = \overline{p}~q \vee q \vee \overline{q} = \top       
+	    \end{equation*}
+
+	    * Deduktivni dokaz zadatog modela se može ovako iskazati: 
+	    \begin{align*}
+	    
+	        (1)~~ q \Rightarrow (p \Rightarrow r) ~~ \text{(hipoteza 1)} \\
+	        
+	        (2)~~ \overline{r} ~~ \text{(hipoteza 2)} \\
+	        
+	        (3)~~ q ~~ \text{(hipoteza 3)} \\
+	        
+	        (4)~~ p \Rightarrow r ~~ \text{(modus ponens iz (1) i (3)~)} \\
+	        
+	        (5)~~ \overline{r} \Rightarrow \overline{p} ~~ \text{(iskorištena kontrapozicija iz (4)~)} \\
+	        
+	        (6)~~ \overline{p} ~~ \text{(modus ponens iz (2) i (4)~)}
+	    \end{align*}
+	    
+	    * Iz krajnjeg izraza (6) vidimo naš traženi zaključak, samim tim smo dokazali ovaj model. \\
+	    
+	    (c) \begin{equation*}
+	        q \vdash (p \wedge q) \vee (\overline{p} \wedge q)
+	    \end{equation*}
+	    
+	    Deduktivni dokaz ovog modela se može uraditi na sljedeći način: \\
+	    \begin{equation*}
+	        
+	        (1)~~ q ~~\text{(hipoteza)} \\
+	        
+	        (2)~~ T = p \vee~\overline{p} ~~ \text{(tautologija)} \\
+	        
+	        (3)~~ q \wedge~T ~~ \text{(pravilo neutralnog elementa)} \\
+	        
+	        (4)~~ q \wedge~(p \vee \overline{p}) = p~q \vee \overline{p}~q \\
+	        
+	    \end{equation*}
+	    
+	    * Iz krajnjeg izraza (4) vidimo naš traženi zaključak, samim tim smo dokazali ovaj model.
+	    
+
+	    
+	    \newpage
+		\item Rješenje zadatka
+		
+		(a) \begin{equation*}
+		    p \Rightarrow (q \wedge r) \vdash (p \Rightarrow q) \wede (p \Rightarrow r)
+		\end{equation*}
+        \\
+		* Metodom rezolucije sa oporgivanjem imamo: 
+		\begin{align*}     
+		
+		    (1)~~ p \Rightarrow ( q \wedge r) = \overline{p} \vee (q \wedge r) = (\overline{p} \vee q)(\overline{p} \vee r)  ~~ \text{(hipoteza~1)} \\
+		    
+		    (2)~~ p \wedge~(\overline{q} \vee \overline{r}) ~~ \text{(negacija zaključka)} \\
+		    
+		    (3)~~ \overline{p} \vee q ~~ \text{(pravilo~simplifikacije~iz~(1)~)} \\
+		    
+		    (4)~~ \overline{p} \vee r ~~ \text{(pravilo~simplifikacije~iz~(1)~)} \\
+		    
+		    (5)~~ p ~~ \text{(pravilo~simplifikacije~iz~(2)~)} \\
+		    
+		    (6)~~ \overline{q} \vee \overline{r} ~~ \text{(pravilo~simplifikacije~iz~(2)~)} \\
+		    
+		    (7)~~ q ~~ \text{(pravilo~rezoluzije~iz~(3)~i~(5)~)} \\
+		    
+		    (8)~~ r ~~ \text{(pravilo~rezoluzije~iz~(4)~i~(5)~)} \\
+		    
+		    (9)~~ \overline{r} ~~ \text{(pravilo~rezolucije~iz~(7)~i~(6)~)} \\
+		    
+		    (10)~~ \overline{q} ~~ \text{(pravilo~rezolucije~iz~(8)~i~(6)~)} \\
+		    
+		    (11)~~ \text{Pravilo~rezolucije~iz~(~(8)~i~(9)~)~(~ili~(7)~i~(10)~)~-~NIL}
+ 		\end{align*}
+ 		
+ 		\newpage
+ 		
+ 		(b) \begin{equation*}
+		    (p \Rightarrow q)~(r \Rightarrow \overline{t})~(q \Rightarrow r) \vdash p \Rightarrow \overline{t}
+		\end{equation*}
+ 		\\
+		* Metodom rezolucije sa oporgivanjem imamo: 
+		\begin{align*}    
+		
+		    (1)~~ \overline{p} \vee q ~~ \text{(hipoteza~1)} \\
+		    
+		    (2)~~ \overline{r} \vee \overline{t} ~~ \text{(hipoteza~2)} \\
+		    
+		    (3)~~ \overline{q} \vee r ~~ \text{(hipoteza~3)} \\
+		    
+		    (4)~~ p \wedge~t ~~ \text{(negacija zaključka)} \\
+		    
+		    (5)~~ p ~~ \text{(pravilo~simplifikacije~iz~(4)~)} \\
+		    
+		    (6)~~ t ~~ \text{(pravilo~simplifikacije~iz~(4)~)} \\
+		    
+		    (7)~~ q ~~ \text{(pravilo~rezolucije~iz~(1)~i~(5)~)} \\
+		    
+		    (8)~~ \overline{r} ~~ \text{(pravilo~rezolucije~iz~(2)~i~(6)~)} \\
+		    
+		    (9)~~ r ~~ \text{(pravilo~rezolucije~iz~(3)~i~(7)~)} \\
+		    
+		    (10)~~ \text{Pravilo~rezolucije~iz~(~(8)~i~(9)~)~-~NIL}
+		    
+ 		
+		\end{align*}
+		\newpage
+		
+		(c) \begin{equation*}
+		    (~(p \Rightarrow q) \Rightarrow r)~(s \Rightarrow~\overline{p})~t~\overline{s}~(t \Rightarrow q) \vdash r
+		\end{equation*}
+ 		\\
+		* Metodom rezolucije sa oporgivanjem imamo: 
+		\begin{align*}    
+		
+		    (1)~~ (\overline{p} \vee q)~\Rightarrow~r = p~\overline{q} \vee r ~~ \text{(hipoteza~1)} \\
+		    
+		    (2)~~ \overline{s} \vee \overline{p} ~~ \text{(hipoteza~2)} \\
+		    
+		    (3)~~ t ~~ \text{(hipoteza~3)} \\
+		    
+		    (4)~~ \overline{s}~\overline{t} \vee \overline{s}~q = \overline{s}~(\overline{t} \vee q)  ~~ \text{(hipoteza~4)} \\
+		    
+		    (5)~~ \overline{r} ~~\text{(negacija zaključka)}\\
+		    
+		    (6)~~ \overline{s} ~~\text{(pravilo~simplifikacije~iz~(4)~)} \\
+		    
+		    (7)~~ \overline{t} \vee q ~~\text{(pravilo~simplifikacije~iz~(4)~)} \\
+		    
+		    (8)~~ q ~~\text{(pravilo~rezolucije~iz~(3)~i~(7)~)} \\
+		    
+		    (9)~~ r ~~\text{(pravilo~rezolucije~iz~(1)~i~(8)~)} \\
+		    
+		    (10)~~ \text{Pravilo~rezolucije~iz~(~(5)~i~(9)~)~-~NIL}
+		\end{align*}
+		\newpage
+		
+		(d) \begin{equation*}
+		    (q \Rightarrow ( p \Rightarrow r))~\overline{r}~q \vdash \overline{p}
+		\end{equation*}
+ 		\\
+		* Metodom rezolucije sa oporgivanjem imamo: 
+		\begin{align*}    
+		    
+		    (1)~~ q \Rightarrow (p \Rightarrow r) = \overline{q} \vee (p \Rightarrow r) = \overline{q} \vee \overline{p} \vee r ~~ \text{(hipoteza~1)} \\
+		    
+		    (2)~~ \overline{r} ~~ \text{(hipoteza~2)} \\
+		    
+		    (3)~~ q ~\text{(hipoteza~3)} \\
+		    
+		    (4)~~ p ~\text{(negacija zaključka)} \\
+		    
+		    (5)~~ \overline{p} \vee r ~~\text{(pravilo~rezolucije~iz~(1)~i~(3)~)} \\
+		    
+		    (6)~~ r ~~\text{(pravilo~rezolucije~iz~(4)~i~(5)~)} \\
+		    
+		    (7)~~ \text{Pravilo~rezolucije~iz~(~(2)~i~(6)~)~-~NIL}
+		    
+		\end{align*}
+		
+		\item Rješenje zadatka \\
+		
+		* Ukoliko uvedemo sljedeće oznake:
+		
+		A - Pisati ću zadaću u LaTeX-u \\
+		B - Poslat ću je preko Zamgera \\
+		C - Možda dobijem 20\% dodatnih bodova \\
+		D - Neću ostavljati zadaću na portirnici \\
+		E - Neću predavati nekome iz nastavnog ansambla \\
+		F - Pisati ću zadaću na papiru \\
+		
+		Zadato modeliranje možemo izvesti na sljedeći način:
+		\begin{equation*}
+		    (A \Rightarrow BC)(F \Rightarrow D \vee E)(F \vee \overline{B}~\overline{C}) \vdash (A \Rightarrow D \vee E) \\
+		    
+		\end{equation*}
+		\\
+		\\
+		\\
+		\\
+		
+		* Metodom rezolucije sa oporgivanjem imamo: 
+		\begin{align*}
+		    
+		    (1)~~ \overline{A} \vee BC ~~ \text{(hipoteza 1)}\\
+		    
+		    (2)~~ F \Rightarrow (D \vee E) = \overline{F} \vee D \vee E ~~ \text{(hipoteza 2)} \\
+		    
+		    (3)~~ F \vee \overline{B}~\overline{C} ~~ \text{(hipoteza 3)} \\
+		    
+		    (4)~~ \overline{\overline{A} \vee D \vee E} = A\overline{D}~\overline{E} ~~ \text{(negacija zaključka)} \\
+		    
+		    (5)~~ A ~~\text{(pravilo simplifikacije iz (4)~)} \\
+		    
+		    (6)~~ \overline{D} ~~\text{(pravilo simplifikacije iz (4)~)} \\
+		    
+		    (7)~~ \overline{E} ~~\text{(pravilo simplifikacije iz (4)~)} \\
+		    
+		    (8)~~ \overline{F} \vee D ~~ \text{(pravilo ezolucije iz (2) i (6)~)} \\
+		    
+		    (9)~~ \overline{F} ~~  \text{(pravilo rezolucije iz (6) i (8)~)} \\
+		    
+		    (10)~~ BC ~~ \text{(pravilo rezolucije iz (6) i (8)~)} \\
+		    
+		    (11)~~ B ~~ \text{(pravilo simplifikacije iz (10)~)} \\
+		    
+		    (12)~~ C ~~ \text{(pravilo simplifikacije iz (10)~)} \\
+		    
+		    (13)~~ F ~~ \text{(pravilo rezolucije iz (3), (11), (12)~)} \\
+		    
+		    (14)~~ \text{Pravilo~rezolucije~iz~(~(9)~i~(13)~)~-~NIL}
+ 		\end{align*}
+		\newpage
+		\item Rješenje zadatka
+		
+		* Prije nego što ispitamo da li su sljedeći skupovi logičkih operacija funkcionalno
+          kompletni, moramo uvesti par pojmova: \\
+
+		  (1)~~ Za neku logičku operaciju kažemo da zadržava neistinu (ili nulu), ukoliko daje rezultat "{$\bot$}" kada svi operandi također imaju vriijednost "{$\bot$}". \\
+		  
+		  (2)~~ Za neku logičku operaciju kažemo da zadržava istinu (ili jedinicu), ukoliko daje rezultat "{$\top$}" kada svi operandi također imaju vrijednost "{$\top$}". \\
+		  
+		  (3)~~ Za neku logičku operaciju kažemo da je linarna ako i samo ako vrijedi jedna od sljedeće dvije tvrdnje: \\
+		  
+		  a : Kad god je rezultat operacije "{$\top$}", broj operanada koji imaju vrijednost "{$\top$}" je neparan, a kad god je rezultat operacije "{$\bot$}", broj operanada koji imaju vrijednost "{$\top$}" je paran. \\
+		  
+		  b : Kad god je rezultat operacije "{$\top$}", broj operanada koji imaju vrijednost "{$\top$}" je paran, a kad god je rezultat operacije "{$\bot$}", broj opearanada koji imaju vrijednost "{$\top$}" je neparan. \\
+		  
+		  (4)~~ Za neku logičku funkciju kažemo da je monotona (ili neopadajuća) ukoliko primjena nekog od operanada sa "{$\bot$}" na "{$\top$}" može eventualno dovesti do promjene rezultata također sa "{$\bot$}" na "{$\top$}", ali nikad do promjene rezultata sa "{$\top$}" na "{$\bot$}" (dopušteno je i da se rezultat ne promjeni). \\
+		  
+		  (5)~~ Za neku logičku operaciju kažemo da je samodualna (ili samosvojstvena) ukoliko za njemu karakterističnu funkciju vrijedi f({$\overline{X}$}1, {$\overline{X}$}2, ... , {$\overline{X}$}n = {$\neg$}~f(X1,  X2, ... , Xn). \\
+		  
+		  (6)~~ Da bi neki skup logičkih operacija predstavljao bazu iskazne algebre (odnosno bio funkcionalno kompletan), potrebno je i dovoljno da ne pripada u potpunosti niti jednoj od klasa koje je smatraju pod (1)-(5). Drugim riječima, potrebno je i dovoljno da se među njima nalazi barem jedna operacija koja ne zadržava neistinu, barem jedna koja ne sadržava istinu, barem jedna operacija koja nije linearna, barem jedna operacija koja nije monotona i barem jedna operacija koja nije samodualna. (Postova teorema o funkcionalnoj kompletnosti logičkih funkcija). \\
+		  
+		  
+		  Pomoću ovih pojmova možemo rješiti sljedeće nedoumice kod ispitivanja da li su skupovi logičkih operacija funkcionalno kompletni, tako da imamo sljedeće: \\
+		  
+		  \newpage
+		  
+		  (a) \begin{equation*}
+		       S = (\neg\Leftarrow, \Leftrightarrow) 
+		  \end{equation*}
+		  
+		  * Ukoliko posmatramo samo 1 operaciju tj. {$\neg$}{$\Leftarrow$} možemo formirati sljedeću tablicu za ovu operaciju: \\
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \neg\Leftarrow b \\
+    	    \hline 0 & 0 & 0 \\
+    	    \hline 0 & 1 & 1 \\
+    	    \hline 1 & 0 & 0 \\
+        	\hline 1 & 1 & 0 \\
+        	\hline
+          \end{tabular}
+		  
+		  Iz tabele vidimo da se zadržava neistina, da se ne zadržava istina, vidimo također da nije operacija linearna jer ne čini ni jednu od navedenih kombinacija, također vidimo da nije monotona jer ne zadovolja gore spomenute uslove. \\
+		  
+		  Samodulanost ćemo ispitati na drugoj tablici: 
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \vee~\overline{b} \\
+    	    \hline 1 & 1 & 1 \\
+    	    \hline 1 & 0 & 1 \\
+    	    \hline 0 & 1 & 0 \\
+        	\hline 0 & 0 & 1 \\
+        	\hline
+          \end{tabular}
+          
+          Vidimo da ne važi ni samodualnost. \\
+          
+          * Dalje ispitujemo {$\Leftrightarrow$} operaciju: \\   
+          Formirajmo tablicu za ovu opearciju:
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \Leftrightarrow b \\
+    	    \hline 0 & 0 & 1 \\
+    	    \hline 0 & 1 & 0 \\
+    	    \hline 1 & 0 & 0 \\
+        	\hline 1 & 1 & 1 \\
+        	\hline
+        	
+          \end{tabular}
+          \\
+          
+		  Iz tabele vidimo da se ne zadržava neistina. \\
+		  
+		  Pomoću Postove teoreme (6), dokazali da je ovaj skup funkcionalno kompletan i sad možemo zadane operacije izraziti na sljedeći način (uz korištenje odgovarajući broj operanada): \\	  
+		  \begin{equation*}  
+		  
+		      (1)~~\overline{a} = \overline{a} \wedge T = \overline{a} \wedge (a \Leftrightarrow a) = a~ \neg\Leftarrow (a \Leftrightarrow a) \noindent
+		      
+		      (2)~~a \wedge~b = \overline{\overline{a}} \wedge b = \overline{a}~\neg\Leftarrow b = 
+		      (a \neg\Leftarrow (a \Leftrightarrow a))~\neg\Leftarrow b
+		      
+		      (3)~~a \vee b = a \vee \overline{\overline{b}} = (\overline{a~\neg\Leftarrow \overline{b}}) =
+		      (\overline{a~\neg\Leftarrow ( b~\neg\Leftarrow (b \Leftrightarrow b)}) = \noindent
+		      
+		      = (a~\neg\Leftarrow ( b~\neg\Leftarrow (b \Leftrightarrow b))~\neg\Leftarrow ( (a~\neg\Leftarrow ( b~\neg\Leftarrow (b \Leftrightarrow b)) \Leftrightarrow (a~\neg\Leftarrow ( b \neg\Leftarrow (b \Leftrightarrow b)))) 
+		      
+		  \end{equation*}
+		  
+		  \newpage
+		  
+		  (b) \begin{equation*}
+		       S = (\Rightarrow, \veebar{}) 
+		  \end{equation*}
+		  
+		  * Ukoliko posmatramo samo 1 operaciju tj. {$\Rightarrow$} možemo formulisati sljedeću tablicu: \\
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \Rightarrow b \\
+    	    \hline 0 & 0 & 1 \\
+    	    \hline 0 & 1 & 1 \\
+    	    \hline 1 & 0 & 0 \\
+        	\hline 1 & 1 & 1 \\
+        	\hline
+          \end{tabular}
+		  
+		   Iz tabele vidimo da se ne zadržava neistina, da se zadržava istina, vidimo također da nije operacija linearna jer ne čini ni jednu od navedenih kombinacija, također vidimo da nije monotona jer ne zadovolja gore spomenute uslove. \\
+		  
+		  Samodulanost ćemo ispitati na drugoj tablici: 
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a~\wedge~\overline{b} \\
+    	    \hline 1 & 1 & 0 \\
+    	    \hline 1 & 0 & 1 \\
+    	    \hline 0 & 1 & 0 \\
+        	\hline 0 & 0 & 1 \\
+        	\hline
+          \end{tabular}
+          
+          Vidimo da ne važi ni samodualnost. \\
+          
+          * Dalje ispitujemo {$\veebar{}$} operaciju: \\   
+          Formirajmo tablicu za ovu opearciju:
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \veebar{}~b \\
+    	    \hline 0 & 0 & 0 \\
+    	    \hline 0 & 1 & 1 \\
+    	    \hline 1 & 0 & 1 \\
+        	\hline 1 & 1 & 0 \\
+        	\hline
+        	
+          \end{tabular}
+          \\
+          
+		  Iz tabele vidimo da se ne zadržava istina i da operacija nije monotona što nam je ujedno i bilo potrebno. \\
+		  
+		  Pomoću Postove teoreme (6), dokazali da je ovaj skup funkcionalno kompletan i sad možemo zadane operacije izraziti na sljedeći način (uz korištenje odgovarajući broj operanada): \\	  
+		  \begin{equation*}
+		      
+		      (1)~~\overline{a} = \overline{a} \vee \bot = (a \Rightarrow (a \veebar{} a)) \\
+		      
+		      (2)~~a \wedge~b = \overline{\overline{a \wedge b}} = \overline{\overline{a} \vee \overline{b}} = \overline{\overline{a}b \vee a\overline{b} \vee \overline{a}~\overline{b}} = \overline{a \veebar{} b} = (~(a \veebar{} b) \Rightarrow (a \veebar{} a)) \\
+
+              (3)~~a \vee~b = \overline{\overline{a}} \vee b = \overline{a} \Rightarrow b = (a \Rightarrow (a \veebar{} a)~) \Rightarrow b
+              
+		  \end{equation*}
+		  
+		  \newpage
+		  
+		  (c) \begin{equation*}
+		       S = (\Leftrightarrow, \neg) 
+		  \end{equation*}
+		  
+		  * Ukoliko posmatramo samo 1 operaciju tj. {$\Leftrightarrow$} možemo formulisati sljedeću tablicu: \\
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \Leftrightarrow b \\
+    	    \hline 0 & 0 & 1 \\
+    	    \hline 0 & 1 & 0 \\
+    	    \hline 1 & 0 & 0 \\
+        	\hline 1 & 1 & 1 \\
+        	\hline
+        	
+          \end{tabular}
+		  
+		  Iz tabele vidimo da se ne zadržava neistina, da se zadržava istina, vidimo također da je operacija linearna jer zadovoljava barem jednu od 2 mogučnosti , također vidimo da nije monotona jer ne zadovolja gore spomenute uslove. \\
+		  
+		  Samodulanost ćemo ispitati na drugoj tablici: 
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & b & a \veebar{}~b \\
+    	    \hline 0 & 0 & 0 \\
+    	    \hline 0 & 1 & 1 \\
+    	    \hline 1 & 0 & 1 \\
+        	\hline 1 & 1 & 0 \\
+        	\hline
+        	
+          \end{tabular}
+          
+          Vidimo da ne važi ni samodualnost. \\
+          
+          * Dalje ispitujemo {$\neg$} operaciju: \\   
+          Formirajmo tablicu za ovu opearciju:
+		  
+		  \begin{tabular}{|c|c|c|}
+    	    \hline a & \neg(a)\\
+    	    \hline 0 & 1 \\
+    	    \hline 1 & 0 \\
+        	\hline
+        	
+          \end{tabular}
+          \\
+          
+		  Iz tabele vidimo da operacija nije linearna, što nama u biti i fali da bismo dokazali da li je ovaj skup funkcionalno kompletan. \\
+		  
+		  Pomoću Postove teoreme (6), ovaj skup će biti funkcionalno kompletan ukoliko ga proširimo sa operacijom koja ne sadržava linearnost. Ukoliko proširimo sa konjukcijom ili disjunkcijom dobiti ćemo naš kompletan funkcionalan skup. \\
+		  
+		  Naš novi funkcionalni skup glasi: \\
+		  \begin{equation*}
+		       S = (\Leftrightarrow, \neg, \wedge). 
+		  \end{equation*}
+		  
+		  I naš novi skup je sad funkcionalno kompletan skup po Postovoj teoremi i sada možemo (uz korištenje odgovarajući broj operanada) izrazit operaciju disjunkcije koja i fali u odnosu na druge dvije: \\
+		  \begin{equation*}
+		      (1)~~ a \vee b = (\overline{\overline{a} \wedge \overline{b}})
+		  \end{equation*}
+		  \newpage
+		\item Rješenje zadatka \\
+		
+		(a)
+		\begin{align*}
+		
+		    (A \Rightarrow B~\overline{C}) \vee \overline{A~\overline{B \vee C~\overline{D}}} \veebar{} C(B \Leftrightarrow AD) = \overline{A} \vee B~\overline{C} \vee (\overline{A} \vee (B \vee C~\overline{D}) \veebar{} C(B \Leftrightarrow AD) = \\
+		    
+		    = (\overline{A} \vee B \vee C~\overline{D}) \veebar{} C(B \Leftrightarrow AD) 
+		\end{align*} 
+		Ukoliko rješimo prvo lijevu stranu ekskluzivne disjunkcije imamo: 	
+		\begin{equation*}
+		
+		    \overline{(\overline{A} \vee B \vee C~\overline{D})} \veebar{} C(B \Leftrightarrow AD)  =
+		    A~\overline{B}(\overline{C} \vee D)C(BAD \vee \overline{B}~\overline{A}~\overline{D}) = \bot ~~~~~~ (1) 
+		    
+		\end{equation*}
+		
+		Ukoliko rješimo desnu lijevu stranu ekskluzivne disjunkcije imamo: 		
+		\begin{equation*}
+		
+		    (\overline{A} \vee B \vee C~\overline{D})~\overline{(C(B \Leftrightarrow AD))} =
+		    (\overline{A} \vee B \vee C~\overline{D})~(\overline{C} \vee B \veebar{} AD) =
+		    (\overline{A} \vee B \vee C~\overline{D})~(\overline{C} \vee \overline{B}AD \vee B(\overline{A} \vee \overline{D})) = \\
+		    
+		    (\overline{A} \vee B \vee C~\overline{D})~(\overline{C} \vee \overline{B}AD \vee B~\overline{A} \vee B~\overline{D}) = \overline{A}~\overline{C} \vee B~\overline{C} \vee \overline{A}B \vee B~\overline{D} ~~~~~~ (2)
+		    
+		\end{equation*}
+		
+		Ukoliko ujedinimo (1) i (2) tj. uradimo konačnu disjunkciju imamo rezultat
+		(koji predstavlja traženu DNF):
+		
+		\begin{equation*}
+		    \overline{A}~\overline{C} \vee B~\overline{C} \vee \overline{A}B \vee B~\overline{D} ~~~~ (*)
+		\end{equation*}
+
+	    (b) \\
+	    
+	    Ukoliko negiramo naš dobiveni rezultat tj. (*) možemo dobiti traženi KNF: \\	    
+	    \begin{equation*}
+	    
+	        \overline{\overline{\overline{A}~\overline{C} \vee B~\overline{C} \vee \overline{A}B \vee B~\overline{D}}} = \overline{(A \vee C)(\overline{B} \vee C)(A \vee \overline{B})(\overline{B} \vee D)} = \overline{(A \vee C~\overline{B})(\overline{B} \vee CD)} = \\
+	        
+	        \overline{A~\overline{B} \vee ACD \vee C~\overline{B} \vee C\overline{B}D} = \overline{A\overline{B} \vee ACD \vee C\overline{B}} = (\overline{A} \vee B)(\overline{A} \vee \overline{C} \vee \overline{D})(\overline{C} \vee B) 
+	        
+	    \end{equation*}
+	    
+		\newpage
+		
+		(c) \\
+		
+		\begin{equation*}
+		    \overline{A}~\overline{C} \vee B~\overline{C} \vee \overline{A}B \vee B~\overline{D} = 
+		    
+		    = \overline{A}~\overline{C}(B \vee \overline{B})(D \vee \overline{D}) 
+		    \vee B~\overline{C}(A \vee \overline{A})(D \vee \overline{D}) 
+		    \vee \overline{A}B(C \vee \overline{C})(D \vee \overline{D})
+		    \vee B~\overline{D}(A \vee \overline{A})(C \vee \overline{C}) = \\
+		    
+		    = (\overline{A}~\overline{C}B \vee \overline{A}~\overline{C}~\overline{B})(D \vee \overline{D}) \vee (B\overline{C}A \vee B\overline{C}~\overline{A})(D \vee \overline{D}) \vee (\overline{A}BC \vee \overline{A}B\overline{C})(D \vee \overline{D}) \\
+		    
+		    \vee~(B\overline{D}A \vee B\overline{D}~\overline{A})(C \vee \overline{C}) = \\
+		    
+		    \overline{A}~\overline{C}BD \vee A\overline{C}B\overline{D} \vee \overline{A}~\overline{C}~\overline{B}D \vee \overline{A}~\overline{C}~\overline{B}~\overline{D} \vee B\overline{C}AD \vee \overline{A}BCD \vee~\overline{A}BC\overline{D} \vee \overline{A}B\overline{C}~\overline{D} \vee B\overline{D}AC
+		
+		\end{equation*}
+		
+		Dobiveni zadnji izraz od 9 mintermi predstavlja naš SDNF. \\
+		
+		(d) \\
+		
+		* Ukoliko posmatramo naš dobiveni SDNF, na osnovu mintermi koje fale, možemo formirati i odgovarajući SKNF. Ukoliko analiziramo minterme koje fale ovom izrazu i operacijom negacije,  možemo to uraditi na sljedeći način: \\
+		
+		\begin{equation*}
+		    \overline{\overline{A}~\overline{B}C\overline{D} \vee \overline{A}~\overline{B}CD \vee A\overline{B}~\overline{C}~\overline{D} \vee A\overline{B}~\overline{C}D \vee A\overline{B}C\overline{D} \vee A\overline{B}CD \vee ABCD} = \\
+		    
+		    (A \vee B \vee \overline{C} \vee D)(A \vee B \vee \overline{C} \vee \overline{D})
+		    (\overline{A} \vee B \vee C \vee D)(\overline{A} \vee B \vee C \vee \overline{D})
+		    (\overline{A} \vee B \vee \overline{C} \vee D) \\
+		    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ (\overline{A} \vee B \vee \overline{C} \vee \overline{D})(\overline{A} \vee \overline{B} \vee \overline{C} \vee \overline{D})
+		\end{equation*}
+		\\
+		
+		Naš dobiveni izraz predstavlja SKNF našeg početnog izraza. \\
+		\newpage
+		(e) \\
+		
+		Ukoliko krenemo od našeg DNF tj. (a), možemo dobiti ANF na sljedeći način: \\		
+		\begin{equation*}
+		
+		    \overline{A}~\overline{C} \vee B~\overline{C} \vee \overline{A}B \vee B~\overline{D} 
+		    = T \veebar{} ( T \veebar{} (T \veebar{} A)(T \veebar{} C))(T \veebar{} B(T \veebar{} C))(T \veebar{} (T \veebar{} A)B)(T \veebar{} B(T \veebar{} D)) = \\ 
+		    
+		    = T \veebar{} ( T \veebar{} (T \veebar{} C \veebar{} A \veebar{} AC))(T \veebar{} B \veebar{} BC)(T \veebar{} B \veebar{} AB)(T \veebar{} B \veebar{} BD) = \\
+		    
+		    = T \veebar{} (C \veebar{} A \veebar{} AB \veebar{} AC \veebar{} ABC)(T \veebar{} B \veebar{} ABD) = \\
+		    
+		    = T \veebar~C \veebar{} BC \veebar{} ABCD \veebar{} AB \veebar{} ABC \veebar{} A \veebar{} AC
+		    
+		\end{equation*}
+		
+		
+		(f) \\
+		
+		Ukoliko krenemo od našeg DNF izraza, možemo ga predstaviti na sljedeći način: \\
+		
+		$f$(A,B,C,D) = Z = {$\overline{A}$}~{$\overline{C}$} \vee B{$\overline{C}$} \vee {$\overline{A}$}B \vee B{$\overline{D}$} \\
+		\begin{equation*}
+		    
+		    Z = ITE(A, B\overline{C} \vee B\overline{D}, \overline{C} \vee D) =
+		    ITE(A, ITE(B, \overline{C} \vee \overline{D}, \bot), ITE(B, \top, \overline{C})) = \\
+		    
+		    = ITE(A, ITE(B, ITE(C, \overline{D}, \top), \bot), ITE(B, \top, ITE(C, \bot, \top))) = \\
+		    
+		    = ITE(A, ITE(B, ITE(C, ITE(D, \bot, \top), \top), \bot), ITE(B, \top, ITE(C, \bot, \top)))
+		    
+		\end{equation*}
+		
+	\end{enumerate}
+	
+	
+	
+    \end{document}
+    

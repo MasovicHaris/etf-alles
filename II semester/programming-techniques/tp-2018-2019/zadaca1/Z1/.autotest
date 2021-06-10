@@ -1,0 +1,122 @@
+{
+    "id": 1201,
+    "name": "Tehnike programiranja (2018\/2019), Z1, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1202,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT1: primjer iz zadace\n        for (int i : PalindromskaOtpornost({16453, -48394, 43834, 4838, 35984, -35984}))\n            std::cout << i << \" \";\n    }\/\/10 7 0 2 6 6",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 7 0 2 6 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1203,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT2:\n        for (int i : PalindromskaOtpornost({1212, 220, 56, 12, 17, 6593, 224}))\n            std::cout << i << \" \";\n    }\/\/1 1 1 1 1 3 1  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 1 1 3 1  "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1204,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT3:\n        for (int i : PalindromskaOtpornost({16453, 48394, 43834, 4838, 9374, 6453, -8873, 27}))\n            std::cout << i << \" \";\n    }\/\/10 7 0 2 2 1 12 1 ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 7 0 2 2 1 12 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1205,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT4:\n        for (int i : PalindromskaOtpornost({-17, 6748, -2384, 2384, 3838, -666, 2837}))\n            std::cout << i << \" \";\n    }\/\/1 2 3 3 1 0 3 ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2 3 3 1 0 3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1210,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT9: main\n        _main(); \/\/unos: 9 9991 8882 7773 6664 5555 4446 3337 2228 11119\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "9 9991 8882 7773 6664 5555 4446 3337 2228 11119\n"
+            },
+            "expected": [
+                "Koliko zelite unijeti elemenata: Unesite elemente: Palindromska otpornost broja 9991 iznosi 7                             \\nPalindromska otpornost broja 8882 iznosi 6  \\nPalindromska otpornost broja 7773 iznosi 4  \\nPalindromska otpornost broja 6664 iznosi 2  \\nPalindromska otpornost broja 5555 iznosi 0  \\nPalindromska otpornost broja 4446 iznosi 4  \\nPalindromska otpornost broja 3337 iznosi 6  \\nPalindromska otpornost broja 2228 iznosi 2  \\nPalindromska otpornost broja 11119 iznosi 2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

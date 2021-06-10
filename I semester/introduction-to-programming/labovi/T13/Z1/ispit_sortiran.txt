@@ -1,0 +1,10 @@
+Ivic                Ivica          20
+Radic               Rade           19
+Markovic            Marko          14
+Majic               Maja           12
+Danilovic           Danilo         12
+Almirovic           Almir          10
+Zdravkovic          Zdravko         8
+Anic                Ana             7
+Muharemovic         Muharem         7
+Isovic              Ismet           5

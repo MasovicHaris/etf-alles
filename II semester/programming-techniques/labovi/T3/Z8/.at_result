@@ -1,0 +1,133 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3207": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite redni broj rijeci: Unesite recenicu: Rijec na poziciji 4 je vrba",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3208": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci! \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3209": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci! \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3210": {
+            "status": 1,
+            "run_result": {
+                "output": "'rijec'\n'rijec'\n'rijec'\n'rijec'\n'rijec'\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3211": {
+            "status": 1,
+            "run_result": {
+                "output": "'rijec1'\n'rijec2'\n'rijec1'\n'rijec2'\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3212": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite redni broj rijeci: Unesite recenicu: IZUZETAK: Pogresan redni broj rijeci! \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3213": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite redni broj rijeci: Unesite recenicu: Rijec na poziciji 1 je Ja.sam/student#Elektrotehnickog.fakulteta",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3214": {
+            "status": 1,
+            "run_result": {
+                "output": "'razmatrati'",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1490257192
+}

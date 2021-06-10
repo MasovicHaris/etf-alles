@@ -1,0 +1,94 @@
+{
+    "id": 7211,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 5",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2052,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nMeho\nMehic\n123456\n2\n0\n2\n0\n"
+            },
+            "expected": [
+                "Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \\n1. Meho Mehic, Tel: 123456\\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \\n1. Meho Mehic, Tel: 123456\\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2053,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "remove(\"imenik.txt\");\n_main();\nprintf(\"\\n\");\nFILE* dat = fopen(\"imenik.txt\", \"r\");\nif (dat == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\nint c;\ndo {\n   c = fgetc(dat);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose(dat);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nPero\nPeric\n111111\n1\nHana\nHanic\n555555\n0\n"
+            },
+            "expected": [
+                "Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj telefona: Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \\nPero           Peric               111111\\nHana           Hanic               555555"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2054,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "FILE* dat = fopen(\"imenik.txt\", \"w\");\nfputs(\"Jure           Juric               987654\\n\", dat);\nfputs(\"Alma           Almic               246802\\n\", dat);\nfclose(dat);\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n0\n"
+            },
+            "expected": [
+                "Pritisnite 1 za unos, 2 za ispis, 0 za izlaz: \\n1. Jure Juric, Tel: 987654\\n2. Alma Almic, Tel: 246802\\nPritisnite 1 za unos, 2 za ispis, 0 za izlaz: \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

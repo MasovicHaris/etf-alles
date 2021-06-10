@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Vicinor.Forme.FavouritesList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vicinor.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Vicinor.Model"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="13*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <GridView ItemsSource="{x:Bind dRestorani}" Margin="0,0,0,10" Grid.Row="1" Grid.RowSpan="2">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Restoran">
+                    <StackPanel HorizontalAlignment="Center" Width="250" Height="250">
+                        <Image Height="150" Width="150" Source="{x:Bind Slika}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind Name}" HorizontalAlignment="Center"/>
+                        <TextBlock FontSize="10" Text="{x:Bind Description}" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+
+        <TextBlock Text="Favourite Resorants" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+
+    </Grid>
+</Page>

@@ -1,0 +1,194 @@
+{
+    "id": 8631,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 13, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 71234,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/test polimorfizma \n\tstd::vector<std::shared_ptr<Lik>> v(3);\n\tv[0] = std::make_shared<Krug>(10);\n\tv[1] = std::make_shared<Pravougaonik>(10,10);\n\tv[2] = std::make_shared<Trougao>(3,4,5);\n\tfor(int i = 0; i < 3; i++) v[i]->IspisiSpecificnosti();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Krug poluprecnika 10\\nPravougaonik sa stranicama duzine 10 i 10\\nTrougao sa stranicama duzine 3, 4 i 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3797,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/klasa krug\n\tstd::vector<std::shared_ptr<Lik>> krugovi;\n\t\ttry{\n\t\t\tkrugovi.push_back(std::make_shared<Krug>(-5));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tkrugovi.push_back(std::make_shared<Krug>(0));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tkrugovi.push_back(std::make_shared<Krug>(10));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tkrugovi.push_back(std::make_shared<Krug>(5.1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\tfor(auto x : krugovi) x->Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravni parametri\\nNeispravni parametri\\nKrug poluprecnika 10\\nObim: 62.8319 Povrsina: 314.159\\nKrug poluprecnika 5.1\\nObim: 32.0442 Povrsina: 81.7128"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3798,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/klasa pravougaonik\n\tstd::vector<std::shared_ptr<Lik>> pravougaonici;\n\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(-5,1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(1,-5));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(0,1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(1,0));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(5,1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\tpravougaonici.push_back(std::make_shared<Pravougaonik>(5.5,1.1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\tfor(auto x : pravougaonici) x->Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nPravougaonik sa stranicama duzine 5 i 1\\nObim: 12 Povrsina: 5\\nPravougaonik sa stranicama duzine 5.5 i 1.1\\nObim: 13.2 Povrsina: 6.05"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3799,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\t\/\/klasa trougao\n\tstd::vector<std::shared_ptr<Lik>> trouglovi;\n\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(-1,-1,-1));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(0,0,0));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(1,2,3));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(7,8,56));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(8,56,7));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(56,8,7));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(3,4,5));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\ttry{\n\t\t\ttrouglovi.push_back(std::make_shared<Trougao>(4,4,4));\n\t\t}\n\t\tcatch(std::domain_error e){\n\t\t\tstd::cout << e.what() << std::endl;\n\t\t}\n\t\t\n\tfor(auto x : trouglovi) x->Ispisi();\n ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\nTrougao sa stranicama duzine 3, 4 i 5\\nObim: 12 Povrsina: 6\\nTrougao sa stranicama duzine 4, 4 i 4\\nObim: 12 Povrsina: 6.9282"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3800,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/main\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\nK-5\nK0\nK10\nK5.1\nP-5,1\nP1,-5\nP0,1\nP1,0\nP5,1\nP5.5,1.1\nP-1,-1,-1\nT0,0,0\nT1,2,3\nT7,8,56\nT8,56,7\nT56,8,7\nT3,4,5\nT4,4,4\n"
+            },
+            "expected": [
+                "Koliko zelite likova: Lik 1: Pogresni podaci, ponovite unos!\\nLik 1: Pogresni podaci, ponovite unos!\\nLik 1: Lik 2: Lik 3: Pogresni podaci, ponovite unos!\\nLik 3: Pogresni podaci, ponovite unos!\\nLik 3: Pogresni podaci, ponovite unos!\\nLik 3: Pogresni podaci, ponovite unos!\\nLik 3: Lik 4: Lik 5: Pogresni podaci, ponovite unos!\\nLik 5: Pogresni podaci, ponovite unos!\\nLik 5: Pogresni podaci, ponovite unos!\\nLik 5: Pogresni podaci, ponovite unos!\\nLik 5: Pogresni podaci, ponovite unos!\\nLik 5: Pogresni podaci, ponovite unos!\\nLik 5: Lik 6: \\nKrug poluprecnika 10\\nObim: 62.8319 Povrsina: 314.159\\nKrug poluprecnika 5.1\\nObim: 32.0442 Povrsina: 81.7128\\nPravougaonik sa stranicama duzine 5 i 1\\nObim: 12 Povrsina: 5\\nPravougaonik sa stranicama duzine 5.5 i 1.1\\nObim: 13.2 Povrsina: 6.05\\nTrougao sa stranicama duzine 3, 4 i 5\\nObim: 12 Povrsina: 6\\nTrougao sa stranicama duzine 4, 4 i 4\\nObim: 12 Povrsina: 6.9282"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3801,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/main test iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\nP3,2\npppqqq\nK2,3\nK5\nT1,2,3\nT3,4,5\nP10,20\nK10\n"
+            },
+            "expected": [
+                "Koliko zelite likova: Lik 1: Lik 2: Pogresni podaci, ponovite unos!\\nLik 2: Pogresni podaci, ponovite unos!\\nLik 2: Lik 3: Pogresni podaci, ponovite unos!\\nLik 3: Lik 4: Lik 5: \\nPravougaonik sa stranicama duzine 3 i 2\\nObim: 10 Povrsina: 6\\nKrug poluprecnika 5\\nObim: 31.4159 Povrsina: 78.5398\\nTrougao sa stranicama duzine 3, 4 i 5\\nObim: 12 Povrsina: 6\\nPravougaonik sa stranicama duzine 10 i 20\\nObim: 60 Povrsina: 200\\nKrug poluprecnika 10\\nObim: 62.8319 Povrsina: 314.159"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3802,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  Lik *p = new DummyKlasa;\n  delete p;",
+            "global_above_main": "class DummyKlasa : public Lik {\npublic:\n  ~DummyKlasa() { std::cout << \"Pozvan ispravan destruktor!\"; };\n  void IspisiSpecificnosti() const {};\n  double DajObim() const {};\n  double DajPovrsinu() const {};\n};",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Pozvan ispravan destruktor!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

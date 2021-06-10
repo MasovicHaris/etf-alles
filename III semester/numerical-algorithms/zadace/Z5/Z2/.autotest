@@ -1,0 +1,121 @@
+{
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 5, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 81,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 1: Test minimuma, pocetna tacka lijevo od minimuma\nstd::cout << FindMinimum([](double x) { return 1 + (x - 5) * (x - 5); }, 1);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 82,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 2: Test minimuma, pocetna tacka desno od minimuma\nstd::cout << FindMinimum([](double x) { return 1 + (x - 5) * (x - 5); }, 20);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 83,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 3: FindMinimum, izuzeci -1\ntry {\n    std::cout << FindMinimum([](double x) { return x; }, 1);\n}\ncatch(std::logic_error e) {\n    std::cout << \"'\" << e.what() << \"'\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Minimum has not found'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 84,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 4: FindMinimum, izuzeci - 2\ntry {\n    FindMinimum([](double x) { return x; }, 1, -1, 1, 1, 1);\n}\ncatch(std::domain_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    FindMinimum([](double x) { return x; }, 1, 1, -1, 1, 1);\n}\ncatch(std::domain_error e) {\n    std::cout << \"'\" << e.what() << \"'\";\n}\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid parameters'\\n'Invalid parameters'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 85,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test 5: FindMinimum, izuzeci - 3\ntry {\n    FindMinimum([](double x) { return x; }, 1, 1, 1, -1, 1);\n}\ncatch(std::domain_error e) {\n    std::cout << \"'\" << e.what() << \"'\" << std::endl;\n}\ntry {\n    FindMinimum([](double x) { return x; }, 1, 1, 1, 1, -1);\n}\ncatch(std::domain_error e) {\n    std::cout << \"'\" << e.what()<< \"'\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid parameters'\\n'Invalid parameters'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

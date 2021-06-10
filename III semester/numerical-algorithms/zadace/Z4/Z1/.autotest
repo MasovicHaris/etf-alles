@@ -1,0 +1,268 @@
+{
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 4, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 99,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - ChebyshevApproximation - 1\nconst double PI10 = 4 * std::atan(1);\nauto funsin = [](double x) { return std::sin(x); };\nChebyshevApproximation sinch(funsin, 0, PI10, 10);\nstd::cout << funsin(1) << \" \" << sinch(1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.841471 0.841471"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 100,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - ChebyshevApproximation - 2\nconst double PI11 = 4 * std::atan(1);\nauto funsin1 = [](double x) { return std::sin(x); };\nChebyshevApproximation sinch1(funsin1, 0, PI11, 10);\nstd::cout <<funsin1(1) << \" \" << sinch1.derivative(1) << \" \" << sinch1.derivative()(1)\n<< \" \" << sinch1.derivative().derivative(1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.841471 0.540302 0.540302 -0.841471"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 101,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - ChebyshevApproximation - 3\nconst double PI12 = 4 * std::atan(1);\nauto funsin2 = [](double x) { return std::sin(x); };\nChebyshevApproximation sinch2(funsin2, 0, PI12, 10);\nstd::cout << sinch2.integrate(0, PI12 \/ 2) << \" \" << sinch2.integrate();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 102,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - ChebyshevApproximation - 4\nconst double PI13 = 4 * std::atan(1);\nauto funsin3 = [](double x) { return std::sin(x); };\nChebyshevApproximation sinch3(funsin3, 0, PI13, 10);\nsinch3.trunc(0.001);\nstd::cout << funsin3(1) << \" \" << sinch3(1)<<std::endl;\nstd::cout <<funsin3(1) << \" \" << sinch3.derivative(1) << \" \" << sinch3.derivative()(1)\n<< \" \" << sinch3.derivative().derivative(1)<<std::endl;\nstd::cout << sinch3.integrate(0, PI13 \/ 2) << \" \" << sinch3.integrate();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.841471 0.841844\\n0.841471 0.538365 0.538365 -0.847308\\n0.999973 1.99995"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 103,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - ChebyshevApproximation - 5\nconst double PI14 = 4 * std::atan(1);\nauto funsin4 = [](double x) { return std::sin(x); };\nChebyshevApproximation sinch4(funsin4, 0, PI14, 10);\nsinch4.set_m(4);\nstd::cout << funsin4(1) << \" \" << sinch4(1)<<std::endl;\nstd::cout <<funsin4(1) << \" \" << sinch4.derivative(1) << \" \" << sinch4.derivative()(1)\n<< \" \" << sinch4.derivative().derivative(1)<<std::endl;\nstd::cout << sinch4.integrate(0, PI14 \/ 2) << \" \" << sinch4.integrate();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.841471 0.841844\\n0.841471 0.538365 0.538365 -0.847308\\n0.999973 1.99995"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 104,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT6 - ChebyshevApproximation - Izuzetak 1\ntry\n{\nconst double PIPI3 = 4 * std::atan(1);\nauto sinf2 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin10(sinf2,PIPI3, -10, 10);\n\/\/Bad parametrers \/ Bad parameters\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad parameters'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 105,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT7 - ChebyshevApproximation - Izuzetak 2\ntry\n{\nconst double PIPI4 = 4 * std::atan(1);\nauto sinf3 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin11(sinf3,0, PIPI4,0);\n\/\/Bad parametrers \/ Bad parameters\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad parameters'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 106,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8 - ChebyshevApproximation - Izuzetak 3\ntry\n{\nconst double PIPI5 = 4 * std::atan(1);\nauto sinf4 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin12(sinf4,0, PIPI5,10);\nchsin12.set_m(1);\n\/\/Bad order\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\"<<std::endl;\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\"<<std::endl;\n}\n    try\n{\nconst double PIPI6 = 4 * std::atan(1);\nauto sinf5 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin13(sinf5,0, PIPI6,10);\nchsin13.set_m(11);\n\/\/Bad order\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad order'\\n'Bad order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 107,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT9 - ChebyshevApproximation - Izuzetak 4\ntry\n{\nconst double PIPI7 = 4 * std::atan(1);\nauto sinf6 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin14(sinf6,0, PIPI7,10);\nstd::cout<<chsin14(-2);\n\/\/Bad argument\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\"<<std::endl;\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\"<<std::endl;\n}\n    try\n{\nconst double PIPI8 = 4 * std::atan(1);\nauto sinf7 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin15(sinf7,0, PIPI8,10);\nstd::cout<<chsin15.derivative(20);\n\/\/Bad argument\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad argument'\\n'Bad argument'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 108,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT10 - ChebyshevApproximation - Izuzetak 5\ntry\n{\nconst double PIPI9 = 4 * std::atan(1);\nauto sinf8 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin16(sinf8,0, PIPI9,10);\nstd::cout << chsin16.integrate(-2, PIPI9 \/ 2);\n\/\/Bad interval\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\"<<std::endl;\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\"<<std::endl;\n}\n    try\n{\nconst double PIPI10 = 4 * std::atan(1);\nauto sinf9 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin17(sinf9,0, PIPI10,10);\nstd::cout << chsin17.integrate(0, 20);\n\/\/Bad interval\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad interval'\\n'Bad interval'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 109,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT11 - ChebyshevApproximation - Izuzetak 6\ntry\n{\nconst double PIPI5 = 4 * std::atan(1);\nauto sinf4 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin12(sinf4,0, PIPI5,10);\nchsin12.trunc(1000);\n\/\/Bad order\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\"<<std::endl;\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\"<<std::endl;\n}\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad tolerance'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 110,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT12 - ChebyshevApproximation - Izuzetak 7\ntry\n{\nconst double PIPI5 = 4 * std::atan(1);\nauto sinf4 = [](double x) { return std::sin(x); };\nChebyshevApproximation chsin12(sinf4,0, PIPI5,10);\nchsin12.trunc(-5);\n\/\/Bad order\n}\ncatch (std::domain_error e)\n{\nstd::cout << \"'\" << e.what() << \"'\"<<std::endl;\n}\ncatch (...)\n{\nstd::cout << \"Pogresan tip izuzetka\"<<std::endl;\n}\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Bad tolerance'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

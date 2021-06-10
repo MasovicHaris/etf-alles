@@ -1,0 +1,217 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3630": {
+            "status": 1,
+            "run_result": {
+                "output": "false false false\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3631": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravna visina\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3632": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan poluprecnik\nNeispravan poluprecnik\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3633": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan poluprecnik\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3634": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan poluprecnik\nNeispravan poluprecnik\nNeispravan poluprecnik\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3635": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan poluprecnik\nNeispravan poluprecnik\nNeispravan poluprecnik\nNeispravna visina\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3636": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan faktor skaliranja\nNeispravan faktor skaliranja\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3637": {
+            "status": 1,
+            "run_result": {
+                "output": "1.00000 6.28319 3.14159\n1.41421 8.88577 6.28319\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3640": {
+            "status": 1,
+            "run_result": {
+                "output": "2.000 2.000 50.265 25.133\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3641": {
+            "status": 1,
+            "run_result": {
+                "output": "1.414\n1.414\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3642": {
+            "status": 1,
+            "run_result": {
+                "output": "R=5 O=31.41593 P=78.53982\nR=1.00000 H=9.00000 P=62.83185 V=28.27433\nR=1.00000 O=6.28319 P=3.14159\nR=5.00000 O=31.41593 P=78.53982\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3643": {
+            "status": 1,
+            "run_result": {
+                "output": "R=5 O=31.41593 P=78.53982\nR=1.00000 H=9.00000 P=62.83185 V=28.27433\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3644": {
+            "status": 1,
+            "run_result": {
+                "output": "10\n10",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3645": {
+            "status": 1,
+            "run_result": {
+                "output": "50\n50\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1495696175
+}

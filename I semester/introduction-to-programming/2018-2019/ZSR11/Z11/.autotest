@@ -1,0 +1,295 @@
+{
+    "id": 7204,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Zada\u0107a 5, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1885,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT1: da li je izbacivanje ispravno? (Gleda se samo podstring, ne gledaju najbolja 3)\n        struct Student studenti[] = {\n\n            {\"Meho\", \"Behic\", {10, 9}, 2},\n            {\"Meho\", \"Aehic\", {10, 8}, 2},\n            {\"Meho\", \"Cehic\", {10, 9, 8, 7, 6}, 5},\n            {\"Meho\", \"Dehic\", {6, 9}, 2},\n            {\"Meho\", \"Zehic\", {10}, 1},\n            {\"Meho\", \"Oehic\", {10, 9, 9, 9}, 4}\n        };\n        int vel = sizeof studenti \/ sizeof studenti[0], i;\n        vel = genijalci(studenti, vel, 9.);\n        printf(\"Vel: %d\\nStudenti:\\n\", vel);\n        for (i = 0; i < vel; ++i)\n            printf (\"%s %s\\n\", studenti[i].prezime, studenti[i].ime);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 4\\nStudenti:\\nBehic Meho\\nAehic Meho\\nZehic Meho\\nOehic Meho"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1886,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "{\/\/AT2: da li je izbacivanje ispravno? Imamo studenta sa ocjenom 5\n        struct Student studenti[] = {\n\n            {\"Meho\", \"Behic\", {10, 9}, 2},\n            {\"Meho\", \"Aehic\", {10, 8}, 2},\n            {\"Meho\", \"Cehic\", {10, 9, 8, 7, 6}, 5},\n            {\"Meho\", \"Dehic\", {6, 9}, 2},\n            {\"Meho\", \"Zehic\", {10}, 1},\n            {\"Neko\", \"Nekic\", {10, 10, 5, 10, 10, 10, 10}, 7},\n            {\"Meho\", \"Oehic\", {10, 9, 9, 9}, 4}\n        };\n        int vel = sizeof studenti \/ sizeof studenti[0], i;\n        vel = genijalci(studenti, vel, 9.8);\n        printf(\"Vel: %d\\nStudenti:\\n\", vel);\n        for (i = 0; i < vel; ++i)\n            printf (\"%s %s\\n\", studenti[i].prezime, studenti[i].ime);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 1\\nStudenti:\\nZehic Meho"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1889,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Test sortiranja po prosjeku *\/\nstruct Student studenti[5] ={\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Pero\", \"Peric\", { 8,8,8,8,7}, 5}, \n\t{ \"Beba\", \"Bebic\", { 6,6,6,6,6}, 5},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,8,8}, 5}, \n};\ngenijalci(studenti, 5, 6.5);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Peric Pero\\nFatic Fata\\nMujic Mujo\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1890,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Test leksikografskog sortiranja *\/\nstruct Student studenti[6] ={\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Meho\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Pero\", \"Peric\", { 8,8,8,8,7}, 5}, \n\t{ \"Beba\", \"Bebic\", { 6,6,6,6,6}, 5},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,8}, 5}, \n};\ngenijalci(studenti, 6, 6.5);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Peric Pero\\nFatic Fata\\nMujic Meho\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1891,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Test leksikografskog sortiranja no. 2, jedna petica je prosjek 5.0 *\/\nstruct Student studenti[5] ={\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Meho\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Beba\", \"Bebic\", { 10, 10, 10, 10, 5}, 5},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,8}, 5}, \n};\ngenijalci(studenti, 5, 6.5);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Fatic Fata\\nMujic Meho\\nMujic Mujo\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1892,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT6: Test vise studenata sa istim imenom, prezimenom i prosjekom *\/\nstruct Student studenti[4] ={\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Beba\", \"Bebic\", { 6,6,6,6,6}, 5},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,8}, 5}, \n};\ngenijalci(studenti, 4, 6.5);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Fatic Fata\\nMujic Mujo\\nMujic Mujo\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1893,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT7: Test izbacivanja + samo dva studenta ispunjavaju uslov *\/\nstruct Student studenti[3] = {\n\t{ \"Beba\", \"Bebic\", { 6,6,6,6,6}, 5},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8,8}, 29}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,8}, 29}, \n};\ngenijalci(studenti, 3, 7.0);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Mujic Mujo\\nFatic Fata\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1894,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT8: Test preciznosti izbacivanja + samo jedan student ispunjava uslov + student bez ocjena *\/\nstruct Student studenti[3] = {\n    { \"Beba\", \"Bebic\", {}, 0},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7}, 29}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6}, 29}, \n};\ngenijalci(studenti, 3, 7);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Mujic Mujo\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1895,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT9: Niko nije ostao u nizu *\/ \nstruct Student studenti[6] ={\n\t{ \"Mujo\", \"Mujic\", { 10,10,10,10,9}, 5}, \n\t{ \"Meho\", \"Mujic\", { 7,7,7,7,8}, 5}, \n\t{ \"Pero\", \"Peric\", { 8,8,8,8,7}, 5}, \n\t{ \"Beba\", \"Bebic\", {}, 0},\n\t{ \"Mujo\", \"Mujic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7}, 29}, \n\t{ \"Fata\", \"Fatic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6}, 29}, \n};\nint vel = genijalci(studenti, 6, 10);\nprintf(\"Vel: %d\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2065,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT10: Niz treba ostati nepromijenjen *\/ \nstruct Student studenti[6] ={\n    { \"Meho\", \"Mujic\", { 7,7,7,7,8}, 5}, \n    { \"Pero\", \"Peric\", { 8,8,8,8,7}, 5}, \n    { \"Beba\", \"Bebic\", {}, 0},\n    { \"Mujo\", \"Mujic\", { 10,10,10,10,9}, 5}, \n    { \"Mujo\", \"Mujic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7}, 29}, \n    { \"Fata\", \"Fatic\", { 7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6}, 29}, \n};\nint vel = genijalci(studenti, 6, 7);\nint i, j;\nfor (i=0; i<vel; i++) {\n    printf(\"%s %s (\", studenti[i].ime, studenti[i].prezime);\n    for (j=0; j<studenti[i].br_ocjena; j++) {\n       if (j>0) printf(\",\");\n       printf(\"%d\", studenti[i].ocjene[j]);\n    }\n    printf(\")\\n\");\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Mujic Mujo\\nPeric Pero\\nMujic Meho\\nMeho Mujic (7,7,7,7,8)\\nPero Peric (8,8,8,8,7)\\nMujo Mujic (10,10,10,10,9)\\nMujo Mujic (7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7)\\n",
+                "Mujic Mujo\\nPeric Pero\\nMujic MehoMeho Mujic (7,7,7,7,8)\\nPero Peric (8,8,8,8,7)\\nMujo Mujic (10,10,10,10,9)\\nMujo Mujic (7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7)\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2066,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT11: Nije dozvoljeno dodavanje novih elemenata u strukturu *\/\nstruct Student s = { \"aaaaaaaaaaaaaaaaaaa\", \"aaaaaaaaaaaaaaaaaaa\", {}, 50 };\nint i;\nfor (i=0; i<50; i++) s.ocjene[i]=10;\nprintf(\"Vel: %llu\\n\", sizeof s);\n\/* = 244 = 20*1 (char) + 20*1 (char) + 50*4 (int) + 4 (int) *\/\n\nstruct Student niz[1];\nniz[0]=s;\ngenijalci(niz, 1, 9.9);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vel: 244\\naaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

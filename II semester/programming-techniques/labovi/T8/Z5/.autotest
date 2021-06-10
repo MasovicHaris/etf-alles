@@ -1,0 +1,269 @@
+{
+    "id": 8585,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 8, Zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3531,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1 - main iz postavke\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2.5 3.17 5.8 2 -1 3.9 6 1.17 1 -2.25 9 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3532,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2 - main\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "13 1.2 16.4 18.7 12.4 15 19 4 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3533,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - unos sa negativnim brojevima\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-13 -1.2 -16.4 -18.7 -12.4 -15 -19 -4 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 3 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3534,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - unos sa pozitivnim i negativnim brojevima\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-13 1.2 -16.4 18.7 -12.4 -15 19 -4 4 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 4 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3535,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5 - unos sa pozitivnim i negativnim brojevima\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-5 -4 5 4 -5 -4 5 4 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 4 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3536,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6 - svi brojevi u listi su isti\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 1 1 1 1 1 1 1 1 1 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 0 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3537,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7 - svi brojevi u listi su isti po modulu\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 -1 1 -1 1 -1 1 -1 -1 1 0\n"
+            },
+            "expected": [
+                "Unesite slijed brojeva (0 za kraj): U slijedu ima 5 brojeva vecih od njihove aritmeticke sredine"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3538,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8 - testiranje funkcija sa elementima tipa int\n\n  auto lista(KreirajPovezanuListu<int>(0));\n  int prag;\n  std::cin >> prag; \n  std::cout << \"Suma elemenata \" << SumaElemenata(lista) << std::endl;\n  std::cout << \"Broj elemenata \" << BrojElemenata(lista) << std::endl;\n  std::cout << \"Broj vecih od praga: \" << BrojVecihOd(lista, prag) << std::endl;\n  UnistiListu(lista);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3 4 5 6 7 8 9 10 0 4\n"
+            },
+            "expected": [
+                "Suma elemenata 55\\nBroj elemenata 10\\nBroj vecih od praga: 6\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3539,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9 - da li se ispravno obavlja unos elemenata do zavrsnog\n\n  auto lista(KreirajPovezanuListu<int>(5));\n  int prag;\n  std::cin >> prag; \n  std::cout << \"Suma elemenata \" << SumaElemenata(lista) << std::endl;\n  std::cout << \"Broj elemenata \" << BrojElemenata(lista) << std::endl;\n  std::cout << \"Broj vecih od praga: \" << BrojVecihOd(lista, prag) << std::endl;\n  UnistiListu(lista);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3 4 5 6\n"
+            },
+            "expected": [
+                "Suma elemenata 10\\nBroj elemenata 4\\nBroj vecih od praga: 0\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3540,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10 - da li se ispravno obavlja unos elemenata do zavrsnog\n\n  auto lista(KreirajPovezanuListu<int>(5));\n  int prag;\n  std::cin >> prag; \n  std::cout << \"Suma elemenata \" << SumaElemenata(lista) << std::endl;\n  std::cout << \"Broj elemenata \" << BrojElemenata(lista) << std::endl;\n  std::cout << \"Broj vecih od praga: \" << BrojVecihOd(lista, prag) << std::endl;\n  UnistiListu(lista);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1 2 3 4 5 6 7 8 9 10\n"
+            },
+            "expected": [
+                "Suma elemenata 10\\nBroj elemenata 4\\nBroj vecih od praga: 0\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

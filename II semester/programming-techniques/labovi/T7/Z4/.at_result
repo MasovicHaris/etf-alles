@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3503": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite recenica: Unesite recenice: \nProblemi s memorijom!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3504": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite recenica: Unesite recenice: \nProblemi s memorijom!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3505": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite recenica: Unesite recenice: \nSortirane recenice: \nHop cup na kalup cetir babe jedan zub\nI jogurt ujutro goji\nOtiso si sarme probo nisi\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3506": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite recenica: Unesite recenice: \nSortirane recenice: \nCetvrta recenica\nDruga recenica\nPeta recenica\nPrva recenica\nTreca recenica\n48\n31\n48\n48\n48\n48\n88\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3512": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite recenica: Unesite recenice: \nSortirane recenice: \nA\nA\nAA\nAAA\nAAA\nB\nG\nG  \nGG\nH\nH\nI\nI\nX\nXXX\nY\nZ\nZ\nZZ\nZZZ\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1493881826
+}

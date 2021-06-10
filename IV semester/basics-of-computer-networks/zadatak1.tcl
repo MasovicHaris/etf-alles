@@ -1,0 +1,112 @@
+
+# Mašović Haris - 17993
+
+# Kreiranje objekta simulatora (inicijalizacija raspoređivača događaja)
+set ns [new Simulator]
+
+# Uključivanje trace procesa (kreiranje trace datoteke za vizualizaciju)
+set nf [open out1.nam w]
+$ns namtrace-all $nf
+
+# Otvaranje trace datoteke za upis značajnih podataka o simulaciji
+set tf [open out1.tr w]
+$ns trace-all $tf
+
+#Define a 'finish' procedure
+proc finish {} {
+        global ns nf tf
+        $ns flush-trace
+        # Zatvaranje NAM trace datoteke za vizualizaciju
+        close $nf
+        # Zatvaranje trace datoteke
+        close $tf
+        # Izvršavanje NAMa na trace datoteci
+        exec nam out1.nam &
+        exit 0
+}
+
+# Kreiranje čvorova
+set n0 [$ns node]
+set n1 [$ns node]
+set n2 [$ns node]
+set n3 [$ns node]
+set n4 [$ns node]
+set n5 [$ns node]
+
+# Nodes Label
+$n0 label "0"
+$n1 label "1"
+$n2 label "2"
+$n3 label "3"
+$n4 label "4"
+$n5 label "5"
+
+#Izgledi čvorova
+$n0 color Red
+$n1 color Yellow
+$n2 color Blue
+$n3 color Blue
+$n4 color Green
+$n5 color Red
+
+# Povezivanje čvorova duplex linkom
+$ns duplex-link $n5 $n3 625Mb 3ms DropTail
+$ns duplex-link $n3 $n1 256kb 1ms DropTail
+$ns duplex-link $n3 $n4 384kb 2ms DropTail
+$ns duplex-link $n1 $n2 384kb 2ms RED
+$ns duplex-link $n4 $n2 256kb 1ms RED
+$ns duplex-link $n2 $n0 625kb 3ms DropTail
+
+
+#Položaj čvorova za izgled u NAM-u
+$ns duplex-link-op $n5 $n3 orient down
+$ns duplex-link-op $n3 $n1 orient left-down
+$ns duplex-link-op $n3 $n4 orient right-down
+$ns duplex-link-op $n1 $n2 orient right-down
+$ns duplex-link-op $n4 $n2 orient left-down
+$ns duplex-link-op $n2 $n0 orient down
+
+# Kreiranje UDP transportnih agenata za exp
+set udp [new Agent/UDP]
+$ns attach-agent $n0 $udp
+set null [new Agent/Null]
+$ns attach-agent $n5 $null
+$ns connect $udp $null
+$udp set fid_ 1
+
+# Kreiranje UDP transportnih agenata za pareto
+set udp2 [new Agent/UDP]
+$ns attach-agent $n0 $udp2
+set null2 [new Agent/Null]
+$ns attach-agent $n3 $null2
+$ns connect $udp2 $null2
+$udp2 set fid_ 2
+
+# Postavljanje Eksponencijalnog generatora saobracaja
+set e [new Application/Traffic/Exponential]
+$e set packetSize_ 800
+$e set burst_time_ 30ms
+$e set idle_time_ 65ms
+$e set rate_ 800k
+$e attach-agent $udp
+
+
+# Postavljanje Pereto generatora saobracaja
+set p [new Application/Traffic/Pareto]
+$p set burst_time_ 500ms
+$p set idle_time_ 500ms
+$p set rate_ 200k
+$p set packetSize_ 300
+$p set shape_ 1.5
+$p attach-agent $udp2
+
+# Postavljanje scenarija simulacije
+$ns at 1.0 "$p start"
+$ns at 1.0 "$e start"
+$ns at 9.0 "$p stop"
+$ns at 9.0 "$e stop"
+$ns at 11.0 "finish"
+
+# Pokretanje simulacije
+$ns run
+

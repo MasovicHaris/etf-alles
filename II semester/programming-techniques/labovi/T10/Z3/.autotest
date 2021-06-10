@@ -1,0 +1,119 @@
+{
+    "id": 8603,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 10, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3646,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Test konstruktora\n\nVektor3d v1(3, 1, 4), v2, v3{-2,0,-10};\nv1.Ispisi(); std::cout<<\" \"; v1.Ispisi();\nstd::cout<<\" \"; v2.Ispisi(); std::cout<<\" \";\nv2.Ispisi(); std::cout<<\" \"; v3.Ispisi();\nstd::cout<<\" \"; v3.Ispisi(); std::cout<<\" \";\nv3.Ispisi();",
+            "global_above_main": "#include <cmath>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{3,1,4} {3,1,4} {0,0,0} {0,0,0} {-2,0,-10} {-2,0,-10} {-2,0,-10}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3647,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje metode DajBrojIspisa\n\nVektor3d v1(3, 1, 4), v2, v3{-2,0,-10};\nfor(int i=0;i<5;i++) {v1.Ispisi();std::cout<<\" \";}\nstd::cout<<std::endl;\nfor(int i=0;i<2;i++) {v2.Ispisi();std::cout<<\" \";}\nstd::cout<<std::endl;\nfor(int i=0;i<1;i++) {v3.Ispisi();std::cout<<\" \";}\nstd::cout<<std::endl;\nstd::cout<<\"Vektor v1 je ispisan \"<<v1.DajBrojIspisa()<<\", vektor v2 \"<<v2.DajBrojIspisa()<<\" i vektor v3 \"<<v3.DajBrojIspisa()<<\" puta.\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{3,1,4} {3,1,4} {3,1,4} {3,1,4} {3,1,4}\\n{0,0,0} {0,0,0}\\n{-2,0,-10}\\nVektor v1 je ispisan 5, vektor v2 2 i vektor v3 1 puta."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3648,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje da li novokreirana kopija nasljedjuje brojac ispisa\n\nVektor3d v1(1, 1, 1);\nfor(int i=0;i<3;i++) {v1.Ispisi();std::cout<<\" \";}\nstd::cout<<std::endl;\nconst Vektor3d v2(v1);\nv2.Ispisi(); std::cout << std::endl;\nstd::cout << v2.DajBrojIspisa() << std::endl;\nconst Vektor3d v3(v2);\nstd::cout << v3.DajBrojIspisa();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1,1,1} {1,1,1} {1,1,1}\\n{1,1,1}\\n1\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3678,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Testiranje da li klasa zaista ima niz od tri double elementa i brojac ispisa kao atribute.\n\nstd::cout<<sizeof(Vektor3d)<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "32"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

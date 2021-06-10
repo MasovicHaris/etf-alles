@@ -1,0 +1,31 @@
+Broj elemenata u steku: 5
+Elementi steka: 1 2 3 4 5 
+Stek nakon brisanja: 
+Broj elemenata u steku: 0
+
+------------------------------------
+Broj elemenata u steku: 0
+Elementi steka: 
+Stek nakon dodavanja 1 elementa: 
+Broj elemenata u steku: 1
+1337 
+------------------------------------
+Broj elemenata u steku: 1
+Elementi steka: 1337 
+Stek nakon skidanja 1 elementa: 
+Broj elemenata u steku: 0
+
+------------------------------------
+Broj elemenata u steku: 0
+Elementi steka: 
+Stek nakon stavljanja 1 elementa: 
+Broj elemenata u steku: 1
+1337 
+Element na vrhu: 1337
+------------------------------------
+Broj elemenata u steku: 1
+Elementi steka: 1337 
+Stek nakon dodavanja 1 elementa: 
+Broj elemenata u steku nakon dodavanja 1 elementa: 2
+1337 1338 
+------------------------------------

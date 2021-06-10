@@ -1,0 +1,153 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘std::function<double(double)> BaricentricnaInterpolacija(std::vector<std::pair<double, double> >, int)’:\nmain.cpp:47:37: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(i!=j && v[i].first==v[j].first) throw std::domain_error(\"Neispravni cvorovi\");\n                                     ^~~~~\nmain.cpp: In lambda function:\nmain.cpp:63:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n             if(x==v[i].first) return v[i].second;\n                        ^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "47",
+                "col": "37",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_8879/main.cpp:47:37: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(i!=j && v[i].first==v[j].first) throw std::domain_error(\"Neispravni cvorovi\");                                     ^~~~~/tmp/buildservice/bs_8879/main.cpp: In lambda function:",
+                "code": "if(i!=j && v[i].first==v[j].first) throw std::domain_error(\"Neispravni cvorovi\");"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "63",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_8879/main.cpp:63:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]             if(x==v[i].first) return v[i].second;                        ^~~~~",
+                "code": "if(x==v[i].first) return v[i].second;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "53": {
+            "status": 1,
+            "run_result": {
+                "output": "fun (2.5) = 5.425",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "54": {
+            "status": 1,
+            "run_result": {
+                "output": "fun (0.3) = 0.38552",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "55": {
+            "status": 1,
+            "run_result": {
+                "output": "fun (2.5) = 5.425\nfun (4) = 4\nfun (5.32) = 1.47372\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "56": {
+            "status": 1,
+            "run_result": {
+                "output": "fun (0.3) = 0.38552\nfun (0.57) = 0.864515\nfun (5) = 24.289\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "57": {
+            "status": 1,
+            "run_result": {
+                "output": "Odaberite opciju (1 - unos cvorova, 2 - aproksimacija): Unesite broj cvorova: Unesite cvorove kao parove x y: Unesite red interpolacije: Unesite argument (ili \"kraj\" za kraj): f(2.5) = 5.425\nUnesite argument (ili \"kraj\" za kraj): f(4) = 4\nUnesite argument (ili \"kraj\" za kraj): f(5.32) = 1.47372\nUnesite argument (ili \"kraj\" za kraj): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "58": {
+            "status": 1,
+            "run_result": {
+                "output": "Odaberite opciju (1 - unos cvorova, 2 - aproksimacija): Unesite krajeve intervala i korak: Unesite red interpolacije: Unesite argument (ili \"kraj\" za kraj): f(0.3) = 0.38552 fapprox(0.3) = 0.38552\nUnesite argument (ili \"kraj\" za kraj): f(0.57) = 0.864532 fapprox(0.57) = 0.864515\nUnesite argument (ili \"kraj\" za kraj): f(5) = 24.0411 fapprox(5) = 24.289\nUnesite argument (ili \"kraj\" za kraj): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "59": {
+            "status": 1,
+            "run_result": {
+                "output": "Odaberite opciju (1 - unos cvorova, 2 - aproksimacija): Unesite krajeve intervala i korak: Unesite red interpolacije: Unesite argument (ili \"kraj\" za kraj): f(1) = 1.84147 fapprox(1) = 1.84147\nUnesite argument (ili \"kraj\" za kraj): f(2) = 4.9093 fapprox(2) = 4.91588\nUnesite argument (ili \"kraj\" za kraj): f(3) = 9.14112 fapprox(3) = 9.34906\nUnesite argument (ili \"kraj\" za kraj): f(4) = 15.2432 fapprox(4) = 17.0272\nUnesite argument (ili \"kraj\" za kraj): f(5) = 24.0411 fapprox(5) = 32.4627\nUnesite argument (ili \"kraj\" za kraj): f(0.3) = 0.38552 fapprox(0.3) = 0.38552\nUnesite argument (ili \"kraj\" za kraj): f(0.57) = 0.864532 fapprox(0.57) = 0.864532\nUnesite argument (ili \"kraj\" za kraj): f(-2) = 3.0907 fapprox(-2) = 3.12192\nUnesite argument (ili \"kraj\" za kraj): f(-4) = 16.7568 fapprox(-4) = 15.5912\nUnesite argument (ili \"kraj\" za kraj): f(-7) = 48.343 fapprox(-7) = -19.1548\nUnesite argument (ili \"kraj\" za kraj): f(-0.7) = -0.154218 fapprox(-0.7) = -0.153751\nUnesite argument (ili \"kraj\" za kraj): f(0.1) = 0.109833 fapprox(0.1) = 0.109833\nUnesite argument (ili \"kraj\" za kraj): f(0.2) = 0.238669 fapprox(0.2) = 0.238669\nUnesite argument (ili \"kraj\" za kraj): f(0.333) = 0.437769 fapprox(0.333) = 0.437769\nUnesite argument (ili \"kraj\" za kraj): ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "60": {
+            "status": 1,
+            "run_result": {
+                "output": "fun (-2) = -8.0000\nfun (-1.6500) = -4.4921\nfun (-1.3000) = -2.1970\nfun (-0.9500) = -0.8574\nfun (-0.6000) = -0.2160\nfun (-0.2500) = -0.0156\nfun (0.1000) = 0.0010\nfun (0.4500) = 0.0911\nfun (0.8000) = 0.5120\nfun (1.1500) = 1.5209\nfun (1.5000) = 3.3750\nfun (1.8500) = 6.3316\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1558302713
+}

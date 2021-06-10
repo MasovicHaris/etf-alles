@@ -1,0 +1,290 @@
+{
+    "id": 472602,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 5, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 6975,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT1 - (javni) Test klase Student - konstruktori\n    Student s1(12345, \"1\/B\", \"Neko Nekic\", \"Bascarsija 1\", \"1\/1-1\");\n    Student s2(12346, \"1\/M\", \"    Neko  Nekic    \", \"Bascarsija 2\", \"1\/1-1\");\n    Student s3(12347, \"1\/D\", \"  Neko   Nekic   \", \"Bascarsija 3\", \"1\/1-1\");\n    Student s4(12348, \"1\", \"Neko   Nekic\", \"Bascarsija 4\", \"1\/1-1\");\n    Student s5(12349, \"3\", \"    Neko Nekic    \", \"Bascarsija 5\", \"1\/1-1\");\n    std::cout << \"OK\";",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6976,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - (javni) Test klase Student - geteri\n    Student s1(12345, \"1\/B\", \"Neko Nekic\", \"Bascarsija 1\", \"1\/1-1\");\n    Student s2(12346, \"1\/M\", \"    Neko  Nekic    \", \"Bascarsija 2\", \"1\/1-1\");\n    Student s3(12347, \"1\/D\", \"  Neko   Nekic   \", \"Bascarsija 3\", \"1\/1-1\");\n    Student s4(12348, \"1\", \"Neko   Nekic\", \"Bascarsija 4\", \"1\/1-1\");\n    \n    int i{12349};\n    std::string st1{\"3\"}, st2{\"    Neko Nekic    \"}, st3{\"Bascarsija 5\"}, st4{\"1\/1-1\"};\n    Student s5(i, st1, st2, st3, st4);\n    \n    std::cout << s1.DajIndeks() << \" \" << s1.DajImePrezime() << \" \" << s1.DajGodinuStudija() << \" \" << s1.DajAdresu() << \" \" << s1.DajTelefon() << std::endl;\n    std::cout << s2.DajIndeks() << \" \" << s2.DajImePrezime() << \" \" << s2.DajGodinuStudija() << \" \" << s2.DajAdresu() << \" \" << s2.DajTelefon() << std::endl;\n    std::cout << s3.DajIndeks() << \" \" << s3.DajImePrezime() << \" \" << s3.DajGodinuStudija() << \" \" << s3.DajAdresu() << \" \" << s3.DajTelefon() << std::endl;\n    std::cout << s4.DajIndeks() << \" \" << s4.DajImePrezime() << \" \" << s4.DajGodinuStudija() << \" \" << s4.DajAdresu() << \" \" << s4.DajTelefon() << std::endl;\n    std::cout << s5.DajIndeks() << \" \" << s5.DajImePrezime() << \" \" << s5.DajGodinuStudija() << \" \" << s5.DajAdresu() << \" \" << s5.DajTelefon() << std::endl;\n",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "12345 Neko Nekic 1\/B Bascarsija 1 1\/1-1\\n12346 Neko Nekic 1\/M Bascarsija 2 1\/1-1\\n12347 Neko Nekic 1\/D Bascarsija 3 1\/1-1\\n12348 Neko Nekic 1\/B Bascarsija 4 1\/1-1\\n12349 Neko Nekic 3\/B Bascarsija 5 1\/1-1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6977,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT3 - (javni) Test klase Student - metoda Ispisi\n    Student s1(12345, \"1\/D\", \"Neko Nekic\", \"Bascarsija 1\", \"1\/1-1\");\n    Student s2(12346, \"1\", \"    Neko  Nekic    \", \"Bascarsija 2\", \"1\/1-1\");\n    s1.Ispisi();\n    std::cout << std::endl;\n    s2.Ispisi();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj indeksa: 12345\\nGodina studija: 1\/D\\nIme i prezime: Neko Nekic\\nAdresa: Bascarsija 1\\nTelefon: 1\/1-1\\n\\nBroj indeksa: 12346\\nGodina studija: 1\/B\\nIme i prezime: Neko Nekic\\nAdresa: Bascarsija 2\\nTelefon: 1\/1-1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6978,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT5 - (javni) Test klase Laptop - konstruktor\n    Laptop l1 (123, \"ASUS X554L\", \"Intel CPU 2.4 GHz, 8 GB RAM\");\n    int i{234};\n    std::string s1{\"DELL XPS 13\"}, s2{\"Intel CPU 3.5 GHz, 8 GB RAM\"};\n    Laptop l2 (i, s1, s2);\n    std::cout << \"OK\";",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6979,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT6 - (javni) Test klase Laptop - geteri\n    Laptop l1 (123, \"ASUS X554L\", \"Intel CPU 2.4 GHz, 8 GB RAM\");\n    std::cout << l1.DajEvidencijskiBroj() << \" \" << l1.DajNaziv() << l1.DajKarakteristike();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "123 ASUS X554LIntel CPU 2.4 GHz, 8 GB RAM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6980,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT7 - (javni) Test klase Laptop - metoda Ispisi\n    Laptop l1 (123, \"ASUS X554L\", \"Intel CPU 2.4 GHz, 8 GB RAM\");\n    l1.Ispisi();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Evidencijski broj: 123\\nNaziv: ASUS X554L\\nKarakteristike: Intel CPU 2.4 GHz, 8 GB RAM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6981,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT8 - (javni) Test klase Laptop - metoda DaLiJeZaduzen\n    Laptop l1 (123, \"ASUS X554L\", \"Intel CPU 2.4 GHz, 8 GB RAM\");\n    std::cout << l1.DaLiJeZaduzen();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6982,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT18 - (javni) Test klase Administracija - konstruktor\n    Administracija admin;\n    std::cout << \"OK\";",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6983,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT20 - (skriveni) Test klase Administracija - NadjiStudenta (izuzetak)\n    \n    try\n    {\n        Administracija admin;\n        admin.NadjiStudenta(123);\n        std::cout << \"Ovo se ne smije ispisati.\";\n    } catch (const std::domain_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    } catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka!\";\n    }\n    \n    try\n    {\n        Administracija admin;\n        admin.NadjiStudenta(12345);\n        std::cout << \"Ovo se ne smije ispisati.\";\n    } catch (const std::domain_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    } catch (...)\n    {\n        std::cout << \"Pogresan tip izuzetka!\";\n    }",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Student nije nadjen\\nIzuzetak: Student nije nadjen"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6984,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT24 - (javni) Test klase Administracija - IzlistajStudente\n    \n    Administracija etf ;\n\n    etf.RegistrirajNoviLaptop(123, \"Dell\", \"CPU 3.0 GHz, 4 GB RAM\");\n    etf.RegistrirajNoviLaptop(331, \"ASUS\", \"CPU 3.5 GHz, 2 GB RAM\");\n    etf.RegistrirajNoviLaptop(122, \"Dell 2\", \"CPU 3.2 GHz, 6 GB RAM\");\n    etf.RegistrirajNovogStudenta(14212, \"1\", \"Benjamin\", \"Francuska revolucija 23\", \"12\/34-56\");\n    etf.RegistrirajNovogStudenta(17528, \"2\",\"Ivan\", \"Trg vjecnih studenata 12\", \"048\/597-585\");\n    \n    etf.IzlistajStudente();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Broj indeksa: 14212\\nGodina studija: 1\/B\\nIme i prezime: Benjamin\\nAdresa: Francuska revolucija 23\\nTelefon: 12\/34-56\\n\\nBroj indeksa: 17528\\nGodina studija: 2\/B\\nIme i prezime: Ivan\\nAdresa: Trg vjecnih studenata 12\\nTelefon: 048\/597-585"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6985,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT25 - (javni) Test klase Administracija - IzlistajLaptope\n    \n    Administracija etf ;\n\n    etf.RegistrirajNoviLaptop(123, \"Dell\", \"CPU 3.0 GHz, 4 GB RAM\");\n    etf.RegistrirajNoviLaptop(331, \"ASUS\", \"CPU 3.5 GHz, 2 GB RAM\");\n    etf.RegistrirajNoviLaptop(122, \"Dell 2\", \"CPU 3.2 GHz, 6 GB RAM\");\n    etf.RegistrirajNovogStudenta(14212, \"1\", \"Benjamin\", \"Francuska revolucija 23\", \"12\/34-56\");\n    etf.RegistrirajNovogStudenta(17528, \"2\",\"Ivan\", \"Trg vjecnih studenata 12\", \"048\/597-585\");\n    \n    etf.IzlistajLaptope();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Evidencijski broj: 122\\nNaziv: Dell 2\\nKarakteristike: CPU 3.2 GHz, 6 GB RAM\\n\\nEvidencijski broj: 123\\nNaziv: Dell\\nKarakteristike: CPU 3.0 GHz, 4 GB RAM\\n\\nEvidencijski broj: 331\\nNaziv: ASUS\\nKarakteristike: CPU 3.5 GHz, 2 GB RAM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6986,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT26 - (javni) Test klase Administracija - ZaduziLaptop\/PrikaziZaduzenja\n\n    Administracija etf ;\n\n    etf.RegistrirajNoviLaptop(123, \"Dell\", \"CPU 3.0 GHz, 4 GB RAM\");\n    etf.RegistrirajNoviLaptop(331, \"ASUS\", \"CPU 3.5 GHz, 2 GB RAM\");\n    etf.RegistrirajNoviLaptop(122, \"Dell 2\", \"CPU 3.2 GHz, 6 GB RAM\");\n    etf.RegistrirajNovogStudenta(14212, \"1\", \"Benjamin\", \"Francuska revolucija 23\", \"12\/34-56\");\n    etf.RegistrirajNovogStudenta(17528, \"2\",\"Ivan\", \"Trg vjecnih studenata 12\", \"048\/597-585\");\n    \n    etf.ZaduziLaptop(14212, 123);\n    etf.ZaduziLaptop(17528, 331);\n    \n    etf.PrikaziZaduzenja();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Student Benjamin (14212) zaduzio\/la laptop broj 123\\nStudent Ivan (17528) zaduzio\/la laptop broj 331"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6987,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/AT41 - (javni) Test klase Administracija - IzlistajLaptope\n\n     Administracija etf;\n\n    etf.RegistrirajNoviLaptop(123, \"Dell\", \"CPU 3.0 GHz, 4 GB RAM\");\n    etf.RegistrirajNoviLaptop(331, \"ASUS\", \"CPU 3.5 GHz, 2 GB RAM\");\n    etf.RegistrirajNoviLaptop(122, \"Dell 2\", \"CPU 3.2 GHz, 6 GB RAM\");\n\n\n    etf.RegistrirajNovogStudenta(14212, \"1\",\"Benjamin\", \"Francuska revolucija 23\", \"12\/34-56\");\n    etf.RegistrirajNovogStudenta(17528, \"2\",\"Ivan\", \"Trg vjecnih studenata 12\", \"048\/597-585\");\n    etf.RegistrirajNovogStudenta(17525, \"3\", \"Ante\" ,\"Trg vjecnih studenata 11\", \"062\/582-757\");\n\n    etf.ZaduziLaptop(14212, 122);\n    etf.ZaduziLaptop(17525,331);\n    etf.IzlistajLaptope();",
+            "global_top": "",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Evidencijski broj: 122\\nNaziv: Dell 2\\nKarakteristike: CPU 3.2 GHz, 6 GB RAM\\nZaduzio(la): Benjamin (14212)\\n\\nEvidencijski broj: 123\\nNaziv: Dell\\nKarakteristike: CPU 3.0 GHz, 4 GB RAM\\n\\n\\nEvidencijski broj: 331\\nNaziv: ASUS\\nKarakteristike: CPU 3.5 GHz, 2 GB RAM\\nZaduzio(la): Ante (17525)\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

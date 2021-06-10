@@ -1,0 +1,119 @@
+{
+    "id": 77729,
+    "name": "Tehnike programiranja (2016\/2017), Zadaca 4, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3769,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 \nMurga Drot\n3005017180005\nGile Sampion\n2905017170007\nAbid ReciNamDe\n1234567891234\nSelena VratiSe\n1612994175008\n3\nIbro Dirka\n16\/12\/1994\n17\nM\nLijepa Alma\n14\/12\/1994\n18\nZ\nAbid ReciNamDe\n12\/14\/1992\n17\nM\nAbid ReciNamde\n12\/12\/1992\n17\nM\n"
+            },
+            "expected": [
+                "Koliko gradjana zelite unijeti po JMBG? \\nUnesite ime i prezime (u istom redu): \\nUnesite JMBG: \\nUnijeli ste gradjanina Murga Drot rodjenog 30.5.2017 u regiji 18, musko.\\nUnesite ime i prezime (u istom redu): \\nUnesite JMBG: \\nUnijeli ste gradjanina Gile Sampion rodjenog 29.5.2017 u regiji 17, musko.\\nUnesite ime i prezime (u istom redu): \\nUnesite JMBG: \\nJMBG nije validan\\nUnesite ime i prezime (u istom redu): \\nUnesite JMBG: \\nUnijeli ste gradjanina Selena VratiSe rodjenog 16.12.1994 u regiji 17, zensko.\\nKoliko gradjana zelite unijeti po datumu rodjenja, regiji i polu? \\nUnesite ime i prezime (u istom redu): \\nUnesite datum rodjenja (format dd\/mm\/gggg): \\nUnesite sifru regije: \\nUnesite M za musko, Z za zensko: \\nUnijeli ste gradjanina Ibro Dirka JMBG: 1612994170006.\\nUnesite ime i prezime (u istom redu): \\nUnesite datum rodjenja (format dd\/mm\/gggg): \\nUnesite sifru regije: \\nUnesite M za musko, Z za zensko: \\nUnijeli ste gradjanina Lijepa Alma JMBG: 1412994185004.\\nUnesite ime i prezime (u istom redu): \\nUnesite datum rodjenja (format dd\/mm\/gggg): \\nUnesite sifru regije: \\nUnesite M za musko, Z za zensko: \\nNeispravni podaci\\nUnesite ime i prezime (u istom redu): \\nUnesite datum rodjenja (format dd\/mm\/gggg): \\nUnesite sifru regije: \\nUnesite M za musko, Z za zensko: \\nUnijeli ste gradjanina Abid ReciNamde JMBG: 1212992170000.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3770,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "           \/\/AT 2 - konstruktor sa JMBG\n\n            std::string ime = \"Gile Sampion\";\n           GradjaninBiH g(ime, 1212992170000);\n           std::cout << g.DajDanRodjenja() <<\"\/\"<<g.DajMjesecRodjenja() <<\"\/\" <<g.DajGodinuRodjenja()<<std::endl;\n           std::cout <<  g.DajSifruRegije()<< std::endl; \n           std::cout << g.DajPol() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "12\/12\/1992\\n17\\n0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3771,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3 - konstruktor vi\u0161e parametara\n\n           std::string ime = \"Gile Sampion\";\n           GradjaninBiH g(ime, 12,12,1992, 17, GradjaninBiH::Pol::Musko);\n           std::cout << g.DajJMBG() <<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1212992170000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3772,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "           \/\/AT 4 - PromijeniImeIPrezime\n\n           std::string ime = \"Gile Sampion\";\n           GradjaninBiH g(ime, 1212992170000);\n           g.PromijeniImeIPrezime(\"Gile Hasisar\");\n           std::cout << g.DajImeIPrezime() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Gile Hasisar"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,245 @@
+{
+    "id": 8591,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 9, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3557,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metoda Postavi, PostaviX, PostaviY i PostaviZ.\n\nVektor3d v1, v2;\nv1.Postavi(1,2,3);\nv2.PostaviX(1.2);\nv2.PostaviY(2.2);\nv2.PostaviZ(3.2);\nv1.Ispisi();\nv2.Ispisi();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{1,2,3}{1.2,2.2,3.2}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3559,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metode Ocitaj\n\nVektor3d v;\nv.Postavi(4,5.3,6);\ndouble x, y, z;\nv.Ocitaj(x, y, z);\nstd::cout << x << \" \" << y << \" \" << z << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "4 5.3 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3560,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metoda DajX, DajY i Dayz\n\nVektor3d v;\nv.PostaviX(1.2);\nv.PostaviY(2.2);\nv.PostaviZ(3.2);\nstd::cout << v.DajX() << \" \" << v.DajY() << \" \" << v.DajZ() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.2 2.2 3.2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3561,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metode DajDuzinu\n\nVektor3d v;\nv.PostaviX(4);\nv.PostaviY(3);\nv.PostaviZ(0);\nstd::cout << v.DajDuzinu() << std::endl;\nv.PostaviZ(3);\nv.PostaviY(0);\nstd::cout << v.DajDuzinu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5\\n5",
+                "5\\n5\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3562,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metode PomnoziSaSkalarom\n\nVektor3d v;\nv.PostaviX(4);\nv.PostaviY(-3);\nv.PostaviZ(0);\nv.PomnoziSaSkalarom(2).Ispisi();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{8,-6,0}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3563,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje metode SaberiSa\n\nVektor3d v1, v2;\nv1.Postavi(1,2,3);\nv2.Postavi(4,-3,0);\nv1.SaberiSa(v2).Ispisi();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{5,-1,3}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3564,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje funkcije ZbirVektora\n\nVektor3d v1, v2;\nv1.Postavi(1,2,3);\nv2.Postavi(4,-3,0);\nauto v3 = ZbirVektora(v1, v2);\nv3.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{5,-1,3}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3565,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje const metoda\n\nVektor3d v1;\nv1.PostaviX(4);\nv1.PostaviY(-3);\nv1.PostaviZ(0);\nconst Vektor3d v2(v1);\nv2.Ispisi();\ndouble x, y, z;\nv2.Ocitaj(x, y, z);\nstd::cout << std::endl << x << \" \" << y << \" \" << z << std::endl;\nstd::cout << v2.DajX() << \" \" << v2.DajY() << \" \" << v2.DajZ() << std::endl;\nstd::cout << v2.DajDuzinu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{4,-3,0}\\n4 -3 0\\n4 -3 0\\n5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3566,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Testiranje da li Vektor3d zaista sadrzi tri atributa x, y i z. \n\/\/Napomena: ako vasa klasa sadrzi tri double atributa a test pada vjerovatno se atributi ne zovu \"x\", \"y\" i \"z\".\n\/\/Napomena 2: ako test pada dobijate 0 bodova na zadatku.\n\nVektor3d v1;\nv1.x = 4;\nv1.y = -3;\nv1.z = 0;",
+            "global_top": "#define class struct\n#define private public",
+            "global_above_main": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                ""
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

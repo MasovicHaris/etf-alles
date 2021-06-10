@@ -1,0 +1,420 @@
+{
+    "id": 8543,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 4, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3256,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira primjer iz predavanja\n\nstd::vector<std::string> v {\"xyzzy\", \"qwert\", \"uiop\", \"asd\", \"rrrfat\", \"asd\", \"yxcvbb\", \"qwert\", \"asd\", \"cvbnm\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "asd yxcvbb"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3257,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testira primjer iz predavanja\n\nstd::vector<std::string> v {\"xyzzy\", \"qwert\", \"uiop\", \"asd\", \"rrrfat\", \"asd\", \"yxcvbb\", \"qwert\", \"asd\", \"cvbnm\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "qwert_asd_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3258,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testira na prazan vektor\n\nstd::vector<std::string> v;\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \",\" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                ","
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3259,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testira osjetljivost na velika i mala slova\n\nstd::vector<std::string> v{\"aaa\", \"ZZZ\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "aaa ZZZ"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3260,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: testira osjetljivost na velika i mala slova\n\nstd::vector<std::string> v{\"AbC\", \"ZzZ\", \"aBc\", \"zZe\", \"pQr\", \"AaAAa\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AaAAa ZzZ"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3261,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testira osjetljivost na velika i mala slova\n\nstd::vector<std::string> v{\"iJkLM\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "iJkLM iJkLM"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3262,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: testira osjetljivost na velika i mala slova\n\nstd::vector<std::string> v{\"xjsh\", \"asqssq\", \"cjdh\", \"icuudh\", \"OfyX\", \"oiDEu\", \"qwyt\", \"pQjasW\", \"WWW\", \"poWmkJA\", \"a\", \"aa\", \"Z\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "a Z"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3263,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: testira osjetljivost na velika i mala slova\n\nstd::vector<std::string> v{\"IM\", \"tp\", \"eeS\", \"Or\", \"eK\", \"mLtI\", \"dM\", \"lAg\", \"maTrIcaA\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja;",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "dM tp"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3264,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: testira funkciju ZadrziDuplikate na prazan vektor\n\nstd::vector<std::string> v {};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3265,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT10: testira funkciju ZadrziDuplikate\n\nstd::vector<std::string> v {\"abc\", \"abc\", \"abc\", \"abc\", \"def\", \"opr\", \"opr\", \"OpR\", \"AbC\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc_opr_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3266,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT11: testira funkciju ZadrziDuplikate\n\nstd::vector<std::string> v {\"abc\", \"ABC\", \"aBc\", \"abC\", \"aBC\", \"AbC\", \"ABc\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";\nstd::cout << \"x\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "x"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3267,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT12: testira funkciju ZadrziDuplikate\n\nstd::vector<std::string> v {\"abc\", \"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\",\"abc\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3268,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT13: testira funkciju ZadrziDuplikate\n\nstd::vector<std::string> v {\"abc\", \"abc\", \"acb\", \"bac\", \"acb\",\"bca\", \"cab\", \"cba\",\"cab\", \"cba\",\"bac\",\"bca\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "abc_acb_bac_bca_cab_cba_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3269,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT14: testira funkciju ZadrziDuplikate\n\nstd::vector<std::string> v {\"AsM\", \"XyZzzZ\", \"XyZzzZ\", \"qwe\", \"qwe\", \"asd\", \"asd\", \"PwA\", \"pwa\", \"pwa\", \"AsM\"};\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AsM_XyZzzZ_qwe_asd_pwa_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3270,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT15: testira kombinovano IzdvojiKrajnjeRijeci i ZadrziDuplikate\n\nstd::vector<std::string> v{\"AbC\", \"ZzZ\", \"aBc\", \"zZe\", \"pQr\", \"AaAAa\", \"ZzZ\", \"AbC\", \"aBc\"};\nstd::string prva, posljednja;\nIzdvojiKrajnjeRijeci(v, prva, posljednja);\nstd::cout << prva << \" \" << posljednja << std::endl;\nZadrziDuplikate(v);\nfor(auto temp : v) std::cout << temp << \"_\";",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AaAAa ZzZ\\nAbC_ZzZ_aBc_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3295,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT16: testira main na primjer iz postavke tutorijala\n\n_main();",
+            "global_above_main": "",
+            "global_top": "#include <vector>\n#include <string>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\nxyzzy qwert uiop asd rrrfat asd yxcvbb qwert asd cvbnm\n"
+            },
+            "expected": [
+                "Koliko zelite unijeti rijeci: Unesite rijeci:\\nPrva rijec po abecednom poretku je: asd\\nPosljednja rijec po abecednom poretku je: yxcvbb\\nRijeci koje se ponavljaju su: qwert asd",
+                "Koliko zelite unijeti rijeci: Unesite rijeci: Prva rijec po abecednom poretku je: asd\\nPosljednja rijec po abecednom poretku je: yxcvbb\\nRijeci koje se ponavljaju su: qwert asd"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

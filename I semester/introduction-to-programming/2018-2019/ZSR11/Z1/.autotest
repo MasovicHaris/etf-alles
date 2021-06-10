@@ -1,0 +1,144 @@
+{
+    "id": 236803,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), ZSR 12, zadatak 1",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1831,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT1: Osnovni test *\/\nstruct Trougao trouglovi[3];\nint i, vel;\n\/* Jeste pravougli *\/ \ntrouglovi[0].A.x=0; trouglovi[0].A.y=0; \ntrouglovi[0].B.x=1; trouglovi[0].B.y=0; \ntrouglovi[0].C.x=0; trouglovi[0].C.y=1; \n\/* Jeste pravougli *\/\ntrouglovi[1].A.x=0; trouglovi[1].A.y=0; \ntrouglovi[1].B.x=1; trouglovi[1].B.y=1; \ntrouglovi[1].C.x=0; trouglovi[1].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[2].A.x=0; trouglovi[2].A.y=0; \ntrouglovi[2].B.x=1; trouglovi[2].B.y=1; \ntrouglovi[2].C.x=2; trouglovi[2].C.y=1; \n\n\/* Izbacivanje *\/\nvel = izbaci_pravougle(trouglovi, 3);\nfor (i=0; i<vel; i++) {\n   printf(\"Trougao %d: (%d,%d)-(%d,%d)-(%d,%d)\\n\", i, \n   trouglovi[i].A.x, trouglovi[i].A.y, trouglovi[i].B.x, trouglovi[i].B.y, \n   trouglovi[i].C.x, trouglovi[i].C.y);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 0: (0,0)-(1,1)-(2,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1832,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT2: Bez izbacivanja *\/\nstruct Trougao trouglovi[2];\nint i, vel;\n\n\/* Nije pravougli *\/\ntrouglovi[0].A.x=0; trouglovi[0].A.y=0; \ntrouglovi[0].B.x=1; trouglovi[0].B.y=1; \ntrouglovi[0].C.x=2; trouglovi[0].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[1].A.x=0; trouglovi[1].A.y=0; \ntrouglovi[1].B.x=1; trouglovi[1].B.y=1; \ntrouglovi[1].C.x=3; trouglovi[1].C.y=1; \n\n\/* Izbacivanje *\/\nvel = izbaci_pravougle(trouglovi, 2);\nfor (i=0; i<vel; i++) {\n   printf(\"Trougao %d: (%d,%d)-(%d,%d)-(%d,%d)\\n\", i, \n   trouglovi[i].A.x, trouglovi[i].A.y, trouglovi[i].B.x, trouglovi[i].B.y, \n   trouglovi[i].C.x, trouglovi[i].C.y);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 0: (0,0)-(1,1)-(2,1)\\nTrougao 1: (0,0)-(1,1)-(3,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1833,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT3: Sve izbacujemo *\/\nstruct Trougao trouglovi[2];\nint i, vel;\n\/* Jeste pravougli *\/\ntrouglovi[0].A.x=0; trouglovi[0].A.y=0; \ntrouglovi[0].B.x=1; trouglovi[0].B.y=0; \ntrouglovi[0].C.x=0; trouglovi[0].C.y=1; \n\/* Jeste pravougli *\/\ntrouglovi[1].A.x=0; trouglovi[1].A.y=0; \ntrouglovi[1].B.x=1; trouglovi[1].B.y=1; \ntrouglovi[1].C.x=0; trouglovi[1].C.y=1; \n\n\/* Izbacivanje *\/\nvel = izbaci_pravougle(trouglovi, 2);\nprintf(\"%d\", vel);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1834,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT4: Provjera ocuvanja redoslijeda *\/\nstruct Trougao trouglovi[4];\nint i, vel;\n\/* Jeste pravougli *\/\ntrouglovi[0].A.x=0; trouglovi[0].A.y=0; \ntrouglovi[0].B.x=1; trouglovi[0].B.y=0; \ntrouglovi[0].C.x=0; trouglovi[0].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[1].A.x=0; trouglovi[1].A.y=0; \ntrouglovi[1].B.x=1; trouglovi[1].B.y=1; \ntrouglovi[1].C.x=3; trouglovi[1].C.y=1; \n\/* Jeste pravougli *\/\ntrouglovi[2].A.x=0; trouglovi[2].A.y=0; \ntrouglovi[2].B.x=1; trouglovi[2].B.y=1; \ntrouglovi[2].C.x=0; trouglovi[2].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[3].A.x=0; trouglovi[3].A.y=0; \ntrouglovi[3].B.x=1; trouglovi[3].B.y=1; \ntrouglovi[3].C.x=2; trouglovi[3].C.y=1; \n\n\/* Izbacivanje *\/\nvel = izbaci_pravougle(trouglovi, 4);\nfor (i=0; i<vel; i++) {\n   printf(\"Trougao %d: (%d,%d)-(%d,%d)-(%d,%d)\\n\", i, \n   trouglovi[i].A.x, trouglovi[i].A.y, trouglovi[i].B.x, trouglovi[i].B.y, \n   trouglovi[i].C.x, trouglovi[i].C.y);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 0: (0,0)-(1,1)-(3,1)\\nTrougao 1: (0,0)-(1,1)-(2,1)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1835,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* AT5: Redoslijed tacaka *\/\nstruct Trougao trouglovi[12];\nint i, vel;\n\/* Sve tacke ispod su identicne sa permutacijama tacaka *\/\n\/* Jeste pravougli *\/\ntrouglovi[0].A.x=0; trouglovi[0].A.y=0; \ntrouglovi[0].B.x=1; trouglovi[0].B.y=0; \ntrouglovi[0].C.x=0; trouglovi[0].C.y=1; \n\/* Jeste pravougli *\/\ntrouglovi[1].A.x=0; trouglovi[1].A.y=0; \ntrouglovi[1].B.x=0; trouglovi[1].B.y=1; \ntrouglovi[1].C.x=1; trouglovi[1].C.y=0; \n\/* Jeste pravougli *\/\ntrouglovi[2].A.x=1; trouglovi[2].A.y=0; \ntrouglovi[2].B.x=0; trouglovi[2].B.y=1; \ntrouglovi[2].C.x=0; trouglovi[2].C.y=0; \n\/* Jeste pravougli *\/\ntrouglovi[3].A.x=1; trouglovi[3].A.y=0; \ntrouglovi[3].B.x=0; trouglovi[3].B.y=0; \ntrouglovi[3].C.x=0; trouglovi[3].C.y=1; \n\/* Jeste pravougli *\/\ntrouglovi[4].A.x=0; trouglovi[4].A.y=1; \ntrouglovi[4].B.x=1; trouglovi[4].B.y=0; \ntrouglovi[4].C.x=0; trouglovi[4].C.y=0; \n\/* Jeste pravougli *\/\ntrouglovi[5].A.x=0; trouglovi[5].A.y=1; \ntrouglovi[5].B.x=0; trouglovi[5].B.y=0; \ntrouglovi[5].C.x=1; trouglovi[5].C.y=0; \n\/* Nije pravougli *\/\ntrouglovi[6].A.x=0; trouglovi[6].A.y=0; \ntrouglovi[6].B.x=1; trouglovi[6].B.y=0; \ntrouglovi[6].C.x=2; trouglovi[6].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[7].A.x=1; trouglovi[7].A.y=0; \ntrouglovi[7].B.x=0; trouglovi[7].B.y=0; \ntrouglovi[7].C.x=2; trouglovi[7].C.y=1; \n\/* Nije pravougli *\/\ntrouglovi[8].A.x=0; trouglovi[8].A.y=0; \ntrouglovi[8].B.x=2; trouglovi[8].B.y=1; \ntrouglovi[8].C.x=1; trouglovi[8].C.y=0; \n\/* Nije pravougli *\/\ntrouglovi[9].A.x=1; trouglovi[9].A.y=0; \ntrouglovi[9].B.x=2; trouglovi[9].B.y=1; \ntrouglovi[9].C.x=0; trouglovi[9].C.y=0; \n\/* Nije pravougli *\/\ntrouglovi[10].A.x=2; trouglovi[10].A.y=1; \ntrouglovi[10].B.x=0; trouglovi[10].B.y=0; \ntrouglovi[10].C.x=1; trouglovi[10].C.y=0; \n\/* Nije pravougli *\/\ntrouglovi[11].A.x=2; trouglovi[11].A.y=1; \ntrouglovi[11].B.x=1; trouglovi[11].B.y=0; \ntrouglovi[11].C.x=0; trouglovi[11].C.y=0; \n\n\/* Izbacivanje *\/\nvel = izbaci_pravougle(trouglovi, 12);\nfor (i=0; i<vel; i++) {\n   printf(\"Trougao %d: (%d,%d)-(%d,%d)-(%d,%d)\\n\", i, \n   trouglovi[i].A.x, trouglovi[i].A.y, trouglovi[i].B.x, trouglovi[i].B.y, \n   trouglovi[i].C.x, trouglovi[i].C.y);\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Trougao 0: (0,0)-(1,0)-(2,1)\\nTrougao 1: (1,0)-(0,0)-(2,1)\\nTrougao 2: (0,0)-(2,1)-(1,0)\\nTrougao 3: (1,0)-(2,1)-(0,0)\\nTrougao 4: (2,1)-(0,0)-(1,0)\\nTrougao 5: (2,1)-(1,0)-(0,0)\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

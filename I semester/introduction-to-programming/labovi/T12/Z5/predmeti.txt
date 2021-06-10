@@ -1,0 +1,5 @@
+	1 Inzinjerska matematika I
+	2 Inzinjerska fizika I
+	3 Linearna algebra i geometrija
+	4 Osnove racunarstva
+	5 Osnove elektrotehnike

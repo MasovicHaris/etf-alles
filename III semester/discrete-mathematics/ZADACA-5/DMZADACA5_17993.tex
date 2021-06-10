@@ -1,0 +1,140 @@
+ \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    \usepackage{tikz}
+    \usetikzlibrary{automata, positioning}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    
+    
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{5}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Diskretna Matematika}
+
+      \vspace*{1.25cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.5cm}
+      {\Large Br. indexa: \brIndexa} \\
+      \vspace*{0.5cm}
+      {\Large Demonstrator: Rijad Muminović} \\
+      \vspace*{0.5cm}
+      {\Large Grupa: RI - 4} \\ 
+      
+      \vspace*{2cm}
+      \renewcommand{\arraystretch}{1.75}
+      \begin{tabular}{|c|c|}
+    	\hline Zadatak & Bodovi \\
+    	\hline 1 &  \\
+    	\hline 2 &  \\
+    	\hline 3 &  \\
+    	\hline 4 &  \\
+    	\hline 5 &  \\
+    	\hline 6 &  \\
+    	\hline 7 &  \\
+    	\hline 8 &  \\
+    	\hline
+     \end{tabular}
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo, Januar 2018g.}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 1 [0.5 poena] \\
+		\\
+		a) Predstavite ovaj diskretni signal formulom u kojoj se javlja cijeli dio broja.
+		\\
+		\\
+		Svaki periodičan signal perioda N može se izraziti formulom u kojoj figurira cijeli dio broja na sljedeći način: \\
+		\begin{equation*}
+		    x_n = x_{-1} + \sum_{k =0}^{N-1}~(x_k - x_{k-1}) \lfloor~\frac{n - k }{N}~\rfloor
+		\end{equation*}
+		U zadanom primjeru poznate su vrijednosti $x_n$ a n = [0, 5] i one redom iznose -9, -6, 2, -2, 5 i -2. Zbog periodičnosti, poznata je i vrijednost $x_{-1}$ = $x_5$ = -2. Uvrštavanjem ovih vrijednosti u navedenu formulu dobija se sljedeći izraz:
+		\begin{equation*}
+		    x_n = -2 -7 \cdot \lfloor~\frac{n }{6}~\rfloor + 3 \cdot \lfloor~\frac{n - 1}{6}~\rfloor + 8 \cdot \lfloor~\frac{n - 2}{6}~\rfloor - 4 \cdot \lfloor~\frac{n - 3}{6}~\rfloor + 7 \cdot \lfloor~\frac{n - 4}{6}~\rfloor - 7 \cdot \lfloor~\frac{n - 5}{6}~\rfloor
+		\end{equation*}
+		\\
+		b) Predstavite ovaj signal diskretnim Fourierovim redom.
+		\\
+		\\
+		Svaki periodični signal sa periodom N također je moguće izraziti preko diskretnog Fourierovog reda. Njegov oblik i koeficijenti dati su formulama:
+		\begin{equation*}
+		    x_n = \frac{a_0}{2} + \sum_{k = 1}^{\lfloor~N/2~\rfloor} a_k~cos\frac{2k\pi}{N}n + b_k~sin\frac{2k\pi}{N}n
+		\end{equation*}
+		\begin{equation*}
+		    a_k = \frac{2}{N}~\sum_{n = 0}^{N - 1} x_n~cos\frac{2k\pi}{N}n, ~ k = 0,1,...,\lfloor~\frac{N}{2}~\rfloor
+		\end{equation*}
+		\begin{equation*}
+		    b_k = \frac{2}{N}~\sum_{n = 0}^{N - 1} x_n~sin\frac{2k\pi}{N}n, ~ k = 0,1,...,\lfloor~\frac{N}{2}~\rfloor
+		\end{equation*}
+		Iznimku pri upotrebi ove formule predstavlja situacija kada je N paran broj, jer se tada pri računanju koeficijenta $a_k$ za k = N/2 ispred sume umjesto faktora 2/N javlja faktor 1/N. Također, $b_k$ za takvo k jednako nuli za parno N. Potrebni koeficijenti su:
+		\begin{equation*}
+		    a_0 = -4 \quad a_1 = \frac{-29}{6} \quad a_2 = \frac{-7}{2} \quad a_3 = \frac{8}{3}
+		\end{equation*}
+		\begin{equation*}
+		    b_1 = \frac{-7 \cdot \sqrt{3}}{6} \quad  b_2 = \frac{-\sqrt{3}}{6} \quad b_3 = 0
+		\end{equation*}
+		Diskretni Fourierov red glasi:
+		\begin{equation*}
+		    x_n = -2 + \frac{-29}{6}~cos\frac{\pi}{3}n + \frac{-7 \cdot \sqrt{3}}{6}~sin\frac{\pi}{3}n + \frac{-7}{2}~cos\frac{2\pi}{3}n + \frac{-\sqrt{3}}{6}~sin\frac{2\pi}{3}n + \frac{8}{3}~cos\pi n
+		\end{equation*}
+		\newpage
+		c) Odredite amplitudni i fazni spektar za ovaj signal i predstavite ga u vidu sume harmonika.
+		\begin{equation*}
+		    x_n = \sum_{k = 0}^{\lfloor~N/2~\rfloor} A_k~sin(\frac{2k\pi}{N}n + \varphi_k) ~(*)
+		\end{equation*}
+		\begin{equation*}
+		    A_k = \sqrt{a_k^2 + b_k^2} \quad \varphi_k = arctg\frac{a_k}{b_k}
+		\end{equation*}
+		pa imamo:
+		\begin{equation*}
+		    A_0 = 4 \quad A_1 = \frac{\sqrt{247}}{3} \quad A_2 = \frac{\sqrt{111}}{3}\quad A_3 = \frac{8}{3}
+		\end{equation*}
+		\begin{equation*}
+		    \varphi_0 = \frac{3\pi}{2} \quad \varphi_1 = arctg\frac{29}{7\sqrt{3}}\quad \varphi_2 = arctg\frac{21}{\sqrt{3}}\quad \varphi_3 = \frac{\pi}{2}
+		\end{equation*}
+		\\
+		Uvrštavanje vrijednosti u (*) imamo:
+		\begin{equation*}
+		    x_n = 4~sin(\frac{3\pi}{2}) + \frac{\sqrt{247}}{3}~sin(\frac{\pi}{3}n + arctg\frac{29}{7\sqrt{3}}) + \frac{\sqrt{111}}{3}~sin(\frac{2\pi}{3}n + arctg\frac{21}{\sqrt{3}}) + \frac{8}{3}~sin(\pi n + \frac{\pi}{2})
+		\end{equation*}
+		\item Rješenje zadatka \\
+		\\
+		Zadatak 2 [0.4 poena] \\
+		\\
+\end{enumerate}
+\end{document}

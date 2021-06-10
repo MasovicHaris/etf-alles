@@ -1,0 +1,147 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3517": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Unesite drugo vrijeme (h m s): Prvo vrijeme: 03:34:52\nDrugo vrijeme: 04:42:50\nZbir vremena: 08:17:42\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3518": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Unesite drugo vrijeme (h m s): Prvo vrijeme: 12:24:52\nDrugo vrijeme: 09:18:23\nZbir vremena: 21:43:15\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3519": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Neispravno vrijeme",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3520": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Unesite drugo vrijeme (h m s): Neispravno vrijeme",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3521": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Unesite drugo vrijeme (h m s): Prvo vrijeme: 00:00:01\nDrugo vrijeme: 23:59:59\nZbir vremena: 00:00:00\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3522": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Unesite drugo vrijeme (h m s): Prvo vrijeme: 23:59:59\nDrugo vrijeme: 23:59:59\nZbir vremena: 23:59:58\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3523": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravno vrijeme\nNeispravno vrijeme\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3524": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravno vrijeme\nNeispravno vrijeme\nNeispravno vrijeme\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3525": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite prvo vrijeme (h m s): Neispravno vrijeme\nUnesite prvo vrijeme (h m s): Neispravno vrijeme\nUnesite prvo vrijeme (h m s): Neispravno vrijeme\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1494486973
+}

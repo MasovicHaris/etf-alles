@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="353.0" prefWidth="544.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="65.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="200.0" minWidth="10.0" prefWidth="65.0" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+   </columnConstraints>
+   <children>
+      <Button fx:id="btnDodajGrad" mnemonicParsing="false" onAction="#dodajGradKlik" prefHeight="26.0" prefWidth="113.0" text="%dodaj.grad" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Button>
+      <Button mnemonicParsing="false" onAction="#dodajDrzavuKlik" prefHeight="26.0" prefWidth="113.0" text="%dodaj.drzavu" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnIzmijeniGrad" layoutX="434.0" layoutY="54.0" mnemonicParsing="false" onAction="#izmijeniGradKlik" prefHeight="26.0" prefWidth="113.0" text="%izmijeni.grad" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <TableView fx:id="tableViewGradovi" prefHeight="348.0" prefWidth="416.0" GridPane.columnSpan="5" GridPane.rowSpan="9">
+        <columns>
+          <TableColumn fx:id="colGradId" prefWidth="75.0" resizable="false" text="%id" />
+          <TableColumn fx:id="colGradNaziv" prefWidth="75.0" resizable="false" text="%naziv" />
+            <TableColumn fx:id="colGradStanovnika" prefWidth="75.0" resizable="false" text="%stanovnika" />
+            <TableColumn fx:id="colGradDrzava" prefWidth="150.0" resizable="false" text="%drzava" />
+            <TableColumn prefWidth="34.0" resizable="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnObrisiGrad" layoutX="434.0" layoutY="94.0" mnemonicParsing="false" onAction="#obrisiGradKlik" prefHeight="26.0" prefWidth="113.0" text="%obrisi.grad" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button fx:id="stampa" mnemonicParsing="false" onAction="#stampaAction" prefHeight="26.0" prefWidth="113.0" text="%stampa" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Button fx:id="jezikBiraj" mnemonicParsing="false" onAction="#birajJezikAction" prefHeight="25.0" prefWidth="112.0" text="%izaberi.jezik" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </opaqueInsets>
+</GridPane>

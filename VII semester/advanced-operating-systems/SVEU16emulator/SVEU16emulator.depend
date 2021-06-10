@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1579133990 source:c:\users\840 g2\desktop\custom-process-vm\sveu16emulator\main.cpp
+	<iostream>
+	<fstream>
+	<sys/stat.h>
+	<string>
+	<bitset>
+	<dirent.h>
+	<vector>
+	<fcntl.h>
+	<sys/types.h>
+	<unistd.h>
+	<stdio.h>
+	<sstream>
+	<cmath>
+

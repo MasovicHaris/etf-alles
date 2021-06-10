@@ -1,0 +1,172 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3709": {
+            "status": 1,
+            "run_result": {
+                "output": "Nesaglasni kapaciteti liga\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3712": {
+            "status": 1,
+            "run_result": {
+                "output": "Nesaglasni kapaciteti liga\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3713": {
+            "status": 1,
+            "run_result": {
+                "output": "Liga popunjena\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3714": {
+            "status": 1,
+            "run_result": {
+                "output": "Tim nije nadjen\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3718": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravan broj golova\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3722": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nNakon izmjene kopije: \n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               1   0   1   0   1   1   1\nFK Sloboda             1   0   1   0   1   1   1\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3724": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nNakon izmjene kopije: \n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         1   1   0   0   2   0   3\nFK Krupa               1   0   1   0   1   1   1\nFK Sloboda             1   0   1   0   1   1   1\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nHSK Zrinjski           1   0   0   1   0   2   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3726": {
+            "status": 1,
+            "run_result": {
+                "output": "Orginalna Liga za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n\nKopija Lige za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3727": {
+            "status": 1,
+            "run_result": {
+                "output": "Djelimicna Liga za Ispadanje: \nNK Siroki Brijeg       1   0   1   0   1   1   1\nNK Vitez               1   0   1   0   1   1   1\n\nOrginalna Liga za Prvaka: \nNK Zeljeznicar         2   2   0   0   4   0   6\nFK Sloboda             2   1   1   0   2   1   4\nHSK Zrinjski           2   1   1   0   3   2   4\nFK Krupa               2   0   1   1   1   2   1\nFK Radnik Bijeljina    2   0   1   1   1   2   1\nFK Sarajevo            2   0   0   2   1   5   0\n\nKopija Lige za Prvaka: \nFK Krupa               0   0   0   0   0   0   0\nFK Radnik Bijeljina    0   0   0   0   0   0   0\nFK Sarajevo            0   0   0   0   0   0   0\nFK Sloboda             0   0   0   0   0   0   0\nHSK Zrinjski           0   0   0   0   0   0   0\nNK Zeljeznicar         0   0   0   0   0   0   0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3743": {
+            "status": 1,
+            "run_result": {
+                "output": "Alocirano je: 120 B\nNakon brisanja je ostalo alocirano: 0 B",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3743.cpp: In function ‘void operator delete(void*)’:\nbs_test_3743.cpp:258:63: warning: throw will always call terminate() [-Wterminate]\n   if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");\n                                                               ^",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3743.cpp",
+                        "line": "258",
+                        "col": "63",
+                        "message": "throw will always call terminate()",
+                        "output": "/tmp/buildservice/bs_3692/bs_test_3743.cpp:258:63: warning: throw will always call terminate() [-Wterminate]   if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");                                                               ^",
+                        "code": "if(adresa && !tekuci) throw std::runtime_error(\"Bad delete!\");"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1496256908
+}

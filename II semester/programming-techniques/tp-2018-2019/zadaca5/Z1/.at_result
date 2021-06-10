@@ -1,0 +1,630 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3803": {
+            "status": 1,
+            "run_result": {
+                "output": "2\n4\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3804": {
+            "status": 1,
+            "run_result": {
+                "output": "543210",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3805": {
+            "status": 1,
+            "run_result": {
+                "output": "2 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3806": {
+            "status": 1,
+            "run_result": {
+                "output": "1.1 2.2 3.3 4.4 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3807": {
+            "status": 1,
+            "run_result": {
+                "output": "Tehnike programiranja\n4321",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3808": {
+            "status": 1,
+            "run_result": {
+                "output": "Suma 16.5\nProdukt 193.261200",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3809": {
+            "status": 1,
+            "run_result": {
+                "output": "9 8 7 6 5 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3810": {
+            "status": 1,
+            "run_result": {
+                "output": "3 2 1 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3811": {
+            "status": 1,
+            "run_result": {
+                "output": "5, 3, 18, 9, 11, (11) (9) (18) (3) (5) [5][3][18][9][11]",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3812": {
+            "status": 1,
+            "run_result": {
+                "output": "\nPrije Preskoci(2): 1 2 3 4 5 6 7 \nNakon Preskoci(2) a prije Limitiraj(3): 3 4 5 6 7 \nNakon Limitiraj(3) a prije Preskoci(1): 3 4 5 \nPoslije Preskoci(1): 4 5 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3813": {
+            "status": 1,
+            "run_result": {
+                "output": "10 20 30 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3814": {
+            "status": 1,
+            "run_result": {
+                "output": "Tok: 1 2 3 \nNakon mapiranja/negiranja: -1 -2 -3 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3815": {
+            "status": 1,
+            "run_result": {
+                "output": "Tok: 1 2 3 \nNakon mapiranja/negiranja: -1 -2 -3 \nNakon invertovanja: -1.000000 -0.500000 -0.333333 \nNakon dijeljenja s 100: -0.010000 -0.005000 -0.003333 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3816": {
+            "status": 1,
+            "run_result": {
+                "output": "-2 -4 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3817": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3818": {
+            "status": 1,
+            "run_result": {
+                "output": "Barem jedan trocifren porzivan: true\nBarem jedan negativan: true\nSvi veci od -5: true\nSvi pozitivni: false\nNijedan pozitivan: false\nNijedan negativan: false\nNijedan veci od 1000: true\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3819": {
+            "status": 6,
+            "run_result": {
+                "output": "ZXVTRPNLJHFDB\nYWUSQOMKIGECA",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3820": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3821": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 3 4 5 6 7 8 9 0 -1 -2 -3 -4 -5 -6 -7 -8 -9 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3822": {
+            "status": 1,
+            "run_result": {
+                "output": "1 12 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3823": {
+            "status": 1,
+            "run_result": {
+                "output": "0 Err: 'Tok je prazan'\nErr: 'Tok je prazan'\nErr: 'Tok je prazan'\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3824": {
+            "status": 1,
+            "run_result": {
+                "output": "5 2 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3825": {
+            "status": 1,
+            "run_result": {
+                "output": "0 Err: 'Tok je prazan'\nErr: 'Tok je prazan'\nErr: 'Tok je prazan'\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3826": {
+            "status": 1,
+            "run_result": {
+                "output": "provirio (1): 1\nprovirio (1): 2\nprovirio (1): 3\nprovirio (2): 100\nprovirio (2): 200\nprovirio (2): 300\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3827": {
+            "status": 1,
+            "run_result": {
+                "output": "0 13 5 1 -250000 Err: 'Tok je prazan'\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3828": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3828.cpp: In instantiation of ‘TipEl Tok<TipEl, Kontejner>::Maksimalan(std::function<bool(TipEl, TipEl)>) const [with TipEl = int; Kontejner = std::vector]’:\nbs_test_3828.cpp:284:50:   required from here\nbs_test_3828.cpp:224:25: error: invalid use of member function ‘unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = int; Kontejner = std::vector]’ (did you forget the ‘()’ ?)\n      if((*this).Velicina==0) throw std::logic_error(\"Tok je prazan\");\n         ~~~~~~~~~~~~~~~~^~~\nbs_test_3828.cpp: In instantiation of ‘TipEl Tok<TipEl, Kontejner>::Maksimalan(std::function<bool(TipEl, TipEl)>) const [with TipEl = short int; Kontejner = std::vector]’:\nbs_test_3828.cpp:287:73:   required from here\nbs_test_3828.cpp:224:25: error: invalid use of member function ‘unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = short int; Kontejner = std::vector]’ (did you forget the ‘()’ ?)",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "main.cpp",
+                        "line": 218,
+                        "col": "25",
+                        "message": "invalid use of member function 'unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = int; Kontejner = std::vector]' (did you forget the '()' ?)",
+                        "output": "/tmp/buildservice/bs_2247/bs_test_3828.cpp:224:25: error: invalid use of member function ‘unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = int; Kontejner = std::vector]’ (did you forget the ‘()’ ?)      if((*this).Velicina==0) throw std::logic_error(\"Tok je prazan\");         ~~~~~~~~~~~~~~~~^~~/tmp/buildservice/bs_2247/bs_test_3828.cpp: In instantiation of ‘TipEl Tok<TipEl, Kontejner>::Maksimalan(std::function<bool(TipEl, TipEl)>) const [with TipEl = short int; Kontejner = std::vector]’:/tmp/buildservice/bs_2247/bs_test_3828.cpp:287:73:   required from here",
+                        "code": "if((*this).Velicina==0) throw std::logic_error(\"Tok je prazan\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "main.cpp",
+                        "line": 218,
+                        "col": "25",
+                        "message": "invalid use of member function 'unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = short int; Kontejner = std::vector]' (did you forget the '()' ?)",
+                        "output": "/tmp/buildservice/bs_2247/bs_test_3828.cpp:224:25: error: invalid use of member function ‘unsigned int Tok<TipEl, Kontejner>::Velicina() const [with TipEl = short int; Kontejner = std::vector]’ (did you forget the ‘()’ ?)"
+                    }
+                ]
+            }
+        },
+        "3829": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3829.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const int*; _ForwardIterator2 = const int*]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const int*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const int*]’\nbs_test_3829.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = int; Kontejner = MojNizKontejner]’\nbs_test_3829.cpp:305:53:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const int&, const int&)’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3829.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)\n     swap(_Tp& __a, _Tp& __b)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note:   template argument deduction/substitution failed:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h: In substitution of ‘template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = const int]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const int*; _ForwardIterator2 = const int*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const int*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const int*]’\nbs_test_3829.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = int; Kontejner = MojNizKontejner]’\nbs_test_3829.cpp:305:53:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const int*; _ForwardIterator2 = const int*]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const int*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const int*]’\nbs_test_3829.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = int; Kontejner = MojNizKontejner]’\nbs_test_3829.cpp:305:53:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])\n     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3829.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘_Tp [_Nm]’ and ‘const int’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:64:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3829.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)\n     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3829.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘std::pair<_T1, _T2>’ and ‘const int’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h",
+                        "line": "148",
+                        "col": "11",
+                        "message": "no matching function for call to 'swap(const int&, const int&)'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const int&, const int&)’       swap(*__a, *__b);       ~~~~^~~~~~~~~~~~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_2247/bs_test_3829.cpp:1:",
+                        "code": "swap(*__a, *__b);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h",
+                        "line": "179",
+                        "col": "5",
+                        "message": "no type named 'type' in 'struct std::enable_if<false, void>'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const int*; _ForwardIterator2 = const int*]’:/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const int*]’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const int*]’/tmp/buildservice/bs_2247/bs_test_3829.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = int; Kontejner = MojNizKontejner]’/tmp/buildservice/bs_2247/bs_test_3829.cpp:305:53:   required from here",
+                        "code": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const int*; _ForwardIterator2 = const int*]’:"
+                    }
+                ]
+            }
+        },
+        "3830": {
+            "status": 1,
+            "run_result": {
+                "output": "0 0 0 0 1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3831": {
+            "status": 1,
+            "run_result": {
+                "output": "3 3 3 3 2 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3832": {
+            "status": 1,
+            "run_result": {
+                "output": "Err: 'Tok je prazan'\nErr: 'Tok je prazan'\nErr: 'Tok je prazan'\nErr: 'Tok je prazan'\n9",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3833": {
+            "status": 6,
+            "run_result": {
+                "output": "Tref14 Tref13 Tref12 Tref11 Tref10 Tref9 Tref8 Tref7 Tref6 Tref5 Tref4 Tref3 Tref2 Tref1 Pik14 Pik13 Pik12 Pik11 Pik10 Pik9 Pik8 Pik7 Pik6 Pik5 Pik4 Pik3 Pik2 Pik1 Srce14 Srce13 Srce12 Srce11 Srce10 Srce9 Srce8 Srce7 Srce6 Srce5 Srce4 Srce3 Srce2 Srce1 Karo14 Karo13 Karo12 Karo11 Karo10 Karo9 Karo8 Karo7 Karo6 Karo5 Karo4 Karo3 Karo2 Karo1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3834": {
+            "status": 1,
+            "run_result": {
+                "output": "Tref: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\nPik: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\nSrce: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\nKaro: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3835": {
+            "status": 1,
+            "run_result": {
+                "output": "Tref: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \nPik: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \nSrce: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \nKaro: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3836": {
+            "status": 1,
+            "run_result": {
+                "output": "set: 10 20 30 40 70 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3837": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3837.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const char*; _ForwardIterator2 = const char*]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const char*]’\nbs_test_3837.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojNizKontejner]’\nbs_test_3837.cpp:306:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const char&, const char&)’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3837.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)\n     swap(_Tp& __a, _Tp& __b)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note:   template argument deduction/substitution failed:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h: In substitution of ‘template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = const char]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const char*; _ForwardIterator2 = const char*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const char*]’\nbs_test_3837.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojNizKontejner]’\nbs_test_3837.cpp:306:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const char*; _ForwardIterator2 = const char*]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const char*]’\nbs_test_3837.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojNizKontejner]’\nbs_test_3837.cpp:306:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])\n     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3837.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘_Tp [_Nm]’ and ‘const char’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:64:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3837.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)\n     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3837.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘std::pair<_T1, _T2>’ and ‘const char’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h",
+                        "line": "148",
+                        "col": "11",
+                        "message": "no matching function for call to 'swap(const char&, const char&)'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const char&, const char&)’       swap(*__a, *__b);       ~~~~^~~~~~~~~~~~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_2247/bs_test_3837.cpp:1:",
+                        "code": "swap(*__a, *__b);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h",
+                        "line": "179",
+                        "col": "5",
+                        "message": "no type named 'type' in 'struct std::enable_if<false, void>'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const char*; _ForwardIterator2 = const char*]’:/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = const char*]’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = const char*]’/tmp/buildservice/bs_2247/bs_test_3837.cpp:129:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojNizKontejner]’/tmp/buildservice/bs_2247/bs_test_3837.cpp:306:21:   required from here",
+                        "code": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = const char*; _ForwardIterator2 = const char*]’:"
+                    }
+                ]
+            }
+        },
+        "3838": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3838.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >; _ForwardIterator2 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\nbs_test_3838.cpp:122:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojVektorKontejner]’\nbs_test_3838.cpp:299:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const char&, const char&)’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3838.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note: candidate: template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&)\n     swap(_Tp& __a, _Tp& __b)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: note:   template argument deduction/substitution failed:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h: In substitution of ‘template<class _Tp> typename std::enable_if<std::__and_<std::is_move_constructible<_Tp>, std::is_move_assignable<_Tp> >::value>::type std::swap(_Tp&, _Tp&) [with _Tp = const char]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11:   required from ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >; _ForwardIterator2 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\nbs_test_3838.cpp:122:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojVektorKontejner]’\nbs_test_3838.cpp:299:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >; _ForwardIterator2 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’\nbs_test_3838.cpp:122:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojVektorKontejner]’\nbs_test_3838.cpp:299:21:   required from here\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note: candidate: template<class _Tp, long unsigned int _Nm> typename std::enable_if<std::__is_swappable<_Tp>::value>::type std::swap(_Tp (&)[_Nm], _Tp (&)[_Nm])\n     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:202:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3838.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘_Tp [_Nm]’ and ‘const char’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:64:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3838.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note: candidate: template<class _T1, class _T2> void std::swap(std::pair<_T1, _T2>&, std::pair<_T1, _T2>&)\n     swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)\n     ^~~~\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_pair.h:403:5: note:   template argument deduction/substitution failed:\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/char_traits.h:39:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:40,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_3838.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: note:   mismatched types ‘std::pair<_T1, _T2>’ and ‘const char’\n       swap(*__a, *__b);\n       ~~~~^~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h",
+                        "line": "148",
+                        "col": "11",
+                        "message": "no matching function for call to 'swap(const char&, const char&)'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h:148:11: error: no matching function for call to ‘swap(const char&, const char&)’       swap(*__a, *__b);       ~~~~^~~~~~~~~~~~In file included from /opt/gcc-6.2.0/include/c++/6.2.0/bits/nested_exception.h:40:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/exception:171,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ios:39,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_2247/bs_test_3838.cpp:1:",
+                        "code": "swap(*__a, *__b);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h",
+                        "line": "179",
+                        "col": "5",
+                        "message": "no type named 'type' in 'struct std::enable_if<false, void>'",
+                        "output": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/move.h:179:5: error: no type named ‘type’ in ‘struct std::enable_if<false, void>’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >; _ForwardIterator2 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’:/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1157:18:   required from ‘void std::__reverse(_RandomAccessIterator, _RandomAccessIterator, std::random_access_iterator_tag) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algo.h:1183:21:   required from ‘void std::reverse(_BIter, _BIter) [with _BIter = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’/tmp/buildservice/bs_2247/bs_test_3838.cpp:122:18:   required from ‘Tok<TipEl, Kontejner> Tok<TipEl, Kontejner>::Obrnut() const [with TipEl = char; Kontejner = MojVektorKontejner]’/tmp/buildservice/bs_2247/bs_test_3838.cpp:299:21:   required from here",
+                        "code": "/opt/gcc-6.2.0/include/c++/6.2.0/bits/stl_algobase.h: In instantiation of ‘void std::iter_swap(_ForwardIterator1, _ForwardIterator2) [with _ForwardIterator1 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >; _ForwardIterator2 = __gnu_cxx::__normal_iterator<const char*, std::vector<char> >]’:"
+                    }
+                ]
+            }
+        },
+        "3839": {
+            "status": 1,
+            "run_result": {
+                "output": "40",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3840": {
+            "status": 1,
+            "run_result": {
+                "output": "{0: 1}, {1: 0.5}, {2: 0.333333}, {3: 0.25}, {4: 0.2}, {5: 0.166667}, {6: 0.142857}, {7: 0.125}, {8: 0.111111}, {9: 0.1}, {10: 0.0909091}, {11: 0.0833333}, ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3841": {
+            "status": 1,
+            "run_result": {
+                "output": "1 -1 2 5 7 -3 0 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1561023413
+}

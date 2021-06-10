@@ -1,0 +1,144 @@
+{
+    "id": 7005,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 6, zadatak 6",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 709,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2 2\n1 2\n3 4"
+            },
+            "expected": [
+                "Unesite dimenzije matrice: Unesite elemente matrice: Suma elemenata na rubu je 10.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 710,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 3\n1 0 1\n0 1 0\n1 0 1"
+            },
+            "expected": [
+                "Unesite dimenzije matrice: Unesite elemente matrice: Suma elemenata na rubu je 4.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 1482,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16"
+            },
+            "expected": [
+                "Unesite dimenzije matrice: Unesite elemente matrice: Suma elemenata na rubu je 102.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1483,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 4\n0.1 0.2 0.3 0.4\n0.5 0.6 0.7 0.8\n0.9 1.0 1.1 1.2\n1.3 1.4 1.5 1.6"
+            },
+            "expected": [
+                "Unesite dimenzije matrice: Unesite elemente matrice: Suma elemenata na rubu je 10.20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1484,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 4\n1 1 1 1\n2 2 2 2\n-2 -2 -2 -2\n-1 -1 -1 -1"
+            },
+            "expected": [
+                "Unesite dimenzije matrice: Unesite elemente matrice: Suma elemenata na rubu je 0.00"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

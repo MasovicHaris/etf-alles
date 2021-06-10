@@ -1,0 +1,244 @@
+{
+    "id": 8521,
+    "name": "Tehnike programiranja (2016\/2076), Tutorijal 2, Zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3144,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: primjer iz postavke\n\/\/NAPOMENA: znak _ na kraju ispisa je u sklopu autotesta!\n_main();\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15 30\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: Prosti brojevi u rasponu od 15 do 30 su: 17, 19, 23, 29\\n_\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3145,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: primjer iz postavke (nema prostih)\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "24 28\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: Nema prostih brojeva u rasponu od 24 do 28!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3146,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: obje granice ukljucive\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7 17\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: Prosti brojevi u rasponu od 7 do 17 su: 7, 11, 13, 17"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3147,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: jedan broj\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "11 11\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: Prosti brojevi u rasponu od 11 do 11 su: 11"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3148,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: negativni brojevi + puno prostih\n\/\/NAPOMENA: autotest doda znak _ na kraj ispisa\n_main();\nstd::cout << \"_\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-1000 777\n"
+            },
+            "expected": [
+                "Unesite pocetnu i krajnju vrijednost: Prosti brojevi u rasponu od -1000 do 777 su: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773\\n_"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3149,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: testiramo DaLiJeProst funkciju\nfor (int i = -10; i <= 30; ++i)\n        std::cout << i << \": \" << std::boolalpha << DaLiJeProst(i) << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-10: false\\n-9: false\\n-8: false\\n-7: false\\n-6: false\\n-5: false\\n-4: false\\n-3: false\\n-2: false\\n-1: false\\n0: false\\n1: false\\n2: true\\n3: true\\n4: false\\n5: true\\n6: false\\n7: true\\n8: false\\n9: false\\n10: false\\n11: true\\n12: false\\n13: true\\n14: false\\n15: false\\n16: false\\n17: true\\n18: false\\n19: true\\n20: false\\n21: false\\n22: false\\n23: true\\n24: false\\n25: false\\n26: false\\n27: false\\n28: false\\n29: true\\n30: false"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3150,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT7: test funkcije ProstiBrojeviUOpsegu\n    std::vector<int> v1 = ProstiBrojeviUOpsegu(8, 10);\n    std::vector<int> v2 = ProstiBrojeviUOpsegu(80, 100);\n    std::cout << v1.size() << \" \" << v2.size() << std::endl;\n    for (unsigned int i = 0; i < v2.size(); ++i)\n        std::cout << v2.at (i) << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 3\\n83 89 97"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3151,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT8: prosljedjujemo najveci broj koji moze stati u int (a.k.a AT13)\n    int maxi = std::numeric_limits<int>::max();\n    std::vector<int> v = ProstiBrojeviUOpsegu(maxi - 5, maxi);\n    std::cout << v.size() << \" \";\n    std::cout << (v.at(0) == maxi ? \"OK\" : \"NotOK\");",
+            "global_above_main": "#include <limits>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3152,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT9: veliki brojevi, razmislite kako optimizirati!\n    const int a = 100000000, b = a + 50000;\n    std::vector<int> v = ProstiBrojeviUOpsegu(a, b);\n    std::cout << \"Prostih brojeva: \" << v.size() << std::endl;\n    for (unsigned int i = 0; i < v.size(); i += 15) \/\/ispisimo svako 15.\n        std::cout << v.at(i) << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prostih brojeva: 2722\\n100000007 100000267 100000567 100000837 100001119 100001399 100001689 100001903 100002163 100002431 100002647 100002967 100003279 100003573 100003807 100004041 100004309 100004519 100004819 100005097 100005343 100005527 100005757 100006097 100006273 100006607 100006817 100007143 100007377 100007813 100007983 100008247 100008611 100008869 100009297 100009549 100009817 100010039 100010231 100010461 100010731 100011073 100011397 100011677 100011907 100012163 100012397 100012667 100012931 100013273 100013497 100013803 100014209 100014433 100014847 100015169 100015537 100015763 100016009 100016249 100016531 100016773 100017079 100017517 100017791 100018091 100018417 100018693 100018909 100019119 100019441 100019693 100019977 100020343 100020637 100020863 100021157 100021351 100021631 100021973 100022233 100022497 100022861 100023109 100023377 100023761 100024031 100024247 100024541 100024921 100025201 100025521 100025719 100025963 100026253 100026547 100026803 100027121 100027469 100027693 100028147 100028359 100028609 100028813 100029101 100029331 100029577 100029767 100030067 100030291 100030543 100030753 100031039 100031303 100031579 100031851 100032103 100032337 100032659 100032979 100033169 100033517 100033711 100033919 100034251 100034533 100034849 100035163 100035359 100035583 100035979 100036219 100036439 100036667 100036997 100037351 100037593 100037803 100038049 100038329 100038649 100038977 100039133 100039411 100039721 100040023 100040351 100040531 100040951 100041437 100041703 100041983 100042253 100042513 100042699 100043003 100043267 100043519 100043689 100043947 100044137 100044487 100044691 100045037 100045333 100045531 100045723 100045987 100046231 100046473 100046707 100046953 100047221 100047511 100047797 100048027 100048309 100048591 100048973 100049303 100049567 100049891 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.c: In function ‘upisi’:\nmain.c:14:12: warning: unused variable ‘k’ [-Wunused-variable]\n  int i, j, k;\n            ^\nmain.c:14:9: warning: unused variable ‘j’ [-Wunused-variable]\n  int i, j, k;\n         ^\nmain.c:14:6: warning: unused variable ‘i’ [-Wunused-variable]\n  int i, j, k;\n      ^\nmain.c: In function ‘ispis’:\nmain.c:45:12: warning: unused variable ‘k’ [-Wunused-variable]\n  int i, j, k;\n            ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "14",
+                "col": "12",
+                "message": "unused variable 'k'",
+                "output": "/tmp/buildservice/bs_476/main.c:14:12: warning: unused variable ‘k’ [-Wunused-variable]  int i, j, k;            ^",
+                "code": "int i, j, k;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "14",
+                "col": "9",
+                "message": "unused variable 'j'",
+                "output": "/tmp/buildservice/bs_476/main.c:14:9: warning: unused variable ‘j’ [-Wunused-variable]  int i, j, k;         ^",
+                "code": "int i, j, k;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "14",
+                "col": "6",
+                "message": "unused variable 'i'",
+                "output": "/tmp/buildservice/bs_476/main.c:14:6: warning: unused variable ‘i’ [-Wunused-variable]  int i, j, k;      ^",
+                "code": "int i, j, k;"
+            },
+            {
+                "type": "warning",
+                "file": "main.c",
+                "line": "45",
+                "col": "12",
+                "message": "unused variable 'k'",
+                "output": "/tmp/buildservice/bs_476/main.c:45:12: warning: unused variable ‘k’ [-Wunused-variable]  int i, j, k;            ^",
+                "code": "int i, j, k;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "2057": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \n1. Meho Mehic - 10, 8\nUnesite 1 za unos, 2 za ispis, 0 za izlaz: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2058": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \nispit.txt:\nMehic               Meho           10  8\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2059": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \nUnesite 1 za unos, 2 za ispis, 0 za izlaz: Unesite ime: Unesite prezime: Unesite broj bodova na I parcijalnom: Unesite broj bodova na II parcijalnom: Unesite 1 za unos, 2 za ispis, 0 za izlaz: \nispit.txt:\nHanic               Hana           15 14\nDadic               Dada           18 18\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1484775628
+}

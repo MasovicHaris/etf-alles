@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\Zadaca 3\Program\bin\Debug\Program.exe.config
+C:\Users\User\Desktop\Zadaca 3\Program\bin\Debug\Program.exe
+C:\Users\User\Desktop\Zadaca 3\Program\bin\Debug\Program.pdb
+C:\Users\User\Desktop\Zadaca 3\Program\bin\Debug\iTunes.dll
+C:\Users\User\Desktop\Zadaca 3\Program\bin\Debug\iTunes.pdb
+C:\Users\User\Desktop\Zadaca 3\Program\obj\Debug\Program.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Zadaca 3\Program\obj\Debug\Program.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\Program\obj\Debug\Program.csproj.CopyComplete
+C:\Users\User\Desktop\Zadaca 3\Program\obj\Debug\Program.exe
+C:\Users\User\Desktop\Zadaca 3\Program\obj\Debug\Program.pdb

@@ -1,0 +1,122 @@
+{
+    "id": 234422,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 2, Zadatak 4",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3014,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT1: Provjera maina *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 3\n1.1 2.2 3.3\n4.4 5.5 6.6\n7.7 8.8 9.9"
+            },
+            "expected": [
+                "Unesite vrijednosti M i N: Unesite clanove matrice: \\nNakon izbacivanja matrica glasi:\\n   1.1   2.2   3.3\\n   4.4   5.5   6.6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3015,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT2: Provjera epsilona *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 3\n1 1 1\n1 1 1.00001\n1 1 1.001"
+            },
+            "expected": [
+                "Unesite vrijednosti M i N: Unesite clanove matrice: \\nNakon izbacivanja matrica glasi:\\n   1.0   1.0   1.0\\n   1.0   1.0   1.0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3016,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT3: Jednostavni test *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3 4\n4 4 4 4\n1 2 3 4\n1 2 3 4"
+            },
+            "expected": [
+                "Unesite vrijednosti M i N: Unesite clanove matrice: \\nNakon izbacivanja matrica glasi:\\n   1.0   2.0   3.0\\n   1.0   2.0   3.0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3095,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT4: Provjera do-while *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0 50\n1 0\n101 99\n98 101\n1 100\n0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 "
+            },
+            "expected": [
+                "Unesite vrijednosti M i N: Vrijednosti su van opsega!\\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\\nUnesite vrijednosti M i N: Vrijednosti su van opsega!\\nUnesite vrijednosti M i N: Unesite clanove matrice: \\nNakon izbacivanja matrica glasi:\\n   0.0   1.0   2.0   3.0   4.0   5.0   6.0   7.0   8.0   9.0  10.0  11.0  12.0  13.0  14.0  15.0  16.0  17.0  18.0  19.0  20.0  21.0  22.0  23.0  24.0  25.0  26.0  27.0  28.0  29.0  30.0  31.0  32.0  33.0  34.0  35.0  36.0  37.0  38.0  39.0  40.0  41.0  42.0  43.0  44.0  45.0  46.0  47.0  48.0  49.0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3096,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/* AT5: Izbacivanje redova i kolona s pocetka matrice *\/\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 5\n5 5 5 5 5\n4 4 4 4 4\n5 4 3 2 1\n5 4 3 2 1\n5 4 3 2 1"
+            },
+            "expected": [
+                "Unesite vrijednosti M i N: Unesite clanove matrice: \\nNakon izbacivanja matrica glasi:\\n   3.0   2.0   1.0\\n   3.0   2.0   1.0\\n   3.0   2.0   1.0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

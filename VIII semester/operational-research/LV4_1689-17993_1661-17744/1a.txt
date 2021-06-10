@@ -1,0 +1,2 @@
+Optimalno rjesenje: 6000,
+uz x1=x3=0 i x2=3.

@@ -1,0 +1,194 @@
+{
+    "id": 8633,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 13, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 71234,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/Upisi studenta\n  Fakultet f1;\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n  f1.IspisiSveStudente();\n  TestirajIzuzetak(std::logic_error, { f1.UpisiStudenta(\"Drugi\", \"Drugic\", 3412); });",
+            "global_above_main": "#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Student bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nStudent sa zadanim brojem indeksa vec postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3807,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/operator []\n  Fakultet f1;\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n  f1[3412].RegistrirajIspit(7); f1[3412].RegistrirajIspit(9);\n  f1[3124].RegistrirajIspit(9); f1[3124].RegistrirajIspit(10);\n  f1[1243].RegistrirajIspit(8);\n  f1.IspisiSveStudente();\n  TestirajIzuzetak(std::logic_error, { f1[9876].IspisiPodatke(); });",
+            "global_above_main": "#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Student master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 9.5.\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 8.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 8.\\nStudent sa zadanim brojem indeksa ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3808,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ispisi sve\n  Fakultet f1;\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.ObrisiStudenta(3412);\n  f1.IspisiSveStudente();\n  TestirajIzuzetak(std::logic_error, { f1.ObrisiStudenta(6789); });",
+            "global_above_main": "#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Student master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent sa zadanim brojem indeksa ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3809,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  \/\/kopiraju\u0107i konstruktor i pomijeraju\u0107i konstruktor\n  Fakultet f1;\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n  \n  \n  std::cout<< \"KOPIRAJUCI KONSTRUKTOR\" << std::endl;\n  Fakultet f2(f1);\n  std::cout << \"Original prije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  \n  std::cout << \"Kopija prije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  f2.UpisiStudenta(\"Djuro\", \"Djuric\", 9876);\n  \n  std::cout << \"Original poslije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  \n  std::cout << \"Kopija poslije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  std::cout<< \"POMIJERAJUCI KONSTRUKTOR\" << std::endl;\n \n  Fakultet f3(std::move(f1));\n  std::cout << \"Original prije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  \n  std::cout << \"Kopija prije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f3.IspisiSveStudente();\n  \n  f3.UpisiStudenta(\"Djuro\", \"Djuric\", 9999);\n  \n  std::cout << \"Original poslije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  \n  std::cout << \"Kopija poslije promjene\" << std::endl;\n  std::cout << \"---------------------\" << std::endl;\n  f3.IspisiSveStudente();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "KOPIRAJUCI KONSTRUKTOR\\nOriginal prije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nKopija prije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nOriginal poslije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nKopija poslije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nStudent bachelor studija Djuro Djuric, sa brojem indeksa 9876,\\nima prosjek 5.\\nPOMIJERAJUCI KONSTRUKTOR\\nOriginal prije promjene\\n---------------------\\nKopija prije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nOriginal poslije promjene\\n---------------------\\nKopija poslije promjene\\n---------------------\\nStudent bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nStudent bachelor studija Djuro Djuric, sa brojem indeksa 9999,\\nima prosjek 5."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3810,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/metode inspektori\n  Fakultet f1;\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n \n  const Fakultet f4(f1);    \n  f4.IspisiSveStudente();\n  f4[3124].IspisiPodatke();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Student bachelor studija Pero Peric, sa brojem indeksa 1243,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 3412,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 3124,\\nzavrsio bachelor studij godine 2015,ima prosjek 5."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3816,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": " \n  \/\/kopiraju\u0107i operator i pomijeraju\u0107i operator\n  Fakultet f1; \/\/3 studenta\n  f1.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f1.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f1.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n \n  Fakultet f2;  \/\/2 studenta\n  f2.UpisiStudenta(\"Meho\", \"Mehic\", 1111);\n  f2.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);\n  \n  f1 = f2;  \/\/dodjela manjeg ve\u0107em, sadai f1 i f2 imaju 2 elementa\n  std::cout << \"KOPIRAJUCI OPERATOR DODJELE - manji ve\u0107em\" << std::endl;\n  std::cout << \"Original prije promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  std::cout << \"Kopija prije promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  f2.ObrisiStudenta(1111);  \/\/f2 sada ima 1 element\n  std::cout << \"Original nakon promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  std::cout << \"Kopija nakon promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  \n  f2 = f1;  \/\/f2 sada opet ima 2 elementa\n    std::cout << \"KOPIRAJUCI OPERATOR DODJELE - ve\u0107i manjem\" << std::endl;\n  std::cout << \"Original prije promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  std::cout << \"Kopija prije promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  f2.ObrisiStudenta(1111); \/\/f2 ima 1 element\n  std::cout << \"Original nakon promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f1.IspisiSveStudente();\n  std::cout << \"Kopija nakon promjene: \" << std::endl;\n  std::cout << \"----------------------\" << std::endl;\n  f2.IspisiSveStudente();\n  \n  \n  Fakultet f3; \/\/3 studenta\n  f3.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f3.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f3.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n \n  Fakultet f4;  \/\/2 studenta\n  f4.UpisiStudenta(\"Meho\", \"Mehic\", 1111);\n  f4.UpisiStudenta(\"Ibro\", \"Ibric\", 2222, 2015);\n \n  std::cout << std::endl << std::endl;\n  f3 = std::move(f4);  \/\/dodjela manjeg ve\u0107em, sadai f3 i f4 imaju 2 elementa\n  std::cout << \"POMIJERAJUCI OPERATOR DODJELE - manji ve\u0107em\" << std::endl;\n  f4.IspisiSveStudente(); \/\/f4 je prazno\n  \n  f4.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n  f4.UpisiStudenta(\"Ibro\", \"Ibric\", 3124, 2015);\n  f4.UpisiStudenta(\"Pero\", \"Peric\", 1243);\n  f3 = std::move(f4);  \/\/f3 je prazno\n  f4.IspisiSveStudente(); \n  \n ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "KOPIRAJUCI OPERATOR DODJELE - manji ve\u0107em\\nOriginal prije promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nKopija prije promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nOriginal nakon promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nKopija nakon promjene: \\n----------------------\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nKOPIRAJUCI OPERATOR DODJELE - ve\u0107i manjem\\nOriginal prije promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nKopija prije promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nOriginal nakon promjene: \\n----------------------\\nStudent bachelor studija Meho Mehic, sa brojem indeksa 1111,\\nima prosjek 5.\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\nKopija nakon promjene: \\n----------------------\\nStudent master studija Ibro Ibric, sa brojem indeksa 2222,\\nzavrsio bachelor studij godine 2015,ima prosjek 5.\\n\\n\\nPOMIJERAJUCI OPERATOR DODJELE - manji ve\u0107em"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3819,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "  try{\n    Fakultet f;\n    f.UpisiStudenta(\"Meho\", \"Mehic\", 3412);\n    f.UpisiStudenta(\"Ibro\", \"Ibric\", 3124);\n  }\n  catch(std::bad_alloc e){\n    std::cout << \"Nestalo memorije\" << std::endl;\n  }\n",
+            "global_above_main": "\nconst unsigned MAX_RAM = 1 * sizeof (StudentBachelor) + 1*sizeof(Fakultet);\nstatic unsigned Alocirano;\nvoid *operator new (size_t size)\n    {\n        Alocirano += size;\n        if (Alocirano >= MAX_RAM)\n            throw std::bad_alloc();\n        return std::malloc(size);\n    }\n\nvoid operator delete (void *p) noexcept\n    {\n        std::free(p); \n    }",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nestalo memorije"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

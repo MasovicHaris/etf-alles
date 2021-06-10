@@ -1,0 +1,80 @@
+{
+    "id": 8525,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 2, zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1344,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1: primjer iz postavke\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n10.5\n30\n2.8\n-47.6\n"
+            },
+            "expected": [
+                "Unesi broj elemenata:\\nZ1 = fi1 = \\nZ2 = fi2 = \\nParalelna veza ovih elemenata ima Z = 2.57147 i fi = -33.7613."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1345,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2: provjera za nulu\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\n0\n0\n"
+            },
+            "expected": [
+                "Unesi broj elemenata:\\nZ1 = fi1 =  \\nParalelna veza ovih elemenata ima Z = 0 i fi = 0."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1346,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n1\n90\n1\n90\n1\n0\n1\n0\n"
+            },
+            "expected": [
+                "Unesi broj elemenata:\\nZ1 = fi1 = \\nZ2 = fi2 = \\nZ3 = fi3 = \\nZ4 = fi4 =\\nParalelna veza ovih elemenata ima Z = 0.353553 i fi = 45."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

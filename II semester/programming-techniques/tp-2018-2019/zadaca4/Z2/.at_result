@@ -1,0 +1,88 @@
+{
+    "buildhost_description": {
+        "id": "lab002c18",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:239:67: warning: ‘pol’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             g[br]=new GradjaninBiH(ime,dan,mjesec,godina,sifra,pol);\n                                                                   ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "239",
+                "col": "67",
+                "message": "'pol' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_3993/main.cpp:239:67: warning: ‘pol’ may be used uninitialized in this function [-Wmaybe-uninitialized]             g[br]=new GradjaninBiH(ime,dan,mjesec,godina,sifra,pol);                                                                   ^",
+                "code": "g[br]=new GradjaninBiH(ime,dan,mjesec,godina,sifra,pol);"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3769": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko gradjana zelite unijeti po JMBG?\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Murga Drot rodjenog 30.5.2017 u regiji 18, musko.\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Gile Sampion rodjenog 29.5.2017 u regiji 17, musko.\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nJMBG nije validan\nUnesite ime i prezime (u istom redu): \nUnesite JMBG: \nUnijeli ste gradjanina Selena VratiSe rodjenog 16.12.1994 u regiji 17, zensko.\nKoliko gradjana zelite unijeti po datumu rodjenja, regiji i polu?\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Ibro Dirka JMBG: 1612994170006.\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Lijepa Alma JMBG: 1412994185004.\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nNeispravni podaci\nUnesite ime i prezime (u istom redu): \nUnesite datum rodjenja (format dd/mm/gggg): \nUnesite sifru regije: \nUnesite M za musko, Z za zensko: \nUnijeli ste gradjanina Abid ReciNamde JMBG: 1212992170000.\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3770": {
+            "status": 1,
+            "run_result": {
+                "output": "12/12/1992\n17\n0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3771": {
+            "status": 1,
+            "run_result": {
+                "output": "1212992170000\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3772": {
+            "status": 1,
+            "run_result": {
+                "output": "Gile Hasisar\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1559321270
+}

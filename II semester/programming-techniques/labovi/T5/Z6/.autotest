@@ -1,0 +1,169 @@
+{
+    "id": 8556,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 5, Zadatak 6",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3358,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: testira primjer iz postavke\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n25 -174 2316 1111 99 0 -345 614 -1111 22222\n2316"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 0 -1111 1111 25 22222 614 -345 -174 2316 99\\nUnesite broj koji trazite: Trazeni broj nalazi se na poziciji 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3359,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: testira skoro sortiran primjer\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n10 100 1000 20 200 2000 110 1100 -97 88\n88"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 10 100 1000 20 110 200 1100 2000 -97 88 \\nUnesite broj koji trazite: Trazeni broj nalazi se na poziciji 9"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3360,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: testira obrnuto sortirani niz\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n558 99 -99 44 -17 -112 -11 100 10 1\n-11\n"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 1 10 100 -11 -112 -17 44 -99 99 558\\nUnesite broj koji trazite: Trazeni broj nalazi se na poziciji 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3361,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: testira sortirani niz\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n1 10 100 -11 -112 -17 44 -99 99 558\n-11"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 1 10 100 -11 -112 -17 44 -99 99 558\\nUnesite broj koji trazite: Trazeni broj nalazi se na poziciji 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3362,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT5: primjer koji ispituje da li program sortira vrijednosti koje\n\/\/imaju istu sumu cifara i jedna do druge su, ali su po vrijednosti nesortirane\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n125 44 -99 99 1\n1"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 1 44 125 -99 99\\nUnesite broj koji trazite: Trazeni broj nalazi se na poziciji 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3375,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT6: primjer koji ispituje pretragu pozicije broja koji se ne nalazi u sortiranom nizu\n\n_main(); ",
+            "global_above_main": "#define for !zabranjeno!!\n#define while !zabranjeno!!\n#define goto !zabranjeno!!",
+            "global_top": "#define deque !zabranjeno!!",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5\n125 44 -99 99 1\n65"
+            },
+            "expected": [
+                "Unesite broj elemenata: Unesite elemente: Niz sortiran po sumi cifara glasi: 1 44 125 -99 99\\nUnesite broj koji trazite: Trazeni broj ne nalazi se u nizu!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,772 @@
+{
+    "name": "Numeri\u010dki algoritmi (2019\/2020), Zada\u0107a 3, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 299,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - Testiranje LinearInterpolator - sortirane vrijednosti 1\nLinearInterpolator li({{0,8},{1,3},{2,7},{4,5},{7,10}});\nstd::cout << li(0.5) << std::endl;\nstd::cout << li(0.6) << std::endl;\nstd::cout << li(1.5) << std::endl;\nstd::cout << li(8) << std::endl;\nstd::cout << li(-0.1) << std::endl;\nstd::cout << li(2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5.5\\n5\\n5\\n11.6667\\n8.5\\n7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 300,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT2 Testiranje LinearInterpolator - nesortirane vrijednosti 1\nLinearInterpolator li1({{4,5},{2,7},{0,8},{7,10},{1,3}});\nstd::cout << li1(0.5) << std::endl;\nstd::cout << li1(0.6) << std::endl;\nstd::cout << li1(1.5) << std::endl;\nstd::cout << li1(8) << std::endl;\nstd::cout << li1(-0.1) << std::endl;\nstd::cout << li1(2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5.5\\n5\\n5\\n11.6667\\n8.5\\n7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 301,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 Testiranje LinearInterpolator - sortirane vrijednosti 2\nLinearInterpolator li2({{1,1},{2,2},{3,3},{4,4},{5,5},{6,6}});\nstd::cout << li2(0.5) << std::endl;\nstd::cout << li2(1) << std::endl;\nstd::cout << li2(8) << std::endl;\nstd::cout << li2(-0.1) << std::endl;\nstd::cout << li2(3);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.5\\n1\\n8\\n-0.1\\n3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 302,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 Testiranje LinearInterpolator - nesortirane vrijednosti 2\nLinearInterpolator li3({{3,3},{4,4},{1,1},{6,6},{2,2},{5,5}});\nstd::cout << li3(0.5) << std::endl;\nstd::cout << li3(1) << std::endl;\nstd::cout << li3(8) << std::endl;\nstd::cout << li3(-0.1) << std::endl;\nstd::cout << li3(3);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0.5\\n1\\n8\\n-0.1\\n3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 303,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 Testiranje izuzetka LinearInterpolator\ntry\n{\n    LinearInterpolator li3({{3,3},{3,3},{1,1},{6,6},{2,2},{5,5}});\n    \/\/Invalid data set\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid data set'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 304,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT6 - PolynomialInterpolator operator ()\nPolynomialInterpolator pi({{-2,-39},{0,3},{4,25},{6,30}});\nstd::cout << pi(2.5) << std::endl;\nstd::cout << pi(3.5) << std::endl;\nstd::cout << pi(7.5) << std::endl;\nstd::cout << pi(-3.5);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "22.043\\n24.2643\\n41.3789\\n-94.3164"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 305,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT7 - PolynomialInterpolator - AddPoint\nPolynomialInterpolator pi2({{-2,-39},{0,3},{4,25},{6,30}});\npi2.AddPoint({1,6});\npi2.AddPoint({3,36});\npi2.AddPoint({-3,-30});\nstd::cout << pi2(7.5) << std::endl;\nstd::cout << pi2(-3.5);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1132.14\\n56.3569"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 306,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8 - PolynomialInterpolator - GetCoefficients test 1\nPolynomialInterpolator pi3({{-2,-39},{0,3},{4,25},{6,30}});\nstd::vector<double> p = pi3.GetCoefficients();\nfor(int i = 0; i < p.size(); i++) std::cout << p[i] << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 13.75 -3.10417 0.260417"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 307,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT9 - PolynomialInterpolator - GetCoefficients test 2\nPolynomialInterpolator pi4({{-2,-39},{0,3},{4,25},{6,30}});\npi4.AddPoint({1,6});\npi4.AddPoint({3,36});\npi4.AddPoint({-3,-30});\nstd::vector<double> p1 = pi4.GetCoefficients();\nfor(int i = 0; i < p1.size(); i++) std::cout << p1[i] << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 2.25952 -3.64107 4.84706 -0.0897817 -0.430655 0.0549272"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 308,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT10 - PolynomialInterpolator - Bacanje izuzetka\ntry\n{\n    PolynomialInterpolator pi6({{-2,-39},{-2,3},{4,25},{6,30}});\n    \/\/Invalid data set\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid data set'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 309,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT11 - SplineInterpolator Test 1 - sortirane vrijednosti\nconst double PI=std::atan(1)*4;\nstd::vector<std::pair<double,double>> data1;\nfor(double i=0; i<=2*PI; i+=PI\/2)\n    data1.push_back({i,std::sin(i)});\nSplineInterpolator si(data1);\nfor (int i=-PI\/4; i<=2*PI\/2; i++)\n    std::cout<<si(i)<<\" \"<<std::sin(i)<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0\\n0.825924 0.841471\\n0.89821 0.909297\\n0.134845 0.14112\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 310,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT12 - SplineInterpolator Test 1 - nesortirane vrijednosti\nconst double PI1=std::atan(1)*4;\nstd::vector<std::pair<double,double>> data2;\nfor(double i=2*PI1; i>=0; i-=PI1\/2)\ndata2.push_back({i,std::sin(i)});\nSplineInterpolator si1(data2);\nfor (int i=-PI1\/4; i<=2*PI1\/2; i++)\nstd::cout<<si1(i)<<\" \"<<std::sin(i)<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0\\n0.825924 0.841471\\n0.89821 0.909297\\n0.134845 0.14112\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 311,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT13 - SplineInterpolator Test 1 - sortirane vrijednosti\/van opsega\/ke\u00c5\u00a1iranje\nconst double PI3=std::atan(1)*4;\nstd::vector<std::pair<double,double>> data3;\nfor(double i=0; i<=2*PI3; i+=PI3\/2)\n    data3.push_back({i,std::cos(i)});\nSplineInterpolator si3(data3);\nstd::cout<<si3(-0.1)<<\" \"<<std::cos(-0.1)<<std::endl;\nstd::cout<<si3(-0.2)<<\" \"<<std::cos(-0.2)<<std::endl;\nstd::cout<<std::round(si3(PI3\/2))<<\" \"<<std::round(std::cos(PI3\/2))<<std::endl;\nstd::cout<<si3(PI3\/2+0.1)<<\" \"<<std::cos(PI3\/2+0.1)<<std::endl;\nstd::cout<<si3(PI3*3+0.1)<<\" \"<<std::cos(PI3*3+0.1)<<std::endl;\nstd::cout<<si3(PI3*3+0.2)<<\" \"<<std::cos(PI3*3+0.2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.0546 0.995004\\n1.10943 0.980067\\n0 0\\n-0.0834038 -0.0998334\\n4.02436 -0.995004\\n4.19874 -0.980067"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 312,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT14 - SplineInterpolator Test 1 - nesortirane vrijednosti\/vanopsega\/ke\u00c5\u00a1iranje\nconst double PI4=std::atan(1)*4;\nstd::vector<std::pair<double,double>> data4;\nfor(double i=2*PI4; i>=0; i-=PI4\/2)\n    data4.push_back({i,std::cos(i)});\nSplineInterpolator si4(data4);\nstd::cout<<si4(-0.1)<<\" \"<<std::cos(-0.1)<<std::endl;\nstd::cout<<si4(-0.2)<<\" \"<<std::cos(-0.2)<<std::endl;\nstd::cout<<std::round(si4(PI4\/2))<<\" \"<<std::round(std::cos(PI4\/2))<<std::endl;\nstd::cout<<si4(PI4\/2+0.1)<<\" \"<<std::cos(PI4\/2+0.1)<<std::endl;\nstd::cout<<si4(PI4*3+0.1)<<\" \"<<std::cos(PI4*3+0.1)<<std::endl;\nstd::cout<<si4(PI4*3+0.2)<<\" \"<<std::cos(PI4*3+0.2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1.0546 0.995004\\n1.10943 0.980067\\n0 0\\n-0.0834038 -0.0998334\\n4.02436 -0.995004\\n4.19874 -0.980067"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 313,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT15 - SplineInterpolator - Bacanje izuzetka\ntry\n{\n    SplineInterpolator pi6({{-2,-39},{-2,3},{4,25},{6,30}});\n    \/\/Invalid data set\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid data set'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 314,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT16 - Barycentric Interpolator Test 1 - operator ()\nBarycentricInterpolator bi({{0,8},{1,3},{2,7},{4,5},{7,10}}, 0);\nstd::cout << bi(2) << std::endl;\nstd::cout << bi(3.5) << std::endl;\nstd::cout << bi(7.5) << std::endl;\nstd::cout << bi(-3.5);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7\\n5.68908\\n10.9028\\n15.3343"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 315,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT17 - Barycentric Interpolator Test 2 - operator ()\nBarycentricInterpolator bi1({{4,25},{0,3},{6,30},{-2,-39}}, 0);\nstd::cout << bi1(-2) << std::endl;\nstd::cout << bi1(3.5) << std::endl;\nstd::cout << bi1(7.5) << std::endl;\nstd::cout << bi1(-3.5);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-39\\n26.9665\\n42.4485\\n-65.2328"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 316,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT18 - Barycentric Interpolator Test - GetWeights\nBarycentricInterpolator bi2({{0,8},{1,3},{2,7},{4,5},{7,10}}, 0);\nstd::vector<double> w = bi2.GetWeights();\nfor(int i = 0; i < w.size(); i++) std::cout << w[i] << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 -1 1 -1 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 317,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n\/\/AT19 - Barycentric Interpolator Test - Exception 1\ntry\n{\n    BarycentricInterpolator bi4({{2,-39},{2,3},{2,25},{2,30}},2);\n    \/\/Invalid data set\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid data set'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 318,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT20 - Barycentric Interpolator Test - Exception 2\ntry\n{\n    BarycentricInterpolator bi5({{-2,-39},{0,3},{4,25},{6,30}},7);\n    \/\/Invalid order\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 319,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT21 - Invalid point izuzetak\ntry\n{\n    PolynomialInterpolator pi2({{-2,-39},{0,3},{4,25},{6,30}});\n    pi2.AddPoint({1,6});\n    pi2.AddPoint({4,36});\n    \/\/Invalid point\n\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid point'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 320,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT22 - PiecewisePolynomialInterpolator \nPiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 3);\n  for(double x : {0.5, 1.5, 3., 5., 7., 9.}) std::cout << pwi(x) << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3.79688 4.45312 6.75 6.4375 7.8125 5.9375 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 321,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT23 - PiecewisePolynomialInterpolator i ekstrapolacija\nPiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 3);\n  for(double x : {-1., 0.5, 1.5, 3., 5., 7., 9., 10.5}) std::cout << pwi(x) << \" \";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "31.25 3.79688 4.45312 6.75 6.4375 7.8125 5.9375 4.69531 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 322,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT24 - PiecewisePolynomialInterpolator Izuzeci\ntry\n{\n    PiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 0);\n    \/\/Invalid order\n\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 323,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT25 - PiecewisePolynomialInterpolator Izuzeci\ntry\n{\n    PiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 8);\n    \/\/Invalid order\n\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 324,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT26 - PiecewisePolynomialInterpolator Izuzeci\ntry\n{\n    PiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 10);\n    \/\/Invalid order\n\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 325,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT27 - Test polimorfizma 1\nLinearInterpolator li({{0,8},{1,3},{2,7},{4,5},{7,10}});\nstd::cout << TestPolymorphic(li, 3);",
+            "global_above_main": "double TestPolymorphic(AbstractInterpolator &a, double x) {\n  return a(x);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 326,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT28 - Test polimorfizma 2\nPolynomialInterpolator pi({{-2, -39}, {0, 3}});\npi.AddPoint({1, 6});\npi.AddPoint({3, 36});\nstd::cout << TestPolymorphic(pi, 2.5) << std::endl;",
+            "global_above_main": "double TestPolymorphic(AbstractInterpolator &a, double x) {\n  return a(x);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "21.75"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 327,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT29 - Test polimorfizma 3\nPiecewisePolynomialInterpolator pwi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {6, 8},\n    {8, 7}, {10, 5}}, 3);\nstd::cout <<  TestPolymorphic(pwi, 3);",
+            "global_above_main": "double TestPolymorphic(AbstractInterpolator &a, double x) {\n  return a(x);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6.75"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 328,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT30 - Test polimorfizma 4\nSplineInterpolator si2({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {7, 10}});\nstd::cout << TestPolymorphic(si2, 2.5);",
+            "global_above_main": "double TestPolymorphic(AbstractInterpolator &a, double x) {\n  return a(x);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7.88668"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 329,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT31 - Test polimorfizma 5\nBarycentricInterpolator bi({{0, 8}, {1, 3}, {2, 7}, {4, 5}, {7, 10}}, 0);\nstd::cout << TestPolymorphic(bi, 2.5);",
+            "global_above_main": "double TestPolymorphic(AbstractInterpolator &a, double x) {\n  return a(x);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "7.4898"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 330,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT32 - Barycentric Interpolator Test - Exception 2\ntry\n{\n    BarycentricInterpolator bi5({{-2,-39},{0,3},{4,25},{6,30}},-1);\n    \/\/Invalid order\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid order'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 331,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT33 - Invalid point izuzetak\ntry\n{\n    PolynomialInterpolator pi2({{-2,-39},{0,3},{4,25},{6,30}});\n    pi2.AddPoint({1,6});\n    pi2.AddPoint({1,36});\n    \/\/Invalid point\n\n}\ncatch (std::domain_error e)\n{\n    std::cout << \"'\" << e.what() << \"'\";\n}\ncatch (...)\n{\n    std::cout << \"Pogresan tip izuzetka\";\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "'Invalid point'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 332,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT34 - Test locate\nTestAbstractInterpolator ta({{3, 1}, {5, 3}, {8, 4}, {11, 5}, {14, 2}});\nfor(double x : {1, 6, 15, 4, 10, 10, 7, 2, 6, 6, 9, 3, 14, 13, 2, 8, 16})\n   std::cout << ta.Locate(x) << \" \";\nstd::cout << std::endl;",
+            "global_above_main": "class TestAbstractInterpolator : public AbstractInterpolator {\npublic:\n  TestAbstractInterpolator(const std::vector<std::pair<double, double>> &data)\n    : AbstractInterpolator(data) {}\n  int Locate(double x) const { return AbstractInterpolator::Locate(x); }\n  double operator()(double x) const override { return 0; }\n};",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 2 5 1 3 3 2 0 2 2 3 0 4 4 0 2 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 333,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT35 - Stress test locate\nstd::vector<std::pair<double, double>> sts_data(100000);\nfor(int i = 0; i < 100000; i++) sts_data[i] = {i, i};\nTestAbstractInterpolator sts(sts_data);\nlong long int sum1 = 0;\nfor(int i = 0; i < 100000; i++)\n  sum1 += sts.Locate(99900.5) + sts.Locate(99990.5);\nstd::cout << sum1 << std::endl;",
+            "global_above_main": "class TestAbstractInterpolator : public AbstractInterpolator {\npublic:\n  TestAbstractInterpolator(const std::vector<std::pair<double, double>> &data)\n    : AbstractInterpolator(data) {}\n  int Locate(double x) const { return AbstractInterpolator::Locate(x); }\n  double operator()(double x) const override { return 0; }\n};",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "19989200000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 334,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT36 - Stress test locate + cache\nstd::vector<std::pair<double, double>> sts_data(100000);\nfor(int i = 0; i < 100000; i++) sts_data[i] = {i, i};\nTestAbstractInterpolator sts(sts_data);\nlong long int sum2 = 0;\nfor(int i = 0; i < 70000; i++)\n    sum2 += sts.Locate(99991.5) + sts.Locate(99990.5) + sts.Locate(99991.5)\n      + sts.Locate(99992.5) + sts.Locate(99991.5) + sts.Locate(99990.5)\n      + sts.Locate(99991.5) + sts.Locate(99992.5) + sts.Locate(99991.5)\n      + sts.Locate(99990.5) + sts.Locate(99991.5) + sts.Locate(99992.5)\n      + sts.Locate(99991.5) + sts.Locate(99990.5) + sts.Locate(99991.5);\nstd::cout << sum2 << std::endl;",
+            "global_above_main": "class TestAbstractInterpolator : public AbstractInterpolator {\npublic:\n  TestAbstractInterpolator(const std::vector<std::pair<double, double>> &data)\n    : AbstractInterpolator(data) {}\n  int Locate(double x) const { return AbstractInterpolator::Locate(x); }\n  double operator()(double x) const override { return 0; }\n};",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "104991530000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

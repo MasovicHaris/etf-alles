@@ -1,0 +1,144 @@
+{
+    "id": 8613,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 11, Zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3703,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: Testiranje izuzetka kada je predugacko ime tima\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nTestirajIzuzetak(std::range_error, { Tim t(\"NK Metalleghe BSI Jajce\"); });\n\n",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Predugacko ime tima"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3704,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: Testiranje izuzetka kada je neispravan rezultat domacina\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nTim t(\"NK GOSK\");\nTestirajIzuzetak(std::range_error, { t.ObradiUtakmicu(-15, 0); });",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravan broj golova"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3705,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3: Testiranje izuzetka kada je neispravan rezultat gosta\n\n#define TestirajIzuzetak(izuzetak, tijelo) \\\n  try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n\nTim t(\"NK TOSK\");\nTestirajIzuzetak(std::range_error, { t.ObradiUtakmicu(1, -15); });",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravan broj golova"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3706,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4: Provjera ispravnog bodovanja svih ishoda utakmice\n\nTim t(\"FK Krupa\");\n\nt.ObradiUtakmicu(1, 0);\nt.ObradiUtakmicu(1, 1);\nt.ObradiUtakmicu(0, 2);\n\nstd::cout << t.DajImeTima() << \" \" << t.DajBrojPoena() << \" \" << t.DajGolRazliku() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "FK Krupa 4 -1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3707,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT5: Provjera ispravnog ispisa tabele\n \nTim t1(\"NK Zeljeznicar\");\nTim t2(\"FK Sarajevo\");\nTim t3(\"HSK Zrinjski\");\n  \nt1.ObradiUtakmicu(1, 0);\nt1.ObradiUtakmicu(3, 0);\nt1.ObradiUtakmicu(2, 1);\nt2.ObradiUtakmicu(1, 1);\nt2.ObradiUtakmicu(1, 0);\nt2.ObradiUtakmicu(0, 5);\nt3.ObradiUtakmicu(0, 1);\nt3.ObradiUtakmicu(0, 2);\nt3.ObradiUtakmicu(1, 1);\n   \nt1.IspisiPodatke();\nt2.IspisiPodatke();\nt3.IspisiPodatke();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "NK Zeljeznicar         3   3   0   0   6   1   9\\nFK Sarajevo            3   1   1   1   2   6   4\\nHSK Zrinjski           3   0   1   2   1   4   1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "id": 8578,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 8",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3486,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1: test funkcije\nTest();",
+            "global_above_main": "void Test()\n{\n\tstd::cout << IzvrniBezRazmaka(\"Evo pada kisa\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"I jogurt ujutru goji ....\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"  udovica  baci   vodu\") << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "asikadapovE\\n....ijogurtujutrugojI\\nudovicabacivodu\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3488,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 2: test razmaci\nTest1();",
+            "global_above_main": "void Test1()\n{\n\tstd::cout << IzvrniBezRazmaka(\"      \") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"\") << std::endl;\n  \tstd::cout << IzvrniBezRazmaka(\"       \") << std::endl;\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "\\n\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

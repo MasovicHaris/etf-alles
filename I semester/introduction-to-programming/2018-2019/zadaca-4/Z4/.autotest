@@ -1,0 +1,122 @@
+{
+    "id": 5559,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 3, zadatak 4",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int A[100][100] = {{1,2,3,4,5}, {6,7,8,9,10}, {11,12,13,14,15}, {16,17,18,19,20}};\nint B[100][100] = {{2,3}, {7,8}, {12,13}};\n    \nprintf(\"%d \", matrica_sadrzana(A, 4, 5, B, 3, 2));\nA[2][2] = 12;\nprintf(\"%d \", matrica_sadrzana(A, 4, 5, B, 3, 2));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    int A[100][100];\n    int B[100][100];\n    \n    A[0][0] = B[0][0] = 100;\n    A[0][1] = 200;\n    B[1][0] = 200;\n\n    printf(\"%d \", matrica_sadrzana(A, 1, 2, B, 2, 1));\n    printf(\"%d \", matrica_sadrzana(A, 1, 1, B, 2, 1));\n    printf(\"%d \", matrica_sadrzana(A, 1, 2, B, 1, 1));\n    printf(\"%d \", matrica_sadrzana(A, 1, 1, B, 1, 1));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0 1 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int A[100][100] = {{1,2,3}, {4,5,6}, {7,8,9}};\nint B[100][100] = {{1,2,3}, {4,5,6}, {7,8,9}};\n    \nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 3, 3));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 3, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 2, 3));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 2, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 1, 1));\n\/\/ Jedan sa nulom\nB[0][0] = 100;\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 3, 3));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 1 1 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int A[100][100] = {{1,2,3}, {4,5,6}, {7,8,9}};\nint B[100][100] = {{2,3}, {5,6}, {8,9}};\nint C[100][100] = {{1,2}, {4,5}, {7,8}};\nint D[100][100] = {{4,5,6}, {7,8,9}};\nint E[100][100] = {{1,2,3}, {4,5,6}};\n    \nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 3, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, C, 3, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, D, 2, 3));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, E, 2, 3));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 2, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, C, 2, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, D, 2, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, E, 2, 2));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 1, 1));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 2, 1));\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 1, 2));\n\/\/ Jedan sa nulom\nprintf(\"%d \", matrica_sadrzana(A, 3, 3, B, 2, 3));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 1 1 1 1 1 1 1 1 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int A[100][100], B[100][100];\nint i,j;\n\nfor (i=0; i<100; i++)\n    for (j=0; j<100; j++)\n        A[i][j] = B[i][j] = i*100+j;\n\n    \nprintf(\"%d \", matrica_sadrzana(A, 100, 100, B, 100, 100));\nprintf(\"%d \", matrica_sadrzana(A, 100, 100, B, 100, 50));\nprintf(\"%d \", matrica_sadrzana(A, 100, 100, B, 50, 100));\nprintf(\"%d \", matrica_sadrzana(A, 100, 99, B, 100, 100));\nprintf(\"%d \", matrica_sadrzana(A, 99, 100, B, 100, 100));\nB[99][99] = -1;\nprintf(\"%d \", matrica_sadrzana(A, 100, 100, B, 100, 100));\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1 1 0 0 0 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

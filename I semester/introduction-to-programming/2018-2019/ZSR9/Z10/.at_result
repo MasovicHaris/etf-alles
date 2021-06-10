@@ -1,0 +1,142 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "2199": {
+            "status": 1,
+            "run_result": {
+                "output": "1 A00-A-001",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2200": {
+            "status": 6,
+            "run_result": {
+                "output": "1 A00-A-001\n1 A00-A-002\n1 A00-A-003\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2201": {
+            "status": 6,
+            "run_result": {
+                "output": "1 A00-A-999\n1 A00-A-100\n1 A00-A-010\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2202": {
+            "status": 6,
+            "run_result": {
+                "output": "1 A00-T-100\n1 A00-T-010\n1 A00-T-011\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2203": {
+            "status": 6,
+            "run_result": {
+                "output": "1 A99-T-999\n1  16\n-1 \u0010X\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==14267== Memcheck, a memory error detector\n==14267== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==14267== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==14267== Command: bs_test_2203\n==14267== Parent PID: 14266\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4A08B39: __GI_strlen (vg_replace_strmem.c:455)\n==14267==    by 0x36312688BA: puts (in /lib64/libc-2.12.so)\n==14267==    by 0x400C41: main (bs_test_2203.c:108)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4A08B48: __GI_strlen (vg_replace_strmem.c:455)\n==14267==    by 0x36312688BA: puts (in /lib64/libc-2.12.so)\n==14267==    by 0x400C41: main (bs_test_2203.c:108)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4005C9: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4005D4: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4005DF: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4005EA: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4005F5: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x400600: da_li_je_validna (bs_test_2203.c:7)\n==14267==    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n==14267==    by 0x400C54: main (bs_test_2203.c:109)\n==14267== \n==14267== Conditional jump or move depends on uninitialised value(s)\n==14267==    at 0x4A08B39: __GI_strlen (vg_replace_strmem.c:455)\n==14267==    by 0x36312688BA: puts (in /lib64/libc-2.12.so)\n==14267==    by 0x400C71: main (bs_test_2203.c:110)\n==14267== \n==14267== Syscall param write(buf) points to uninitialised byte(s)\n==14267==    at 0x36312DB850: __write_nocancel (in /lib64/libc-2.12.so)\n==14267==    by 0x36312719B2: _IO_file_write@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)\n==14267==    by 0x3631272F64: _IO_do_write@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)\n==14267==    by 0x3631273CD2: _IO_flush_all_lockp (in /lib64/libc-2.12.so)\n==14267==    by 0x3631274B7E: _IO_cleanup (in /lib64/libc-2.12.so)\n==14267==    by 0x36312359A1: exit (in /lib64/libc-2.12.so)\n==14267==    by 0x363121ED26: (below main) (in /lib64/libc-2.12.so)\n==14267==  Address 0x4c11025 is in a rw- anonymous segment\n==14267== \n==14267== \n==14267== HEAP SUMMARY:\n==14267==     in use at exit: 0 bytes in 0 blocks\n==14267==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated\n==14267== \n==14267== All heap blocks were freed -- no leaks are possible\n==14267== \n==14267== For counts of detected and suppressed errors, rerun with: -v\n==14267== Use --track-origins=yes to see where uninitialised values come from\n==14267== ERROR SUMMARY: 14 errors from 10 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4A08B39: __GI_strlen (vg_replace_strmem.c:455)\n    by 0x36312688BA: puts (in /lib64/libc-2.12.so)\n    by 0x400C41: main (bs_test_2203.c:108)\n",
+                        "file": "TEST_CODE",
+                        "line": 6
+                    },
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4005C9: da_li_je_validna (bs_test_2203.c:7)\n    by 0x40073B: generisi_tablice (bs_test_2203.c:33)\n    by 0x400C54: main (bs_test_2203.c:109)\n",
+                        "file": "main.c",
+                        "line": 5
+                    },
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x4A08B39: __GI_strlen (vg_replace_strmem.c:455)\n    by 0x36312688BA: puts (in /lib64/libc-2.12.so)\n    by 0x400C71: main (bs_test_2203.c:110)\n",
+                        "file": "TEST_CODE",
+                        "line": 8
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2204": {
+            "status": 6,
+            "run_result": {
+                "output": "T00-A-050",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2205": {
+            "status": 1,
+            "run_result": {
+                "output": "-1 -1 -1 -1 -1 -1 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1566838334
+}

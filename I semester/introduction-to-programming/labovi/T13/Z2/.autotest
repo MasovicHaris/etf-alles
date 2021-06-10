@@ -1,0 +1,69 @@
+{
+    "id": 7208,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 13, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2055,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "FILE* dat = fopen(\"ispit.txt\", \"w\");\nfputs(\"Anic           Ana        7 15\\nMarkovic       Marko     11 14\\nIvic           Ivica     20 9\\nMajic          Maja      12 12\\nIsovic         Ismet      5 0\\nMuharemovic    Muharem    7 8\\nAlmirovic      Almir     10 10\\nZdravkovic     Zdravko    8 19\\nRadic          Rade      19 19\\nDanilovic      Danilo    12 10\\n\", dat);\nfclose(dat);\n_main();\n\n\/* Ispisujemo na ekran generisane datoteke *\/\nprintf(\"usmeni.txt:\\n\");\ndat = fopen(\"usmeni.txt\", \"r\");\nif (dat == NULL) {\n    printf(\"Datoteka ne postoji!\");\n    return 0;\n}\nint c;\ndo {\n   c = fgetc(dat);\n   if (c != EOF) printf(\"%c\", c);\n} while (c != EOF);\nfclose (dat);\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izlazna datoteka usmeni.txt je kreirana\\nusmeni.txt:\\nRadic          Rade      38\\nMarkovic       Marko     25\\nMajic          Maja      24\\nDanilovic      Danilo    22\\nAlmirovic      Almir     20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2056,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/* Provjera izgleda strukture Student *\/\nstruct Student s;\ns.broj_bodova1 = 15;\ns.broj_bodova2 = 20;\nprintf(\"Sve ok\");",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sve ok"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

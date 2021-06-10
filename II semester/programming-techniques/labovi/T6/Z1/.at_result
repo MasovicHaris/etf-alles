@@ -1,0 +1,517 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:62:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nmain.cpp:60:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "62",
+                "col": "4",
+                "message": "exception of type 'std::overflow_error' will be caught",
+                "output": "/tmp/buildservice/bs_1643/main.cpp:62:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                "code": "} catch(std::overflow_error exec) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "60",
+                "col": "4",
+                "message": "by earlier handler for 'std::runtime_error'",
+                "output": "/tmp/buildservice/bs_1643/main.cpp:60:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                "code": "} catch(std::runtime_error exec) {"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3380": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite elemenata: Izuzetak: Broj elemenata mora biti pozitivan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3380.cpp: In function ‘int _main()’:\nbs_test_3380.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3380.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3380.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3380.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3380.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3380.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3383": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite elemenata: Izuzetak: Broj elemenata mora biti pozitivan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3383.cpp: In function ‘int _main()’:\nbs_test_3383.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3383.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3383.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3383.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3383.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3383.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3384": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite elemenata: Izuzetak: Prekoracen dozvoljeni opseg\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3384.cpp: In function ‘int _main()’:\nbs_test_3384.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3384.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3384.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3384.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3384.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3384.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3385": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 8 16 32 64 128 256 512 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3385.cpp: In function ‘int _main()’:\nbs_test_3385.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3385.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3385.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3385.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3385.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3385.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3386": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 8 16 32 64 128 256 512 1024 2048 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3386.cpp: In function ‘int _main()’:\nbs_test_3386.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3386.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3386.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3386.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3386.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3386.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3387": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 8 16 32 64 128 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3387.cpp: In function ‘int _main()’:\nbs_test_3387.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3387.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3387.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3387.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3387.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3387.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3388": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Prekoracen dozvoljeni opseg",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3388.cpp: In function ‘int _main()’:\nbs_test_3388.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3388.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3388.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3388.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3388.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3388.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3389": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3389.cpp: In function ‘int _main()’:\nbs_test_3389.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3389.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3389.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3389.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3389.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3389.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3390": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Prekoracen dozvoljeni opseg",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3390.cpp: In function ‘int _main()’:\nbs_test_3390.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3390.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3390.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3390.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3390.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3390.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3391": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3391.cpp: In function ‘int _main()’:\nbs_test_3391.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3391.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3391.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3391.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3391.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3391.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3392": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite elemenata: 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288 1048576 2097152 4194304 8388608 16777216 33554432 67108864 134217728 268435456 536870912 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3392.cpp: In function ‘int _main()’:\nbs_test_3392.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3392.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3392.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3392.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3392.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3392.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3393": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Prekoracen dozvoljeni opseg",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3393.cpp: In function ‘int _main()’:\nbs_test_3393.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3393.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3393.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3393.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3393.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3393.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3415": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Broj elemenata mora biti pozitivan",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3415.cpp: In function ‘int _main()’:\nbs_test_3415.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3415.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3415.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3415.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3415.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3415.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        },
+        "3416": {
+            "status": 1,
+            "run_result": {
+                "output": "Izuzetak: Broj elemenata mora biti pozitivan",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": "bs_test_3416.cpp: In function ‘int _main()’:\nbs_test_3416.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught\n  } catch(std::overflow_error exec) {\n    ^~~~~\nbs_test_3416.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’\n  } catch(std::runtime_error exec) {\n    ^~~~~",
+                "parsed_output": [
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3416.cpp",
+                        "line": "68",
+                        "col": "4",
+                        "message": "exception of type 'std::overflow_error' will be caught",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3416.cpp:68:4: warning: exception of type ‘std::overflow_error’ will be caught  } catch(std::overflow_error exec) {    ^~~~~",
+                        "code": "} catch(std::overflow_error exec) {"
+                    },
+                    {
+                        "type": "warning",
+                        "file": "bs_test_3416.cpp",
+                        "line": "66",
+                        "col": "4",
+                        "message": "by earlier handler for 'std::runtime_error'",
+                        "output": "/tmp/buildservice/bs_1643/bs_test_3416.cpp:66:4: warning:    by earlier handler for ‘std::runtime_error’  } catch(std::runtime_error exec) {    ^~~~~",
+                        "code": "} catch(std::runtime_error exec) {"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1492067427
+}

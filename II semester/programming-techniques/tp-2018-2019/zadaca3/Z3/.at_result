@@ -1,0 +1,111 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘Matrica<TipElemenata> MatricniPolinom(Matrica<TipElemenata>, std::vector<double>)’:\nmain.cpp:185:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(veka.at(i)!=0)\n                        ^\nmain.cpp: In instantiation of ‘Matrica<TipElemenata> MatricniPolinom(Matrica<TipElemenata>, std::vector<double>) [with TipElemenata = double]’:\nmain.cpp:228:31:   required from here\nmain.cpp:185:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if(veka.at(i)!=0)\n            ~~~~~~~~~~^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "24",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_3467/main.cpp:185:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(veka.at(i)!=0)                        ^/tmp/buildservice/bs_3467/main.cpp: In instantiation of ‘Matrica<TipElemenata> MatricniPolinom(Matrica<TipElemenata>, std::vector<double>) [with TipElemenata = double]’:/tmp/buildservice/bs_3467/main.cpp:228:31:   required from here",
+                "code": "if(veka.at(i)!=0)"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "185",
+                "col": "22",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_3467/main.cpp:185:22: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if(veka.at(i)!=0)            ~~~~~~~~~~^~~",
+                "code": "if(veka.at(i)!=0)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3552": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju kvadratne matrice: Unesite elemente matrice A:\nA(1,1) = A(1,2) = A(2,1) = A(2,2) = Unesite red polinoma: Unesite koeficijente polinoma:         24         5\n         0        -1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3553": {
+            "status": 1,
+            "run_result": {
+                "output": "1(1,1) = 1(1,2) = 1(1,3) = 1(2,1) = 1(2,2) = 1(2,3) = 2(1,1) = 2(1,2) = 2(1,3) = 2(1,4) = 2(2,1) = 2(2,2) = 2(2,3) = 2(2,4) = 2(3,1) = 2(3,2) = 2(3,3) = 2(3,4) =  38 14 20 26\n 83 38 53 68\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3554": {
+            "status": 1,
+            "run_result": {
+                "output": "A(1,1) = A(1,2) = A(2,1) = A(2,2) =  1167 1700\n 2550 3717\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3555": {
+            "status": 1,
+            "run_result": {
+                "output": "A(1,1) = A(1,2) = A(2,1) = A(2,2) =   1.1  2.2\n  3.6    4\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3556": {
+            "status": 1,
+            "run_result": {
+                "output": "A(1,1) = A(1,2) = A(2,1) = A(2,2) =   1.1  2.2\n  3.6    4\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1558270211
+}

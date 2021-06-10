@@ -1,0 +1,204 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘bool Trougao::kolinearne(Tacka, Tacka, Tacka)’:\nmain.cpp:14:108: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n         if((t1.first*(t2.second-t3.second)-t2.first*(t1.second-t3.second)+t3.first*(t1.second-t2.second))==0) return true;\n                                                                                                            ^\nmain.cpp: In static member function ‘static int Trougao::Orijentacija(const Tacka&, const Tacka&, const Tacka&)’:\nmain.cpp:73:113: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if((tj1.first*(tj2.second-tj3.second)-tj2.first*(tj1.second-tj3.second)+tj3.first*(tj1.second-tj2.second))==0) return 0;\n                                                                                                                 ^\nmain.cpp: In member function ‘void Trougao::Skaliraj(const Tacka&, double)’:\nmain.cpp:141:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     if(faktor==0) throw std::domain_error(\"Nekorektan faktor skaliranja\");\n                ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "14",
+                "col": "108",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2886/main.cpp:14:108: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]         if((t1.first*(t2.second-t3.second)-t2.first*(t1.second-t3.second)+t3.first*(t1.second-t2.second))==0) return true;                                                                                                            ^/tmp/buildservice/bs_2886/main.cpp: In static member function ‘static int Trougao::Orijentacija(const Tacka&, const Tacka&, const Tacka&)’:",
+                "code": "if((t1.first*(t2.second-t3.second)-t2.first*(t1.second-t3.second)+t3.first*(t1.second-t2.second))==0) return true;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "73",
+                "col": "113",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2886/main.cpp:73:113: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if((tj1.first*(tj2.second-tj3.second)-tj2.first*(tj1.second-tj3.second)+tj3.first*(tj1.second-tj2.second))==0) return 0;                                                                                                                 ^/tmp/buildservice/bs_2886/main.cpp: In member function ‘void Trougao::Skaliraj(const Tacka&, double)’:",
+                "code": "if((tj1.first*(tj2.second-tj3.second)-tj2.first*(tj1.second-tj3.second)+tj3.first*(tj1.second-tj2.second))==0) return 0;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "141",
+                "col": "16",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2886/main.cpp:141:16: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     if(faktor==0) throw std::domain_error(\"Nekorektan faktor skaliranja\");                ^",
+                "code": "if(faktor==0) throw std::domain_error(\"Nekorektan faktor skaliranja\");"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Koordinate tjemena: ((1,2),(3,4),(4,3))\nNove koordinate tjemena: ((4,1),(2,3),(0,0))\nNove koordinate tjemena: ((4,1),(2,3),(5,5))\nIzuzetak: Nekorektne pozicije tjemena\nIzuzetak: Nekorektan indeks\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Tjemena T1, T2 i T3 redom imaju koordinate: (1,0) (4,2) (3,5) \nDuzine stranica naspram tjemena T1, T2 i T3 redom iznose: 3.16228 5.38516 3.60555 \nUglovi (u radijanima) naspram tjemena T1, T2 i T3 redom iznose: 0.602287 1.83705 0.702257 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Obim trougla iznosi: 12.6705\nPovrsina trougla iznosi: 6.5",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Centar trougla se nalazi u tacki (3,0)\nTrougao centriran oko tacke (0,0) glasi: ((2,1),(-3,-1),(1,0))",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "Trougao nakon translacije za delta_x = 1 i delta_y = 2 glasi: ((7,6),(7,10),(2,10))\nTrougao nakon rotacije za PI/2 radijana oko tacke (7,6) glasi: ((7,6),(3,6),(3,1))\nTrougao nakon skaliranja 2x u odnosu na tacku (7,6) glasi: ((7,6),(-1,6),(-1,-4))",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Trouglovi t1 i t2 JESU identicni.\nNakon izmjene trouglovi t1 i t2 NISU identicni.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "7": {
+            "status": 1,
+            "run_result": {
+                "output": "Trouglovi t1 i t2 JESU podudarni.\nNakon izmjene trouglovi t1 i t2 NISU podudarni.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "8": {
+            "status": 1,
+            "run_result": {
+                "output": "Trouglovi t1 i t2 JESU slicni.\nNakon izmjene trouglovi t1 i t2 NISU slicni.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "9": {
+            "status": 1,
+            "run_result": {
+                "output": "Tacka (2,0) je UNUTAR trougla.\nTacka (-1,0) je IZVAN trougla.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "10": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 3. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 4. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 5. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 6. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 7. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 8. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 9. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 10. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija: \n((3,4),(5,6),(11,18))\n((7,5),(3,3),(3,9))\n((3,6),(11,4),(9,8))\n((7,5),(-1,7),(5,9))\n((7,7),(1,1),(7,13))\n((3,5),(13,15),(21,27))\n((3,6),(3,14),(9,6))\n((3,6),(9,6),(9,14))\n((4,4),(12,4),(12,10))\n((3,6),(9,6),(3,14))\nTrougao sa najmanjim obimom: ((7,5),(3,3),(3,9))\nParovi identicnih trouglova: \n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\nParovi podudarnih trouglova: \n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))\nParovi slicnih trouglova: \n((3,6),(11,4),(9,8)) i ((7,5),(-1,7),(5,9))\n((3,6),(3,14),(9,6)) i ((4,4),(12,4),(12,10))\n((3,6),(3,14),(9,6)) i ((3,6),(9,6),(3,14))\n((4,4),(12,4),(12,10)) i ((3,6),(9,6),(3,14))\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "11": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite kreirati trouglova: Unesite podatke za 1. trougao (x1 y1 x2 y2 x3 y3): Unesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Nekorektne pozicije tjemena, ponovite unos!\nUnesite podatke za 2. trougao (x1 y1 x2 y2 x3 y3): Unesite vektor translacije (dx dy): Unesite ugao rotacije: Unesite faktor skaliranja: Trouglovi nakon obavljenih transformacija: \n((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\n((3.50635,3.90931),(17.3241,6.921),(7.09336,37.258))\nTrougao sa najmanjim obimom: ((2.69085,-0.264601),(17.7043,13.8633),(27.3146,19.5765))\nNema identicnih trouglova!\nNema podudarnih trouglova!\nNema slicnih trouglova!\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1559202091
+}

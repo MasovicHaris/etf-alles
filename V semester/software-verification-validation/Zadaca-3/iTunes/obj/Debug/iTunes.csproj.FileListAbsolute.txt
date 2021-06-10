@@ -1,0 +1,17 @@
+c:\users\haris\documents\visual studio 2012\Projects\IspitniRok2016\iTunes\obj\Debug\iTunes.csprojResolveAssemblyReference.cache
+c:\users\haris\documents\visual studio 2012\Projects\IspitniRok2016\iTunes\bin\Debug\iTunes.dll
+c:\users\haris\documents\visual studio 2012\Projects\IspitniRok2016\iTunes\bin\Debug\iTunes.pdb
+c:\users\haris\documents\visual studio 2012\Projects\IspitniRok2016\iTunes\obj\Debug\iTunes.dll
+c:\users\haris\documents\visual studio 2012\Projects\IspitniRok2016\iTunes\obj\Debug\iTunes.pdb
+C:\Users\User\Desktop\Zadaca 3\iTunes\bin\Debug\iTunes.dll
+C:\Users\User\Desktop\Zadaca 3\iTunes\bin\Debug\iTunes.pdb
+C:\Users\User\Desktop\Zadaca 3\iTunes\obj\Debug\iTunes.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Zadaca 3\iTunes\obj\Debug\iTunes.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Zadaca 3\iTunes\obj\Debug\iTunes.dll
+C:\Users\User\Desktop\Zadaca 3\iTunes\obj\Debug\iTunes.pdb
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\bin\Debug\iTunes.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\bin\Debug\iTunes.pdb
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\obj\Debug\iTunes.csprojAssemblyReference.cache
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\obj\Debug\iTunes.csproj.CoreCompileInputs.cache
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\obj\Debug\iTunes.dll
+C:\Users\Amir\Downloads\Shit\AmirVVSZ3\Zadaca 3\iTunes\obj\Debug\iTunes.pdb

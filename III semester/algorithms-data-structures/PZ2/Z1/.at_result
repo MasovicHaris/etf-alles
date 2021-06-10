@@ -1,0 +1,69 @@
+{
+    "buildhost_description": {
+        "id": "uticov",
+        "os": "Linux 4.8.0-51-generic x86_64\nUbuntu 16.10\n",
+        "compiler_version": "g++ (Ubuntu 6.2.0-5ubuntu12) 6.2.0 20161005",
+        "debugger_version": "GNU gdb (Ubuntu 7.11.90.20161005-0ubuntu2) 7.11.90.20161005-git",
+        "profiler_version": "valgrind-3.12.0.SVN"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:493:1: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]\n for (int i(0); i<n.brojElemenata(); i++)\n ^~~\nmain.cpp:496:2: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘for’\n  std::cout << std::endl;\n  ^~~\nmain.cpp:505:1: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]\n for (int i(0); i<n.brojElemenata(); i++)\n ^~~\nmain.cpp:507:2: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the ‘for’\n  std::cout << std::endl;\n  ^~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "493",
+                "col": "1",
+                "message": "this 'for' clause does not guard...",
+                "output": "/tmp/buildservice/bs_35/main.cpp:493:1: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation] for (int i(0); i<n.brojElemenata(); i++) ^~~",
+                "code": "for (int i(0); i<n.brojElemenata(); i++)"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "505",
+                "col": "1",
+                "message": "this 'for' clause does not guard...",
+                "output": "/tmp/buildservice/bs_35/main.cpp:505:1: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation] for (int i(0); i<n.brojElemenata(); i++) ^~~",
+                "code": "for (int i(0); i<n.brojElemenata(); i++)"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "4124": {
+            "status": 1,
+            "run_result": {
+                "output": "5",
+                "duration": 3,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4125": {
+            "status": 1,
+            "run_result": {
+                "output": "abc",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1508880321
+}

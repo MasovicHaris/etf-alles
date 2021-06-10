@@ -1,0 +1,8 @@
+html
+   body
+       h1 Pogodi broj
+       p #{pokusaj.broj_pokusaja}
+       h2 #{pokusaj.poruka}
+       form(action="/",method="POST")
+           input(type="text",name="pokusaj")
+           input(type="submit",value="Pogodi")

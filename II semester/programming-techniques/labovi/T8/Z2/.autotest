@@ -1,0 +1,119 @@
+{
+    "id": 8582,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 8, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3541,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nNiko\nNikic\n17\/11\/1995\n10\n9\n8\n10\n9\n8\n10\n9\n"
+            },
+            "expected": [
+                "Koliko ima ucenika: Unesite podatke za 1. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \\nUcenik Niko Nikic rodjen 17\/11\/1995 ima prosjek 9.12\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3542,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\nNiko\nNikic\n17\/11\/1995\n10\n9\n8\n7\n10\n9\n8\n7\nNeko\nNekic\n15\/4\/1996\n6\n7\n8\n9\n6\n7\n8\n9\n"
+            },
+            "expected": [
+                "Koliko ima ucenika: Unesite podatke za 1. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:  \\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \\nUcenik Niko Nikic rodjen 17\/11\/1995 ima prosjek 8.5\\nUcenik Neko Nekic rodjen 15\/4\/1996 ima prosjek 7.5\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3543,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT3\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\nNiko\nNikic\n17\/11\/1995\n10\n9\n8\n7\n10\n9\n8\n7\nNeko\nNekic\n15\/4\/1996\n6\n7\n8\n9\n6\n7\n8\n9\nMeho\nMehic\n3\/11\/1997\n6\n7\n8\n10\n8\n7\n9\n6\nNeno\nNenic\n12\/8\/1995\n8\n9\n7\n6\n10\n10\n8\n9\nSuljo\nSuljic\n7\/10\/1996\n10\n9\n8\n6\n7\n9\n9\n7\nNino\nNinic\n5\/12\/1995\n8\n7\n8\n10\n6\n7\n8\n10\n"
+            },
+            "expected": [
+                "Koliko ima ucenika: Unesite podatke za 1. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:  \\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 3. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 4. ucenika:  \\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 5. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 6. ucenika:  \\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: \\nUcenik Niko Nikic rodjen 17\/11\/1995 ima prosjek 8.5\\nUcenik Neno Nenic rodjen 12\/8\/1995 ima prosjek 8.38\\nUcenik Suljo Suljic rodjen 7\/10\/1996 ima prosjek 8.12\\nUcenik Nino Ninic rodjen 5\/12\/1995 ima prosjek 8\\nUcenik Meho Mehic rodjen 3\/11\/1997 ima prosjek 7.62\\nUcenik Neko Nekic rodjen 15\/4\/1996 ima prosjek 7.5\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3547,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT4 - ako ovaj autotest padne onda se zadatak tretira kao da ima 0 autotestova koji prolaze\n\n  void UnesiUcenike(std::vector<std::shared_ptr<Ucenik>> &p_ucenici);\n  int broj_ucenika;\n  std::cin >> broj_ucenika;\n  try {\n    std::vector<std::shared_ptr<Ucenik>> p_ucenici(broj_ucenika);\n    UnesiUcenike(p_ucenici);\n  }\n  catch(...) {\n    std::cout << \"Problemi sa memorijom...\\n\";\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "6\nNiko\nNikic\n17\/11\/1995\n10\n9\n8\n7\n10\n9\n8\n7\nNeko\nNekic\n15\/4\/1996\n6\n7\n8\n9\n6\n7\n8\n9\nMeho\nMehic\n3\/11\/1997\n6\n7\n8\n10\n8\n7\n9\n6\nNeno\nNenic\n12\/8\/1995\n8\n9\n7\n6\n10\n10\n8\n9\nSuljo\nSuljic\n7\/10\/1996\n10\n9\n8\n6\n7\n9\n9\n7\nNino\nNinic\n5\/12\/1995\n8\n7\n8\n10\n6\n7\n8\n10\n"
+            },
+            "expected": [
+                "Unesite podatke za 1. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 2. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 3. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 4. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 5. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: Unesite podatke za 6. ucenika:\\n  Ime:   Prezime:   Datum rodjenja (D\/M\/G):   Ocjena iz 1. predmeta:   Ocjena iz 2. predmeta:   Ocjena iz 3. predmeta:   Ocjena iz 4. predmeta:   Ocjena iz 5. predmeta:   Ocjena iz 6. predmeta:   Ocjena iz 7. predmeta:   Ocjena iz 8. predmeta: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

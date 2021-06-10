@@ -1,0 +1,185 @@
+{
+    "id": 5548,
+    "name": "Osnove ra\u010dunarstva (2018\/2019), Zada\u0107a 1, zadatak 1",
+    "language": "C",
+    "preferred_compiler": "gcc",
+    "required_compiler": "gcc",
+    "compiler_features": [],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "25\nk\nd\n29\nN\n20\nN"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Pogresan unos.\\nPadavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Drugarice idu u Mostar.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "29\nn\n30\nn\n20\nn"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Drugarice idu u Sarajevo."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "30\nd\n31\nn\n20\nn"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Anja i Una mogu u Mostar."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1\nd\n5\nd\n0\nd\n"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Anja i Elma mogu u Bihac."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10\nd\n-6\nd\n-15\nd\n"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Ne odgovara niti jedan grad."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\nd\n13\nn\n-10\nn\n"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Anja i Elma mogu u Mostar."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10\nd\n-2\nd\n-12\nd\n"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Anja i Elma mogu u Mostar."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-10\nn\n-2\nn\n-8\nn\n"
+            },
+            "expected": [
+                "Unesite prognozu za Sarajevo:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Mostar:\\nTemperatura: Padavine (D\/N): Unesite prognozu za Bihac:\\nTemperatura: Padavine (D\/N): Drugarice idu u Mostar."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

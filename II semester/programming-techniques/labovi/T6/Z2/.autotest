@@ -1,0 +1,219 @@
+{
+    "id": 8562,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 6, Zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3395,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1 testiranje maina koji sadr\u017ei vector double-ova\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10 2.5 -7 3.12 6 4 0 -1.111 4 2 7.39\n"
+            },
+            "expected": [
+                "Koliko zelite elemenata: Unesite elemente: Kreirani niz: 7.39 2 4 -1.111 0 4 6 3.12 -7 2.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3396,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT2 testiranje hvatanja izuzetka u slu\u010daju nedostatka memorije\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2000000000"
+            },
+            "expected": [
+                "Koliko zelite elemenata: Nedovoljno memorije!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3397,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 testiranje funkcije na vektor stringova\nstd::vector<std::string> v = {\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"};\nstd::string *p(KreirajIzvrnutiNiz(v.begin(), v.end()));\nfor(int i = 0; i < v.size(); i++) std::cout << p[i] << \" \";\ndelete [] p;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Sunday Saturday Friday Thursday Wednesday Tuesday Monday"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3399,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT4 testiranje da li funkcija prima parametre koji mogu koristiti samo operacije navedene u postavci zadatka\nstd::forward_list<int> l{1,2,3,4,5};\nint *p(KreirajIzvrnutiNiz(l.begin(), l.end()));\nfor(int i = 0; i < 5; i++) std::cout << p[i] << \" \";\ndelete [] p;",
+            "global_above_main": "#include <forward_list>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 4 3 2 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3400,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT5 testiranje da li je mogu\u0107e funkciji poslati vektor elemenata koje nije mogu\u0107e sabirati\n\nstd::vector<std::vector<int>> v{{1,2},{3,4},{5,6}};\nstd::vector<int> *p = KreirajIzvrnutiNiz(v.begin(), v.end());\ndelete [] p;\nstd::cout << \"Svaka \u010dast\";\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Svaka \u010dast"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3401,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT6 testiranje da li funkcija ispravno radi nad vektorom integera\n    \n    std::vector<int> v { 21,34,23,67,98, };\n    int *p(KreirajIzvrnutiNiz(v.begin(), v.end()));\n    for(int i = 0; i < 5; i++) std::cout << p[i] << \" \";\n    delete [] p;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "98 67 23 34 21"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3433,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT7 provjera bacanja izuzetka iz funkcije\n try {\n    std::vector<double> v {1,2,3,4,5};\n    double *p(KreirajIzvrnutiNiz(v.begin(), v.end()));\n    for(int i = 0; i < 5; i++) std::cout << p[i] << \" \";\n    delete [] p;\n    std::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n    for (int i=0; i<brojac_new;i++) std::cout << alokacije[i] << \" \";\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }\n  catch(...) {\n    std::cout << \"Greska\";\n  }",
+            "global_above_main": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[10];\nconst size_t RAM = 4 * sizeof(double);\n\nvoid *operator new[] (size_t vel)\n{\n    if (RAM < alocirano+vel) throw std::bad_alloc();\n    alokacije[brojac_new]=vel;\n    brojac_new++;\n    alocirano+=vel;   \n    return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr) {\n  brojac_deleteniz++;\n  free(ptr);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nedovoljno memorije!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3441,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT8 provjera da li se pravilno alocira memorija\ntry {\n    std::vector<double> v {1,2,3,4,5};\n    double *p(KreirajIzvrnutiNiz(v.begin(), v.end()));\n    for(int i = 0; i < 5; i++) std::cout << p[i] << \" \";\n    delete [] p;\n    std::cout << \"New pozvan \" << brojac_new << \" puta,  delete [] pozvan \" << brojac_deleteniz << \" puta, a alocirano ukupno \" << alocirano << \" bajta i to redom: \";\n    for (int i=0; i<brojac_new;i++) std::cout << alokacije[i] << \" \";\n  }\n  catch(std::bad_alloc) {\n    std::cout << \"Nedovoljno memorije!\";\n  }\n  catch(...) {\n    std::cout << \"Greska\";\n  }",
+            "global_above_main": "static size_t alocirano(0);\nstatic int brojac_new(0);\nstatic int brojac_deleteniz(0);\nstatic size_t alokacije[10];\nconst size_t RAM = 5 * sizeof(double);\n\nvoid *operator new[] (size_t vel)\n{\n    if (RAM < alocirano+vel) throw std::bad_alloc();\n    alokacije[brojac_new]=vel;\n    brojac_new++;\n    alocirano+=vel;   \n    return std::malloc (vel);\n}\n\nvoid operator delete [] ( void* ptr) {\n  brojac_deleteniz++;\n  free(ptr);\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "5 4 3 2 1 New pozvan 1 puta,  delete [] pozvan 1 puta, a alocirano ukupno 40 bajta i to redom: 40"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

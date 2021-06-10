@@ -1,0 +1,33 @@
+Testna funkcija 1 (Pretraga nepostojecih elemenata)
+
+Pretraga BH klubova: FK Zeljeznicar i FK Sarajevo
+FK Zeljeznicar - Sampion
+FK Sarajevo - Nije sampion
+
+--------------------------------------------
+Testna funkcija 2 (Brisanje broja 1337 iz niz mape)
+
+IZUZETAK: Broj 1337 se ne nalazi u mapi!
+
+--------------------------------------------
+Testna funkcija 3 (Brisanje čitave niz mape)
+
+Broj elemenata prije brisanja: 1
+Broj elemenata nakon brisanja: 0
+
+Čitava liga obrisana (tugi plaki - mora sa i kolega)
+
+--------------------------------------------
+Testna funkcija 4 (mapa koja sadrzi double brojeve i 2 * te iste brojeve)
+
+2.1 - 4.2
+IZUZETAK: Nema tog kljuca!
+
+--------------------------------------------
+Testna funkcija 5 (Ispis nadjenog elementa i broj elemenata)
+Dodji da ostarimooo 3.14 ~ Broj elemenata (mora biti 1): 1
+Mora biti 0: 0
+ 0
+Ciganka sam 2.78
+
+--------------------------------------------

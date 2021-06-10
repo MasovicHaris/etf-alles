@@ -1,0 +1,119 @@
+{
+    "id": 5503,
+    "name": "Tehnike programiranja (2017\/2018), Zada\u0107a 4, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT (c9 - 1) (javni)\n\/\/Testove pisao Dino \u0160atrovi\u0107\n\/\/Sva evenutalna pitanja u vezi testova mo\u017eete postaviti na forumu\n\/\/za zadace na courseware-u predmeta\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Dino\n31 5 2018\n17 17\nEnis\n16 6 2018\n16 16\nkraj\n1\n31 5 2018\n4\n6\n7"
+            },
+            "expected": [
+                "Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Trenutno su registrovani sljedeci pregledi\\nDino                          31\/5\/2018 17:17\\nEnis                          16\/6\/2018 16:16\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nUnesite dan mjesec i godinu : Broj pregleda na datum 31 5 2018 je: 1\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nNajraniji pregled uspjesno obrisan\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nEnis                          16\/6\/2018 16:16\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT (c9 -2) (javni) \n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Lamija\n25 10 2108\n20 20\nEmina\n16 10 2018\n19 19\nAmina\n18 12 2018\n11 20\nDalila\n17 2 2018\n11 21\nSelma\n20 5 2018\n19 31\nkraj\n3\nLamija\n4\n6\n7"
+            },
+            "expected": [
+                "Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Trenutno su registrovani sljedeci pregledi\\nDalila                        17\/2\/2018 11:21\\nSelma                         20\/5\/2018 19:31\\nEmina                         16\/10\/2018 19:19\\nAmina                         18\/12\/2018 11:20\\nLamija                        25\/10\/2108 20:20\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nUnesite ime pacijenta: Uspjesno obrisano 1 pregleda\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nNajraniji pregled uspjesno obrisan\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nSelma                         20\/5\/2018 19:31\\nEmina                         16\/10\/2018 19:19\\nAmina                         18\/12\/2018 11:20\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT (c9 -3) (javni) \n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Salko\n25 10 2018\n20 20\nEmir\n16 10 2018\n19 19\nSanjin\n18 12 2018\n11 20\nRijad\n17 2 2018\n11 21\nMirza\n20 5 2018\n19 31\nkraj\n1\n20 5 2018\n2\n4\n5\n18 12 2018\n7"
+            },
+            "expected": [
+                "Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Trenutno su registrovani sljedeci pregledi\\nRijad                         17\/2\/2018 11:21\\nMirza                         20\/5\/2018 19:31\\nEmir                          16\/10\/2018 19:19\\nSalko                         25\/10\/2018 20:20\\nSanjin                        18\/12\/2018 11:20\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nUnesite dan mjesec i godinu : Broj pregleda na datum 20 5 2018 je: 1\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nNajraniji pregled je:\\nRijad                         17\/2\/2018 11:21\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nNajraniji pregled uspjesno obrisan\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nUnesite dan mjesec i godinu : Pregledi na datum 18 12 2018 su:\\nSanjin                        18\/12\/2018 11:20\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT (c9 -4) (javni) \n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Sajra\n18 10 2018\n20 20\nMeliha\n19 10 2018\n2 2\nDalila\n20 10 2018\n8 50\nDalila\n8 1 2018\n20 15\nHamza\n17 10 2018\n17 17\nBilal\n16 10 2018\n15 30\nkraj\n3\nDalila\n6\n7"
+            },
+            "expected": [
+                "Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Unesite dan mjesec i godinu pregleda: Unesite sate i minute pregleda: Unesite ime novog pacijenta ili 'kraj' za zavrsetak unosa: Trenutno su registrovani sljedeci pregledi\\nDalila                        8\/1\/2018 20:15\\nBilal                         16\/10\/2018 15:30\\nHamza                         17\/10\/2018 17:17\\nSajra                         18\/10\/2018 20:20\\nMeliha                        19\/10\/2018 02:02\\nDalila                        20\/10\/2018 08:50\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nUnesite ime pacijenta: Uspjesno obrisano 2 pregleda\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa\\nBilal                         16\/10\/2018 15:30\\nHamza                         17\/10\/2018 17:17\\nSajra                         18\/10\/2018 20:20\\nMeliha                        19\/10\/2018 02:02\\n\\nOdaberite jednu od sljedecih opcija\\n1 - Broj pregleda na datum\\n2 - Najraniji pregled\\n3 - Obrisi pregled pacijenta\\n4 - Obrisi najraniji pregled\\n5 - Ispisi sve pregleda na datum\\n6 - Ispisi sve preglede\\n7 - Kraj programa"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

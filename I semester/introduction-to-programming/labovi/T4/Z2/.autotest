@@ -1,0 +1,219 @@
+{
+    "id": 4121,
+    "name": "Osnove ra\u010dunarstva (2016\/2017), Tutorijal 4, zadatak 2",
+    "language": "C",
+    "required_compiler": "gcc",
+    "preferred_compiler": "gcc",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-O1 -Wall -Wuninitialized -Winit-self -Wno-unused-result -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1170,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7,5"
+            },
+            "expected": [
+                "Unesite stranice pravougaonika a,b: +-----+\\n|     |\\n|     |\\n|     |\\n+-----+"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1279,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2,2"
+            },
+            "expected": [
+                "Unesite stranice pravougaonika a,b: ++\\n++"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 1280,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4,4"
+            },
+            "expected": [
+                "Unesite stranice pravougaonika a,b: +--+\\n|  |\\n|  |\\n+--+"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+      {
+         "id":660,
+         "require_symbols":[
+
+         ],
+         "replace_symbols":[
+
+         ],
+         "code":"_main();",
+         "global_above_main":"",
+         "global_top":"",
+         "running_params":{
+            "timeout":"10",
+            "vmem":"1000000",
+            "stdin":"5,7"
+         },
+         "expected":[
+            "Unesite stranice pravougaonika a,b: +---+\\n|   |\\n|   |\\n|   |\\n|   |\\n|   |\\n+---+"
+         ],
+         "expected_exception":"false",
+         "expected_crash":"false",
+         "ignore_whitespace":"false",
+         "regex":"false",
+         "substring":"false"
+      },
+      {
+         "id":661,
+         "require_symbols":[
+
+         ],
+         "replace_symbols":[
+
+         ],
+         "code":"_main();",
+         "global_above_main":"",
+         "global_top":"",
+         "running_params":{
+            "timeout":"10",
+            "vmem":"1000000",
+            "stdin":"1,1"
+         },
+         "expected":[
+            "Unesite stranice pravougaonika a,b: +"
+         ],
+         "expected_exception":"false",
+         "expected_crash":"false",
+         "ignore_whitespace":"false",
+         "regex":"false",
+         "substring":"false"
+      },
+      {
+         "id":662,
+         "require_symbols":[
+
+         ],
+         "replace_symbols":[
+
+         ],
+         "code":"_main();",
+         "global_above_main":"",
+         "global_top":"",
+         "running_params":{
+            "timeout":"10",
+            "vmem":"1000000",
+            "stdin":"1,12"
+         },
+         "expected":[
+            "Unesite stranice pravougaonika a,b: +\\n|\\n|\\n|\\n|\\n|\\n|\\n|\\n|\\n|\\n|\\n+"
+         ],
+         "expected_exception":"false",
+         "expected_crash":"false",
+         "ignore_whitespace":"false",
+         "regex":"false",
+         "substring":"false"
+      },
+      {
+         "id":663,
+         "require_symbols":[
+
+         ],
+         "replace_symbols":[
+
+         ],
+         "code":"_main();",
+         "global_above_main":"",
+         "global_top":"",
+         "running_params":{
+            "timeout":"10",
+            "vmem":"1000000",
+            "stdin":"12,1"
+         },
+         "expected":[
+            "Unesite stranice pravougaonika a,b: +----------+"
+         ],
+         "expected_exception":"false",
+         "expected_crash":"false",
+         "ignore_whitespace":"false",
+         "regex":"false",
+         "substring":"false"
+      },
+      {
+         "id":664,
+         "require_symbols":[
+
+         ],
+         "replace_symbols":[
+
+         ],
+         "code":"_main();",
+         "global_above_main":"",
+         "global_top":"",
+         "running_params":{
+            "timeout":"10",
+            "vmem":"1000000",
+            "stdin":"15,15"
+         },
+         "expected":[
+            "Unesite stranice pravougaonika a,b: +-------------+\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n|             |\\n+-------------+"
+         ],
+         "expected_exception":"false",
+         "expected_crash":"false",
+         "ignore_whitespace":"false",
+         "regex":"false",
+         "substring":"false"
+      }
+    ]
+}

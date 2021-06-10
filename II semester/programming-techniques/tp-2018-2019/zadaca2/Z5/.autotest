@@ -1,0 +1,101 @@
+{
+    "id": 303404,
+    "name": "Tehnike programiranja (2014\/2015), Zada\u0107a 2, zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 2477,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1: javni\nint niz[] = { 1, 3, 5, 7, 8 };\nbool t = ZaSve( niz, niz+5, [](int x){ return x%2==1; });\nstd::cout << std::boolalpha << t << \" \";\nniz[4] = 9;\nt = ZaSve( niz, niz+5, [](int x){ return x%2==1; });\nstd::cout << std::boolalpha << t;\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "false true"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2478,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2: javni\nint niz[] = { 1, 3, 5, 7, 9 };\nbool t = MakarJedan( niz, niz+5, [](int x){ return x%2==0; });\nstd::cout << std::boolalpha << t << \" \";\nniz[4] = 8;\nt = MakarJedan( niz, niz+5, [](int x){ return x%2==0; });\nstd::cout << std::boolalpha << t;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "false true"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2479,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3: javni\nint niz[] = { 1, 2, 3, 4, 5 };\nint a0(5);\nint suma = Akumuliraj( niz, niz+5, [](int x, int y){ return x+y; }, a0);\nstd::cout << suma;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2480,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT12 (javni): definicija maina. Ovo je oficijelni izgled maina\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "abcdef123\n1 2 3 4 5 9 8 11 2 23 -4 -3 -2 -1 0 5 4 3 2 1 "
+            },
+            "expected": [
+                "Unesite string: Uneseni string sadrzi samo slova i cifre\\nUnesite niz od 10 brojeva: U nizu ima brojeva djeljivih sa sumom svojih cifara\\nUnesite dek od 10 elemenata: \\nSuma deka: 5    \\nProdukt deka: 0\\nNajveci elemenat deka: 5\\nNajmanji elemenat deka: -4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

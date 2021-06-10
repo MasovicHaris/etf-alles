@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tekst: abc: 0,14,18\ndhi: 22,35\nhrkw: 30\nqwe: 4,26\nstsda: 8\nUnesite rijec: 0 14 18 \nUnesite rijec: 30 \nUnesite rijec: Unesena rijec nije nadjena!\nUnesite rijec: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite tekst: cijelog: 63\nda: 54,57\netfa: 49,71\ngodine: 42\nii: 25\nje: 3\nnajbolji: 6\npredmet: 15\nprve: 37\nsemestru: 28\ntp: 0,60\nu: 23\nUnesite rijec: 0 60 \nUnesite rijec: 3 \nUnesite rijec: 25 \nUnesite rijec: 54 57 \nUnesite rijec: 49 71 \nUnesite rijec: 23 \nUnesite rijec: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "---: 0,1,2\nab: 0,1,2\nabc: 0,1,2\nabcd: 7\ncde: 0,1,2\nxabc: 0,1,2,4,5,6,7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "0, 1, 2, \n1, 3, 5, \n0, 2, 3, ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "0 28  <--- abc\n4 24  <--- cde\n8 20  <--- def\n12 16  <--- ghi\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1558264212
+}

@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-504.1.3.el6.x86_64 x86_64\n\"CentOS release 6.7 (Final)\"\n",
+        "compiler_version": "gcc (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "993": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite ime datoteke: \nBroj redova: 3\nBroj rijeci: 32\nBroj znakova: 188\nBroj samoglasnika: 70\nBroj velikih slova: 5\nBroj cifara: 12",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "994": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite ime datoteke: \nBroj redova: 9\nBroj rijeci: 57\nBroj znakova: 264\nBroj samoglasnika: 101\nBroj velikih slova: 11\nBroj cifara: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "995": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite ime datoteke: \nBroj redova: 3\nBroj rijeci: 73\nBroj znakova: 318\nBroj samoglasnika: 126\nBroj velikih slova: 13\nBroj cifara: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "996": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite ime datoteke: \nBroj redova: 4\nBroj rijeci: 24\nBroj znakova: 89\nBroj samoglasnika: 31\nBroj velikih slova: 1\nBroj cifara: 7",
+                "duration": 1,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1483690220
+}

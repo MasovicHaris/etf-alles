@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title> Zadatak 2 </title>
+    <link rel="stylesheet" href="/css/zadatak2.css">
+</head>
+
+<body>
+    <h1>Tabela dobijena iz baze:</h1>
+    <table>
+        <% for(var i = 0; i < redovi.length; ++i){ %>
+            <tr>
+                <td><%= redovi[i].ime; %></td>
+                <td><%= redovi[i].prezime; %></td>
+                <td><%= redovi[i].adresa; %></td>
+                <td><%= redovi[i].broj_telefona; %></td>
+            </tr>
+        <% } %>
+    </table>
+    <% if (varijabla) {%>
+    <br><br>
+    <form method="POST" action="/imenik">
+        Ime: <input type="text" name="ime">
+        Prezime: <input type="text" name="prezime">
+        Adresa: <input type="text" name="adresa">
+        Br tel: <input type="text" name="brtel"><br><br>        
+        <input type="submit">
+    </form>
+    <% } %>
+</body>
+
+</html>

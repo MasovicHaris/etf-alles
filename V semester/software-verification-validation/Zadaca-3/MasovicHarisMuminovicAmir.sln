@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTunes", "iTunes\iTunes.csproj", "{839DFB60-E4BC-48AC-BA71-E3F85E22B6B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestoviTDD", "TestoviTDD\TestoviTDD.csproj", "{DA35F7CB-B7C8-4D5A-A5C5-0AB9B7339428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPS", "UPS\UPS.csproj", "{504F5AC0-E3EB-424D-A4E0-A308094F5909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestoviUPS", "UnitTestProject1\TestoviUPS.csproj", "{82EC2DDE-EFE7-44AF-A275-CEF093B266C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestoviCodedUI", "TestoviCodedUI\TestoviCodedUI.csproj", "{013E8278-C64E-4FA4-A891-5C3783446903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTunesUnitTestovi", "iTunesUnitTestovi\iTunesUnitTestovi.csproj", "{49F8D1F8-669F-4A02-92B5-C4C22A4CF02B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StubsMocks", "StubsMocks\StubsMocks.csproj", "{8D7598EB-C703-49F1-AF4E-9A899183E71D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{839DFB60-E4BC-48AC-BA71-E3F85E22B6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839DFB60-E4BC-48AC-BA71-E3F85E22B6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839DFB60-E4BC-48AC-BA71-E3F85E22B6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839DFB60-E4BC-48AC-BA71-E3F85E22B6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA35F7CB-B7C8-4D5A-A5C5-0AB9B7339428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA35F7CB-B7C8-4D5A-A5C5-0AB9B7339428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA35F7CB-B7C8-4D5A-A5C5-0AB9B7339428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA35F7CB-B7C8-4D5A-A5C5-0AB9B7339428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{504F5AC0-E3EB-424D-A4E0-A308094F5909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504F5AC0-E3EB-424D-A4E0-A308094F5909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504F5AC0-E3EB-424D-A4E0-A308094F5909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504F5AC0-E3EB-424D-A4E0-A308094F5909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EC2DDE-EFE7-44AF-A275-CEF093B266C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EC2DDE-EFE7-44AF-A275-CEF093B266C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EC2DDE-EFE7-44AF-A275-CEF093B266C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EC2DDE-EFE7-44AF-A275-CEF093B266C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{013E8278-C64E-4FA4-A891-5C3783446903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{013E8278-C64E-4FA4-A891-5C3783446903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{013E8278-C64E-4FA4-A891-5C3783446903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{013E8278-C64E-4FA4-A891-5C3783446903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F8D1F8-669F-4A02-92B5-C4C22A4CF02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F8D1F8-669F-4A02-92B5-C4C22A4CF02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F8D1F8-669F-4A02-92B5-C4C22A4CF02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F8D1F8-669F-4A02-92B5-C4C22A4CF02B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7598EB-C703-49F1-AF4E-9A899183E71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7598EB-C703-49F1-AF4E-9A899183E71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7598EB-C703-49F1-AF4E-9A899183E71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7598EB-C703-49F1-AF4E-9A899183E71D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92855C50-39F3-4960-9C7E-8C73DB4FE23A}
+	EndGlobalSection
+EndGlobal

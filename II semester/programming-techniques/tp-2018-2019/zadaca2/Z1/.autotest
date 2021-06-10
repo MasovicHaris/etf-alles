@@ -1,0 +1,185 @@
+{
+    "id": 352601,
+    "name": "Tehnike programiranja (2015\/2016), Zada\u0107a 2, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3425,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1: main iz postavke - korektni unosi\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "D\nI5\nA-\nI3\nD\nA+\nD\nI4\nD\nK\n"
+            },
+            "expected": [
+                "Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (5,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (5,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (5,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (5,0) i gleda na jug.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (5,-4) i gleda na jug.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (5,-4) i gleda na zapad.\\n\\nUnesi komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3426,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - iz primjera, pogresni parametri\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "S\nIXY2\nI0\nL2\nKK\nK\n"
+            },
+            "expected": [
+                "Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Parametar komande nije ispravan!\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Zadan je suvisan parametar nakon komande!\\nUnesi komandu: Zadan je suvisan parametar nakon komande!\\nUnesi komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3427,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - funkcija IspisiPoziciju\nIspisiPoziciju(0,5,Pravci::Sjever); std::cout<<std::endl;\nIspisiPoziciju(0,5,Pravci::Jug); std::cout<<std::endl;\nIspisiPoziciju(5,0,Pravci::Istok); std::cout<<std::endl;\nIspisiPoziciju(5,0,Pravci::Zapad); std::cout<<std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Robot je trenutno aktivan, nalazi se na poziciji (0,5) i gleda na sjever.\\nRobot je trenutno aktivan, nalazi se na poziciji (0,5) i gleda na jug.\\nRobot je trenutno aktivan, nalazi se na poziciji (5,0) i gleda na istok. \\nRobot je trenutno aktivan, nalazi se na poziciji (5,0) i gleda na zapad."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3428,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - funkcija Rotiraj\n     Pravci orijentacija = Pravci::Sjever;\n     std::vector<std::string> orijentacije;\n     for(int i = 0; i < 8; i++)\n     {\n          if (i < 4)Rotiraj(orijentacija, Smjer::Nalijevo);\n          else Rotiraj(orijentacija, Smjer::Nadesno);\n          std::string str;\n          if (orijentacija==Pravci::Sjever) str=\"sjever\";\n          else if (orijentacija==Pravci::Istok) str=\"istok\";\n          else if (orijentacija==Pravci::Jug) str=\"jug\";     \n          else  str=\"zapad\";\n          orijentacije.push_back(str);\n     }\n     for(int i = 0; i < 8; i++) std::cout << orijentacije[i] << std::endl;",
+            "global_above_main": "#include <vector>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "zapad\\njug\\nistok\\nsjever\\nistok\\njug\\nzapad\\nsjever\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3429,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - funkcija Idi  \n    int x = 0, y = 0;\n    Idi(x, y, Pravci::Sjever, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Sjever, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Jug, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Jug, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Istok, 5); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Istok, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Zapad, -10); std::cout << x << \" \" << y << std::endl;\n    Idi(x, y, Pravci::Zapad, 5); std::cout << x << \" \" << y;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 5\\n0 -5\\n0 5\\n0 0\\n5 0\\n-5 0\\n5 0\\n0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3430,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 - Funkcija PrijaviGresku\n    PrijaviGresku(KodoviGresaka::PogresnaKomanda);\n    PrijaviGresku(KodoviGresaka::NedostajeParametar);\n    PrijaviGresku(KodoviGresaka::NeispravanParametar);\n    PrijaviGresku(KodoviGresaka::SuvisanParametar);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nerazumljiva komanda!\\nKomanda trazi parametar koji nije naveden!\\nParametar komande nije ispravan!\\nZadan je suvisan parametar nakon komande!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3431,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT 12 - da li se ignorisu razmaci prije i poslije komande kod unosa?\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "   D\nD  \n  D  \n  L\nL  \n  L  \nA-  \n  A+\n  A-\nA+  \n  A-  \n  A+  \nI2  \n  I2\n  I2  \n  K  \n"
+            },
+            "expected": [
+                "Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na jug.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na zapad.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na jug.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na istok.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno neaktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,2) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,4) i gleda na sjever.\\nUnesi komandu: Robot je trenutno aktivan, nalazi se na poziciji (0,6) i gleda na sjever.\\nUnesi komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3432,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT 15 - Nerazumljive komande\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "S\na\n+\nqwertz\nmacka_seta_tastaturom\n987654\n-,.-,\na5a5a5a\nA5\nK\n"
+            },
+            "expected": [
+                "Robot je trenutno aktivan, nalazi se na poziciji (0,0) i gleda na sjever.\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Nerazumljiva komanda!\\nUnesi komandu: Dovidjenja!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,311 @@
+{
+    "id": 5609,
+    "name": "Tehnike programiranja (2018\/2019), Zada\u0107a 2, zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p,q;\nRastavaBroja(22360800, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "462 220"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "try {\n    int p,q;\n    RastavaBroja(-5, p, q);\n    std::cout << \"Ovo se ne smije ispisati\" << std::endl;\n} catch(std::domain_error e) {\n    std::cout << \"Domain error: \"<<e.what() << std::endl;\n} catch(...) {\n    std::cout << \"Ni ovo se ne smije ispisati\" << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Domain error: Broj koji se rastavlja mora biti prirodan\t"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p,q;\nRastavaBroja(48, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p, q;\nRastavaBroja(10, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(18, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "10 1\\n2 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p, q;\nRastavaBroja(27, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(39, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(123456, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "3 3\\n39 1\\n1929 8"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p, q;\nRastavaBroja(9223, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9223 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nint p, q;\nRastavaBroja(777777, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "15873 7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nint p, q;\nRastavaBroja(4, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(8, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(99, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2\\n2 2\\n11 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\nint p, q; \nRastavaBroja(1234567890, p, q);\nstd::cout << p << \" \" << q << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "137174210 3"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p, q;\nRastavaBroja(57683, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(7263, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(123, p, q);\nstd::cout << p << \" \" << q << std::endl;\nRastavaBroja(321, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "57683 1\\n807 3\\n123 1\\n321 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "int p, q;\nRastavaBroja(1, p, q);\nstd::cout << p << \" \" << q;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\ntry {\n    int p, q;\n    RastavaBroja(0, p, q);\n    std::cout << \"Ovo se ne smije ispisati\" << std::endl;\n} catch(std::domain_error e) {\n    std::cout << \"Domain error: \" << e.what() << std::endl;\n} catch(...) {\n    std::cout << \"Ni ovo se ne smije ispisati\" << std::endl;\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Domain error: Broj koji se rastavlja mora biti prirodan"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "48"
+            },
+            "expected": [
+                "Unesite prirodan broj\\n3 4\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-5"
+            },
+            "expected": [
+                "Unesite prirodan broj\\nIzuzetak: Broj koji se rastavlja mora biti prirodan!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

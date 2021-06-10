@@ -1,0 +1,469 @@
+%MIT License
+%
+%Copyright (c) 2017 dinkoosmankovic
+%
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+%
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+
+
+    \documentclass[12pt]{article}
+    \usepackage{amsfonts,amsmath,amssymb}
+    \usepackage{amsmath,multicol,eso-pic}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+    \usepackage{titlesec}
+    \usepackage{enumerate}
+    \usepackage{breqn}
+    \usepackage{tikz}
+    \usepackage{rotating}
+    %\renewcommand{\wedge}{~}
+    %\renewcommand{\neg}{\overline}
+    \titleformat{\section}{\large}{\thesection.}{1em}{}
+    
+    
+    % % % % % POPUNITE PODATKE
+    
+    \newcommand{\prezimeIme}{Mašović Haris}
+    \newcommand{\brIndexa}{17993}
+    \newcommand{\brZadace}{4}
+    
+    % % % % % 
+    
+    \begin{document}
+    
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{1cm}
+
+      \vspace*{2cm}
+      {\huge \bf Zadaća \brZadace } \\
+      \vspace*{1cm}
+      {\Large \bf iz predmeta Matematička logika i teorija izračunljivosti}
+
+      \vspace*{2cm}
+
+      {\Large Prezime i ime: \prezimeIme} \\
+      \vspace*{0.75cm}
+      {\Large Br. indexa: \brIndexa}
+
+      \vspace*{3cm}
+      \renewcommand{\arraystretch}{1.75}
+      \begin{tabular}{|c|c|}
+    	\hline Zadatak & Bodovi \\
+    	\hline 1 &  \\
+    	\hline 2 &  \\
+    	\hline 3 &  \\
+    	\hline 4 &  \\
+    	\hline 5 &  \\
+    	\hline 6 &  \\
+    	\hline 7 &  \\
+    	\hline 
+     \end{tabular}
+
+      \vfill
+
+
+      {\large Elektrotehnički fakultet Sarajevo}
+
+    \end{center}
+    \newpage
+    \thispagestyle{empty}
+    
+    
+    % % % % % Rješenja zadataka
+	\begin{enumerate}
+		\item Rješenje zadatka
+		
+		* Ukoliko označimo date jezike sa: \\
+		S - Španski \\
+		I - Italijanski \\
+		P - Portugalski \\
+		J - Japanski \\
+		\\
+		* Iz postavke imamo sljedeće uslove: \\
+		\#(S {$\cup$} I {$\cup$} P {$\cup$} J) = 277 \\
+		\#(S {$\cap$} I) = 23  \\
+		\#(S {$\cap$} P) = 23  \\
+		\#(S {$\cap$} J) = 23  \\
+		\#(I {$\cap$} P) = 23  \\
+	    \#(I {$\cap$} J) = 23  \\ 
+		\#(P {$\cap$} J) = 23  \\
+		\#(S {$\cap$} I {$\cap$} P) = 11 \\
+		\#(S {$\cap$} P {$\cap$} J) = 11 \\
+		\#(S {$\cap$} I {$\cap$} J) = 11 \\
+		\#(I {$\cap$} P {$\cap$} J) = 11 \\
+		\#(S {$\cap$} I {$\cap$} P {$\cap$} J) = 5 \\
+		\#S = \#I + \#P ~~ (1)\\
+		\#I = \#J + 4 ~~ (2)\\
+		\#P = \#J - 6 ~~ (3)\\
+		
+		* Dalje možemo izračunati kardinalni broj svakog skupa na sljedeći način i \\ korštenje jednačina (1),(2),(3): \\
+		
+		\#(S {$\cup$} I {$\cup$} P {$\cup$} J) = 277 = \#S + \#I + \#P + \#J -(\#(S {$\cap$} I)+ \#(S {$\cap$} P)+ \#(S {$\cap$} J)+ \\\#(I {$\cap$} P)+ \#(I {$\cap$} J)+ \#(P {$\cap$} J)) + \#(S {$\cap$} I {$\cap$} P) + \#(S {$\cap$} P {$\cap$} J) + \#(S {$\cap$} I {$\cap$} J) + \\\#(I {$\cap$} P {$\cap$} J) - \#(S {$\cap$} I {$\cap$} P {$\cap$} J)  = \\
+		384 = 5\#J - 4 {$\Rightarrow$} \#J = 76 \\
+		\\
+		** Uvrštavajući nazad u uslove (1),(2),(3) imamo: \\
+		\#P = 70, \#I = 80, \#S = 150 \\
+		\item Rješenje zadatka
+		\\
+		a) 
+		\begin{equation*}
+		
+		   (A \setminus B) \setminus C = A \setminus ( B \cup C) \\
+		   (A \cap C(B)) \setminus C = A \cap C(B \cup C) \\ 
+		   A \cap C(B) \cap C(C) = A \cap C(B) \cap C(C) \\		   
+		\end{equation*}
+		\\
+		
+		b)
+		\begin{equation*}
+		
+		   (A \setminus B) \ (B \setminus C) = A \setminus B \\
+           (A  \cap C(B)) \setminus (B \cap C(C)) = A \cap C(B) \\ 
+		   A \cap C(B) \cap (C(B) \cup C) = A \cap C(B) \\
+		   A \cap (C(B) \cup (C(B) \cap C)) = A  \cap C(B) \\
+		   A \cap (C(B) \cap (C \cup U)) = A \cap C(B) \\
+		   A \cap C(B) = A \cap C(B) \\
+		\end{equation*}
+		\\		
+		\item Rješenje zadatka
+		
+		a) \\
+		
+		* Ovo ćemo dokazati pomoću zakona idempotentnosti koji glasi: \\
+		A {$\cup$} A {$\cup$} A {$\cup$} ... {$\cup$} A = A \\
+		
+		* Dalje ukoliko raspišemo ovih n skupova imamo: \\
+		A {$\cap$} ($B_1$ {$\cup$} $B_2$ {$\cup$} $B_3$ {$\cup$} ... {$\cup$} $B_n$) = (A {$\cap$} $B_1$) {$\cup$} (A {$\cap$} $B_2$) {$\cup$} (A {$\cap$} $B_3$) {$\cup$} ... {$\cup$} (A {$\cap$} $B_n$) \\
+		
+		** Isključenjem trećeg imamo: \\
+		
+		A {$\cap$} ($B_1$ {$\cup$} $B_2$ {$\cup$} $B_3$ {$\cup$} ... {$\cup$} $B_n$) = A {$\cap$} ($B_1$ {$\cup$} $B_2$ {$\cup$} $B_3$ {$\cup$} ... {$\cup$} $B_n$) \\
+		
+		*** Samim tim dokaz vrijedi uz početne uslove.
+		
+		b) \\
+		
+		* Ovo ćemo dokazati pomoću zakona idempotentnosti koji glasi: \\
+		A {$\cap$} A {$\cap$} A {$\cap$} ... {$\cap$} A = A \\
+		
+		* Dalje ukoliko raspišemo ovih n skupova imamo: \\
+		(A x $B_1$) {$\cap$} (A x $B_2$) {$\cap$} (A x $B_3$) {$\cap$} ... {$\cap$} (A x $B_n$) = A x ($B_1$ {$\cap$} $B_1$ {$\cap$} $B_1$ {$\cap$} ... {$\cap$} $B_n$) \\
+		
+		** Isključenjem trećeg imamo: \\
+		
+		A x ($B_1$ {$\cap$} $B_1$ {$\cap$} $B_1$ {$\cap$} ... {$\cap$} $B_n$) = A x ($B_1$ {$\cap$} $B_1$ {$\cap$} $B_1$ {$\cap$} ... {$\cap$} $B_n$) \\
+		
+		*** Samim tim dokaz vrijedi uz početne uslove. 
+		\newpage
+		\item Rješenje zadatka \\
+		
+		* Funkcija očigledno nije inverzna jer nije zadovoljeno pravilo '1-1' tj. injektivnost , zatim funkcija nije surjektivna jer kodomen nije čitav Z, što znači da funkcija nije ni bijektivna samim tim nema inverznu funkciju. \\
+		
+		** Generalizirana inverzna funkcija glasi: \\
+		
+		$F^{-1}(x) =$
+        \begin{cases}
+        \{\emptyset\}~~~~~~~~~~~~~~~~~~~~~~~~~~~,~~x=0\\
+        \{\{a\},\{b\},\{c\}\}~~~~~~~~~~~~~,~~x=1\\
+        \{\{a,b\},\{a,c\},\{b,c\}\}~~~~~,~~x = 2\\
+        \{a,b,c\}~~~~~~~~~~~~~~~~~~~~~~~,~~x = 3\\
+        \emptyset~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~,~~$x~\in\mathbb{Z}$ \textbackslash~ \{0,1,2,3\} \\
+        \end{cases}
+		
+		\\
+		\\
+		\\
+		\\
+		\\
+		
+		\item Rješenje zadatka
+		
+		$$((\lambda f.\lambda x.f(f(x)))((\lambda y.2y + 1)
+		(\lambda t.t^3 + 2t^2 - t + 4)))(2) =$$
+		$$= ((\lambda f.\lambda x. f(f(x)))(2(\lambda t. t^3 +
+		2t^2 - t + 4) + 1))(2) =$$
+		$$\triangleright f = 2(\lambda t.t^3 + 2t^2 - t + 4) +
+		1$$
+		$$= (\lambda x.f(f(x)))(2) =$$
+		$$= f(f(2)) =$$
+		$$= f((2(\lambda t.t^3 + 2t^2 - t + 4) + 1)(2)) =$$
+		$$= f(2(2^3 + 2\cdot 2^2 - 2 + 4) + 1) =$$
+		$$= f(37) =$$
+		$$= (2(\lambda t.t^3 + 2t^2 - t + 4) + 1)(37) =$$
+		$$= 2(37^3 + 2\cdot 37^2 - 37 + 4) + 1 =$$
+		$$= 2(50653 + 2738 - 37 + 4) + 1 =$$
+		$$= 106717$$
+		
+		
+		
+		\newpage
+		\item Rješenje zadatka
+		
+		a) \\
+		
+		Vrijedi $xR^{-1}y$ ako i samo ako 
+		 	vrijedi $yRx$.
+		 	$$R^{-1} = \{(6, 1), (5, 2), (5, 3), (5, 4), (4, 5)
+		 	, (5, 5)\}$$
+		 	Relaciju R možemo predstaviti relacionom matricom:
+		 	\begin{equation*}
+				M = 
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+			\end{equation*}
+		 	Sada relaciju $R^2$ i $R^3$ možemo naci pomocu
+		 	Booleovog proizvoda matrica:
+		 	\begin{equation*}
+				M^2 = 
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} =
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+			\end{equation*}
+		 	$$R^2 = \{(2, 4), (2, 5), (3, 4), (3, 5), (4, 4), 
+		 	(4, 5), (5, 4), (5, 5)\}$$
+		 	\begin{equation*}
+		 	\hspace{-2cm} M^3 = M^2 \circ M = 
+		 	\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} = 
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+		 	\end{equation*}
+		 	$$R^3 = R^2 = \{(2, 4), (2, 5), (3, 4), (3,
+		 	5), (4, 4), (4, 5), (5, 4), (5, 5)\}$$
+		 	Simetricno zatvorenje jeste unija relacije i njene
+		 	inverzne relacije.
+		 	$$R^s = R \cup R^{-1} = \{(1,6),(2,5),(3,5),(4, 5),
+		 	(5, 2),(5, 3), (5,4), (5,5), (6, 1)\}$$
+		 	Vrijedi $R^+$ ako i samo ako je ikako moguce iz x
+		 	doci u y na strelicastom dijagramu tj. sve vrijednosti {$\top$} bez glavne dijagonale.
+		 	$$R^+ = \{(1, 6), (2, 4), (2, 5), (3, 4), (3, 5),
+		 	(4, 4), (4, 5), (5, 4), (5, 5)\}$$
+		 	Da bismo našli $R^*$, zatvorenje $R^+$
+		 	dopunjujemo sa refleksivnošću.
+		 	$$R^* = \{(1, 1), (1, 6), (2, 2), (2, 4), (2, 5),
+		 	(3,3), (3, 4), (3, 5), (4, 4), (4, 5), (5, 4),(5, 5), (6, 6), (7, 7)\}$$
+		 			 	\newpage
+		 	b) \\
+		 	\begin{equation*}
+				M \circ M^{-1} = 
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ 
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					1 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} = 
+				\begin{pmatrix} 
+					1 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}				
+			\end{equation*}
+			$$R \circ R^{-1} = \{(1, 1), (2, 2), (2, 3), (2, 4)
+			, (2, 5), (3, 2), (3, 3), (3, 4), (3, 5), (4, 2), 
+			(4, 3), (4, 4),$$
+			$$(4, 5), (5, 2), (5, 3), (5, 4), (5, 5)\}$$
+			\begin{equation*}
+				M^2 \circ (M^{-1})^2 =
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 0 & 0 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} =
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 1 & 1 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+			\end{equation*}
+			$$R^2 \circ (R^{-1})^2 = \{(2, 2), (2, 3), (2, 4)
+			, (2, 5), (3, 2), (3, 3), (3, 4), (3, 5), (4, 2), 
+			(4, 3), (4, 4),$$
+			$$ (4, 5), (5, 2), (5, 3), (5, 4), (5, 5)\}$$
+
+		 c)
+		 
+		    \begin{equation*}
+				(M \circ M^2) \circ M^3 =
+				\resizebox{0.2cm}{1cm}{$($}
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 1\\ 
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 0 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+				\resizebox{0.2cm}{1cm}{$)$} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} = 
+			\end{equation*}
+			\begin{equation*}
+			\hspace{3cm}	\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} \circ
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix} =
+				\begin{pmatrix} 
+					0 & 0 & 0 & 0 & 0 & 0\\ 
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 1 & 1 & 0\\
+					0 & 0 & 0 & 0 & 0 & 0\\
+				\end{pmatrix}
+				\end{equation*}
+				\\
+				
+				$$(R \circ R^2) \circ R^3 = \{(2, 4), (2, 5),
+				(3, 4), (3, 5), (4, 4), (4, 5), (5, 4), 
+				(5, 5)\}$$
+		\newpage
+		\item Rješenje zadatka
+		
+		* Ukoliko posmatramo našu prvu projekciju relacije R2 imamo: \\
+		
+		\begin{equation*}
+    		    \underset{(\#1,\#2)}{\pi}(R2) = \{(8,6),(7,4),(6,5),(2,6),(4,8)\}
+		\end{equation*}
+		
+		* Dalje ukoliko posmatramo lambda spajanje, vidimo da moramo spojiti petorku sa dvojkom, pošto u narednoj iteraciji su nam potrebne samo dvije dobivene sedmorke samo će one biti napisane, tj. idemo za korak više pa imamo: \\
+		
+		\begin{equation*}
+    		    \text{A} = \underset{(\#1>\#2~\wedge~\#1 \neg 1)}{\sigma}~( R1 ~ \underset{(\#1<\#1+\#2)}{\bowtie}~\underset{(\#1,\#2)}{\pi}(R2)) = \{(5,4,3,2,6,8,6),(5,4,3,2,6,7,4), \\
+    		    
+    		    (5,4,3,2,6,6,5),(5,4,3,2,6,2,6),(5,4,3,2,6,4,8), (4,1,1,5,7,8,6),(4,1,1,5,7,7,4),(4,1,1,5,7,6,5), \\
+    		    
+    		    (4,1,1,5,7,2,6),(4,1,1,5,7,4,8)\}
+		\end{equation*}
+		
+		** Na kraju posmatramo projekciju i dobijamo konačnu relaciju R: \\
+		
+		\begin{equation*}
+		    R = \underset{(\#1,\#2,\#(-1))}{\pi}(A) = \{ (5,4,6),(5,4,4),(5,4,5),(5,4,6),
+		    (5,4,8),(4,1,6),(4,1,4),\\
+		    
+		    (4,1,5),(4,1,8)\}
+		\end{equation*}
+		
+	\end{enumerate}
+	
+	
+	
+    \end{document}
+    

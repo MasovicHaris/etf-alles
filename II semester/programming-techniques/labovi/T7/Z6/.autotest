@@ -1,0 +1,144 @@
+{
+    "id": 8576,
+    "name": "Tehnike programiranja (2016\/2017), Tutorijal 7, Zadatak 6",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [
+
+    ],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 3478,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT1 : test sortiranja stringova\nSortirajStringove();",
+            "global_above_main": "void SortirajStringove()\n{\n\tstd::list<std::string> ls{\"Mujo\", \"Suljo\", \"Haso\", \"Hrvoje\", \"Ivan\", \"Ante\", \"Milutin\", \"Dragan\", \"Zoran\"};\n\tSortirajListu(ls);\n\tfor(auto x : ls) std::cout << x << \" \";\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ante Dragan Haso Hrvoje Ivan Milutin Mujo Suljo Zoran "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3479,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT2: test maina\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "10\n150 -100 -50 200 25 10 -75 55 45 -30"
+            },
+            "expected": [
+                "Koliko ima elemenata: Unesite elemente: Sortirana lista: -100 -75 -50 -30 10 25 45 55 150 200"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3480,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT3 : test sortiranja proizvoljnog tipa\nSortirajMojTip();",
+            "global_above_main": "struct MojBroj\n{\nint x;\nMojBroj(int x=0) : x (x){}\nfriend bool operator < (const MojBroj &a, const MojBroj &b) {return a.x > b.x;}\nfriend bool operator > (const MojBroj &a, const MojBroj &b) {return a.x < b.x;}\n};\n\nvoid SortirajMojTip()\n{\n\tstd::list<MojBroj> lmb {23, 5, -5, 10, -100, 200, 63, -50};\n\tSortirajListu(lmb);\n\tfor(auto a : lmb) std::cout << a.x << \" \";\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "200 63 23 10 5 -5 -50 -100 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3481,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/ AT 5: test nula ulaz\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "0\n"
+            },
+            "expected": [
+                "Koliko ima elemenata: Unesite elemente: Sortirana lista:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3482,
+            "require_symbols": [
+
+            ],
+            "replace_symbols": [
+
+            ],
+            "code": "\/\/AT 6: test doubleovi\nSortirajDoublove();",
+            "global_above_main": "void SortirajDoublove()\n{\n\tstd::list<double> ld{23.3847239,2.3974,34.183734,23.0,43.36381,22.3,32.0,32.1919,43.938363,34.38364};;\n\tSortirajListu(ld);\n\tfor(auto x : ld) std::cout << x << \" \";\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "2.3974 22.3 23 23.3847 32 32.1919 34.1837 34.3836 43.3638 43.9384 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

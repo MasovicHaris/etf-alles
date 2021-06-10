@@ -1,0 +1,11 @@
+Vrijeme izvrsenja dodavanja rng elemenata (prosjecan slucaj) - binstablo: 43 ms.
+Vrijeme izvrsenja dodavanja rng elemenata (prosjecan slucaj) - nizmapa: 1341 ms.
+Vrijeme izvrsenja dodavanja rng elemenata (prosjecan slucaj) /mojhash2/ - hashmapa: 1833 ms.
+
+Vrijeme izvrsenja pristupa svim elementima (prosjecan slucaj) - binstablo: 15 ms.
+Vrijeme izvrsenja pristupa svim elementima (prosjecan slucaj) - nizmapa: 1240 ms.
+Vrijeme izvrsenja pristupa svim elementima (prosjecan slucaj) /mojhash2/ - hashmapa: 1135 ms.
+
+Vrijeme izvrsenja brisanje 1k elementa po 1 - binstablo: 9 ms.
+Vrijeme izvrsenja brisanje 1k elementa po 1 - nizmapa: 591 ms.
+Vrijeme izvrsenja brisanje 1k elementa po 1 /mojhash2/ - hashmapa: 580 ms.
