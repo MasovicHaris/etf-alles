@@ -43,7 +43,6 @@
 - Advanced Operating Systems 2019/2020 - Project
 
 ### VIII semester
-- Advanced Web Technologies 2019/2020 - [Project](https://github.com/MasovicHaris/event4u)
 - Computer networks 2019/2020 - Tasks / Project documentation
 - Biomedical signals and systems 2019/2020 - Tutorials / Tasks
 - Operational research 2019/2020 - Tutorials / Tasks
