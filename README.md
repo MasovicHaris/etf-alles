@@ -1,5 +1,6 @@
-### Faculty of Electrical Engineering, University of Sarajevo
-#### Department for Computer Science and Informatics
+## Faculty of Electrical Engineering Sarajevo, Computer Science and Informatics
+
+The idea of this repository is to house all projects/tutorials/tasks that are related with the CSI department and have been done in the past. This is intended to help future students in their journey by providing them done/how to examples, as a reference, for all of the subjects.
 
 ## Bachelor's
 
@@ -55,8 +56,9 @@
 ### X semester
 - In depth data analysis 2020/2021 - Tutorials
 
-## Helping out - You want to upgrade this repository ?
-- If you want to help out, feel free to fork this repository and to add your own tasks/projects/anything useful
-- Also put in your pull request the evaluated results on those projects/tasks and the repository owner as the reviewer (in order to pass the pull request in some way)
+## Notes
 
-#### Note that the info part is in English, while all the projects are in Bosnian. #ad-populum
+- Most of the stuff is provided by the owner (+ other students as well).
+- Note that the info part is in English, while all the projects are in Bosnian.
+- Anyone is free to copy, modify, publish, use, compile, sell, or distribute this content, for any purpose, commercial or non-commercial, and by any means.
+- If you want to help out for future students as well, feel free to fork this repository and to add your own tasks/projects/anything useful (also put in your pull request the evaluated results on those projects/tasks and the repository owner as the reviewer, in order to pass the pull request in some way).
