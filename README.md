@@ -42,6 +42,7 @@ The idea of this repository is to house all projects/tutorials/tasks that are re
 - Machine Learning 2019/2020 - Tutorials / Tasks
 - Advanced Algorithms and Data Structures 2019/2020 - Tutorials
 - Advanced Operating Systems 2019/2020 - Project
+- Resource Optimization 2019/2020 - Tutorials
 
 ### VIII semester
 - Computer networks 2019/2020 - Tasks / Project documentation
