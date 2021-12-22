@@ -1,0 +1,154 @@
+version: "3"
+
+services:
+  eureka-service:
+    image: eureka-service
+    build:
+      context: ./eureka-service
+      dockerfile: Dockerfile
+    ports:
+      - 8761:8761
+    expose:
+      - "8761"
+    networks:
+      - events-network
+
+  system-events:
+    image: system-events
+    build:
+      context: ./system-events
+      dockerfile: Dockerfile
+    environment:
+      - EUREKA_BASE_URL=eureka-service
+    expose:
+      - "6565"
+    networks:
+      - events-network
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service:eureka-service
+
+  user-management-service:
+    image: user-management-service
+    env_file:
+      - ./user-managment-service/.env
+    build:
+      context: ./user-managment-service
+      dockerfile: Dockerfile
+    expose:
+      - "4000"
+    networks:
+      - events-network
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service:eureka-service
+
+  gateway-service:
+    image: gateway-service
+    env_file:
+      - ./gateway-service/.env
+    build:
+      context: ./gateway-service
+      dockerfile: Dockerfile
+    expose:
+      - "4200"
+    ports:
+      - 4200:4200
+    networks:
+      - events-network
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service:eureka-service
+
+  notification-service:
+    image: notification-service
+    environment:
+      - EUREKA_BASE_URL=eureka-service
+      - RABBIT_BASE_URL=rabbitmq
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    expose:
+      - "8088"
+    networks:
+      - events-network
+    depends_on:
+      - eureka-service
+      - rabbitmq
+    links:
+      - eureka-service:eureka-service
+      - rabbitmq:rabbitmq
+
+  events-service:
+    image: events-service
+    build:
+      context: ./events-service
+      dockerfile: Dockerfile
+    environment:
+      - EUREKA_BASE_URL=eureka-service
+      - RABBIT_BASE_URL=rabbitmq
+    expose:
+      - "8081"
+    networks:
+      - events-network
+    depends_on:
+      - eureka-service
+      - rabbitmq
+    links:
+      - eureka-service:eureka-service
+      - rabbitmq:rabbitmq
+
+  frontend:
+    image: frontend
+    env_file:
+      - ./frontend/.env
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    ports:
+      - 3000:3000
+    networks:
+      - events-network
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=kukierlang
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    expose:
+      - "5672"
+    ports:
+      - 15672:15672
+      - 5672:5672
+    networks:
+      - events-network
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: "userm"
+      MYSQL_USER: "root"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks:
+      - events-network
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:
+
+networks:
+  events-network:
+    driver: bridge

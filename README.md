@@ -45,6 +45,7 @@ The idea of this repository is to house all projects/tutorials/tasks that are re
 - Resource Optimization 2019/2020 - Tutorials
 
 ### VIII semester
+- Advanced Web Technologies 2019/2020 - Project
 - Computer networks 2019/2020 - Tasks / Project documentation
 - Biomedical signals and systems 2019/2020 - Tutorials / Tasks
 - Operational research 2019/2020 - Tutorials / Tasks
